@@ -259,7 +259,7 @@
       for (let i = 0; i < queries.length; ++i) {
         status.textContent = `Processing ${i + 1} of ${queries.length}...`;
         try {
-          const response = await fetch('http://www.epfindia.com/site_en/get_directory.php', {
+          const response = await fetch('http://www.epfindia.gov.in/site_en/get_directory.php', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
