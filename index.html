@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EPF Contacts Scraper</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2em; }
+    textarea { width: 100%; height: 200px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h2>EPF India Contacts Extractor</h2>
+  <p>Upload your <b>contacts.csv</b> file:</p>
+  <input type="file" id="csvInput" accept=".csv" />
+  <button id="startBtn" disabled>Start Extraction</button>
+  <p id="status"></p>
+  <a id="downloadLink" class="hidden">Download contacts.json</a>
+
+  <script>
+    let contactsData = [];
+
+    const csvInput = document.getElementById('csvInput');
+    const startBtn = document.getElementById('startBtn');
+    const status = document.getElementById('status');
+    const downloadLink = document.getElementById('downloadLink');
+    let csvLines = [];
+
+    csvInput.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        csvLines = ev.target.result.split('\n').filter(line => line.trim());
+        if (csvLines.length > 0) {
+          startBtn.disabled = false;
+          status.textContent = `Loaded ${csvLines.length} lines from CSV. Ready to extract.`;
+        }
+      };
+      reader.readAsText(file);
+    });
+
+    startBtn.addEventListener('click', async function() {
+      contactsData = [];
+      status.textContent = 'Extracting...';
+      startBtn.disabled = true;
+      let count = 0;
+
+      for (const q of csvLines) {
+        try {
+          const formData = new URLSearchParams(q.trim());
+          const response = await fetch('http://www.epfindia.com/site_en/get_directory.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+              'X-Requested-With': 'XMLHttpRequest'
+            },
+            body: formData
+          });
+          const html = await response.text();
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+
+          // Extract office info
+          const officeP = doc.querySelector('p');
+          const office = officeP ? officeP.textContent.trim() : '';
+
+          // Extract officials
+          const officials = [];
+          const rows = doc.querySelectorAll('tr');
+          rows.forEach(row => {
+            const cells = row.querySelectorAll('td');
+            if (cells.length) {
+              const official = {};
+              cells.forEach((cell, i) => {
+                official[i] = cell.textContent.trim();
+              });
+              officials.push(official);
+            }
+          });
+
+          contactsData.push({ office, officials });
+          count++;
+          status.textContent = `Processed ${count}/${csvLines.length}...`;
+        } catch (err) {
+          status.textContent = `Error on line ${count + 1}: ${err}`;
+          break;
+        }
+      }
+
+      // Download result as JSON
+      const blob = new Blob([JSON.stringify(contactsData, null, 2)], { type: 'application/json' });
+      downloadLink.href = URL.createObjectURL(blob);
+      downloadLink.download = "contacts.json";
+      downloadLink.classList.remove('hidden');
+      downloadLink.textContent = "Download contacts.json";
+      status.textContent = `Done! Processed ${count} records.`;
+      startBtn.disabled = false;
+    });
+  </script>
+</body>
+</html>
