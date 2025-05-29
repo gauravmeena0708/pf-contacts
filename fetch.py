@@ -2,6 +2,7 @@ import requests
 import json
 from bs4 import BeautifulSoup
 import time
+import re
 
 # Queries can be loaded from a file or defined here
 queries = [
