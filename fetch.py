@@ -239,62 +239,141 @@ headers = {
     'Referer': 'https://www.epfindia.gov.in/site_en/Contact_us.php' 
 }
 
+from bs4 import BeautifulSoup
+import re
+
+def clean_email(email_text):
+    """Cleans the email text by replacing [at] with @ and [dot] with ."""
+    if email_text:
+        return email_text.replace("[at]", "@").replace("[dot]", ".")
+    return None
+
+def extract_contact_info(html_content):
+    """
+    Extracts office name, address, general contact, and individual contact details
+    from the provided HTML content.
+    """
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    office_info = {}
+    individual_contacts = []
+
+    # --- Extracting from the <p> tag ---
+    p_tag = soup.find('p')
+    if p_tag:
+        # Get all text content, then split by <br/> tags
+        # We use .stripped_strings to get text nodes without extra whitespace
+        p_lines = list(p_tag.stripped_strings)
+        
+        if p_lines:
+            office_info['office_name'] = p_lines[0]
+            
+            # Address lines are usually after the name and before the email
+            address_lines = []
+            email_line_index = -1
+            for i, line in enumerate(p_lines):
+                if "[at]" in line and "[dot]" in line: # Heuristic for email
+                    email_line_index = i
+                    break
+                if i > 0 : # Skip office name
+                    address_lines.append(line)
+            
+            if email_line_index != -1:
+                office_info['office_address'] = " ".join(address_lines[:email_line_index-1]).strip() # Exclude the email line itself
+                office_info['office_email'] = clean_email(p_lines[email_line_index])
+            else: # If no email found in p_lines, assume all are address lines after name
+                 office_info['office_address'] = " ".join(address_lines).strip()
+                 office_info['office_email'] = None
+
+
+            # Extracting STD code, Toll-Free, PRO numbers (more robustly)
+            p_text_content = p_tag.get_text(separator='\n').strip()
+            
+            std_match = re.search(r"STD-Code\s*:\s*(\d+)", p_text_content)
+            if std_match:
+                office_info['std_code'] = std_match.group(1)
+
+            toll_free_match = re.search(r"Toll Free No\.\s*:\s*(\d+)", p_text_content)
+            if toll_free_match:
+                office_info['toll_free_no'] = toll_free_match.group(1)
+            
+            # PRO numbers can be tricky due to formatting, this is an attempt
+            pro_match = re.search(r"PRO No\.\s*:\s*([\d\n\s]+)", p_text_content)
+            if pro_match:
+                pro_numbers_raw = pro_match.group(1).strip()
+                office_info['pro_numbers'] = [num.strip() for num in pro_numbers_raw.split('\n') if num.strip().isdigit()]
+
+
+    # --- Extracting from the <table> ---
+    table = soup.find('table')
+    if table:
+        rows = table.find_all('tr', class_='border_bottom') # Only process data rows
+        
+        for row in rows:
+            cols = row.find_all('td')
+            contact_detail = {}
+            
+            if len(cols) >= 2: # Expecting at least name and phone/email column
+                # Column 1: Name and Designation
+                name_designation_parts = [text for text in cols[0].stripped_strings]
+                if name_designation_parts:
+                    contact_detail['name'] = name_designation_parts[0]
+                    if len(name_designation_parts) > 1:
+                        contact_detail['designation'] = name_designation_parts[1]
+                    else:
+                        contact_detail['designation'] = None
+                else:
+                    contact_detail['name'] = None
+                    contact_detail['designation'] = None
+
+                # Column 2: Phone numbers and Email
+                # This column can have multiple lines for phone numbers and an email
+                contact_info_parts = [text.strip() for text in cols[1].stripped_strings if text.strip()]
+                
+                phone_numbers = []
+                email = None
+                
+                for part in contact_info_parts:
+                    if "[at]" in part and "[dot]" in part:
+                        email = clean_email(part)
+                    elif re.match(r'^[\d\s]+$', part): # Check if it's likely a phone number
+                        # Remove any internal spaces from phone numbers if necessary
+                        phone_numbers.append(part.replace(" ", "")) 
+                
+                contact_detail['phone_numbers'] = list(set(phone_numbers)) # Use set to remove duplicates
+                contact_detail['email'] = email
+
+                # Column 3: Fax (if present)
+                if len(cols) >= 3:
+                    fax_parts = [text.strip() for text in cols[2].stripped_strings if text.strip()]
+                    if fax_parts:
+                         # Check if it's likely a fax number
+                        fax_numbers = [part.replace(" ", "") for part in fax_parts if re.match(r'^[\d\s]+$', part)]
+                        if fax_numbers:
+                             contact_detail['fax'] = list(set(fax_numbers))
+
+                if contact_detail.get('name'): # Only add if a name was found
+                    individual_contacts.append(contact_detail)
+
+    return office_info, individual_contacts
+
+
+
 all_results = []
 
-for query_param_str in queries[:2]:
+for query_param_str in queries:
     print(f"Processing: {query_param_str}")
     try:
         response = requests.post(target_url, data=query_param_str, headers=headers, timeout=30)
         response.raise_for_status()
         
         html_content = response.text
-        soup = BeautifulSoup(html_content, 'html.parser')
-
-        office_text = "Office details not found"
-        office_p_tag = soup.find('p') # First <p> usually contains office details
-        if office_p_tag:
-            # Extract all text content, using space as separator, then clean up multiple spaces
-            # Also replace [dot] and [at]
-            raw_text = office_p_tag.get_text(separator=' ', strip=True)
-            # Replace [dot] and [at] first, then normalize spaces
-            cleaned_text = raw_text.replace("[dot]", ".").replace("[at]", "@")
-            # Normalize multiple spaces into a single space
-            office_text = ' '.join(cleaned_text.split())
-            # Remove image placeholders (like 'ph3.jpg', 'email1.jpg', 'fax1.jpg')
-            # These might get included if they are part of text nodes not handled by strip=True on their own
-            office_text = re.sub(r'\s*(ph3|email1|fax1)\.jpg\s*', ' ', office_text).strip()
-            office_text = ' '.join(office_text.split()) # Re-normalize spaces after image removal
-
-        officials_data = []
-        table_body = soup.find('tbody', id='tbl_body')
-        if table_body:
-            rows = table_body.find_all('tr')
-            for i, row in enumerate(rows):
-                if i == 0 and row.find('th'): # Skip header row if it contains <th>
-                    continue
-                cols = row.find_all('td')
-                if len(cols) > 0: 
-                    official_details = {}
-                    has_data = False
-                    for idx, col in enumerate(cols):
-                        col_text_raw = ' '.join(col.get_text(separator=' ', strip=True).split())
-                        # Replace [dot] and [at] in official details as well
-                        col_text_cleaned = col_text_raw.replace("[dot]", ".").replace("[at]", "@")
-                        # Remove image placeholders
-                        col_text_cleaned = re.sub(r'\s*(ph3|email1|fax1)\.jpg\s*', ' ', col_text_cleaned).strip()
-                        col_text_cleaned = ' '.join(col_text_cleaned.split())
-
-                        official_details[str(idx)] = col_text_cleaned
-                        if col_text_cleaned: 
-                            has_data = True
-                    
-                    if has_data:
-                        officials_data.append(official_details)
+        office_details, staff_contacts = extract_contact_info(html_doc)
         
         all_results.append({
             "query": query_param_str,
-            "office": office_text,
-            "officials": officials_data
+            "office": office_details,
+            "officials": staff_contacts
         })
         
         time.sleep(0.5) # Reduced sleep time, adjust if rate limiting occurs
