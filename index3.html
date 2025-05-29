@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPFO Contact Search</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for better UX on longer lists */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem; /* 12px */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem; /* 24px */
+            margin-bottom: 1.5rem; /* 24px */
+            transition: all 0.3s ease-in-out;
+        }
+        .card:hover {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .search-input {
+            border-radius: 0.5rem; /* 8px */
+            padding: 0.75rem 1rem; /* 12px 16px */
+            border: 1px solid #D1D5DB; /* gray-300 */
+            width: 100%;
+        }
+        .search-btn {
+            background-color: #2563EB; /* blue-600 */
+            color: white;
+            padding: 0.75rem 1.5rem; /* 12px 24px */
+            border-radius: 0.5rem; /* 8px */
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+        .search-btn:hover {
+            background-color: #1D4ED8; /* blue-700 */
+        }
+        .section-title {
+            font-size: 1.5rem; /* 24px */
+            font-weight: 600;
+            color: #1F2937; /* gray-800 */
+            margin-bottom: 1rem; /* 16px */
+            border-bottom: 2px solid #3B82F6; /* blue-500 */
+            padding-bottom: 0.5rem; /* 8px */
+        }
+        .detail-item {
+            margin-bottom: 0.5rem; /* 8px */
+        }
+        .detail-label {
+            font-weight: 500;
+            color: #4B5563; /* gray-600 */
+        }
+        .detail-value {
+            color: #1F2937; /* gray-800 */
+        }
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: #6B7280; /* gray-500 */
+            font-style: italic;
+        }
+        .phone-link, .email-link {
+            color: #2563EB; /* blue-600 */
+            text-decoration: none;
+        }
+        .phone-link:hover, .email-link:hover {
+            text-decoration: underline;
+        }
+        /* Loading spinner styles */
+        .loader {
+            border: 5px solid #f3f3f3; /* Light grey */
+            border-top: 5px solid #3B82F6; /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 2rem auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-4 md:p-8">
+    <div class="container mx-auto max-w-6xl bg-white p-6 md:p-10 rounded-xl shadow-2xl">
+        <header class="mb-8 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-700">EPFO Contact Directory</h1>
+            <p class="text-gray-600 mt-2">Search for EPFO office and official contact information.</p>
+        </header>
+
+        <div id="loadingIndicator" class="text-center py-5" style="display: none;">
+            <div class="loader"></div>
+            <p class="text-gray-600">Loading contact data...</p>
+        </div>
+
+        <div id="errorMessage" class="text-center py-5 text-red-600 font-semibold" style="display: none;">
+            Error loading contact data. Please ensure 'contacts-data.json' is available and try again.
+        </div>
+
+        <section class="mb-10 card">
+            <h2 class="section-title">Search by Office</h2>
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <div class="flex-grow">
+                    <label for="officeSelect" class="block text-sm font-medium text-gray-700 mb-1">Select EPFO Office:</label>
+                    <select id="officeSelect" class="search-input" disabled>
+                        <option value="">-- Loading Offices --</option>
+                    </select>
+                </div>
+                <button id="showOfficeBtn" class="search-btn mt-4 md:mt-0 self-start md:self-end" disabled>Show Details</button>
+            </div>
+        </section>
+
+        <div id="officeDetailsContainer" class="mb-10">
+            </div>
+
+        <div id="officialsListContainer" class="mb-10">
+            </div>
+
+        <hr class="my-10 border-gray-300">
+
+        <section class="mb-10 card">
+            <h2 class="section-title">Search by Official's Name</h2>
+            <div class="flex flex-col md:flex-row md:items-center gap-4">
+                <div class="flex-grow">
+                    <label for="officialNameInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Official's Name:</label>
+                    <input type="text" id="officialNameInput" class="search-input" placeholder="e.g., Brijesh Kumar Mishra" disabled>
+                </div>
+                <button id="searchOfficialBtn" class="search-btn mt-4 md:mt-0 self-start md:self-end" disabled>Search Official</button>
+            </div>
+        </section>
+
+        <div id="officialSearchResultsContainer">
+            </div>
+
+        <footer class="mt-12 text-center text-gray-500 text-sm">
+            <p>EPFO Contact Information. Data processed for user-friendly search.</p>
+        </footer>
+    </div>
+
+    <script>
+        // DOM Elements
+        const officeSelect = document.getElementById('officeSelect');
+        const showOfficeBtn = document.getElementById('showOfficeBtn');
+        const officeDetailsContainer = document.getElementById('officeDetailsContainer');
+        const officialsListContainer = document.getElementById('officialsListContainer');
+        const officialNameInput = document.getElementById('officialNameInput');
+        const searchOfficialBtn = document.getElementById('searchOfficialBtn');
+        const officialSearchResultsContainer = document.getElementById('officialSearchResultsContainer');
+        const loadingIndicator = document.getElementById('loadingIndicator');
+        const errorMessage = document.getElementById('errorMessage');
+
+        let epfoContactsData = []; // To store the fetched contact data
+
+        // Function to display loading state
+        function showLoading(isLoading) {
+            if (isLoading) {
+                loadingIndicator.style.display = 'block';
+                errorMessage.style.display = 'none';
+                officeSelect.disabled = true;
+                showOfficeBtn.disabled = true;
+                officialNameInput.disabled = true;
+                searchOfficialBtn.disabled = true;
+            } else {
+                loadingIndicator.style.display = 'none';
+                officeSelect.disabled = false;
+                showOfficeBtn.disabled = false;
+                officialNameInput.disabled = false;
+                searchOfficialBtn.disabled = false;
+            }
+        }
+
+        // Function to display error message
+        function showError() {
+            loadingIndicator.style.display = 'none';
+            errorMessage.style.display = 'block';
+        }
+
+        // Function to fetch and process contact data
+        async function loadContactData() {
+            showLoading(true);
+            try {
+                // Fetch data from the JSON file
+                const response = await fetch('contacts-data.json'); // Ensure this file is in the same directory or provide the correct path
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                epfoContactsData = await response.json();
+                populateOfficeSelect(); // Populate dropdown once data is loaded
+                showLoading(false);
+            } catch (error) {
+                console.error('Error loading contact data:', error);
+                showError();
+                showLoading(false); // Also hide loading if error occurs
+            }
+        }
+
+        // Function to populate the office select dropdown
+        function populateOfficeSelect() {
+            officeSelect.innerHTML = '<option value="">-- Select an Office --</option>'; // Clear existing options and add default
+            epfoContactsData.forEach((contact, index) => {
+                // Use office_name if available and not '-', otherwise use a modified query
+                let officeDisplayName = contact.office && contact.office.office_name && contact.office.office_name !== '-' ? contact.office.office_name : `Office Entry ${index + 1} (Query: ${contact.query.replace('q=', '')})`;
+                if (officeDisplayName.length > 70) { // Truncate long names for display
+                    officeDisplayName = officeDisplayName.substring(0, 67) + '...';
+                }
+                const option = document.createElement('option');
+                option.value = index; // Use index as value
+                option.textContent = officeDisplayName;
+                officeSelect.appendChild(option);
+            });
+        }
+
+        // Function to format phone numbers
+        function formatPhoneNumber(stdCode, number) {
+            if (!number) return 'N/A';
+            return stdCode ? `(${stdCode}) ${number}` : number;
+        }
+
+        // Function to create a clickable phone link
+        function createPhoneLink(stdCode, number) {
+            const fullNumber = stdCode ? `${stdCode}${number}` : number;
+            return `<a href="tel:${fullNumber}" class="phone-link">${formatPhoneNumber(stdCode, number)}</a>`;
+        }
+
+        // Function to create a clickable email link
+        function createEmailLink(email) {
+            if (!email || email.trim() === '' || email.toLowerCase() === 'null') return 'N/A';
+            return `<a href="mailto:${email}" class="email-link">${email}</a>`;
+        }
+
+
+        // Function to display office details
+        function displayOfficeDetails() {
+            const selectedIndex = officeSelect.value;
+            officeDetailsContainer.innerHTML = ''; // Clear previous details
+            officialsListContainer.innerHTML = ''; // Clear previous officials list
+
+            if (selectedIndex === "") {
+                officeDetailsContainer.innerHTML = '<p class="text-center text-gray-500">Please select an office to see details.</p>';
+                return;
+            }
+
+            const selectedContact = epfoContactsData[selectedIndex];
+            if (!selectedContact || !selectedContact.office) {
+                officeDetailsContainer.innerHTML = '<p class="text-center text-red-500">Selected office data is incomplete or missing.</p>';
+                return;
+            }
+            const office = selectedContact.office;
+
+            let detailsHtml = `<div class="card bg-blue-50">
+                                <h3 class="text-xl font-semibold text-blue-700 mb-3">${office.office_name && office.office_name !== '-' ? office.office_name : 'Office Details'}</h3>`;
+
+            if (office.office_address && office.office_address !== 'STD-Code :') { // Check for placeholder address
+                 detailsHtml += `<p class="detail-item"><span class="detail-label">Address:</span> <span class="detail-value">${office.office_address.replace(/\n/g, '<br>')}</span></p>`;
+            }
+            if (office.office_email) {
+                detailsHtml += `<p class="detail-item"><span class="detail-label">Email:</span> <span class="detail-value">${createEmailLink(office.office_email)}</span></p>`;
+            }
+            if (office.toll_free_no) {
+                detailsHtml += `<p class="detail-item"><span class="detail-label">Toll-Free:</span> <span class="detail-value">${createPhoneLink(null, office.toll_free_no)}</span></p>`;
+            }
+            if (office.pro_numbers && office.pro_numbers.length > 0) {
+                detailsHtml += `<p class="detail-item"><span class="detail-label">PRO Numbers:</span> <span class="detail-value">${office.pro_numbers.map(num => createPhoneLink(office.std_code, num)).join(', ')}</span></p>`;
+            }
+            detailsHtml += `</div>`;
+            officeDetailsContainer.innerHTML = detailsHtml;
+
+            // Display officials for the selected office
+            displayOfficials(selectedContact.officials, office.std_code, officialsListContainer, "Officials at this Office");
+        }
+
+        // Function to display a list of officials
+        function displayOfficials(officials, stdCode, container, title) {
+            if (!officials || officials.length === 0) {
+                container.innerHTML = `<p class="no-results">No officials listed for this selection.</p>`;
+                return;
+            }
+
+            let officialsHtml = `<div class="card bg-green-50">
+                                    <h4 class="text-lg font-semibold text-green-700 mb-4">${title}</h4>
+                                    <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
+            officials.forEach(official => {
+                officialsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+                                    <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
+                                    ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+                                    ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(stdCode, num)).join(', ')}</p>` : ''}
+                                    ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
+                                    ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(stdCode, num)).join(', ')}</p>` : ''}
+                                </li>`;
+            });
+            officialsHtml += `</ul></div>`;
+            container.innerHTML = officialsHtml;
+        }
+
+        // Function to search for officials by name
+        function searchOfficialByName() {
+            const searchTerm = officialNameInput.value.trim().toLowerCase();
+            officialSearchResultsContainer.innerHTML = ''; // Clear previous results
+
+            if (searchTerm === "") {
+                officialSearchResultsContainer.innerHTML = '<p class="text-center text-gray-500">Please enter a name to search.</p>';
+                return;
+            }
+
+            const results = [];
+            epfoContactsData.forEach(contact => {
+                if (contact.officials && contact.officials.length > 0) {
+                    contact.officials.forEach(official => {
+                        if (official.name && official.name.toLowerCase().includes(searchTerm)) {
+                            results.push({
+                                ...official,
+                                officeName: contact.office && contact.office.office_name && contact.office.office_name !== '-' ? contact.office.office_name : `Office (Query: ${contact.query.replace('q=', '')})`,
+                                officeStdCode: contact.office ? contact.office.std_code : null
+                            });
+                        }
+                    });
+                }
+            });
+
+            if (results.length === 0) {
+                officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${officialNameInput.value}".</p>`;
+            } else {
+                 let resultsHtml = `<div class="card bg-yellow-50">
+                                   <h3 class="text-xl font-semibold text-yellow-700 mb-3">Search Results (${results.length} found)</h3>
+                                   <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
+                results.forEach(official => {
+                    resultsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+                                        <p class="font-semibold text-gray-800">${official.name}</p>
+                                        ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+                                        <p class="text-sm text-gray-500 italic">Office: ${official.officeName}</p>
+                                        ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(official.officeStdCode, num)).join(', ')}</p>` : ''}
+                                        ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
+                                        ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(official.officeStdCode, num)).join(', ')}</p>` : ''}
+                                    </li>`;
+                });
+                resultsHtml += `</ul></div>`;
+                officialSearchResultsContainer.innerHTML = resultsHtml;
+            }
+        }
+
+        // Event Listeners
+        showOfficeBtn.addEventListener('click', displayOfficeDetails);
+        searchOfficialBtn.addEventListener('click', searchOfficialByName);
+        officialNameInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                searchOfficialByName();
+            }
+        });
+
+        // Load data on page load
+        document.addEventListener('DOMContentLoaded', loadContactData);
+    </script>
+</body>
+</html>
