@@ -19,7 +19,7 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Run fetching script
-        run: python ./path/to/your_fetch_script.py # Store the script in your repo
+        run: python ./fetch.py # Store the script in your repo
 
       - name: Commit and push if changed
         run: |
