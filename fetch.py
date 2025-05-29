@@ -368,7 +368,7 @@ for query_param_str in queries:
         response.raise_for_status()
         
         html_content = response.text
-        office_details, staff_contacts = extract_contact_info(html_doc)
+        office_details, staff_contacts = extract_contact_info(html_content)
         
         all_results.append({
             "query": query_param_str,
