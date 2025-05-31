@@ -394,25 +394,6 @@
         officeAutocompleteSuggestions.innerHTML = '';
         officeAutocompleteSuggestions.style.display = 'none';
         displayOfficeDetails(officeData); // This will display text details and hierarchy
-
-        // NEW: Zoom map to selected office
-        if (officeMap && officeData.office && officeData.office.latitude != null && officeData.office.longitude != null) {
-            const lat = parseFloat(officeData.office.latitude);
-            const lon = parseFloat(officeData.office.longitude);
-            if (!isNaN(lat) && !isNaN(lon)) {
-                officeMap.setView([lat, lon], 14); // Zoom level 14, adjust as needed
-
-                // Optional: Find and open popup for the specific marker
-                mapMarkersGroup.eachLayer(function (layer) {
-                    // This assumes you store query or some unique ID with marker, or compare coordinates
-                    if (layer.getLatLng().lat == lat && layer.getLatLng().lng == lon) {
-                       // layer.openPopup(); // If you used bindPopup instead of just bindTooltip
-                       // For tooltips, they appear on hover. For a persistent label, a popup is better.
-                       // Alternatively, add a temporary "selected" marker.
-                    }
-                });
-            }
-        }
         // Scroll the main content to the details view
         document.getElementById('contentColumn')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
