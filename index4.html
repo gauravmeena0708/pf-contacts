@@ -475,22 +475,13 @@
 
     function displayEnhancedHierarchy(currentContactData) {
         const breadcrumbs = currentContactData.hierarchy_breadcrumbs;
-        console.log(breadcrumbs);
         hierarchyDisplay.innerHTML = ''; // Clear previous
         if (!breadcrumbs || breadcrumbs.length <= 1) {
             officeHierarchySidebar.style.display = 'none';
             return;
         }
 
-        let hierarchyHtml = '<h3>Office Path</h3><ul>';
-        if (breadcrumbs && breadcrumbs.length > 0) { // Ensure breadcrumbs exist
-            breadcrumbs.slice(1).forEach((crumb) => { // .slice(1) creates a new array starting from the second element
-                const crumbQuery = `q=${encodeURIComponent(crumb.query_param)}`;
-                hierarchyHtml += `<li class="parent-office"><a href="#" class="dynamic-office-link" data-officequery="${crumbQuery}">${crumb.name || 'Unnamed Level'}</a></li>`;
-            });
-        }
-        hierarchyHtml += '</ul>';
-
+        let hierarchyHtml = '<h3>Office Path</h3>';
         // --- Children Offices ---
         let childrenHtml = '';
         const children = epfoContactsData.filter(otherContact => {
