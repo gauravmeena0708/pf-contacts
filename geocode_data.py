@@ -5,7 +5,7 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderUnavailable
 
 # --- Configuration ---
-input_json_file = 'contacts-data-hierarchical.json' # Your source JSON with addresses
+input_json_file = 'contacts-data.json' # Your source JSON with addresses
 output_json_file = 'contacts-data-geocoded-by-pin.json' # New output file
 USER_AGENT_FOR_NOMINATIM = "EPFO OFFICE Locator"
 
