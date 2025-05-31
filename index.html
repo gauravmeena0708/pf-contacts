@@ -3,105 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EPFO Contact Search</title>
+    <title>EPFO Contact Directory with Map</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+         crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+         crossorigin=""></script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
-        /* Custom scrollbar for better UX on longer lists */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 8px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+        /* Custom scrollbar */
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #555; }
+
         .card {
-            background-color: white;
-            border-radius: 0.75rem; /* 12px */
+            background-color: white; border-radius: 0.75rem; /* 12px */
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            padding: 1.5rem; /* 24px */
-            margin-bottom: 1.5rem; /* 24px */
+            padding: 1.5rem; /* 24px */ margin-bottom: 1.5rem; /* 24px */
             transition: all 0.3s ease-in-out;
         }
         .card:hover {
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .search-input {
-            border-radius: 0.5rem; /* 8px */
-            padding: 0.75rem 1rem; /* 12px 16px */
-            border: 1px solid #D1D5DB; /* gray-300 */
-            width: 100%;
+            border-radius: 0.5rem; padding: 0.75rem 1rem; 
+            border: 1px solid #D1D5DB; width: 100%;
         }
         .search-btn {
-            background-color: #2563EB; /* blue-600 */
-            color: white;
-            padding: 0.75rem 1.5rem; /* 12px 24px */
-            border-radius: 0.5rem; /* 8px */
-            font-weight: 500;
-            transition: background-color 0.3s;
+            background-color: #2563EB; color: white; padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; font-weight: 500; transition: background-color 0.3s;
+            cursor: pointer;
         }
-        .search-btn:hover {
-            background-color: #1D4ED8; /* blue-700 */
-        }
+        .search-btn:hover { background-color: #1D4ED8; }
+        .search-btn:disabled { background-color: #9CA3AF; cursor: not-allowed;}
+
         .section-title {
-            font-size: 1.5rem; /* 24px */
-            font-weight: 600;
-            color: #1F2937; /* gray-800 */
-            margin-bottom: 1rem; /* 16px */
-            border-bottom: 2px solid #3B82F6; /* blue-500 */
-            padding-bottom: 0.5rem; /* 8px */
+            font-size: 1.5rem; font-weight: 600; color: #1F2937; /* gray-800 */
+            margin-bottom: 1rem; border-bottom: 2px solid #3B82F6; padding-bottom: 0.5rem;
         }
-        .detail-item {
-            margin-bottom: 0.5rem; /* 8px */
+        .detail-item { margin-bottom: 0.5rem; }
+        .detail-label { font-weight: 500; color: #4B5563; /* gray-600 */ }
+        .detail-value { color: #1F2937; /* gray-800 */ }
+        .no-results { text-align: center; padding: 2rem; color: #6B7280; font-style: italic; }
+        
+        .phone-link, .email-link { color: #2563EB; text-decoration: none; }
+        .phone-link:hover, .email-link:hover { text-decoration: underline; }
+        
+        .dynamic-office-link {
+            color: #2563EB; 
+            text-decoration: none; 
+            font-weight: 500; 
+            cursor: pointer;
         }
-        .detail-label {
-            font-weight: 500;
-            color: #4B5563; /* gray-600 */
-        }
-        .detail-value {
-            color: #1F2937; /* gray-800 */
-        }
-        .no-results {
-            text-align: center;
-            padding: 2rem;
-            color: #6B7280; /* gray-500 */
-            font-style: italic;
-        }
-        .phone-link, .email-link {
-            color: #2563EB; /* blue-600 */
-            text-decoration: none;
-        }
-        .phone-link:hover, .email-link:hover {
+        .dynamic-office-link:hover {
+            color: #1D4ED8; 
             text-decoration: underline;
         }
-        /* Loading spinner styles */
+
         .loader {
-            border: 5px solid #f3f3f3; /* Light grey */
-            border-top: 5px solid #3B82F6; /* Blue */
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 2rem auto;
+            border: 5px solid #f3f3f3; border-top: 5px solid #3B82F6; border-radius: 50%;
+            width: 50px; height: 50px; animation: spin 1s linear infinite; margin: 2rem auto;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+        .autocomplete-suggestions {
+            border: 1px solid #ddd; max-height: 200px; overflow-y: auto;
+            background-color: white; position: absolute; 
+            /* Adjust width: typically same as input or slightly wider */
+            /* This calculation assumes the input's parent is the relative container */
+            width: 100%; 
+            left:0; /* Align with left of parent */
+            z-index: 1000; border-radius: 0 0 0.5rem 0.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .autocomplete-suggestions div { padding: 0.75rem 1rem; cursor: pointer; }
+        .autocomplete-suggestions div:hover { background-color: #f0f0f0; }
+
+        #mainContentLayout { display: flex; gap: 1.5rem; }
+        #detailsColumn { flex-grow: 1; }
+        #officeHierarchySidebar {
+            width: 280px; flex-shrink: 0; background-color: #f9fafb; 
+            padding: 1.5rem; border-radius: 0.75rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); height: fit-content;
+        }
+        #officeHierarchySidebar h3 {
+            font-size: 1.125rem; font-weight: 600; color: #1F2937; 
+            margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #D1D5DB;
+        }
+         #officeHierarchySidebar h4 {
+            font-size: 1rem; font-weight: 600; color: #374151; /* gray-700 */
+            margin-top: 1rem; margin-bottom: 0.5rem;
+        }
+        #officeHierarchySidebar ul { list-style-type: none; padding-left: 0; }
+        #officeHierarchySidebar li { padding: 0.25rem 0; color: #4B5563; }
+        #officeHierarchySidebar .parent-office { padding-left: 1rem; position: relative; }
+        #officeHierarchySidebar .parent-office::before {
+            content: "↳"; position: absolute; left: 0; color: #9CA3AF;
+        }
+         /* For children/sister lists */
+        #officeHierarchySidebar ul ul li { padding-left: 1.5rem; /* Deeper indent for sub-lists */ }
+        #officeHierarchySidebar ul ul li::before { content:"- "; }
+
+
+        #officeMapContainer {
+            border-radius: 0.5rem; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen p-4 md:p-8">
-    <div class="container mx-auto max-w-6xl bg-white p-6 md:p-10 rounded-xl shadow-2xl">
-        <header class="mb-8 text-center">
+<body class="bg-gray-100 text-gray-800"> <div class="w-full min-h-screen bg-white shadow-xl"> 
+        <header class="p-6 md:p-10 text-center border-b">
             <h1 class="text-3xl md:text-4xl font-bold text-blue-700">EPFO Contact Directory</h1>
             <p class="text-gray-600 mt-2">Search for EPFO office and official contact information.</p>
         </header>
@@ -110,265 +128,491 @@
             <div class="loader"></div>
             <p class="text-gray-600">Loading contact data...</p>
         </div>
-
         <div id="errorMessage" class="text-center py-5 text-red-600 font-semibold" style="display: none;">
-            Error loading contact data. Please ensure 'contacts-data.json' is available and try again.
+            Error loading contact data.
         </div>
 
-        
+        <div class="flex flex-col md:flex-row px-4 py-6 md:p-6 gap-6">
 
-       
-
-        <section class="mb-10 card">
-            <h2 class="section-title">Search by Official's Name</h2>
-            <div class="flex flex-col md:flex-row md:items-center gap-4">
-                <div class="flex-grow">
-                    <label for="officialNameInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Official's Name:</label>
-                    <input type="text" id="officialNameInput" class="search-input" placeholder="e.g., Gaurav" disabled>
+            <aside id="mapColumn" class="w-full md:w-1/3 lg:w-2/5 xl:w-1/3 flex-shrink-0 order-first md:order-none">
+                <div class="sticky top-6">
+                    <h2 class="section-title mb-4 text-xl">Office Map</h2>
+                    <div id="officeMapContainer" style="height: 65vh; min-height: 450px; width: 100%;" class="rounded-lg shadow-md border bg-gray-200">
+                        <p class="text-center text-gray-500 p-4" id="mapPlaceholderMsg" style="display:none;">Map loading or not available.</p>
+                    </div>
                 </div>
-                <button id="searchOfficialBtn" class="search-btn mt-4 md:mt-0 self-start md:self-end" disabled>Search Official</button>
-            </div>
-        </section>
+            </aside>
 
-        <div id="officialSearchResultsContainer">
-            </div>
-         <hr class="my-10 border-gray-300">
-        <section class="mb-10 card">
-            <h2 class="section-title">Search by Office</h2>
-            <div class="flex flex-col md:flex-row md:items-center gap-4">
-                <div class="flex-grow">
-                    <label for="officeSelect" class="block text-sm font-medium text-gray-700 mb-1">Select EPFO Office:</label>
-                    <select id="officeSelect" class="search-input" disabled>
-                        <option value="">-- Loading Offices --</option>
-                    </select>
+            <main id="contentColumn" class="w-full md:w-2/3 lg:w-3/5 xl:w-2/3 flex-grow">
+                
+                <section class="mb-6 card">
+                    <h2 class="section-title">Search by Official's Details</h2>
+                    <div class="flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="flex-grow">
+                            <label for="officialNameInput" class="block text-sm font-medium text-gray-700 mb-1">Enter Official's Name, Designation, Phone, etc.:</label>
+                            <input type="text" id="officialNameInput" class="search-input" placeholder="e.g., Gaurav, RPFC, 2737..." disabled>
+                        </div>
+                        <button id="searchOfficialBtn" class="search-btn mt-4 md:mt-0 self-start md:self-end" disabled>Search Official</button>
+                    </div>
+                </section>
+                <div id="officialSearchResultsContainer" class="mb-6"></div>
+                
+                <hr class="my-6 md:my-10 border-gray-300">
+
+                <section class="mb-6 card">
+                    <h2 class="section-title">Search by Office</h2>
+                    <div class="flex flex-col md:flex-row md:items-center gap-4">
+                        <div class="flex-grow relative">
+                            <label for="officeSearchInput" class="block text-sm font-medium text-gray-700 mb-1">Type EPFO Office Name:</label>
+                            <input type="text" id="officeSearchInput" class="search-input" placeholder="-- Type to search offices --" disabled>
+                            <div id="officeAutocompleteSuggestions" class="autocomplete-suggestions mt-1" style="display: none;"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <div id="officeDisplaySection" class="mt-6"> 
+                     <div class="flex flex-col lg:flex-row gap-6">
+                        <aside id="officeHierarchySidebar" class="w-full lg:w-1/3 xl:w-1/4 order-last lg:order-first card bg-gray-50" style="display: none;">
+                             <div id="hierarchyDisplay"></div>
+                        </aside>
+                        <div id="detailsColumn" class="flex-grow order-first lg:order-last">
+                            <div id="officeDetailsContainer" class="mb-6"></div>
+                            <div id="officialsListContainer"></div>
+                        </div>
+                    </div>
                 </div>
-                <button id="showOfficeBtn" class="search-btn mt-4 md:mt-0 self-start md:self-end" disabled>Show Details</button>
-            </div>
-        </section>
-
-        <div id="officeDetailsContainer" class="mb-10">
-            </div>
-
-        <div id="officialsListContainer" class="mb-10">
-            </div>
-
-        <footer class="mt-12 text-center text-gray-500 text-sm">
+            </main>
+        </div> <footer class="p-6 md:p-10 mt-12 text-center text-gray-500 text-sm border-t">
             <p>EPFO Contact Information. Data processed for user-friendly search.</p>
         </footer>
-    </div>
+    </div> 
+<script>
+    // DOM Elements
+    const officeSearchInput = document.getElementById('officeSearchInput');
+    const officeAutocompleteSuggestions = document.getElementById('officeAutocompleteSuggestions');
+    const officeDetailsContainer = document.getElementById('officeDetailsContainer');
+    const officialsListContainer = document.getElementById('officialsListContainer');
+    const officialNameInput = document.getElementById('officialNameInput');
+    const searchOfficialBtn = document.getElementById('searchOfficialBtn');
+    const officialSearchResultsContainer = document.getElementById('officialSearchResultsContainer');
+    const loadingIndicator = document.getElementById('loadingIndicator');
+    const errorMessage = document.getElementById('errorMessage');
+    const officeHierarchySidebar = document.getElementById('officeHierarchySidebar');
+    const hierarchyDisplay = document.getElementById('hierarchyDisplay');
+    const officeMapContainer = document.getElementById('officeMapContainer');
 
-    <script>
-        // DOM Elements
-        const officeSelect = document.getElementById('officeSelect');
-        const showOfficeBtn = document.getElementById('showOfficeBtn');
-        const officeDetailsContainer = document.getElementById('officeDetailsContainer');
-        const officialsListContainer = document.getElementById('officialsListContainer');
-        const officialNameInput = document.getElementById('officialNameInput');
-        const searchOfficialBtn = document.getElementById('searchOfficialBtn');
-        const officialSearchResultsContainer = document.getElementById('officialSearchResultsContainer');
-        const loadingIndicator = document.getElementById('loadingIndicator');
-        const errorMessage = document.getElementById('errorMessage');
 
-        let epfoContactsData = []; // To store the fetched contact data
+    let epfoContactsData = [];
+    let searchableOffices = [];
+    let officeMap = null;
+    let mapMarkersGroup = null;
 
-        // Function to display loading state
-        function showLoading(isLoading) {
-            if (isLoading) {
-                loadingIndicator.style.display = 'block';
-                errorMessage.style.display = 'none';
-                officeSelect.disabled = true;
-                showOfficeBtn.disabled = true;
-                officialNameInput.disabled = true;
-                searchOfficialBtn.disabled = true;
-            } else {
-                loadingIndicator.style.display = 'none';
-                officeSelect.disabled = false;
-                showOfficeBtn.disabled = false;
-                officialNameInput.disabled = false;
-                searchOfficialBtn.disabled = false;
-            }
+    // --- Utility Functions ---
+    function formatPhoneNumber(stdCode, number) {
+        if (!number || String(number).trim() === '') return 'N/A';
+        number = String(number).trim();
+        return stdCode ? `(${String(stdCode).trim()}) ${number}` : number;
+    }
+
+    function createPhoneLink(stdCode, number) {
+        if (!number || String(number).trim() === '') return 'N/A';
+        number = String(number).trim();
+        const fullNumber = stdCode ? `${String(stdCode).trim()}${number}` : number;
+        if (!/^\d[\d\s-]*$/.test(fullNumber.replace(/\+/g, ''))) return formatPhoneNumber(stdCode, number);
+        return `<a href="tel:${fullNumber.replace(/\s|-/g, '')}" class="phone-link">${formatPhoneNumber(stdCode, number)}</a>`;
+    }
+
+    function createEmailLink(email) {
+        if (!email || email.trim() === '' || email.toLowerCase() === 'null') return 'N/A';
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return email.trim();
+        return `<a href="mailto:${email.trim()}" class="email-link">${email.trim()}</a>`;
+    }
+
+    // --- Loading and Error States ---
+    function showLoading(isLoading) {
+        loadingIndicator.style.display = isLoading ? 'block' : 'none';
+        errorMessage.style.display = 'none';
+        if (isLoading) {
+            officeSearchInput.disabled = true;
+            officialNameInput.disabled = true;
+            searchOfficialBtn.disabled = true;
         }
+    }
 
-        // Function to display error message
-        function showError() {
-            loadingIndicator.style.display = 'none';
-            errorMessage.style.display = 'block';
+    function showError(message = "Error loading data.") {
+        showLoading(false); // Ensure loader is hidden
+        errorMessage.textContent = message;
+        errorMessage.style.display = 'block';
+        officeSearchInput.disabled = true;
+        officialNameInput.disabled = true;
+        searchOfficialBtn.disabled = true;
+    }
+
+    // --- Data Loading and Initialization ---
+    async function loadContactData() {
+        showLoading(true);
+        try {
+            const response = await fetch('contacts-data-geocoded-by-pin.json'); // Ensure this is your geocoded file
+            if (!response.ok) throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}. Check if JSON file is present.`);
+            const data = await response.json();
+            if (!Array.isArray(data)) throw new Error("Loaded data is not in the expected array format.");
+            
+            epfoContactsData = data;
+            initializeUI();
+            initializeOfficeMap(); 
+            showLoading(false);
+        } catch (error) {
+            console.error('Error loading contact data:', error);
+            showError(`Failed to load contact data: ${error.message}`);
         }
+    }
 
-        // Function to fetch and process contact data
-        async function loadContactData() {
-            showLoading(true);
-            try {
-                // Fetch data from the JSON file
-                const response = await fetch('contacts-data.json'); // Ensure this file is in the same directory or provide the correct path
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
+    function initializeUI() {
+        searchableOffices = epfoContactsData.map((contact, index) => {
+            const displayName = contact.office_name_hierarchical || 
+                                (contact.office ? contact.office.office_name : `Entry ${index + 1}`);
+            return {
+                name: displayName || "Unnamed Office",
+                query: contact.query,
+                originalData: contact
+            };
+        }).filter(office => office.name && office.name.trim() !== '-' && office.name.trim() !== '');
+
+        officeSearchInput.disabled = false;
+        officialNameInput.disabled = false;
+        searchOfficialBtn.disabled = false;
+
+        officeSearchInput.addEventListener('input', handleOfficeSearchInput);
+        officialNameInput.addEventListener('keypress', e => e.key === 'Enter' && searchOfficialByDetails());
+        searchOfficialBtn.addEventListener('click', searchOfficialByDetails);
+        
+        document.addEventListener('click', event => {
+            if (officeSearchInput && officeAutocompleteSuggestions) { // Ensure elements exist
+                if (!officeSearchInput.contains(event.target) && !officeAutocompleteSuggestions.contains(event.target)) {
+                    officeAutocompleteSuggestions.innerHTML = '';
+                    officeAutocompleteSuggestions.style.display = 'none';
                 }
-                epfoContactsData = await response.json();
-                populateOfficeSelect(); // Populate dropdown once data is loaded
-                showLoading(false);
-            } catch (error) {
-                console.error('Error loading contact data:', error);
-                showError();
-                showLoading(false); // Also hide loading if error occurs
-            }
-        }
-
-        // Function to populate the office select dropdown
-        function populateOfficeSelect() {
-            officeSelect.innerHTML = '<option value="">-- Select an Office --</option>'; // Clear existing options and add default
-            epfoContactsData.forEach((contact, index) => {
-                // Use office_name if available and not '-', otherwise use a modified query
-                let officeDisplayName = contact.office && contact.office.office_name && contact.office.office_name !== '-' ? contact.office.office_name : `Office Entry ${index + 1} (Query: ${contact.query.replace('q=', '')})`;
-                if (officeDisplayName.length > 70) { // Truncate long names for display
-                    officeDisplayName = officeDisplayName.substring(0, 67) + '...';
-                }
-                const option = document.createElement('option');
-                option.value = index; // Use index as value
-                option.textContent = officeDisplayName;
-                officeSelect.appendChild(option);
-            });
-        }
-
-        // Function to format phone numbers
-        function formatPhoneNumber(stdCode, number) {
-            if (!number) return 'N/A';
-            return stdCode ? `(${stdCode}) ${number}` : number;
-        }
-
-        // Function to create a clickable phone link
-        function createPhoneLink(stdCode, number) {
-            const fullNumber = stdCode ? `${stdCode}${number}` : number;
-            return `<a href="tel:${fullNumber}" class="phone-link">${formatPhoneNumber(stdCode, number)}</a>`;
-        }
-
-        // Function to create a clickable email link
-        function createEmailLink(email) {
-            if (!email || email.trim() === '' || email.toLowerCase() === 'null') return 'N/A';
-            return `<a href="mailto:${email}" class="email-link">${email}</a>`;
-        }
-
-
-        // Function to display office details
-        function displayOfficeDetails() {
-            const selectedIndex = officeSelect.value;
-            officeDetailsContainer.innerHTML = ''; // Clear previous details
-            officialsListContainer.innerHTML = ''; // Clear previous officials list
-
-            if (selectedIndex === "") {
-                officeDetailsContainer.innerHTML = '<p class="text-center text-gray-500">Please select an office to see details.</p>';
-                return;
-            }
-
-            const selectedContact = epfoContactsData[selectedIndex];
-            if (!selectedContact || !selectedContact.office) {
-                officeDetailsContainer.innerHTML = '<p class="text-center text-red-500">Selected office data is incomplete or missing.</p>';
-                return;
-            }
-            const office = selectedContact.office;
-
-            let detailsHtml = `<div class="card bg-blue-50">
-                                <h3 class="text-xl font-semibold text-blue-700 mb-3">${office.office_name && office.office_name !== '-' ? office.office_name : 'Office Details'}</h3>`;
-
-            if (office.office_address && office.office_address !== 'STD-Code :') { // Check for placeholder address
-                 detailsHtml += `<p class="detail-item"><span class="detail-label">Address:</span> <span class="detail-value">${office.office_address.replace(/\n/g, '<br>')}</span></p>`;
-            }
-            if (office.office_email) {
-                detailsHtml += `<p class="detail-item"><span class="detail-label">Email:</span> <span class="detail-value">${createEmailLink(office.office_email)}</span></p>`;
-            }
-            if (office.toll_free_no) {
-                detailsHtml += `<p class="detail-item"><span class="detail-label">Toll-Free:</span> <span class="detail-value">${createPhoneLink(null, office.toll_free_no)}</span></p>`;
-            }
-            if (office.pro_numbers && office.pro_numbers.length > 0) {
-                detailsHtml += `<p class="detail-item"><span class="detail-label">PRO Numbers:</span> <span class="detail-value">${office.pro_numbers.map(num => createPhoneLink(office.std_code, num)).join(', ')}</span></p>`;
-            }
-            detailsHtml += `</div>`;
-            officeDetailsContainer.innerHTML = detailsHtml;
-
-            // Display officials for the selected office
-            displayOfficials(selectedContact.officials, office.std_code, officialsListContainer, "Officials at this Office");
-        }
-
-        // Function to display a list of officials
-        function displayOfficials(officials, stdCode, container, title) {
-            if (!officials || officials.length === 0) {
-                container.innerHTML = `<p class="no-results">No officials listed for this selection.</p>`;
-                return;
-            }
-
-            let officialsHtml = `<div class="card bg-green-50">
-                                    <h4 class="text-lg font-semibold text-green-700 mb-4">${title}</h4>
-                                    <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
-            officials.forEach(official => {
-                officialsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                                    <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
-                                    ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
-                                    ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(stdCode, num)).join(', ')}</p>` : ''}
-                                    ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
-                                    ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(stdCode, num)).join(', ')}</p>` : ''}
-                                </li>`;
-            });
-            officialsHtml += `</ul></div>`;
-            container.innerHTML = officialsHtml;
-        }
-
-        // Function to search for officials by name
-        function searchOfficialByName() {
-            const searchTerm = officialNameInput.value.trim().toLowerCase();
-            officialSearchResultsContainer.innerHTML = ''; // Clear previous results
-
-            if (searchTerm === "") {
-                officialSearchResultsContainer.innerHTML = '<p class="text-center text-gray-500">Please enter a name to search.</p>';
-                return;
-            }
-
-            const results = [];
-            epfoContactsData.forEach(contact => {
-                if (contact.officials && contact.officials.length > 0) {
-                    contact.officials.forEach(official => {
-                        if (official.name && official.name.toLowerCase().includes(searchTerm)) {
-                            results.push({
-                                ...official,
-                                officeName: contact.office && contact.office.office_name && contact.office.office_name !== '-' ? contact.office.office_name : `Office (Query: ${contact.query.replace('q=', '')})`,
-                                officeStdCode: contact.office ? contact.office.std_code : null
-                            });
-                        }
-                    });
-                }
-            });
-
-            if (results.length === 0) {
-                officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${officialNameInput.value}".</p>`;
-            } else {
-                 let resultsHtml = `<div class="card bg-yellow-50">
-                                   <h3 class="text-xl font-semibold text-yellow-700 mb-3">Search Results (${results.length} found)</h3>
-                                   <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
-                results.forEach(official => {
-                    resultsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                                        <p class="font-semibold text-gray-800">${official.name}</p>
-                                        ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
-                                        <p class="text-sm text-gray-500 italic">Office: ${official.officeName}</p>
-                                        ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(official.officeStdCode, num)).join(', ')}</p>` : ''}
-                                        ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
-                                        ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(official.officeStdCode, num)).join(', ')}</p>` : ''}
-                                    </li>`;
-                });
-                resultsHtml += `</ul></div>`;
-                officialSearchResultsContainer.innerHTML = resultsHtml;
-            }
-        }
-
-        // Event Listeners
-        showOfficeBtn.addEventListener('click', displayOfficeDetails);
-        searchOfficialBtn.addEventListener('click', searchOfficialByName);
-        officialNameInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                searchOfficialByName();
             }
         });
+        
+        officialSearchResultsContainer.addEventListener('click', handleDynamicLinkClick);
+        if (hierarchyDisplay) hierarchyDisplay.addEventListener('click', handleDynamicLinkClick);
+    }
 
-        // Load data on page load
-        document.addEventListener('DOMContentLoaded', loadContactData);
-    </script>
+    function handleDynamicLinkClick(event) {
+        let target = event.target;
+        while (target != null && !target.classList.contains('dynamic-office-link')) {
+            if (target === this) { target = null; break; }
+            target = target.parentNode;
+        }
+        if (target && target.classList.contains('dynamic-office-link')) {
+            event.preventDefault();
+            const officeQuery = target.dataset.officequery;
+            if (officeQuery) showOfficeByQuery(officeQuery);
+        }
+    }
+    
+    // --- Map Initialization and Functions ---
+    function initializeOfficeMap() {
+        if (!epfoContactsData || epfoContactsData.length === 0 || !L) {
+            console.warn("Map cannot be initialized: No data or Leaflet library not loaded.");
+            if (officeMapContainer) officeMapContainer.innerHTML = '<p class="text-center p-4">Map data unavailable.</p>';
+            return;
+        }
+        if (officeMap) officeMap.remove();
+
+        officeMap = L.map('officeMapContainer').setView([22, 77], 5); // Adjusted default center for India
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18,
+        }).addTo(officeMap);
+
+        if (mapMarkersGroup) mapMarkersGroup.clearLayers();
+        else mapMarkersGroup = L.layerGroup().addTo(officeMap);
+
+        const validOfficeLocations = [];
+        epfoContactsData.forEach(contact => {
+            if (contact.office && contact.office.latitude != null && contact.office.longitude != null) {
+                const lat = parseFloat(contact.office.latitude);
+                const lon = parseFloat(contact.office.longitude);
+                if (!isNaN(lat) && !isNaN(lon)) {
+                    const officeName = contact.office_name_hierarchical || contact.office.office_name || "EPFO Office";
+                    const marker = L.marker([lat, lon]);
+                    let tooltipContent = `<b>${officeName}</b>`;
+                    if (contact.office.office_address) {
+                        tooltipContent += `<br><small>${String(contact.office.office_address).split('\n')[0]}</small>`;
+                    }
+                    tooltipContent += `<br><small><i>Click pin for details</i></small>`;
+                    marker.bindTooltip(tooltipContent);
+                    marker.on('click', () => {
+                        showOfficeByQuery(contact.query);
+                        document.getElementById('officeDetailsContainer')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    });
+                    mapMarkersGroup.addLayer(marker);
+                    validOfficeLocations.push([lat, lon]);
+                }
+            }
+        });
+        if (validOfficeLocations.length > 0) officeMap.fitBounds(validOfficeLocations, { padding: [50, 50] });
+        else if (officeMapContainer) officeMapContainer.innerHTML = '<p class="text-center p-4">No office locations with coordinates found.</p>';
+    }
+
+    // --- Office Search and Autocomplete ---
+    function handleOfficeSearchInput() {
+        const searchTerm = officeSearchInput.value.trim().toLowerCase();
+        officeAutocompleteSuggestions.innerHTML = '';
+        if (searchTerm.length < 2) {
+            officeAutocompleteSuggestions.style.display = 'none';
+            return;
+        }
+        const matchedOffices = searchableOffices.filter(office =>
+            office.name && office.name.toLowerCase().includes(searchTerm)
+        );
+        if (matchedOffices.length > 0) {
+            matchedOffices.slice(0, 10).forEach(office => {
+                const suggestionDiv = document.createElement('div');
+                suggestionDiv.textContent = office.name;
+                suggestionDiv.addEventListener('click', () => {
+                    officeSearchInput.value = office.name;
+                    officeAutocompleteSuggestions.innerHTML = '';
+                    officeAutocompleteSuggestions.style.display = 'none';
+                    displayOfficeDetails(office.originalData);
+                });
+                officeAutocompleteSuggestions.appendChild(suggestionDiv);
+            });
+            officeAutocompleteSuggestions.style.display = 'block';
+        } else {
+            officeAutocompleteSuggestions.style.display = 'none';
+        }
+    }
+    
+    function showOfficeByQuery(officeQueryString) {
+    const officeData = epfoContactsData.find(contact => contact.query === officeQueryString);
+    if (officeData) {
+        officeSearchInput.value = officeData.office_name_hierarchical || (officeData.office ? officeData.office.office_name : '');
+        officeAutocompleteSuggestions.innerHTML = '';
+        officeAutocompleteSuggestions.style.display = 'none';
+        displayOfficeDetails(officeData); // This will display text details and hierarchy
+
+        // NEW: Zoom map to selected office
+        if (officeMap && officeData.office && officeData.office.latitude != null && officeData.office.longitude != null) {
+            const lat = parseFloat(officeData.office.latitude);
+            const lon = parseFloat(officeData.office.longitude);
+            if (!isNaN(lat) && !isNaN(lon)) {
+                officeMap.setView([lat, lon], 14); // Zoom level 14, adjust as needed
+
+                // Optional: Find and open popup for the specific marker
+                mapMarkersGroup.eachLayer(function (layer) {
+                    // This assumes you store query or some unique ID with marker, or compare coordinates
+                    if (layer.getLatLng().lat == lat && layer.getLatLng().lng == lon) {
+                       // layer.openPopup(); // If you used bindPopup instead of just bindTooltip
+                       // For tooltips, they appear on hover. For a persistent label, a popup is better.
+                       // Alternatively, add a temporary "selected" marker.
+                    }
+                });
+            }
+        }
+        // Scroll the main content to the details view
+        document.getElementById('contentColumn')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+
+    } 
+    else {
+            console.warn(`Office with query ${officeQueryString} not found.`);
+            officeDetailsContainer.innerHTML = `<p class="text-center text-red-500">Could not find details for the linked office.</p>`;
+            officialsListContainer.innerHTML = '';
+            hierarchyDisplay.innerHTML = '';
+            officeHierarchySidebar.style.display = 'none';
+        }
+    }
+
+    // --- Display Office Details and Hierarchy ---
+    function displayOfficeDetails(contactData) {
+        officeDetailsContainer.innerHTML = '';
+        officialsListContainer.innerHTML = '';
+        hierarchyDisplay.innerHTML = '';
+        officeHierarchySidebar.style.display = 'none';
+
+        if (!contactData || !contactData.office) {
+            officeDetailsContainer.innerHTML = '<p class="text-center text-red-500">Selected office data is incomplete.</p>';
+            return;
+        }
+        
+        const office = contactData.office;
+        let officeDisplayName = contactData.office_name_hierarchical || office.office_name;
+        if (!officeDisplayName || officeDisplayName === '-') officeDisplayName = 'Office Details';
+
+        let detailsHtml = `<div class="card bg-blue-50">
+                            <h3 class="text-xl font-semibold text-blue-700 mb-3">${officeDisplayName}</h3>`;
+        if (office.office_address && office.office_address !== 'STD-Code :') {
+             detailsHtml += `<p class="detail-item"><span class="detail-label">Address:</span> <span class="detail-value">${String(office.office_address).replace(/\n/g, '<br>')}</span></p>`;
+        }
+        if (office.office_email) {
+            detailsHtml += `<p class="detail-item"><span class="detail-label">Email:</span> <span class="detail-value">${createEmailLink(office.office_email)}</span></p>`;
+        }
+        if (office.toll_free_no) {
+            detailsHtml += `<p class="detail-item"><span class="detail-label">Toll-Free:</span> <span class="detail-value">${createPhoneLink(null, office.toll_free_no)}</span></p>`;
+        }
+        if (office.pro_numbers && office.pro_numbers.length > 0) {
+             detailsHtml += `<p class="detail-item"><span class="detail-label">Phone:</span> <span class="detail-value">${office.pro_numbers.map(num => createPhoneLink(office.std_code, num)).join(', ')}</span></p>`;
+        }
+         if (office.fax_numbers && office.fax_numbers.length > 0) {
+             detailsHtml += `<p class="detail-item"><span class="detail-label">Fax:</span> <span class="detail-value">${office.fax_numbers.map(num => formatPhoneNumber(office.std_code, num)).join(', ')}</span></p>`;
+        }
+        detailsHtml += `</div>`;
+        officeDetailsContainer.innerHTML = detailsHtml;
+
+        if (contactData.officials && contactData.officials.length > 0) {
+            displayOfficials(contactData.officials, office.std_code, officialsListContainer, "Officials at this Office");
+        } else {
+             officialsListContainer.innerHTML = '<p class="no-results">No officials listed for this office.</p>';
+        }
+
+        if (contactData.hierarchy_breadcrumbs && contactData.hierarchy_breadcrumbs.length > 0) {
+            displayEnhancedHierarchy(contactData);
+        }
+    }
+
+    function displayEnhancedHierarchy(currentContactData) {
+        const breadcrumbs = currentContactData.hierarchy_breadcrumbs;
+        hierarchyDisplay.innerHTML = ''; // Clear previous
+        if (!breadcrumbs || breadcrumbs.length <= 1) {
+            officeHierarchySidebar.style.display = 'none';
+            return;
+        }
+
+        let hierarchyHtml = '<h3>Office Path</h3>';
+        // --- Children Offices ---
+        let childrenHtml = '';
+        const children = epfoContactsData.filter(otherContact => {
+            if (!otherContact.hierarchy_breadcrumbs || otherContact.query === currentContactData.query) return false;
+            const obc = otherContact.hierarchy_breadcrumbs;
+            const cbc = currentContactData.hierarchy_breadcrumbs;
+            if (obc.length !== cbc.length + 1) return false;
+            for (let i = 0; i < cbc.length; i++) {
+                if (obc[i].query_param !== cbc[i].query_param) return false;
+            }
+            // The next breadcrumb for 'otherContact' should be the current one.
+            return obc[cbc.length].query_param === currentContactData.office_name_hierarchical; // This needs robust match with query_param
+        });
+
+        if (children.length > 0) {
+            childrenHtml = '<h4>Sub-Offices / Units:</h4><ul>';
+            children.forEach(child => {
+                const childName = child.office_name_hierarchical || child.office.office_name;
+                childrenHtml += `<li><a href="#" class="dynamic-office-link" data-officequery="${child.query}">${childName}</a></li>`;
+            });
+            childrenHtml += '</ul>';
+            hierarchyHtml += childrenHtml;
+        }
+
+        // --- Sister Offices ---
+        if (breadcrumbs.length > 1) { // Must have at least one parent to have sisters
+            let sistersHtml = '';
+            const parentBreadcrumbPath = breadcrumbs.slice(0, -1); // Path to the parent
+            const currentOfficeNameInPath = breadcrumbs[breadcrumbs.length - 1].query_param;
+
+            const sisters = epfoContactsData.filter(otherContact => {
+                if (!otherContact.hierarchy_breadcrumbs || otherContact.query === currentContactData.query) return false;
+                if (otherContact.hierarchy_breadcrumbs.length !== breadcrumbs.length) return false; // Same level
+                
+                const otherParentPath = otherContact.hierarchy_breadcrumbs.slice(0, -1);
+                if (parentBreadcrumbPath.length !== otherParentPath.length) return false;
+
+                let sameParent = true;
+                for (let i = 0; i < parentBreadcrumbPath.length; i++) {
+                    if (parentBreadcrumbPath[i].query_param !== otherParentPath[i].query_param) {
+                        sameParent = false;
+                        break;
+                    }
+                }
+                return sameParent;
+            });
+
+            if (sisters.length > 0) {
+                 sistersHtml = '<h4>Other Offices in this Level:</h4><ul>';
+                sisters.forEach(sister => {
+                    const sisterName = sister.office_name_hierarchical || sister.office.office_name;
+                    sistersHtml += `<li><a href="#" class="dynamic-office-link" data-officequery="${sister.query}">${sisterName}</a></li>`;
+                });
+                sistersHtml += '</ul>';
+                hierarchyHtml += sistersHtml;
+            }
+        }
+        hierarchyDisplay.innerHTML = hierarchyHtml;
+        officeHierarchySidebar.style.display = 'block';
+    }
+
+    function displayOfficials(officials, stdCode, container, title) {
+        if (!officials || officials.length === 0) {
+            container.innerHTML = ''; return;
+        }
+        let officialsHtml = `<div class="card bg-green-50">
+                                <h4 class="text-lg font-semibold text-green-700 mb-4">${title}</h4>
+                                <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
+        officials.forEach(official => {
+            officialsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+                                <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
+                                ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+                                ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(stdCode, num)).join(', ')}</p>` : ''}
+                                ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
+                                ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(stdCode, num)).join(', ')}</p>` : ''}
+                            </li>`;
+        });
+        officialsHtml += `</ul></div>`;
+        container.innerHTML = officialsHtml;
+    }
+
+    function searchOfficialByDetails() {
+        const searchTerm = officialNameInput.value.trim().toLowerCase();
+        officialSearchResultsContainer.innerHTML = ''; 
+        if (searchTerm === "") {
+            officialSearchResultsContainer.innerHTML = '<p class="text-center text-gray-500">Please enter a detail to search.</p>';
+            return;
+        }
+        const results = [];
+        epfoContactsData.forEach(contact => {
+            if (contact.officials && contact.officials.length > 0) {
+                contact.officials.forEach(official => {
+                    let isMatch = false;
+                    const officeName = contact.office_name_hierarchical || (contact.office ? contact.office.office_name : 'N/A');
+                    const officeStdCode = contact.office ? contact.office.std_code : null;
+                    const officeQueryForLink = contact.query;
+
+                    if (official.name?.toLowerCase().includes(searchTerm)) isMatch = true;
+                    if (!isMatch && official.designation?.toLowerCase().includes(searchTerm)) isMatch = true;
+                    if (!isMatch && official.email?.toLowerCase().includes(searchTerm)) isMatch = true;
+                    if (!isMatch && official.phone_numbers?.some(phone => String(phone).includes(searchTerm))) isMatch = true;
+                    if (!isMatch && official.fax?.some(faxNum => String(faxNum).includes(searchTerm))) isMatch = true;
+                    
+                    if (isMatch) results.push({ ...official, officeName, officeStdCode, officeQuery: officeQueryForLink });
+                });
+            }
+        });
+        if (results.length === 0) {
+            officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${officialNameInput.value}".</p>`;
+        } else {
+             let resultsHtml = `<div class="card bg-yellow-50">
+                               <h3 class="text-xl font-semibold text-yellow-700 mb-3">Search Results (${results.length} found)</h3>
+                               <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
+            results.forEach(official => {
+                const officeLink = official.officeQuery ? 
+                    `<a href="#" class="dynamic-office-link" data-officequery="${official.officeQuery}">${official.officeName}</a>` : 
+                    official.officeName;
+                resultsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+                                    <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
+                                    ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+                                    <p class="text-sm text-gray-500 italic">Office: ${officeLink}</p>
+                                    ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(official.officeStdCode, num)).join(', ')}</p>` : ''}
+                                    ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
+                                    ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(official.officeStdCode, num)).join(', ')}</p>` : ''}
+                                </li>`;
+            });
+            resultsHtml += `</ul></div>`;
+            officialSearchResultsContainer.innerHTML = resultsHtml;
+        }
+    }
+    document.addEventListener('DOMContentLoaded', loadContactData);
+</script>
 </body>
 </html>
