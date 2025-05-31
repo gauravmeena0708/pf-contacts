@@ -6,12 +6,30 @@ import re
 
 # Queries can be loaded from a file or defined here
 queries = [
+      "q=DELHI,+UTTARAKHAND,+JAMMU+&+KASHMIR+AND+LADAKH",
+      "q=PUNJAB+&+HIMACHAL+PRADESH",
+      "q=UTTAR+PRADESH",
+      "q=",
+      "q=",
+      "q=",
+      "q=",
+      "q=",
+      "q=ANDHRA+PRADESH,+TELANGANA+&+ORISSA",
+      "q=HARYANA+&+RAJASTHAN",
+      "q=KARNATAKA+&+GOA",
+      "q=PUNJAB+&+HIMACHAL+PRADESH",
+
+      
       "q=DELHI+[NORTH]",
       "q=DELHI+[SOUTH]",
-      "q=LAXMI+NAGAR",
+      "q=DELHI+[EAST]",
       "q=DEHRADUN",
       "q=HALDWANI",
-      "q=ANDHRA+PRADESH,+TELANGANA+&+ORISSA",
+      "q=JAMMU",
+      "q=LEH+(LADAKH)",
+      "q=KASHMIR+(SRINAGAR)",
+      
+      
       "q=GUNTUR",
       "q=CUDAPA",
       "q=RAJAHMUNDRY",
@@ -41,7 +59,7 @@ queries = [
       "q=BRAHMAPUR",
       "q=ROURKELA",
       "q=KEONJHAR",
-      "q=KARNATAKA+&+GOA",
+      
       "q=BANGALORE",
       "q=RAJARAJESHWARI+NAGAR",
       "q=YELAHANKA",
@@ -67,7 +85,7 @@ queries = [
       "q=K+R+PURAM+(WHITEFIELD)",
       "q=TUMKUR",
       "q=GOA",
-      "q=HARYANA+&+RAJASTHAN",
+      
       "q=FARIDABAD",
       "q=KARNAL",
       "q=D.O+-+AMBALA",
@@ -86,7 +104,7 @@ queries = [
       "q=D.O+-+BHARATPUR",
       "q=D.O+-+JHUNJHUNUN",
       "q=D.O+-+BHILWARA",
-      "q=PUNJAB+&+HIMACHAL+PRADESH",
+      
       "q=CHANDIGARH",
       "q=BHATINDA",
       "q=D.O+-+MOGA",
