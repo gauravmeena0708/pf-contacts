@@ -163,317 +163,318 @@
     </div>
 
     <script>
-        const officeSearchInput = document.getElementById('officeSearchInput');
-        const officeAutocompleteSuggestions = document.getElementById('officeAutocompleteSuggestions');
+//         const officeSearchInput = document.getElementById('officeSearchInput');
+//         const officeAutocompleteSuggestions = document.getElementById('officeAutocompleteSuggestions');
         
-        const officeDetailsContainer = document.getElementById('officeDetailsContainer');
-        const officialsListContainer = document.getElementById('officialsListContainer');
+//         const officeDetailsContainer = document.getElementById('officeDetailsContainer');
+//         const officialsListContainer = document.getElementById('officialsListContainer');
         
-        const officialNameInput = document.getElementById('officialNameInput');
-        const searchOfficialBtn = document.getElementById('searchOfficialBtn');
-        const officialSearchResultsContainer = document.getElementById('officialSearchResultsContainer');
+//         const officialNameInput = document.getElementById('officialNameInput');
+//         const searchOfficialBtn = document.getElementById('searchOfficialBtn');
+//         const officialSearchResultsContainer = document.getElementById('officialSearchResultsContainer');
         
-        const loadingIndicator = document.getElementById('loadingIndicator');
-        const errorMessage = document.getElementById('errorMessage');
+//         const loadingIndicator = document.getElementById('loadingIndicator');
+//         const errorMessage = document.getElementById('errorMessage');
 
-        // NEW: Hierarchy display elements
-        const officeHierarchySidebar = document.getElementById('officeHierarchySidebar');
-        const hierarchyDisplay = document.getElementById('hierarchyDisplay');
+//         // NEW: Hierarchy display elements
+//         const officeHierarchySidebar = document.getElementById('officeHierarchySidebar');
+//         const hierarchyDisplay = document.getElementById('hierarchyDisplay');
 
-        let epfoContactsData = []; // To store the fetched contact data
-        let searchableOffices = []; // For office autocomplete
+//         let epfoContactsData = []; // To store the fetched contact data
+//         let searchableOffices = []; // For office autocomplete
 
-        // --- Utility Functions (Phone, Email Links) ---
-        function formatPhoneNumber(stdCode, number) {
-            if (!number || String(number).trim() === '') return 'N/A';
-            number = String(number).trim();
-            return stdCode ? `(${stdCode}) ${number}` : number;
-        }
+//         // --- Utility Functions (Phone, Email Links) ---
+//         function formatPhoneNumber(stdCode, number) {
+//             if (!number || String(number).trim() === '') return 'N/A';
+//             number = String(number).trim();
+//             return stdCode ? `(${stdCode}) ${number}` : number;
+//         }
 
-        function createPhoneLink(stdCode, number) {
-            if (!number || String(number).trim() === '') return 'N/A';
-            number = String(number).trim();
-            const fullNumber = stdCode ? `${stdCode}${number}` : number;
-            // Basic validation to ensure it's a plausible phone number before creating tel: link
-            if (!/^\d[\d\s-]*$/.test(fullNumber.replace(/\+/g, ''))) return formatPhoneNumber(stdCode, number); // Avoid tel: for non-numbers
-            return `<a href="tel:${fullNumber.replace(/\s|-/g, '')}" class="phone-link">${formatPhoneNumber(stdCode, number)}</a>`;
-        }
+//         function createPhoneLink(stdCode, number) {
+//             if (!number || String(number).trim() === '') return 'N/A';
+//             number = String(number).trim();
+//             const fullNumber = stdCode ? `${stdCode}${number}` : number;
+//             // Basic validation to ensure it's a plausible phone number before creating tel: link
+//             if (!/^\d[\d\s-]*$/.test(fullNumber.replace(/\+/g, ''))) return formatPhoneNumber(stdCode, number); // Avoid tel: for non-numbers
+//             return `<a href="tel:${fullNumber.replace(/\s|-/g, '')}" class="phone-link">${formatPhoneNumber(stdCode, number)}</a>`;
+//         }
 
-        function createEmailLink(email) {
-            if (!email || email.trim() === '' || email.toLowerCase() === 'null') return 'N/A';
-            // Basic email validation
-            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return email; // Return as text if not valid format
-            return `<a href="mailto:${email.trim()}" class="email-link">${email.trim()}</a>`;
-        }
+//         function createEmailLink(email) {
+//             if (!email || email.trim() === '' || email.toLowerCase() === 'null') return 'N/A';
+//             // Basic email validation
+//             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return email; // Return as text if not valid format
+//             return `<a href="mailto:${email.trim()}" class="email-link">${email.trim()}</a>`;
+//         }
 
-        // --- Loading and Error States ---
-        function showLoading(isLoading) {
-            if (isLoading) {
-                loadingIndicator.style.display = 'block';
-                errorMessage.style.display = 'none';
-                officeSearchInput.disabled = true;
-                officialNameInput.disabled = true;
-                searchOfficialBtn.disabled = true;
-            } else {
-                loadingIndicator.style.display = 'none';
-                // Enabling will be handled by initializeUI after successful data load
-            }
-        }
+//         // --- Loading and Error States ---
+//         function showLoading(isLoading) {
+//             if (isLoading) {
+//                 loadingIndicator.style.display = 'block';
+//                 errorMessage.style.display = 'none';
+//                 officeSearchInput.disabled = true;
+//                 officialNameInput.disabled = true;
+//                 searchOfficialBtn.disabled = true;
+//             } else {
+//                 loadingIndicator.style.display = 'none';
+//                 // Enabling will be handled by initializeUI after successful data load
+//             }
+//         }
 
-        function showError(message = "Error loading contact data. Please ensure 'contacts-data-hierarchical.json' is available and try again.") {
-            loadingIndicator.style.display = 'none';
-            errorMessage.textContent = message;
-            errorMessage.style.display = 'block';
-            // Keep inputs disabled if there's a load error
-            officeSearchInput.disabled = true;
-            officialNameInput.disabled = true;
-            searchOfficialBtn.disabled = true;
-        }
+//         function showError(message = "Error loading contact data. Please ensure 'contacts-data-hierarchical.json' is available and try again.") {
+//             loadingIndicator.style.display = 'none';
+//             errorMessage.textContent = message;
+//             errorMessage.style.display = 'block';
+//             // Keep inputs disabled if there's a load error
+//             officeSearchInput.disabled = true;
+//             officialNameInput.disabled = true;
+//             searchOfficialBtn.disabled = true;
+//         }
 
-        // --- Data Loading and Initialization ---
-        async function loadContactData() {
-            showLoading(true);
-            try {
-                const response = await fetch('contacts-data-hierarchical.json'); // Ensure this filename matches your new JSON
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}`);
-                }
-                const data = await response.json();
-                if (!Array.isArray(data)) {
-                    throw new Error("Loaded data is not in the expected array format.");
-                }
-                epfoContactsData = data;
-                initializeUI(); // Prepare UI elements and autocomplete data
-                showLoading(false); // Hide loader, inputs will be enabled by initializeUI
-            } catch (error) {
-                console.error('Error loading contact data:', error);
-                showError(`Failed to load contact data: ${error.message}`);
-                // showLoading(false) is called within showError implicitly
-            }
-        }
+//         // --- Data Loading and Initialization ---
+//         async function loadContactData() {
+//             showLoading(true);
+//             try {
+//                 const response = await fetch('contacts-data-hierarchical.json'); // Ensure this filename matches your new JSON
+//                 if (!response.ok) {
+//                     throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}`);
+//                 }
+//                 const data = await response.json();
+//                 if (!Array.isArray(data)) {
+//                     throw new Error("Loaded data is not in the expected array format.");
+//                 }
+//                 epfoContactsData = data;
+//                 initializeUI(); // Prepare UI elements and autocomplete data
+//                 showLoading(false); // Hide loader, inputs will be enabled by initializeUI
+//             } catch (error) {
+//                 console.error('Error loading contact data:', error);
+//                 showError(`Failed to load contact data: ${error.message}`);
+//                 // showLoading(false) is called within showError implicitly
+//             }
+//         }
 
-        function initializeUI() {
-            // Prepare data for office autocomplete
-            searchableOffices = epfoContactsData.map((contact, index) => {
-                const displayName = contact.office_name_hierarchical || 
-                                    (contact.office ? contact.office.office_name : `Entry ${index + 1}`);
-                return {
-                    name: displayName || "Unnamed Office", // Ensure name is never undefined
-                    query: contact.query, // Unique identifier
-                    originalData: contact // Reference to the full data object
-                };
-            }).filter(office => office.name && office.name !== '-'); // Filter out offices with no meaningful name
+//         function initializeUI() {
+//             // Prepare data for office autocomplete
+//             searchableOffices = epfoContactsData.map((contact, index) => {
+//                 const displayName = contact.office_name_hierarchical || 
+//                                     (contact.office ? contact.office.office_name : `Entry ${index + 1}`);
+//                 return {
+//                     name: displayName || "Unnamed Office", // Ensure name is never undefined
+//                     query: contact.query, // Unique identifier
+//                     originalData: contact // Reference to the full data object
+//                 };
+//             }).filter(office => office.name && office.name !== '-'); // Filter out offices with no meaningful name
 
-            // Enable search inputs
-            officeSearchInput.disabled = false;
-            officialNameInput.disabled = false;
-            searchOfficialBtn.disabled = false;
+//             // Enable search inputs
+//             officeSearchInput.disabled = false;
+//             officialNameInput.disabled = false;
+//             searchOfficialBtn.disabled = false;
 
-            // Add event listeners
-            officeSearchInput.addEventListener('input', handleOfficeSearchInput);
-            officialNameInput.addEventListener('keypress', function(event) {
-                if (event.key === 'Enter') {
-                    searchOfficialByDetails();
-                }
-            });
-            searchOfficialBtn.addEventListener('click', searchOfficialByDetails);
+//             // Add event listeners
+//             officeSearchInput.addEventListener('input', handleOfficeSearchInput);
+//             officialNameInput.addEventListener('keypress', function(event) {
+//                 if (event.key === 'Enter') {
+//                     searchOfficialByDetails();
+//                 }
+//             });
+//             searchOfficialBtn.addEventListener('click', searchOfficialByDetails);
             
-            // Clicking outside the autocomplete should close it
-            document.addEventListener('click', function(event) {
-                if (!officeSearchInput.contains(event.target) && !officeAutocompleteSuggestions.contains(event.target)) {
-                    officeAutocompleteSuggestions.innerHTML = '';
-                    officeAutocompleteSuggestions.style.display = 'none';
-                }
-            });
-        }
+//             // Clicking outside the autocomplete should close it
+//             document.addEventListener('click', function(event) {
+//                 if (!officeSearchInput.contains(event.target) && !officeAutocompleteSuggestions.contains(event.target)) {
+//                     officeAutocompleteSuggestions.innerHTML = '';
+//                     officeAutocompleteSuggestions.style.display = 'none';
+//                 }
+//             });
+//         }
 
-        // --- Office Search and Autocomplete ---
-        function handleOfficeSearchInput() {
-            const searchTerm = officeSearchInput.value.trim().toLowerCase();
-            officeAutocompleteSuggestions.innerHTML = '';
+//         // --- Office Search and Autocomplete ---
+//         function handleOfficeSearchInput() {
+//             const searchTerm = officeSearchInput.value.trim().toLowerCase();
+//             officeAutocompleteSuggestions.innerHTML = '';
 
-            if (searchTerm.length < 2) { // Start searching after 2 characters
-                officeAutocompleteSuggestions.style.display = 'none';
-                return;
-            }
+//             if (searchTerm.length < 2) { // Start searching after 2 characters
+//                 officeAutocompleteSuggestions.style.display = 'none';
+//                 return;
+//             }
 
-            const matchedOffices = searchableOffices.filter(office =>
-                office.name.toLowerCase().includes(searchTerm)
-            );
+//             const matchedOffices = searchableOffices.filter(office =>
+//                 office.name.toLowerCase().includes(searchTerm)
+//             );
 
-            if (matchedOffices.length > 0) {
-                matchedOffices.slice(0, 10).forEach(office => { // Show top 10 suggestions
-                    const suggestionDiv = document.createElement('div');
-                    suggestionDiv.textContent = office.name;
-                    suggestionDiv.addEventListener('click', () => {
-                        officeSearchInput.value = office.name;
-                        officeAutocompleteSuggestions.innerHTML = '';
-                        officeAutocompleteSuggestions.style.display = 'none';
-                        displayOfficeDetails(office.originalData);
-                    });
-                    officeAutocompleteSuggestions.appendChild(suggestionDiv);
-                });
-                officeAutocompleteSuggestions.style.display = 'block';
-            } else {
-                officeAutocompleteSuggestions.style.display = 'none';
-            }
-        }
+//             if (matchedOffices.length > 0) {
+//                 matchedOffices.slice(0, 10).forEach(office => { // Show top 10 suggestions
+//                     const suggestionDiv = document.createElement('div');
+//                     suggestionDiv.textContent = office.name;
+//                     suggestionDiv.addEventListener('click', () => {
+//                         officeSearchInput.value = office.name;
+//                         officeAutocompleteSuggestions.innerHTML = '';
+//                         officeAutocompleteSuggestions.style.display = 'none';
+//                         displayOfficeDetails(office.originalData);
+//                     });
+//                     officeAutocompleteSuggestions.appendChild(suggestionDiv);
+//                 });
+//                 officeAutocompleteSuggestions.style.display = 'block';
+//             } else {
+//                 officeAutocompleteSuggestions.style.display = 'none';
+//             }
+//         }
         
-        // --- Display Office Details and Hierarchy ---
-        function displayOfficeDetails(contactData) {
-            officeDetailsContainer.innerHTML = '';
-            officialsListContainer.innerHTML = '';
-            hierarchyDisplay.innerHTML = ''; // Clear previous hierarchy
-            officeHierarchySidebar.style.display = 'none'; // Hide sidebar initially
+//         // --- Display Office Details and Hierarchy ---
+//         function displayOfficeDetails(contactData) {
+//             officeDetailsContainer.innerHTML = '';
+//             officialsListContainer.innerHTML = '';
+//             hierarchyDisplay.innerHTML = ''; // Clear previous hierarchy
+//             officeHierarchySidebar.style.display = 'none'; // Hide sidebar initially
 
-            if (!contactData || !contactData.office) {
-                officeDetailsContainer.innerHTML = '<p class="text-center text-red-500">Selected office data is incomplete or missing.</p>';
-                return;
-            }
+//             if (!contactData || !contactData.office) {
+//                 officeDetailsContainer.innerHTML = '<p class="text-center text-red-500">Selected office data is incomplete or missing.</p>';
+//                 return;
+//             }
             
-            const office = contactData.office;
-            let officeDisplayName = contactData.office_name_hierarchical || office.office_name;
-            if (!officeDisplayName || officeDisplayName === '-') officeDisplayName = 'Office Details';
+//             const office = contactData.office;
+//             let officeDisplayName = contactData.office_name_hierarchical || office.office_name;
+//             if (!officeDisplayName || officeDisplayName === '-') officeDisplayName = 'Office Details';
 
 
-            let detailsHtml = `<div class="card bg-blue-50">
-                                <h3 class="text-xl font-semibold text-blue-700 mb-3">${officeDisplayName}</h3>`;
+//             let detailsHtml = `<div class="card bg-blue-50">
+//                                 <h3 class="text-xl font-semibold text-blue-700 mb-3">${officeDisplayName}</h3>`;
 
-            if (office.office_address && office.office_address !== 'STD-Code :') {
-                 detailsHtml += `<p class="detail-item"><span class="detail-label">Address:</span> <span class="detail-value">${String(office.office_address).replace(/\n/g, '<br>')}</span></p>`;
-            }
-            if (office.office_email) {
-                detailsHtml += `<p class="detail-item"><span class="detail-label">Email:</span> <span class="detail-value">${createEmailLink(office.office_email)}</span></p>`;
-            }
-            if (office.toll_free_no) { // This field is often specific
-                detailsHtml += `<p class="detail-item"><span class="detail-label">Toll-Free:</span> <span class="detail-value">${createPhoneLink(null, office.toll_free_no)}</span></p>`;
-            }
-            // Displaying pro_numbers (which might be general phone numbers for HH/GH)
-            if (office.pro_numbers && office.pro_numbers.length > 0) {
-                 detailsHtml += `<p class="detail-item"><span class="detail-label">Phone:</span> <span class="detail-value">${office.pro_numbers.map(num => createPhoneLink(office.std_code, num)).join(', ')}</span></p>`;
-            }
-            // Displaying fax_numbers if available (especially for HH/GH)
-             if (office.fax_numbers && office.fax_numbers.length > 0) {
-                 detailsHtml += `<p class="detail-item"><span class="detail-label">Fax:</span> <span class="detail-value">${office.fax_numbers.map(num => formatPhoneNumber(office.std_code, num)).join(', ')}</span></p>`;
-            }
+//             if (office.office_address && office.office_address !== 'STD-Code :') {
+//                  detailsHtml += `<p class="detail-item"><span class="detail-label">Address:</span> <span class="detail-value">${String(office.office_address).replace(/\n/g, '<br>')}</span></p>`;
+//             }
+//             if (office.office_email) {
+//                 detailsHtml += `<p class="detail-item"><span class="detail-label">Email:</span> <span class="detail-value">${createEmailLink(office.office_email)}</span></p>`;
+//             }
+//             if (office.toll_free_no) { // This field is often specific
+//                 detailsHtml += `<p class="detail-item"><span class="detail-label">Toll-Free:</span> <span class="detail-value">${createPhoneLink(null, office.toll_free_no)}</span></p>`;
+//             }
+//             // Displaying pro_numbers (which might be general phone numbers for HH/GH)
+//             if (office.pro_numbers && office.pro_numbers.length > 0) {
+//                  detailsHtml += `<p class="detail-item"><span class="detail-label">Phone:</span> <span class="detail-value">${office.pro_numbers.map(num => createPhoneLink(office.std_code, num)).join(', ')}</span></p>`;
+//             }
+//             // Displaying fax_numbers if available (especially for HH/GH)
+//              if (office.fax_numbers && office.fax_numbers.length > 0) {
+//                  detailsHtml += `<p class="detail-item"><span class="detail-label">Fax:</span> <span class="detail-value">${office.fax_numbers.map(num => formatPhoneNumber(office.std_code, num)).join(', ')}</span></p>`;
+//             }
 
 
-            detailsHtml += `</div>`;
-            officeDetailsContainer.innerHTML = detailsHtml;
+//             detailsHtml += `</div>`;
+//             officeDetailsContainer.innerHTML = detailsHtml;
 
-            // Display officials if any
-            if (contactData.officials && contactData.officials.length > 0) {
-                displayOfficials(contactData.officials, office.std_code, officialsListContainer, "Officials at this Office");
-            } else {
-                officialsListContainer.innerHTML = '<p class="no-results">No officials listed for this office.</p>';
-            }
+//             // Display officials if any
+//             if (contactData.officials && contactData.officials.length > 0) {
+//                 displayOfficials(contactData.officials, office.std_code, officialsListContainer, "Officials at this Office");
+//             } else {
+//                 officialsListContainer.innerHTML = '<p class="no-results">No officials listed for this office.</p>';
+//             }
 
-            // Display hierarchy
-            if (contactData.hierarchy_breadcrumbs && contactData.hierarchy_breadcrumbs.length > 0) {
-                displayHierarchy(contactData.hierarchy_breadcrumbs);
-            }
-        }
+//             // Display hierarchy
+//             if (contactData.hierarchy_breadcrumbs && contactData.hierarchy_breadcrumbs.length > 0) {
+//                 displayHierarchy(contactData.hierarchy_breadcrumbs);
+//             }
+//         }
 
-        function displayHierarchy(breadcrumbs) {
-            if (!breadcrumbs || breadcrumbs.length === 0) {
-                hierarchyDisplay.innerHTML = '';
-                officeHierarchySidebar.style.display = 'none';
-                return;
-            }
+//         function displayHierarchy(breadcrumbs) {
+//             if (!breadcrumbs || breadcrumbs.length === 0) {
+//                 hierarchyDisplay.innerHTML = '';
+//                 officeHierarchySidebar.style.display = 'none';
+//                 return;
+//             }
 
-            let hierarchyHtml = '<ul>';
-            breadcrumbs.forEach((crumb, index) => {
-                // Add class for indentation based on level, if desired (e.g. `class="level-${index}"`)
-                // Simple list for now, CSS handles indentation via .parent-office (applied to all here)
-                hierarchyHtml += `<li class="parent-office">${crumb.name || 'Unnamed Level'}</li>`;
-            });
-            hierarchyHtml += '</ul>';
-            hierarchyDisplay.innerHTML = hierarchyHtml;
-            officeHierarchySidebar.style.display = 'block';
-        }
+//             let hierarchyHtml = '<ul>';
+//             breadcrumbs.forEach((crumb, index) => {
+//                 // Add class for indentation based on level, if desired (e.g. `class="level-${index}"`)
+//                 // Simple list for now, CSS handles indentation via .parent-office (applied to all here)
+//                 hierarchyHtml += `<li class="parent-office">${crumb.name || 'Unnamed Level'}</li>`;
+//             });
+//             hierarchyHtml += '</ul>';
+//             hierarchyDisplay.innerHTML = hierarchyHtml;
+//             officeHierarchySidebar.style.display = 'block';
+//         }
 
-        function displayOfficials(officials, stdCode, container, title) {
-            if (!officials || officials.length === 0) {
-                // Container clearing is handled by displayOfficeDetails
-                // container.innerHTML = `<p class="no-results">No officials listed for this selection.</p>`;
-                return;
-            }
+//         function displayOfficials(officials, stdCode, container, title) {
+//             if (!officials || officials.length === 0) {
+//                 // Container clearing is handled by displayOfficeDetails
+//                 // container.innerHTML = `<p class="no-results">No officials listed for this selection.</p>`;
+//                 return;
+//             }
 
-            let officialsHtml = `<div class="card bg-green-50">
-                                    <h4 class="text-lg font-semibold text-green-700 mb-4">${title}</h4>
-                                    <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
-            officials.forEach(official => {
-                officialsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                                    <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
-                                    ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
-                                    ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(stdCode, num)).join(', ')}</p>` : ''}
-                                    ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
-                                    ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(stdCode, num)).join(', ')}</p>` : ''}
-                                </li>`;
-            });
-            officialsHtml += `</ul></div>`;
-            container.innerHTML = officialsHtml;
-        }
+//             let officialsHtml = `<div class="card bg-green-50">
+//                                     <h4 class="text-lg font-semibold text-green-700 mb-4">${title}</h4>
+//                                     <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
+//             officials.forEach(official => {
+//                 officialsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+//                                     <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
+//                                     ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+//                                     ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(stdCode, num)).join(', ')}</p>` : ''}
+//                                     ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
+//                                     ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(stdCode, num)).join(', ')}</p>` : ''}
+//                                 </li>`;
+//             });
+//             officialsHtml += `</ul></div>`;
+//             container.innerHTML = officialsHtml;
+//         }
 
-        // --- Enhanced Official Search ---
-        function searchOfficialByDetails() {
-            const searchTerm = officialNameInput.value.trim().toLowerCase();
-            officialSearchResultsContainer.innerHTML = ''; 
+//         // --- Enhanced Official Search ---
+//         function searchOfficialByDetails() {
+//             const searchTerm = officialNameInput.value.trim().toLowerCase();
+//             officialSearchResultsContainer.innerHTML = ''; 
 
-            if (searchTerm === "") {
-                officialSearchResultsContainer.innerHTML = '<p class="text-center text-gray-500">Please enter a detail to search for officials.</p>';
-                return;
-            }
+//             if (searchTerm === "") {
+//                 officialSearchResultsContainer.innerHTML = '<p class="text-center text-gray-500">Please enter a detail to search for officials.</p>';
+//                 return;
+//             }
 
-            const results = [];
-            epfoContactsData.forEach(contact => {
-                if (contact.officials && contact.officials.length > 0) {
-                    contact.officials.forEach(official => {
-                        let isMatch = false;
-                        const officeName = contact.office_name_hierarchical || (contact.office ? contact.office.office_name : 'N/A');
-                        const officeStdCode = contact.office ? contact.office.std_code : null;
+//             const results = [];
+//             epfoContactsData.forEach(contact => {
+//                 if (contact.officials && contact.officials.length > 0) {
+//                     contact.officials.forEach(official => {
+//                         let isMatch = false;
+//                         const officeName = contact.office_name_hierarchical || (contact.office ? contact.office.office_name : 'N/A');
+//                         const officeStdCode = contact.office ? contact.office.std_code : null;
 
-                        if (official.name?.toLowerCase().includes(searchTerm)) isMatch = true;
-                        if (!isMatch && official.designation?.toLowerCase().includes(searchTerm)) isMatch = true;
-                        if (!isMatch && official.email?.toLowerCase().includes(searchTerm)) isMatch = true;
+//                         if (official.name?.toLowerCase().includes(searchTerm)) isMatch = true;
+//                         if (!isMatch && official.designation?.toLowerCase().includes(searchTerm)) isMatch = true;
+//                         if (!isMatch && official.email?.toLowerCase().includes(searchTerm)) isMatch = true;
                         
-                        if (!isMatch && official.phone_numbers?.some(phone => String(phone).includes(searchTerm))) isMatch = true;
-                        if (!isMatch && official.fax?.some(faxNum => String(faxNum).includes(searchTerm))) isMatch = true;
+//                         if (!isMatch && official.phone_numbers?.some(phone => String(phone).includes(searchTerm))) isMatch = true;
+//                         if (!isMatch && official.fax?.some(faxNum => String(faxNum).includes(searchTerm))) isMatch = true;
                         
-                        if (isMatch) {
-                            results.push({
-                                ...official,
-                                officeName: officeName,
-                                officeStdCode: officeStdCode 
-                            });
-                        }
-                    });
-                }
-            });
+//                         if (isMatch) {
+//                             results.push({
+//                                 ...official,
+//                                 officeName: officeName,
+//                                 officeStdCode: officeStdCode 
+//                             });
+//                         }
+//                     });
+//                 }
+//             });
 
-            if (results.length === 0) {
-                officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${officialNameInput.value}".</p>`;
-            } else {
-                 let resultsHtml = `<div class="card bg-yellow-50">
-                                   <h3 class="text-xl font-semibold text-yellow-700 mb-3">Search Results (${results.length} found)</h3>
-                                   <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
-                results.forEach(official => {
-                    resultsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                                        <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
-                                        ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
-                                        <p class="text-sm text-gray-500 italic">Office: ${official.officeName}</p>
-                                        ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(official.officeStdCode, num)).join(', ')}</p>` : ''}
-                                        ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
-                                        ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(official.officeStdCode, num)).join(', ')}</p>` : ''}
-                                    </li>`;
-                });
-                resultsHtml += `</ul></div>`;
-                officialSearchResultsContainer.innerHTML = resultsHtml;
-            }
-        }
+//             if (results.length === 0) {
+//                 officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${officialNameInput.value}".</p>`;
+//             } else {
+//                  let resultsHtml = `<div class="card bg-yellow-50">
+//                                    <h3 class="text-xl font-semibold text-yellow-700 mb-3">Search Results (${results.length} found)</h3>
+//                                    <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
+//                 results.forEach(official => {
+//                     resultsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
+//                                         <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
+//                                         ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+//                                         <p class="text-sm text-gray-500 italic">Office: ${official.officeName}</p>
+//                                         ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(official.officeStdCode, num)).join(', ')}</p>` : ''}
+//                                         ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
+//                                         ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(official.officeStdCode, num)).join(', ')}</p>` : ''}
+//                                     </li>`;
+//                 });
+//                 resultsHtml += `</ul></div>`;
+//                 officialSearchResultsContainer.innerHTML = resultsHtml;
+//             }
+//         }
 
-        // --- Initial Load ---
-        document.addEventListener('DOMContentLoaded', loadContactData);
+//         // --- Initial Load ---
+//         document.addEventListener('DOMContentLoaded', loadContactData);
 </script>
+<script src="script.js"></script> 
 </body>
 </html>
