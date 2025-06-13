@@ -251,7 +251,7 @@ function initializeOfficeMap() {
                 // When marker is clicked, show details and scroll the content view
                 marker.on('click', () => {
                     showOfficeByQuery(contact.query);
-                    document.getElementById('contentColumn')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    
                 });
                 mapMarkersGroup.addLayer(marker);
                 validOfficeLocations.push([lat, lon]);
@@ -325,6 +325,7 @@ function handleOfficeSearchInput() {
 
 function showOfficeByQuery(officeQueryString) {
     const officeData = epfoContactsData.find(contact => contact.query === officeQueryString);
+    document.getElementById('officeDisplaySection')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     if (officeData) {
         const officeName = officeData.office_name_hierarchical || (officeData.office ? officeData.office.office_name : '');
         officeSearchInput.value = officeName;
