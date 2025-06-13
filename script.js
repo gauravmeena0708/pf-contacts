@@ -284,6 +284,7 @@ function searchOfficeByName() {
         updateUrl({ office: searchTerm });
         gtag('event', 'search', { 'search_term': searchTerm, 'search_type': 'office_button' });
         document.getElementById('hierarchyDisplay').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
     } else {
         officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${searchTerm}".</p>`;
         officialsListContainer.innerHTML = '';
@@ -312,7 +313,7 @@ function handleOfficeSearchInput() {
                 focusMapOnOffice(office.originalData.office);
                 updateUrl({ office: office.name });
                 gtag('event', 'search', { 'search_term': office.name, 'search_type': 'office_autocomplete' });
-                 document.getElementById('officeDetailsContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                 
 
             });
             officeAutocompleteSuggestions.appendChild(suggestionDiv);
