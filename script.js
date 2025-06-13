@@ -283,7 +283,7 @@ function searchOfficeByName() {
         focusMapOnOffice(matchedOffice.originalData.office);
         updateUrl({ office: searchTerm });
         gtag('event', 'search', { 'search_term': searchTerm, 'search_type': 'office_button' });
-        document.getElementById('officeDetailsContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById('hierarchyDisplay').scrollIntoView({ behavior: 'smooth', block: 'center' });
     } else {
         officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${searchTerm}".</p>`;
         officialsListContainer.innerHTML = '';
