@@ -173,6 +173,22 @@ function handleDynamicLinkClick(event) {
 }
 
 // --- Map Initialization and Functions ---
+function focusMapOnOffice(office) {
+    if (officeMap && office && office.latitude != null && office.longitude != null) {
+        const lat = parseFloat(office.latitude);
+        const lon = parseFloat(office.longitude);
+        if (!isNaN(lat) && !isNaN(lon)) {
+            officeMap.setView([lat, lon], 14); // Zoom level 14 is a good starting point
+            // Optional: find the corresponding marker and open its popup
+            mapMarkersGroup.eachLayer(function (layer) {
+                if (layer.getLatLng().lat === lat && layer.getLatLng().lng === lon) {
+                    layer.openPopup();
+                }
+            });
+        }
+    }
+}
+
 function initializeOfficeMap() {
     if (!epfoContactsData || epfoContactsData.length === 0 || !L) {
         if (officeMapContainer) officeMapContainer.innerHTML = '<p class="text-center p-4">Map data unavailable.</p>';
@@ -190,7 +206,7 @@ function initializeOfficeMap() {
             if (!isNaN(lat) && !isNaN(lon)) {
                 const officeName = contact.office_name_hierarchical || contact.office.office_name || "EPFO Office";
                 const marker = L.marker([lat, lon]);
-                marker.bindTooltip(`<b>${officeName}</b><br><small><i>Click pin for details</i></small>`);
+                marker.bindPopup(`<b>${officeName}</b>`);
                 marker.on('click', () => {
                     showOfficeByQuery(contact.query);
                     document.getElementById('contentColumn')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -215,6 +231,7 @@ function searchOfficeByName() {
     const matchedOffice = searchableOffices.find(o => o.name.toLowerCase() === searchTerm.toLowerCase());
     if (matchedOffice) {
         displayOfficeDetails(matchedOffice.originalData);
+        focusMapOnOffice(matchedOffice.originalData.office);
         updateUrl({ office: searchTerm });
         gtag('event', 'search', { 'search_term': searchTerm, 'search_type': 'office_button' });
         document.getElementById('officeDetailsContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -242,7 +259,9 @@ function handleOfficeSearchInput() {
                 officeSearchInput.value = office.name;
                 officeAutocompleteSuggestions.style.display = 'none';
                 displayOfficeDetails(office.originalData);
+                focusMapOnOffice(office.originalData.office);
                 updateUrl({ office: office.name });
+                gtag('event', 'search', { 'search_term': office.name, 'search_type': 'office_autocomplete' });
                 document.getElementById('officeDetailsContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
             officeAutocompleteSuggestions.appendChild(suggestionDiv);
@@ -260,6 +279,7 @@ function showOfficeByQuery(officeQueryString) {
         officeSearchInput.value = officeName;
         officeAutocompleteSuggestions.style.display = 'none';
         displayOfficeDetails(officeData);
+        focusMapOnOffice(officeData.office);
         updateUrl({ office: officeName });
         document.getElementById('contentColumn')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
