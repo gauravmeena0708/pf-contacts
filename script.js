@@ -178,7 +178,7 @@ function focusMapOnOffice(office) {
         const lat = parseFloat(office.latitude);
         const lon = parseFloat(office.longitude);
         if (!isNaN(lat) && !isNaN(lon)) {
-            officeMap.setView([lat, lon], 14); // Zoom level 14 is a good starting point
+            officeMap.setView([lat, lon], 12); // Zoom level 14 is a good starting point
             // Optional: find the corresponding marker and open its popup
             mapMarkersGroup.eachLayer(function (layer) {
                 if (layer.getLatLng().lat === lat && layer.getLatLng().lng === lon) {
