@@ -64,25 +64,28 @@ function showError(message = "Error loading data.") {
 }
 
 // --- Data Loading and Initialization ---
+// --- Data Loading and Initialization ---
 async function loadContactData() {
     showLoading(true);
     try {
         const response = await fetch('contacts-data-geocoded-by-pin.json'); // Ensure this is your geocoded file
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}. Check if JSON file is present.`);
-        const data = await response.json();
-        if (!Array.isArray(data)) throw new Error("Loaded data is not in the expected array format.");
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}. Check if JSON file is present.`); //
+        const data = await response.json(); //
+        if (!Array.isArray(data)) throw new Error("Loaded data is not in the expected array format."); //
 
-        epfoContactsData = data;
-        initializeUI();
-        initializeOfficeMap();
+        epfoContactsData = data; //
+        initializeUI(); //
+        initializeOfficeMap(); //
+        
+        // *** ADD THIS LINE ***
         handleUrlParameters(); // Handle search from URL parameters
+
         showLoading(false);
     } catch (error) {
         console.error('Error loading contact data:', error);
         showError(`Failed to load contact data: ${error.message}`);
     }
 }
-
 function initializeUI() {
     searchableOffices = epfoContactsData.map((contact, index) => {
         const displayName = contact.office_name_hierarchical ||
@@ -121,9 +124,11 @@ function handleUrlParameters() {
     const officerName = urlParams.get('officer');
     const officeName = urlParams.get('office');
 
+    // Prioritize officer search if both parameters are present
     if (officerName) {
         officialNameInput.value = officerName;
         searchOfficialByDetails();
+        // Send event to Google Analytics
         if (typeof gtag === 'function') {
             gtag('event', 'search', {
                 'search_term': officerName,
@@ -133,12 +138,14 @@ function handleUrlParameters() {
     } else if (officeName) {
         officeSearchInput.value = officeName;
         const searchTerm = officeName.trim().toLowerCase();
+        // Find the first matching office and display its details
         const matchedOffice = searchableOffices.find(office => office.name.toLowerCase().includes(searchTerm));
         if (matchedOffice) {
             displayOfficeDetails(matchedOffice.originalData);
         } else {
             officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${officeName}".</p>`;
         }
+        // Send event to Google Analytics
         if (typeof gtag === 'function') {
             gtag('event', 'search', {
                 'search_term': officeName,
