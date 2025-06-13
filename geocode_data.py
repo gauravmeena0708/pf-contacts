@@ -5,9 +5,9 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderUnavailable
 
 # --- Configuration ---
-# The main, non-geocoded data file from fetch.py
-INPUT_JSON_FILE = 'contacts-data-hierarchical.json'
-# The simple, key-value file for coordinates you suggested
+# UPDATED: Reads from the cleaner contacts-data.json
+INPUT_JSON_FILE = 'contacts-data.json'
+# The simple, key-value file for coordinates
 GEOCODES_JSON_FILE = 'geocodes.json'
 USER_AGENT_FOR_NOMINATIM = "EPFO_Office_Locator_by_Gaurav"
 
@@ -72,7 +72,7 @@ if __name__ == "__main__":
         if not office_name:
             continue
 
-        # --- The key change: Skip if already geocoded ---
+        # Skip if already geocoded
         if office_name in geocodes:
             continue
 
