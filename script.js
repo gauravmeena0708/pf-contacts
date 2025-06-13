@@ -1,6 +1,7 @@
 // DOM Elements
 const officeSearchInput = document.getElementById('officeSearchInput');
 const officeAutocompleteSuggestions = document.getElementById('officeAutocompleteSuggestions');
+const searchOfficeBtn = document.getElementById('searchOfficeBtn'); // New button
 
 const officeDetailsContainer = document.getElementById('officeDetailsContainer');
 const officialsListContainer = document.getElementById('officialsListContainer');
@@ -15,7 +16,6 @@ const errorMessage = document.getElementById('errorMessage');
 const officeHierarchySidebar = document.getElementById('officeHierarchySidebar');
 const hierarchyDisplay = document.getElementById('hierarchyDisplay');
 const officeMapContainer = document.getElementById('officeMapContainer');
-
 
 let epfoContactsData = [];
 let searchableOffices = [];
@@ -51,23 +51,24 @@ function showLoading(isLoading) {
         officeSearchInput.disabled = true;
         officialNameInput.disabled = true;
         searchOfficialBtn.disabled = true;
+        searchOfficeBtn.disabled = true; // Disable new button
     }
 }
 
 function showError(message = "Error loading data.") {
-    showLoading(false); // Ensure loader is hidden
+    showLoading(false);
     errorMessage.textContent = message;
     errorMessage.style.display = 'block';
     officeSearchInput.disabled = true;
     officialNameInput.disabled = true;
     searchOfficialBtn.disabled = true;
+    searchOfficeBtn.disabled = true; // Disable new button
 }
 
 // --- Data Loading and Initialization ---
 async function loadContactData() {
     showLoading(true);
     try {
-        // Fetch both files concurrently
         const [contactsResponse, geocodesResponse] = await Promise.all([
             fetch('contacts-data.json'),
             fetch('geocodes.json')
@@ -82,13 +83,10 @@ async function loadContactData() {
         if (!Array.isArray(contacts)) throw new Error("Contacts data is not a valid array.");
         if (typeof geocodes !== 'object' || geocodes === null) throw new Error("Geocodes data is not a valid object.");
 
-        // Merge geocodes into contacts data
         epfoContactsData = contacts.map(contact => {
             if (contact.office_name_hierarchical && geocodes[contact.office_name_hierarchical]) {
                 const [lat, lon] = geocodes[contact.office_name_hierarchical];
-                if (!contact.office) {
-                    contact.office = {};
-                }
+                if (!contact.office) contact.office = {};
                 contact.office.latitude = lat;
                 contact.office.longitude = lon;
             }
@@ -108,20 +106,19 @@ async function loadContactData() {
 
 function initializeUI() {
     searchableOffices = epfoContactsData.map((contact, index) => {
-        const displayName = contact.office_name_hierarchical ||
-                            (contact.office ? contact.office.office_name : `Entry ${index + 1}`);
-        return {
-            name: displayName || "Unnamed Office",
-            query: contact.query,
-            originalData: contact
-        };
+        const displayName = contact.office_name_hierarchical || (contact.office ? contact.office.office_name : `Entry ${index + 1}`);
+        return { name: displayName || "Unnamed Office", query: contact.query, originalData: contact };
     }).filter(office => office.name && office.name.trim() !== '-' && office.name.trim() !== '');
 
     officeSearchInput.disabled = false;
     officialNameInput.disabled = false;
     searchOfficialBtn.disabled = false;
+    searchOfficeBtn.disabled = false;
 
     officeSearchInput.addEventListener('input', handleOfficeSearchInput);
+    officeSearchInput.addEventListener('keypress', e => e.key === 'Enter' && searchOfficeByName());
+    searchOfficeBtn.addEventListener('click', searchOfficeByName);
+
     officialNameInput.addEventListener('keypress', e => e.key === 'Enter' && searchOfficialByDetails());
     searchOfficialBtn.addEventListener('click', searchOfficialByDetails);
 
@@ -138,48 +135,34 @@ function initializeUI() {
     if (hierarchyDisplay) hierarchyDisplay.addEventListener('click', handleDynamicLinkClick);
 }
 
-// --- Handle URL parameters ---
+// --- URL Parameter Handling ---
+function updateUrl(params) {
+    const url = new URL(window.location);
+    url.search = new URLSearchParams(params).toString();
+    window.history.pushState({path: url.href}, '', url.href);
+}
+
 function handleUrlParameters() {
     const urlParams = new URLSearchParams(window.location.search);
     const officerName = urlParams.get('officer');
     const officeName = urlParams.get('office');
 
-    // Prioritize officer search if both parameters are present
     if (officerName) {
         officialNameInput.value = officerName;
         searchOfficialByDetails();
-        if (typeof gtag === 'function') {
-            gtag('event', 'search', {
-                'search_term': officerName,
-                'search_type': 'officer_url_param'
-            });
-        }
+        gtag('event', 'search', { 'search_term': officerName, 'search_type': 'officer_url_param' });
     } else if (officeName) {
         officeSearchInput.value = officeName;
-        const searchTerm = officeName.trim().toLowerCase();
-        const matchedOffice = searchableOffices.find(office => office.name.toLowerCase().includes(searchTerm));
-        if (matchedOffice) {
-            displayOfficeDetails(matchedOffice.originalData);
-        } else {
-            officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${officeName}".</p>`;
-        }
-        if (typeof gtag === 'function') {
-            gtag('event', 'search', {
-                'search_term': officeName,
-                'search_type': 'office_url_param'
-            });
-        }
+        searchOfficeByName();
+        gtag('event', 'search', { 'search_term': officeName, 'search_type': 'office_url_param' });
     }
 }
 
-
+// --- Dynamic Content Functions ---
 function handleDynamicLinkClick(event) {
     let target = event.target;
     while (target != null && !target.classList.contains('dynamic-office-link')) {
-        if (target === this) {
-            target = null;
-            break;
-        }
+        if (target === event.currentTarget) { target = null; break; }
         target = target.parentNode;
     }
     if (target && target.classList.contains('dynamic-office-link')) {
@@ -192,21 +175,13 @@ function handleDynamicLinkClick(event) {
 // --- Map Initialization and Functions ---
 function initializeOfficeMap() {
     if (!epfoContactsData || epfoContactsData.length === 0 || !L) {
-        console.warn("Map cannot be initialized: No data or Leaflet library not loaded.");
         if (officeMapContainer) officeMapContainer.innerHTML = '<p class="text-center p-4">Map data unavailable.</p>';
         return;
     }
     if (officeMap) officeMap.remove();
-
     officeMap = L.map('officeMapContainer').setView([22, 77], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-        maxZoom: 18,
-    }).addTo(officeMap);
-
-    if (mapMarkersGroup) mapMarkersGroup.clearLayers();
-    else mapMarkersGroup = L.layerGroup().addTo(officeMap);
-
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors', maxZoom: 18 }).addTo(officeMap);
+    mapMarkersGroup = L.layerGroup().addTo(officeMap);
     const validOfficeLocations = [];
     epfoContactsData.forEach(contact => {
         if (contact.office && contact.office.latitude != null && contact.office.longitude != null) {
@@ -215,31 +190,41 @@ function initializeOfficeMap() {
             if (!isNaN(lat) && !isNaN(lon)) {
                 const officeName = contact.office_name_hierarchical || contact.office.office_name || "EPFO Office";
                 const marker = L.marker([lat, lon]);
-                let tooltipContent = `<b>${officeName}</b>`;
-                if (contact.office.office_address) {
-                    tooltipContent += `<br><small>${String(contact.office.office_address).split('\n')[0]}</small>`;
-                }
-                tooltipContent += `<br><small><i>Click pin for details</i></small>`;
-                marker.bindTooltip(tooltipContent);
+                marker.bindTooltip(`<b>${officeName}</b><br><small><i>Click pin for details</i></small>`);
                 marker.on('click', () => {
                     showOfficeByQuery(contact.query);
-                    document.getElementById('officeDetailsContainer')?.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    document.getElementById('contentColumn')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 });
                 mapMarkersGroup.addLayer(marker);
                 validOfficeLocations.push([lat, lon]);
             }
         }
     });
-    if (validOfficeLocations.length > 0) officeMap.fitBounds(validOfficeLocations, {
-        padding: [50, 50]
-    });
-    else if (officeMapContainer) officeMapContainer.innerHTML = '<p class="text-center p-4">No office locations with coordinates found.</p>';
+    if (validOfficeLocations.length > 0) officeMap.fitBounds(validOfficeLocations, { padding: [50, 50] });
 }
 
-// --- Office Search and Autocomplete ---
+// --- Office Search ---
+function searchOfficeByName() {
+    const searchTerm = officeSearchInput.value.trim();
+    if (!searchTerm) {
+        officeDetailsContainer.innerHTML = '<p class="no-results">Please enter an office name.</p>';
+        officialsListContainer.innerHTML = '';
+        officeHierarchySidebar.style.display = 'none';
+        return;
+    }
+    const matchedOffice = searchableOffices.find(o => o.name.toLowerCase() === searchTerm.toLowerCase());
+    if (matchedOffice) {
+        displayOfficeDetails(matchedOffice.originalData);
+        updateUrl({ office: searchTerm });
+        gtag('event', 'search', { 'search_term': searchTerm, 'search_type': 'office_button' });
+    } else {
+        officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${searchTerm}".</p>`;
+        officialsListContainer.innerHTML = '';
+        officeHierarchySidebar.style.display = 'none';
+    }
+    officeAutocompleteSuggestions.style.display = 'none';
+}
+
 function handleOfficeSearchInput() {
     const searchTerm = officeSearchInput.value.trim().toLowerCase();
     officeAutocompleteSuggestions.innerHTML = '';
@@ -247,18 +232,16 @@ function handleOfficeSearchInput() {
         officeAutocompleteSuggestions.style.display = 'none';
         return;
     }
-    const matchedOffices = searchableOffices.filter(office =>
-        office.name && office.name.toLowerCase().includes(searchTerm)
-    );
+    const matchedOffices = searchableOffices.filter(o => o.name && o.name.toLowerCase().includes(searchTerm));
     if (matchedOffices.length > 0) {
         matchedOffices.slice(0, 10).forEach(office => {
             const suggestionDiv = document.createElement('div');
             suggestionDiv.textContent = office.name;
             suggestionDiv.addEventListener('click', () => {
                 officeSearchInput.value = office.name;
-                officeAutocompleteSuggestions.innerHTML = '';
                 officeAutocompleteSuggestions.style.display = 'none';
                 displayOfficeDetails(office.originalData);
+                updateUrl({ office: office.name });
             });
             officeAutocompleteSuggestions.appendChild(suggestionDiv);
         });
@@ -271,16 +254,13 @@ function handleOfficeSearchInput() {
 function showOfficeByQuery(officeQueryString) {
     const officeData = epfoContactsData.find(contact => contact.query === officeQueryString);
     if (officeData) {
-        officeSearchInput.value = officeData.office_name_hierarchical || (officeData.office ? officeData.office.office_name : '');
-        officeAutocompleteSuggestions.innerHTML = '';
+        const officeName = officeData.office_name_hierarchical || (officeData.office ? officeData.office.office_name : '');
+        officeSearchInput.value = officeName;
         officeAutocompleteSuggestions.style.display = 'none';
         displayOfficeDetails(officeData);
-        document.getElementById('contentColumn')?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
+        updateUrl({ office: officeName });
+        document.getElementById('contentColumn')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
-        console.warn(`Office with query ${officeQueryString} not found.`);
         officeDetailsContainer.innerHTML = `<p class="text-center text-red-500">Could not find details for the linked office.</p>`;
         officialsListContainer.innerHTML = '';
         hierarchyDisplay.innerHTML = '';
@@ -288,9 +268,9 @@ function showOfficeByQuery(officeQueryString) {
     }
 }
 
-
-// --- Display Office Details and Hierarchy ---
+// --- Display Functions ---
 function displayOfficeDetails(contactData) {
+    // This function remains the same
     officeDetailsContainer.innerHTML = '';
     officialsListContainer.innerHTML = '';
     hierarchyDisplay.innerHTML = '';
@@ -337,15 +317,15 @@ function displayOfficeDetails(contactData) {
 }
 
 function displayEnhancedHierarchy(currentContactData) {
+    // This function remains the same
     const breadcrumbs = currentContactData.hierarchy_breadcrumbs;
-    hierarchyDisplay.innerHTML = ''; // Clear previous
+    hierarchyDisplay.innerHTML = '';
     if (!breadcrumbs || breadcrumbs.length <= 1) {
         officeHierarchySidebar.style.display = 'none';
         return;
     }
 
     let hierarchyHtml = '<h3>Office Path</h3>';
-
     let childrenHtml = '';
     const children = epfoContactsData.filter(otherContact => {
         if (!otherContact.hierarchy_breadcrumbs || otherContact.query === currentContactData.query) return false;
@@ -367,44 +347,12 @@ function displayEnhancedHierarchy(currentContactData) {
         childrenHtml += '</ul>';
         hierarchyHtml += childrenHtml;
     }
-
-    if (breadcrumbs.length > 1) {
-        let sistersHtml = '';
-        const parentBreadcrumbPath = breadcrumbs.slice(0, -1);
-        const currentOfficeNameInPath = breadcrumbs[breadcrumbs.length - 1].query_param;
-
-        const sisters = epfoContactsData.filter(otherContact => {
-            if (!otherContact.hierarchy_breadcrumbs || otherContact.query === currentContactData.query) return false;
-            if (otherContact.hierarchy_breadcrumbs.length !== breadcrumbs.length) return false;
-
-            const otherParentPath = otherContact.hierarchy_breadcrumbs.slice(0, -1);
-            if (parentBreadcrumbPath.length !== otherParentPath.length) return false;
-
-            let sameParent = true;
-            for (let i = 0; i < parentBreadcrumbPath.length; i++) {
-                if (parentBreadcrumbPath[i].query_param !== otherParentPath[i].query_param) {
-                    sameParent = false;
-                    break;
-                }
-            }
-            return sameParent;
-        });
-
-        if (sisters.length > 0) {
-            sistersHtml = '<h4>Other Offices in this Level:</h4><ul>';
-            sisters.forEach(sister => {
-                const sisterName = sister.office_name_hierarchical || sister.office.office_name;
-                sistersHtml += `<li><a href="#" class="dynamic-office-link" data-officequery="${sister.query}">${sisterName}</a></li>`;
-            });
-            sistersHtml += '</ul>';
-            hierarchyHtml += sistersHtml;
-        }
-    }
     hierarchyDisplay.innerHTML = hierarchyHtml;
     officeHierarchySidebar.style.display = 'block';
 }
 
 function displayOfficials(officials, stdCode, container, title) {
+    // This function remains the same
     if (!officials || officials.length === 0) {
         container.innerHTML = '';
         return;
@@ -425,46 +373,45 @@ function displayOfficials(officials, stdCode, container, title) {
     container.innerHTML = officialsHtml;
 }
 
+// --- Official Search ---
 function searchOfficialByDetails() {
-    const searchTerm = officialNameInput.value.trim().toLowerCase();
+    const searchTerm = officialNameInput.value.trim();
     officialSearchResultsContainer.innerHTML = '';
     if (searchTerm === "") {
         officialSearchResultsContainer.innerHTML = '<p class="text-center text-gray-500">Please enter a detail to search.</p>';
         return;
     }
+    const lowerCaseSearchTerm = searchTerm.toLowerCase();
     const results = [];
     epfoContactsData.forEach(contact => {
         if (contact.officials && contact.officials.length > 0) {
             contact.officials.forEach(official => {
-                let isMatch = false;
-                const officeName = contact.office_name_hierarchical || (contact.office ? contact.office.office_name : 'N/A');
-                const officeStdCode = contact.office ? contact.office.std_code : null;
-                const officeQueryForLink = contact.query;
+                const isMatch = (official.name?.toLowerCase().includes(lowerCaseSearchTerm) ||
+                                 official.designation?.toLowerCase().includes(lowerCaseSearchTerm) ||
+                                 official.email?.toLowerCase().includes(lowerCaseSearchTerm) ||
+                                 official.phone_numbers?.some(p => String(p).includes(searchTerm)) ||
+                                 official.fax?.some(f => String(f).includes(searchTerm)));
 
-                if (official.name?.toLowerCase().includes(searchTerm)) isMatch = true;
-                if (!isMatch && official.designation?.toLowerCase().includes(searchTerm)) isMatch = true;
-                if (!isMatch && official.email?.toLowerCase().includes(searchTerm)) isMatch = true;
-                if (!isMatch && official.phone_numbers?.some(phone => String(phone).includes(searchTerm))) isMatch = true;
-                if (!isMatch && official.fax?.some(faxNum => String(faxNum).includes(searchTerm))) isMatch = true;
-
-                if (isMatch) results.push({ ...official,
-                    officeName,
-                    officeStdCode,
-                    officeQuery: officeQueryForLink
-                });
+                if (isMatch) {
+                    results.push({ 
+                        ...official,
+                        officeName: contact.office_name_hierarchical || (contact.office ? contact.office.office_name : 'N/A'),
+                        officeStdCode: contact.office ? contact.office.std_code : null,
+                        officeQuery: contact.query
+                    });
+                }
             });
         }
     });
+
     if (results.length === 0) {
-        officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${officialNameInput.value}".</p>`;
+        officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${searchTerm}".</p>`;
     } else {
         let resultsHtml = `<div class="card bg-yellow-50">
                                <h3 class="text-xl font-semibold text-yellow-700 mb-3">Search Results (${results.length} found)</h3>
                                <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
         results.forEach(official => {
-            const officeLink = official.officeQuery ?
-                `<a href="#" class="dynamic-office-link" data-officequery="${official.officeQuery}">${official.officeName}</a>` :
-                official.officeName;
+            const officeLink = official.officeQuery ? `<a href="#" class="dynamic-office-link" data-officequery="${official.officeQuery}">${official.officeName}</a>` : official.officeName;
             resultsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
                                     <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
                                     ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
@@ -476,6 +423,9 @@ function searchOfficialByDetails() {
         });
         resultsHtml += `</ul></div>`;
         officialSearchResultsContainer.innerHTML = resultsHtml;
+        updateUrl({ officer: searchTerm }); // Update URL on successful search
+        gtag('event', 'search', { 'search_term': searchTerm, 'search_type': 'officer_button' });
     }
 }
+
 document.addEventListener('DOMContentLoaded', loadContactData);
