@@ -211,8 +211,7 @@ function focusMapOnOffice(office) {
         const lat = parseFloat(office.latitude);
         const lon = parseFloat(office.longitude);
         if (!isNaN(lat) && !isNaN(lon)) {
-            officeMap.setView([lat, lon], 14); // Zoom level 14 is a good starting point
-            // Find the corresponding marker and open its popup
+            officeMap.setView([lat, lon], 12);
             mapMarkersGroup.eachLayer(function(layer) {
                 if (layer.getLatLng().lat === lat && layer.getLatLng().lng === lon) {
                     layer.openPopup();
@@ -228,10 +227,10 @@ function initializeOfficeMap() {
         return;
     }
 
-    if (officeMap) officeMap.remove(); // Remove existing map if any
+    if (officeMap) officeMap.remove(); 
     if(mapPlaceholderMsg) mapPlaceholderMsg.style.display = 'none';
     
-    officeMap = L.map('officeMapContainer').setView([22, 77], 5); // Centered on India
+    officeMap = L.map('officeMapContainer').setView([22, 77], 5); 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         maxZoom: 18
