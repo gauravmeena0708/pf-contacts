@@ -64,28 +64,48 @@ function showError(message = "Error loading data.") {
 }
 
 // --- Data Loading and Initialization ---
-// --- Data Loading and Initialization ---
 async function loadContactData() {
     showLoading(true);
     try {
-        const response = await fetch('contacts-data-geocoded-by-pin.json'); // Ensure this is your geocoded file
-        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status} - ${response.statusText}. Check if JSON file is present.`); //
-        const data = await response.json(); //
-        if (!Array.isArray(data)) throw new Error("Loaded data is not in the expected array format."); //
+        // Fetch both files concurrently
+        const [contactsResponse, geocodesResponse] = await Promise.all([
+            fetch('contacts-data.json'),
+            fetch('geocodes.json')
+        ]);
 
-        epfoContactsData = data; //
-        initializeUI(); //
-        initializeOfficeMap(); //
+        if (!contactsResponse.ok) throw new Error(`HTTP error! Status: ${contactsResponse.status} - Could not fetch contacts-data.json.`);
+        if (!geocodesResponse.ok) throw new Error(`HTTP error! Status: ${geocodesResponse.status} - Could not fetch geocodes.json.`);
+
+        const contacts = await contactsResponse.json();
+        const geocodes = await geocodesResponse.json();
+
+        if (!Array.isArray(contacts)) throw new Error("Contacts data is not a valid array.");
+        if (typeof geocodes !== 'object' || geocodes === null) throw new Error("Geocodes data is not a valid object.");
+
+        // Merge geocodes into contacts data
+        epfoContactsData = contacts.map(contact => {
+            if (contact.office_name_hierarchical && geocodes[contact.office_name_hierarchical]) {
+                const [lat, lon] = geocodes[contact.office_name_hierarchical];
+                if (!contact.office) {
+                    contact.office = {};
+                }
+                contact.office.latitude = lat;
+                contact.office.longitude = lon;
+            }
+            return contact;
+        });
         
-        // *** ADD THIS LINE ***
-        handleUrlParameters(); // Handle search from URL parameters
+        initializeUI();
+        initializeOfficeMap();
+        handleUrlParameters();
 
         showLoading(false);
     } catch (error) {
-        console.error('Error loading contact data:', error);
-        showError(`Failed to load contact data: ${error.message}`);
+        console.error('Error loading or processing data:', error);
+        showError(`Failed to load data: ${error.message}`);
     }
 }
+
 function initializeUI() {
     searchableOffices = epfoContactsData.map((contact, index) => {
         const displayName = contact.office_name_hierarchical ||
@@ -106,7 +126,7 @@ function initializeUI() {
     searchOfficialBtn.addEventListener('click', searchOfficialByDetails);
 
     document.addEventListener('click', event => {
-        if (officeSearchInput && officeAutocompleteSuggestions) { // Ensure elements exist
+        if (officeSearchInput && officeAutocompleteSuggestions) {
             if (!officeSearchInput.contains(event.target) && !officeAutocompleteSuggestions.contains(event.target)) {
                 officeAutocompleteSuggestions.innerHTML = '';
                 officeAutocompleteSuggestions.style.display = 'none';
@@ -128,7 +148,6 @@ function handleUrlParameters() {
     if (officerName) {
         officialNameInput.value = officerName;
         searchOfficialByDetails();
-        // Send event to Google Analytics
         if (typeof gtag === 'function') {
             gtag('event', 'search', {
                 'search_term': officerName,
@@ -138,14 +157,12 @@ function handleUrlParameters() {
     } else if (officeName) {
         officeSearchInput.value = officeName;
         const searchTerm = officeName.trim().toLowerCase();
-        // Find the first matching office and display its details
         const matchedOffice = searchableOffices.find(office => office.name.toLowerCase().includes(searchTerm));
         if (matchedOffice) {
             displayOfficeDetails(matchedOffice.originalData);
         } else {
             officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${officeName}".</p>`;
         }
-        // Send event to Google Analytics
         if (typeof gtag === 'function') {
             gtag('event', 'search', {
                 'search_term': officeName,
