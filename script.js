@@ -211,7 +211,7 @@ function focusMapOnOffice(office) {
         const lat = parseFloat(office.latitude);
         const lon = parseFloat(office.longitude);
         if (!isNaN(lat) && !isNaN(lon)) {
-            officeMap.setView([lat, lon], 12);
+            officeMap.setView([lat, lon], 10);
             mapMarkersGroup.eachLayer(function(layer) {
                 if (layer.getLatLng().lat === lat && layer.getLatLng().lng === lon) {
                     layer.openPopup();
