@@ -411,8 +411,8 @@
       "std_code": null,
       "toll_free_no": null,
       "pro_numbers": [
-        "2240046",
-        "2240045"
+        "2240045",
+        "2240046"
       ],
       "fax_numbers": []
     },
@@ -592,6 +592,20 @@
         "fax": [],
         "name": "Shri Ramesh Krishnamurthi",
         "designation": "Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shobhit Shrivastava",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sushil Kumar Katariya",
+        "designation": "Section Officer"
       },
       {
         "phone_numbers": [],
@@ -877,37 +891,10 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
-        "phone_numbers": [
-          "24345236"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri S. K. Gupta",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "20815642"
-        ],
-        "email": "shobhit.singhal@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Shobhit Singhal",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "20815525"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sanjay Bisht",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Shri Sandeep Singh Negi",
+        "name": "Shri Soumya Kanti Gupta",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -921,20 +908,27 @@
       },
       {
         "phone_numbers": [
-          "24345255"
+          "20815525"
         ],
-        "email": "murugavel.sambasivam@epfindia.gov.in",
+        "email": null,
         "fax": [],
-        "name": "Shri S. Murugavel",
+        "name": "Shri Sanjay Bisht",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
         "phone_numbers": [
-          "24345325"
+          "24345236"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Shaswat Shukla",
+        "name": "Shri S. K. Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sandeep Singh Negi",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -948,20 +942,11 @@
       },
       {
         "phone_numbers": [
-          "24345259"
+          "24345325"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Shailendra Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345301"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Saurabh Suman Prasad",
+        "name": "Shri Shaswat Shukla",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -983,13 +968,6 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Shashi Bhushan Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
         "phone_numbers": [
           "20815647"
         ],
@@ -999,17 +977,55 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
-        "phone_numbers": [],
-        "email": null,
+        "phone_numbers": [
+          "24345255"
+        ],
+        "email": "murugavel.sambasivam@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Soumya Kanti Gupta",
+        "name": "Shri S. Murugavel",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Shri R.w Syeim",
+        "name": "Shri Shashi Bhushan Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345259"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shailendra Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815642"
+        ],
+        "email": "shobhit.singhal@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Shobhit Singhal",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345301"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Saurabh Suman Prasad",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "26173877"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Rajesh Kumar Sinha",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1029,21 +1045,19 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri R.w Syeim",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
         "phone_numbers": [
           "20815684"
         ],
         "email": null,
         "fax": [],
         "name": "Shri Raman Dhanasekhar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "26173877"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Rajesh Kumar Sinha",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1075,15 +1089,6 @@
       },
       {
         "phone_numbers": [
-          "24345262"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri P. Senthil Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
           "20815527"
         ],
         "email": null,
@@ -1093,11 +1098,11 @@
       },
       {
         "phone_numbers": [
-          "24345243"
+          "24345262"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Pranjeet Joshi",
+        "name": "Shri P. Senthil Kumar",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1107,6 +1112,15 @@
         "email": null,
         "fax": [],
         "name": "Shri P. P. S. Maingi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345243"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pranjeet Joshi",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1129,20 +1143,20 @@
       },
       {
         "phone_numbers": [
-          "20815524"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Mohammad Shariq",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
           "24345287"
         ],
         "email": null,
         "fax": [],
         "name": "Shri Manoj Kumar Yadav",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345328"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Manish Kr. Thakur",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1156,11 +1170,11 @@
       },
       {
         "phone_numbers": [
-          "24345328"
+          "20815524"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Manish Kr. Thakur",
+        "name": "Shri Mohammad Shariq",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1183,20 +1197,20 @@
       },
       {
         "phone_numbers": [
-          "24345232"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Jitinder Kumar Sangalay",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
           "24345242"
         ],
         "email": null,
         "fax": [],
         "name": "Shri Jogender Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345232"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Jitinder Kumar Sangalay",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1253,15 +1267,6 @@
       },
       {
         "phone_numbers": [
-          "24345249"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Deepak",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
           "20815645"
         ],
         "email": null,
@@ -1271,11 +1276,11 @@
       },
       {
         "phone_numbers": [
-          "24345272"
+          "24345249"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Brijesh K Mishra",
+        "name": "Shri Deepak",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1290,22 +1295,20 @@
       },
       {
         "phone_numbers": [
+          "24345272"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Brijesh K Mishra",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
           "24345237"
         ],
         "email": null,
         "fax": [],
         "name": "Shri B. Andrew Prabhu",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345278"
-        ],
-        "email": "rc.hrm@epfindia.gov.in",
-        "fax": [
-          "26163245"
-        ],
-        "name": "Shri Aditya Shah",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1319,20 +1322,13 @@
       },
       {
         "phone_numbers": [
-          "24345241"
+          "24345278"
         ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Ashwini Kumar Gupta",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345300"
+        "email": "rc.hrm@epfindia.gov.in",
+        "fax": [
+          "26163245"
         ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Amul Raj Singh",
+        "name": "Shri Aditya Shah",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1362,11 +1358,11 @@
       },
       {
         "phone_numbers": [
-          "24345257"
+          "24345300"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Ankesh Srivastava",
+        "name": "Shri Amul Raj Singh",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1378,28 +1374,30 @@
       },
       {
         "phone_numbers": [
+          "24345257"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ankesh Srivastava",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345241"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ashwini Kumar Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
           "26163245"
         ],
         "email": "dir.ol@epfindia.gov.in",
         "fax": [],
         "name": "Dr Veena Rani Yadav",
         "designation": "Director"
-      },
-      {
-        "phone_numbers": [
-          "24345336"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sahalabh Gupta",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sahil Grover",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
         "phone_numbers": [
@@ -1414,7 +1412,23 @@
         "phone_numbers": [],
         "email": null,
         "fax": [],
+        "name": "Shri Sahil Grover",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
         "name": "Shri Satay Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345336"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sahalabh Gupta",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -1494,15 +1508,6 @@
       },
       {
         "phone_numbers": [
-          "24345327"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Kushagra Sagar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
           "24345337"
         ],
         "email": null,
@@ -1526,6 +1531,15 @@
         "email": null,
         "fax": [],
         "name": "Sandeep Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345327"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Kushagra Sagar",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -1595,6 +1609,15 @@
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
+        "phone_numbers": [
+          "24345320"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Atul Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
         "phone_numbers": [],
         "email": null,
         "fax": [],
@@ -1624,15 +1647,6 @@
         "email": null,
         "fax": [],
         "name": "Shri Anil Kumar Jain",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "24345320"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Atul Prakash",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -5918,6 +5932,15 @@
         ],
         "email": null,
         "fax": [],
+        "name": "Smt.teela K",
+        "designation": "Enforcement Officer"
+      },
+      {
+        "phone_numbers": [
+          "2436910"
+        ],
+        "email": null,
+        "fax": [],
         "name": "Smt. Latha N Shet",
         "designation": "Enforcement Officer"
       },
@@ -5928,15 +5951,6 @@
         "email": null,
         "fax": [],
         "name": "Smt. Benny Lobo",
-        "designation": "Enforcement Officer"
-      },
-      {
-        "phone_numbers": [
-          "2436910"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Smt.teela K",
         "designation": "Enforcement Officer"
       },
       {
@@ -6793,20 +6807,6 @@
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
-        "phone_numbers": [],
-        "email": "amansaigal@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Aman Kumar Saigal",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [],
-        "email": "reetumeena@epfindia.gov.in",
-        "fax": [],
-        "name": "Ms. Ritu Meena",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
         "phone_numbers": [
           "26561136"
         ],
@@ -6822,6 +6822,20 @@
         "email": "vsrao.karajada@epfindia.gov.in",
         "fax": [],
         "name": "Shri K.v. Sudarshan Rao",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": "amansaigal@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Aman Kumar Saigal",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": "reetumeena@epfindia.gov.in",
+        "fax": [],
+        "name": "Ms. Ritu Meena",
         "designation": "Assistant P. F. Commissioner"
       },
       {
@@ -7310,15 +7324,6 @@
         ],
         "email": null,
         "fax": [],
-        "name": "Shri M Vijay Anand",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "22262251"
-        ],
-        "email": null,
-        "fax": [],
         "name": "Shri K Sisubalan",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
@@ -7329,6 +7334,15 @@
         "email": "sumit.grover@epfindia.gov.in",
         "fax": [],
         "name": "Shri Sumit Kumar Grover",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "22262251"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri M Vijay Anand",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -7388,15 +7402,6 @@
       },
       {
         "phone_numbers": [
-          "22265332"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "E D P Cell",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
           "22264402"
         ],
         "email": "pension.tbm@epfindia.gov.in",
@@ -7429,6 +7434,15 @@
         "email": "ro.tambaram@epfindia.gov.in",
         "fax": [],
         "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "22265332"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "E D P Cell",
         "designation": "General Numbers"
       },
       {
@@ -10963,12 +10977,28 @@
       },
       {
         "phone_numbers": [
+          "2559890"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Smt. Subbalakshmy N. H.",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
           "2192387"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Ajay Kumar Singh",
+        "name": "Shri A Ravi Kumar",
         "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt. Bigy Varghese",
+        "designation": "Assistant P. F. Commissioner"
       },
       {
         "phone_numbers": [
@@ -10987,24 +11017,6 @@
         "fax": [],
         "name": "Smt Sulochana Sundaresan",
         "designation": "SECTION OFFICER"
-      },
-      {
-        "phone_numbers": [
-          "2559890"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Smt. Subbalakshmy N. H.",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "2559890"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Smt. Bigy Varghese",
-        "designation": "Accounts Officer"
       },
       {
         "phone_numbers": [
@@ -11032,8 +11044,7 @@
     ],
     "office": {
       "pro_numbers": [
-        "2535130",
-        "2566500"
+        "2535130"
       ],
       "phone_numbers_direct": [],
       "fax": [],
@@ -11063,20 +11074,11 @@
       },
       {
         "phone_numbers": [
-          "2566526"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Rohit Sreekumar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
           "2335791"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri S Azhahiya Manavalan",
+        "name": "Smt Reena Menon",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -11094,18 +11096,25 @@
         "designation": "Assistant P. F. Commissioner"
       },
       {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt Sreevidya Unnikrishnan",
+        "designation": "Assistant Director"
+      },
+      {
         "phone_numbers": [
-          "2535130",
-          "2566500"
+          "2535130"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Surendra Nathan  A",
+        "name": "Smt Jayasree Sreekumar",
         "designation": "Public Relation Officer"
       },
       {
         "phone_numbers": [
-          "2566522"
+          "2566522",
+          "2566500"
         ],
         "email": null,
         "fax": [],
@@ -11146,7 +11155,7 @@
       "fax": [],
       "office_name": "District Office, D.O - ALLEYPPEY",
       "office_email": "do.alappuzha@epfindia.gov.in",
-      "office_address": "EPFO,XXVI/513,\nQMM Building, C.C.S.B. Road, Iron Bridge Post,\nALAPPUZHA - 688011",
+      "office_address": "Sanchar Bhavan, Pichu Iyyer Road,\nMullakkal PO,\nALAPPUZHA - 688011",
       "std_code": "0477"
     },
     "officials": [
@@ -11156,14 +11165,7 @@
         ],
         "email": null,
         "fax": [],
-        "name": "Regional P. F. Commissioner (Gr.II)",
-        "designation": null
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Sh John Samuel",
+        "name": "Shri Parveen Saroha",
         "designation": "Assistant P. F. Commissioner"
       }
     ]
@@ -11199,7 +11201,7 @@
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Shri Rohit Sreekumar",
+        "name": "Smt Reena Menon",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -11243,10 +11245,10 @@
         "phone_numbers": [
           "2766528"
         ],
-        "email": null,
+        "email": "ro.kozhikode@epfindia.gov.in",
         "fax": [],
-        "name": "Regional P. F. Commissioner (Gr.I)",
-        "designation": null
+        "name": "Shri Shubham Kashyap",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
         "phone_numbers": [
@@ -11261,10 +11263,10 @@
         "phone_numbers": [
           "2768850"
         ],
-        "email": "shubham.K@epfindia.gov.in",
+        "email": null,
         "fax": [],
-        "name": "Shri Shubham Ashok Kashyap",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
+        "name": "Shri Gaurav Verma",
+        "designation": "Assistant P. F. Commissioner"
       },
       {
         "phone_numbers": [
@@ -11328,16 +11330,16 @@
         "phone_numbers": [
           "2571245"
         ],
-        "email": "anantharaman.s@epfindia.gov.in",
+        "email": null,
         "fax": [],
-        "name": "Shri M. S. Anantharaman",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
+        "name": "Assistant P. F. Commissioner",
+        "designation": null
       },
       {
         "phone_numbers": [
           "2571245"
         ],
-        "email": "ambika.m@epfindia.gov.in",
+        "email": "do.palakkad@epfindia.gov.in",
         "fax": [],
         "name": "Smt Ambika Devadas",
         "designation": "Enforcement Officer"
@@ -11375,18 +11377,18 @@
         "phone_numbers": [
           "204443"
         ],
-        "email": "muralidharan.c@epfindia.gov.in",
+        "email": "do.wayanad@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Muraleedharan C.",
-        "designation": "Assistant P. F. Commissioner"
+        "name": "Assistant P. F. Commissioner",
+        "designation": null
       },
       {
         "phone_numbers": [
           "204443"
         ],
-        "email": "arjit.dubey@epfindia.gov.in",
+        "email": "do.wayanad@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Arjit Dubey",
+        "name": "Shri Akhil Nambiar",
         "designation": "Enforcement Officer"
       }
     ]
@@ -11435,12 +11437,19 @@
         "designation": "Assistant P. F. Commissioner"
       },
       {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Gopakumar M",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
         "phone_numbers": [
           "2767645"
         ],
         "email": null,
         "fax": [],
-        "name": "Bindu Krishna",
+        "name": "Smt Bindu Krishna",
         "designation": "Public Relation Officer"
       },
       {
@@ -11530,13 +11539,6 @@
         "designation": "Private Secretary"
       },
       {
-        "phone_numbers": [],
-        "email": "ro.kannur@epfindia.gov.in",
-        "fax": [],
-        "name": "Assistant P. F. Commissioner",
-        "designation": null
-      },
-      {
         "phone_numbers": [
           "2712388"
         ],
@@ -11570,7 +11572,9 @@
       }
     ],
     "office": {
-      "pro_numbers": [],
+      "pro_numbers": [
+        "2304557"
+      ],
       "phone_numbers_direct": [],
       "fax": [],
       "office_name": "Regional Office, KOTTAYAM",
@@ -11580,20 +11584,13 @@
     },
     "officials": [
       {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Vincet Jacob Cheru",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
         "phone_numbers": [
-          "2304556"
+          "2560489"
         ],
         "email": null,
         "fax": [],
-        "name": "Assistant P. F. Commissioner",
-        "designation": "(Pension)"
+        "name": "Shri Rohit Sreekumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
         "phone_numbers": [
@@ -11603,6 +11600,24 @@
         "fax": [],
         "name": "Smt. Elsa Sylen",
         "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "2304556"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri M M Thomas",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "2304557"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri B Vinod",
+        "designation": "Public Relation Officer"
       },
       {
         "phone_numbers": [
@@ -11657,8 +11672,17 @@
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Vincet Jacob Cheru",
+        "name": "Shri Rohit Sreekumar",
         "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "230703"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Rohit Sajeev",
+        "designation": "Enforcement Officer"
       }
     ]
   },
@@ -11688,11 +11712,13 @@
     },
     "officials": [
       {
-        "phone_numbers": [],
+        "phone_numbers": [
+          "2449546"
+        ],
         "email": null,
         "fax": [],
-        "name": "Shri J S Bindhu",
-        "designation": "Assistant P. F. Commissioner"
+        "name": "Shri. K G Vinod",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
         "phone_numbers": [
@@ -11705,11 +11731,34 @@
       },
       {
         "phone_numbers": [
+          "2442800"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri John Samuel",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Subhash Chandra Das",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt Geetha A",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [
           "2557378"
         ],
         "email": null,
         "fax": [],
-        "name": "Smt Malini Ramesh  .",
+        "name": "Smt Maji G Krishnan .",
         "designation": "Public Relation Officer"
       },
       {
@@ -13032,15 +13081,6 @@
       },
       {
         "phone_numbers": [
-          "9996962805"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
           "2209808",
           "2209824"
         ],
@@ -13048,6 +13088,15 @@
         "fax": [],
         "name": "General Numbers",
         "designation": null
+      },
+      {
+        "phone_numbers": [
+          "9996962805"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
       },
       {
         "phone_numbers": [
@@ -15975,6 +16024,15 @@
       },
       {
         "phone_numbers": [
+          "27545475"
+        ],
+        "email": "ajay.bharat@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ajay Bharat",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
           "27543771"
         ],
         "email": "hps.kandara@epfindia.gov.in",
@@ -15989,15 +16047,6 @@
         "email": "johnson.k@epfindia.gov.in",
         "fax": [],
         "name": "Shri K Johnson",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "27545475"
-        ],
-        "email": "ajay.bharat@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ajay Bharat",
         "designation": "Assistant P. F. Commissioner"
       },
       {
@@ -18192,7 +18241,7 @@
     ],
     "office": {
       "pro_numbers": [
-        "26470006"
+        "8356836363"
       ],
       "phone_numbers_direct": [],
       "fax": [],
@@ -18247,7 +18296,7 @@
       },
       {
         "phone_numbers": [
-          "26470006"
+          "8356836363"
         ],
         "email": null,
         "fax": [],
@@ -18287,7 +18336,7 @@
     ],
     "office": {
       "pro_numbers": [
-        "26470006"
+        "8356836363"
       ],
       "phone_numbers_direct": [],
       "fax": [],
@@ -18324,7 +18373,7 @@
       },
       {
         "phone_numbers": [
-          "26470006"
+          "8356836363"
         ],
         "email": null,
         "fax": [],
@@ -18366,7 +18415,7 @@
     ],
     "office": {
       "pro_numbers": [
-        "26470006"
+        "8356836363"
       ],
       "phone_numbers_direct": [],
       "fax": [],
@@ -18423,7 +18472,7 @@
       },
       {
         "phone_numbers": [
-          "26470006"
+          "8356836363"
         ],
         "email": null,
         "fax": [],
@@ -18456,7 +18505,7 @@
     ],
     "office": {
       "pro_numbers": [
-        "26470006"
+        "8356836363"
       ],
       "phone_numbers_direct": [],
       "fax": [],
@@ -18496,7 +18545,7 @@
       },
       {
         "phone_numbers": [
-          "26470006"
+          "8356836363"
         ],
         "email": null,
         "fax": [],
@@ -22290,13 +22339,6 @@
         "phone_numbers": [],
         "email": "vcc.vig@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Santosh Kumar",
-        "designation": "Assistant Director"
-      },
-      {
-        "phone_numbers": [],
-        "email": "vcc.vig@epfindia.gov.in",
-        "fax": [],
         "name": "Smt. Charu Arora",
         "designation": "Assistant Director"
       },
@@ -22319,6 +22361,13 @@
         "email": "vcc.vig@epfindia.gov.in",
         "fax": [],
         "name": "Shri Gopal Krishan Juneja",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": "vcc.vig@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Santosh Kumar",
         "designation": "Assistant Director"
       }
     ]
@@ -22726,37 +22775,9 @@
       },
       {
         "phone_numbers": [],
-        "email": "ram.anand@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ram Anand",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "ankur.gupta@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ankur Gupta",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "ravi.meena@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ravi Meena",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
         "email": "ravindra.babra@epfindia.gov.in",
         "fax": [],
         "name": "Shri Ravindera Babra",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "sharique.tanwir@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Sharique Tanwir",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -22793,6 +22814,55 @@
         "fax": [],
         "name": "Shri Harish Yadav",
         "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "ankur.gupta@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ankur Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "ravi.meena@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ravi Meena",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "sharique.tanwir@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Sharique Tanwir",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "ram.anand@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ram Anand",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "sandeep.oswal@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Sandeep Oswal",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "naveen.juneja@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Naveen Juneja",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "manish.naiyyer@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Manish Kumar Naiyyer",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
         "phone_numbers": [],
@@ -22834,27 +22904,6 @@
         "email": "avinash.sinha@epfindia.gov.in",
         "fax": [],
         "name": "Shri Avinash Kumar Sinha",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "sandeep.oswal@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Sandeep Oswal",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "naveen.juneja@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Naveen Juneja",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "manish.naiyyer@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Manish Kumar Naiyyer",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
