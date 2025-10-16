@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EPFO Office Locator</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- LeafletJS for the interactive map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Custom styles -->
+    <style>
+        /* Set a height for the map container */
+        #map { 
+            height: 100%;
+            width: 100%;
+            min-height: 400px;
+        }
+        /* Custom scrollbar for a cleaner look */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Style for the selected office card */
+        .office-card.selected {
+            border-color: #3b82f6; /* blue-500 */
+            box-shadow: 0 0 0 2px #3b82f6;
+            transform: scale(1.02);
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans antialiased">
+
+    <div class="container mx-auto p-4 md:p-6 lg:p-8">
+        
+        <!-- Header -->
+        <header class="text-center mb-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-gray-800">EPFO Office Locator</h1>
+            <p class="text-gray-600 mt-2">Find your nearest Employees' Provident Fund Organisation office.</p>
+        </header>
+
+        <!-- Main Content Area -->
+        <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[80vh]">
+
+                <!-- Left Panel: Controls and Office List -->
+                <div class="lg:col-span-4 flex flex-col p-4 md:p-6 border-r border-gray-200">
+                    <!-- Controls -->
+                    <div class="flex-shrink-0 mb-4 space-y-4">
+                        <button id="find-nearest-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out flex items-center justify-center space-x-2 shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            <span>Find Nearest Office</span>
+                        </button>
+                        <div class="relative">
+                            <input type="text" id="search-input" placeholder="Search by office name or address..." class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Status Message -->
+                    <div id="status-message" class="text-center text-gray-500 py-2 text-sm flex-shrink-0"></div>
+
+                    <!-- Office List -->
+                    <div id="office-list" class="flex-grow overflow-y-auto custom-scrollbar pr-2 -mr-2">
+                        <!-- Office cards will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Right Panel: Map -->
+                <div class="lg:col-span-8 h-[50vh] lg:h-auto">
+                    <div id="map" class="rounded-b-2xl lg:rounded-r-2xl lg:rounded-bl-none"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script type="module">
+        // --- DOM Elements ---
+        const findNearestBtn = document.getElementById('find-nearest-btn');
+        const searchInput = document.getElementById('search-input');
+        const officeList = document.getElementById('office-list');
+        const statusMessage = document.getElementById('status-message');
+        const mapElement = document.getElementById('map');
+        
+        // --- State Variables ---
+        let allOffices = [];
+        let map;
+        let userLocationMarker;
+        let officeMarkers = L.layerGroup();
+        let selectedOfficeId = null;
+
+        // --- CSV Data Path ---
+        const CSV_PATH = 'contacts-data-with-geocodes.csv';
+
+        // --- Initializer ---
+        document.addEventListener('DOMContentLoaded', initializeApp);
+
+        function initializeApp() {
+            initializeMap();
+            loadAndProcessData();
+            setupEventListeners();
+        }
+
+        // --- Map Initialization ---
+        function initializeMap() {
+            // Initialize the map centered on India
+            map = L.map(mapElement).setView([20.5937, 78.9629], 5);
+            
+            // Add a tile layer from OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            officeMarkers.addTo(map);
+        }
+
+        // --- Data Loading and Processing ---
+        async function loadAndProcessData() {
+            try {
+                statusMessage.textContent = 'Loading office data...';
+                const response = await fetch(CSV_PATH);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const csvText = await response.text();
+                
+                // Basic CSV parsing
+                const rows = csvText.split('\n').slice(1); // Skip header row
+                allOffices = rows.map((row, index) => {
+                    const columns = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/); // Handle commas inside quotes
+                    if (columns.length < 8) return null; // Ensure row has enough columns
+                    
+                    const lat = parseFloat(columns[6]);
+                    const lon = parseFloat(columns[7]);
+
+                    // Validate coordinates
+                    if (isNaN(lat) || isNaN(lon) || lat < -90 || lat > 90 || lon < -180 || lon > 180) {
+                        return null;
+                    }
+
+                    return {
+                        id: index,
+                        name: columns[0]?.replace(/"/g, '') || 'N/A',
+                        address: columns[2]?.replace(/"/g, '') || 'N/A',
+                        city: columns[3]?.replace(/"/g, '') || '',
+                        latitude: lat,
+                        longitude: lon,
+                    };
+                }).filter(office => office !== null); // Filter out invalid rows
+
+                statusMessage.textContent = `Loaded ${allOffices.length} offices.`;
+                renderOfficeList(allOffices);
+                renderMapMarkers(allOffices);
+
+            } catch (error) {
+                console.error('Error loading or parsing CSV data:', error);
+                statusMessage.textContent = 'Failed to load office data. Please check the console.';
+                officeList.innerHTML = `<div class="text-center p-4 bg-red-100 text-red-700 rounded-lg">Could not load office locations. Please make sure the file '${CSV_PATH}' is available.</div>`;
+            }
+        }
+
+        // --- UI Rendering ---
+        function renderOfficeList(offices) {
+            officeList.innerHTML = ''; // Clear existing list
+            if (offices.length === 0) {
+                officeList.innerHTML = '<p class="text-center text-gray-500 mt-4">No offices found matching your search.</p>';
+                return;
+            }
+
+            const fragment = document.createDocumentFragment();
+            offices.forEach(office => {
+                const card = document.createElement('div');
+                card.className = `office-card border-2 border-transparent p-4 mb-3 rounded-lg cursor-pointer hover:bg-gray-100 transition duration-200 ${office.id === selectedOfficeId ? 'selected' : 'border-gray-200 bg-white shadow-sm'}`;
+                card.dataset.id = office.id;
+                card.dataset.lat = office.latitude;
+                card.dataset.lon = office.longitude;
+
+                card.innerHTML = `
+                    <h3 class="font-bold text-gray-800">${office.name}</h3>
+                    <p class="text-sm text-gray-600 mt-1">${office.address}</p>
+                `;
+                fragment.appendChild(card);
+            });
+            officeList.appendChild(fragment);
+        }
+
+        function renderMapMarkers(offices) {
+            officeMarkers.clearLayers();
+            offices.forEach(office => {
+                const marker = L.marker([office.latitude, office.longitude]);
+                marker.bindPopup(`<b>${office.name}</b><br>${office.address}`);
+                marker.on('click', () => {
+                   selectOffice(office.id);
+                });
+                marker.dataset = { id: office.id }; // Store id for finding marker later
+                officeMarkers.addLayer(marker);
+            });
+        }
+        
+        // --- Interactivity and Event Handling ---
+        function setupEventListeners() {
+            // Find nearest office button
+            findNearestBtn.addEventListener('click', handleFindNearest);
+
+            // Search input
+            searchInput.addEventListener('input', handleSearch);
+
+            // Office list click (event delegation)
+            officeList.addEventListener('click', handleOfficeSelection);
+        }
+
+        function handleFindNearest() {
+            if (!navigator.geolocation) {
+                statusMessage.textContent = "Geolocation is not supported by your browser.";
+                return;
+            }
+            
+            statusMessage.textContent = "Getting your location...";
+            findNearestBtn.disabled = true;
+
+            navigator.geolocation.getCurrentPosition(
+                position => {
+                    const userLat = position.coords.latitude;
+                    const userLon = position.coords.longitude;
+                    
+                    if(userLocationMarker) {
+                       map.removeLayer(userLocationMarker);
+                    }
+                    // Custom icon for user location
+                    const userIcon = L.divIcon({
+                        html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-blue-600"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" /></svg>',
+                        className: 'user-location-icon',
+                        iconSize: [32, 32],
+                        iconAnchor: [16, 16]
+                    });
+
+                    userLocationMarker = L.marker([userLat, userLon], { icon: L.icon({ iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png', iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41] }) }).addTo(map);
+                    userLocationMarker.bindPopup("Your Location").openPopup();
+                    
+                    findAndHighlightNearestOffice(userLat, userLon);
+                    findNearestBtn.disabled = false;
+                },
+                () => {
+                    statusMessage.textContent = "Unable to retrieve your location.";
+                    findNearestBtn.disabled = false;
+                }
+            );
+        }
+
+        function findAndHighlightNearestOffice(userLat, userLon) {
+            let nearestOffice = null;
+            let minDistance = Infinity;
+
+            allOffices.forEach(office => {
+                const distance = calculateDistance(userLat, userLon, office.latitude, office.longitude);
+                if (distance < minDistance) {
+                    minDistance = distance;
+                    nearestOffice = office;
+                }
+            });
+
+            if (nearestOffice) {
+                statusMessage.innerHTML = `Nearest office: <b>${nearestOffice.name}</b> (~${minDistance.toFixed(1)} km away).`;
+                selectOffice(nearestOffice.id);
+
+                // Add directions link to the selected office card
+                const selectedCard = officeList.querySelector(`.office-card[data-id='${nearestOffice.id}']`);
+                if(selectedCard && !selectedCard.querySelector('.directions-btn')) {
+                    const directionsButton = document.createElement('a');
+                    directionsButton.href = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLon}&destination=${nearestOffice.latitude},${nearestOffice.longitude}`;
+                    directionsButton.target = '_blank';
+                    directionsButton.rel = 'noopener noreferrer';
+                    directionsButton.className = 'directions-btn mt-3 inline-block bg-green-500 text-white text-sm font-bold py-2 px-3 rounded-md hover:bg-green-600 transition';
+                    directionsButton.textContent = 'Get Directions';
+                    selectedCard.appendChild(directionsButton);
+                }
+                
+                // Also fly to the location
+                map.flyTo([nearestOffice.latitude, nearestOffice.longitude], 13);
+            }
+        }
+
+        function handleSearch(event) {
+            const query = event.target.value.toLowerCase();
+            const filteredOffices = allOffices.filter(office => 
+                office.name.toLowerCase().includes(query) || 
+                office.address.toLowerCase().includes(query)
+            );
+            renderOfficeList(filteredOffices);
+            renderMapMarkers(filteredOffices);
+        }
+        
+        function handleOfficeSelection(event) {
+            const card = event.target.closest('.office-card');
+            if (card) {
+                const officeId = parseInt(card.dataset.id, 10);
+                selectOffice(officeId);
+                const lat = parseFloat(card.dataset.lat);
+                const lon = parseFloat(card.dataset.lon);
+                map.flyTo([lat, lon], 14);
+            }
+        }
+
+        function selectOffice(officeId) {
+            // Update the selected ID state
+            selectedOfficeId = officeId;
+            
+            // Re-render the list to apply the 'selected' style
+            const currentFilter = searchInput.value.toLowerCase();
+            const currentlyDisplayedOffices = allOffices.filter(office => 
+                office.name.toLowerCase().includes(currentFilter) || 
+                office.address.toLowerCase().includes(currentFilter)
+            );
+            renderOfficeList(currentlyDisplayedOffices);
+
+            // Scroll the selected card into view
+            const selectedCard = officeList.querySelector(`.office-card[data-id='${officeId}']`);
+            if (selectedCard) {
+                selectedCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+
+            // Find and open the corresponding map marker's popup
+            officeMarkers.eachLayer(marker => {
+                if (marker.dataset.id === officeId) {
+                    marker.openPopup();
+                }
+            });
+        }
+
+
+        // --- Utility Functions ---
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // Radius of the Earth in km
+            const dLat = deg2rad(lat2 - lat1);
+            const dLon = deg2rad(lon2 - lon1);
+            const a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c; // Distance in km
+        }
+
+        function deg2rad(deg) {
+            return deg * (Math.PI / 180);
+        }
+
+    </script>
+
+</body>
+</html>
