@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPFO Office Locator — UX Enhanced</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind dark mode setup
+        tailwind.config = { darkMode: 'class' };
+    </script>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Leaflet MarkerCluster -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+    <!-- Fuse.js (Fuzzy search) -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+
+    <style>
+        html, body, #app { height: 100%; }
+        #map { height: 100%; min-height: 360px; z-index: 10; }
+        .leaflet-popup-content-wrapper { border-radius: 12px; }
+        .office-card.selected { outline: 2px solid rgb(59 130 246); box-shadow: 0 0 0 2px rgb(59 130 246 / 0.2); }
+        .skeleton { position: relative; overflow: hidden; background: #e5e7eb; border-radius: 0.75rem;}
+        .skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); animation: shimmer 1.2s infinite; }
+        @keyframes shimmer { 100% { transform: translateX(100%); } }
+        mark { background: #fde68a; padding: 0 2px; border-radius: 3px; }
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #555; }
+        .dark .custom-scrollbar::-webkit-scrollbar-track { background: #2d3748; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #718096; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a0aec0; }
+    </style>
+</head>
+<body class="h-full bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
+    <div id="app" class="flex flex-col h-full">
+        <!-- Header -->
+        <header class="sticky top-0 z-20 border-b border-gray-200/80 dark:border-gray-800/80 bg-white/80 dark:bg-gray-900/80 backdrop-blur">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center gap-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-2xl bg-blue-600 text-white grid place-items-center font-bold text-lg">EP</div>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-bold">EPFO Office Locator</h1>
+                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Find your nearest Employees' Provident Fund Organisation office</p>
+                    </div>
+                </div>
+                <div class="ml-auto flex items-center gap-2">
+                    <button id="downloadCsvBtn" class="hidden sm:inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800" aria-label="Download filtered results as CSV">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 16l4-5h-3V4h-2v7H8l4 5zm-7 2v2h14v-2H5z"/></svg>
+                        Export CSV
+                    </button>
+                    <button id="themeToggle" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800" aria-pressed="false" aria-label="Toggle dark mode">
+                        <svg id="iconSun" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zm8.24-18.16l1.8-1.79-1.79-1.79-1.8 1.79 1.79 1.79zM20 13h3v-2h-3v2zM6.76 19.16l-1.8 1.79 1.79 1.79 1.8-1.79-1.79-1.79zM11 1h2v3h-2V1zm6.24 18.16l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 6a6 6 0 100 12A6 6 0 0012 6z"/></svg>
+                        <svg id="iconMoon" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M20.742 13.045A8.001 8.001 0 0111 3a8.002 8.002 0 009.045 9.742 7 7 0 11.697.303z"/></svg>
+                        <span class="hidden sm:inline">Theme</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-3">
+                <div class="flex flex-col sm:flex-row gap-2">
+                    <div class="relative flex-1">
+                        <input id="searchInput" type="search" inputmode="search" autocomplete="off" placeholder="Search by office, address, city, or state…" class="w-full rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-10 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500" aria-label="Search offices" />
+                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="filtersBtn" class="inline-flex items-center gap-2 rounded-xl border border-gray-300 dark:border-gray-700 px-3 py-2.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800" aria-expanded="false" aria-controls="filtersPanel">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18v2H3V5zm4 6h10v2H7v-2zm-2 6h14v2H5v-2z"/></svg>
+                            Filters
+                        </button>
+                        <button id="nearestBtn" class="inline-flex items-center justify-center gap-2 bg-blue-600 text-white rounded-xl px-3 py-2.5 text-sm hover:bg-blue-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            Find Nearest
+                        </button>
+                    </div>
+                </div>
+                <div id="filtersPanel" class="hidden mt-2 rounded-xl border border-gray-200 dark:border-gray-800 p-3 bg-white dark:bg-gray-900">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <div>
+                            <label class="block text-xs font-medium mb-1">Category</label>
+                            <div id="categoryChips" class="flex flex-wrap gap-2"></div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium mb-1">State</label>
+                            <select id="stateSelect" class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm"></select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-medium mb-1">City</label>
+                            <select id="citySelect" class="w-full rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Status Bar -->
+        <div id="statusBar" class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-2 text-sm text-gray-600 dark:text-gray-400">Loading data…</div>
+
+        <!-- Content -->
+        <main class="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-6 flex-1 flex flex-col min-h-0">
+            <div class="sm:hidden mb-2">
+                <div role="tablist" aria-label="View switch" class="grid grid-cols-2 rounded-xl border border-gray-200 dark:border-gray-800 overflow-hidden">
+                    <button id="tabList" role="tab" aria-selected="true" class="py-2 text-center bg-blue-50 dark:bg-blue-900/30">List</button>
+                    <button id="tabMap" role="tab" aria-selected="false" class="py-2 text-center">Map</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 flex-1 min-h-0">
+                <section id="listPane" class="lg:col-span-5 flex flex-col rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden">
+                    <div id="listContainer" class="flex-1 overflow-auto custom-scrollbar p-3 space-y-2" tabindex="0" aria-label="Offices list"></div>
+                </section>
+                <section id="mapPane" class="lg:col-span-7 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white dark:bg-gray-900 min-h-[320px]">
+                    <div id="map"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script type="module">
+        // ---------- THEME ----------
+        const htmlEl = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
+        const iconSun = document.getElementById('iconSun');
+        const iconMoon = document.getElementById('iconMoon');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlEl.classList.add('dark');
+            iconSun.classList.remove('hidden');
+            iconMoon.classList.add('hidden');
+            themeToggle.setAttribute('aria-pressed', 'true');
+        }
+        themeToggle.addEventListener('click', () => {
+            const isDark = htmlEl.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            iconSun.classList.toggle('hidden');
+            iconMoon.classList.toggle('hidden');
+            themeToggle.setAttribute('aria-pressed', String(isDark));
+        });
+
+        // ---------- DOM & STATE ----------
+        const CSV_PATH = 'https://gauravmeena0708.github.io/pf-contacts/test/contacts-data-with-geocodes.csv';
+
+        const searchInput = document.getElementById('searchInput');
+        const listContainer = document.getElementById('listContainer');
+        const statusBar = document.getElementById('statusBar');
+        const nearestBtn = document.getElementById('nearestBtn');
+        const filtersBtn = document.getElementById('filtersBtn');
+        const filtersPanel = document.getElementById('filtersPanel');
+        const categoryChips = document.getElementById('categoryChips');
+        const stateSelect = document.getElementById('stateSelect');
+        const citySelect = document.getElementById('citySelect');
+        const downloadCsvBtn = document.getElementById('downloadCsvBtn');
+        const tabList = document.getElementById('tabList');
+        const tabMap = document.getElementById('tabMap');
+        const listPane = document.getElementById('listPane');
+        const mapPane = document.getElementById('mapPane');
+
+        let map, clusterGroup, userMarker, nearestLine;
+        let allOffices = [], filteredOffices = [];
+        let fuse, selectedId = null;
+        let categories = new Set(), states = new Set();
+        let citiesByState = new Map();
+
+        // ---------- UTILS ----------
+        const haversine = (lat1, lon1, lat2, lon2) => {
+            const R = 6371; // km
+            const dLat = (lat2-lat1) * Math.PI/180, dLon = (lon2-lon1) * Math.PI/180;
+            const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+            return 2*R*Math.asin(Math.sqrt(a));
+        };
+        const slug = (s) => (s || '').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+        const by = (k) => (a,b) => (a[k]||'').localeCompare(b[k]||'');
+        const highlight = (text, query) => !query ? text : text.replace(new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'ig'), m => `<mark>${m}</mark>`);
+        const downloadCSV = (rows) => {
+            const header = ['name','category','address','city','state','postalCode','latitude','longitude'];
+            const csv = [header.join(',')].concat(rows.map(o => header.map(h => `"${String(o[h]??'').replace(/"/g,'\"')}"`).join(','))).join('\n');
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url; a.download = 'epfo_filtered_offices.csv'; a.click();
+            URL.revokeObjectURL(url);
+        };
+
+        // ---------- MAP ----------
+        const initMap = () => {
+            map = L.map('map', { zoomControl: true }).setView([20.5937, 78.9629], 5);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+            clusterGroup = L.markerClusterGroup();
+            map.addLayer(clusterGroup);
+        };
+
+        const renderMarkers = (offices) => {
+            clusterGroup.clearLayers();
+            offices.forEach(o => {
+                const m = L.marker([o.latitude, o.longitude]);
+                const directionsURL = `https://www.google.com/maps/dir/?api=1&destination=${o.latitude},${o.longitude}`;
+                const popupContent = `<b>${o.name}</b><br><span class='text-gray-500'>${o.category}</span><hr class='my-2'/>${o.address}<br>${o.city}, ${o.state} ${o.postalCode}<br><a href="${directionsURL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:10px; padding: 6px 12px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-size: 12px;">Get Directions</a>`;
+                m.bindPopup(popupContent);
+                m.on('click', () => selectOffice(o.id));
+                m._oid = o.id;
+                clusterGroup.addLayer(m);
+            });
+        };
+
+        const flyToOffice = (id) => {
+            const o = filteredOffices.find(x => x.id === id);
+            if (!o) return;
+            map.flyTo([o.latitude, o.longitude], 13, { duration: 0.7 });
+            clusterGroup.eachLayer(layer => { if (layer._oid === id) layer.openPopup(); });
+        };
+
+        // ---------- DATA & RENDER ----------
+        const loadData = async () => {
+            listContainer.innerHTML = Array.from({length: 8}, () => `<div class='skeleton h-24'></div>`).join('');
+            try {
+                const res = await fetch(CSV_PATH);
+                if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+                const text = await res.text();
+                const rows = text.split('\n').slice(1);
+                allOffices = rows.map((row, idx) => {
+                    const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
+                    if (cols.length < 8) return null;
+                    const lat = parseFloat(cols[6]), lon = parseFloat(cols[7]);
+                    if (!isFinite(lat) || !isFinite(lon)) return null;
+                    const clean = (s) => (s||'').replaceAll('"','').trim();
+                    const obj = { id: idx, name: clean(cols[0])||'N/A', category: clean(cols[1])||'N/A', address: clean(cols[2])||'N/A', city: clean(cols[3])||'', state: clean(cols[4])||'', postalCode: clean(cols[5])||'', latitude: lat, longitude: lon, slug: slug(`${clean(cols[0])}-${idx}`) };
+                    categories.add(obj.category); states.add(obj.state);
+                    if (!citiesByState.has(obj.state)) citiesByState.set(obj.state, new Set());
+                    if (obj.city) citiesByState.get(obj.state).add(obj.city);
+                    return obj;
+                }).filter(Boolean);
+
+                fuse = new Fuse(allOffices, { threshold: 0.35, includeScore: true, keys: ['name','address','city','state'] });
+                renderCategoryChips([...categories].sort());
+                renderStateOptions(['', ...[...states].sort()]);
+                renderCityOptions(['']);
+                
+                applyFilters();
+
+                const params = new URLSearchParams(location.search);
+                const qs = params.get('office');
+                if (qs) {
+                    const match = allOffices.find(o => o.slug === qs || String(o.id) === qs);
+                    if (match) selectOffice(match.id, true);
+                }
+            } catch (e) {
+                console.error(e);
+                statusBar.textContent = 'Failed to load data. See console.';
+                listContainer.innerHTML = `<div class='p-4 text-red-600 dark:text-red-400'>Could not load office locations.</div>`;
+            }
+        };
+
+        const renderList = (offices, query = '') => {
+            if (!offices.length) {
+                listContainer.innerHTML = `<div class='p-6 text-center text-gray-500'>No results. Try adjusting filters.</div>`;
+                return;
+            }
+            const frag = document.createDocumentFragment();
+            offices.forEach(o => {
+                const card = document.createElement('button');
+                card.type = 'button';
+                card.className = `w-full text-left rounded-xl border border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 p-3 hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500`;
+                card.dataset.id = o.id;
+                card.innerHTML = `<div class='flex items-start justify-between gap-2'><div><h3 class='font-semibold'>${highlight(o.name, query)}</h3><div class='text-xs text-gray-500 dark:text-gray-400 mt-0.5'>${o.category}</div></div><a class='shrink-0 text-xs underline text-blue-600 dark:text-blue-400' href='https://www.google.com/maps/search/?api=1&query=${o.latitude},${o.longitude}' target='_blank' rel='noopener' onclick="event.stopPropagation()">Open Map</a></div><p class='text-sm mt-1'>${highlight(o.address, query)}</p><p class='text-sm text-gray-600 dark:text-gray-400'>${highlight(`${o.city}${o.city && o.state ? ', ' : ''}${o.state} ${o.postalCode}`, query)}</p>`;
+                if (o.id === selectedId) card.classList.add('selected');
+                card.addEventListener('click', () => selectOffice(o.id, true));
+                frag.appendChild(card);
+            });
+            listContainer.innerHTML = '';
+            listContainer.appendChild(frag);
+        };
+
+        const selectOffice = (id, fly = false) => {
+            selectedId = id;
+            listContainer.querySelectorAll('[data-id]').forEach(el => el.classList.toggle('selected', Number(el.dataset.id) === id));
+            const card = listContainer.querySelector(`[data-id="${id}"]`);
+            if (card) card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            if (fly) flyToOffice(id);
+        };
+
+        // ---------- FILTERS ----------
+        const renderCategoryChips = (cats) => {
+            categoryChips.innerHTML = '';
+            cats.forEach(c => {
+                const id = `cat-${slug(c||'na')}`;
+                const lab = document.createElement('label');
+                lab.className = 'inline-flex items-center gap-2 border border-gray-300 dark:border-gray-700 rounded-full px-3 py-1 text-sm cursor-pointer hover:bg-gray-50 dark:hover:bg-gray-800 has-[:checked]:bg-blue-50 has-[:checked]:dark:bg-blue-900/30 has-[:checked]:border-blue-500';
+                lab.innerHTML = `<input type='checkbox' class='accent-blue-600' id='${id}' value='${c}'> <span>${c || 'N/A'}</span>`;
+                categoryChips.appendChild(lab);
+            });
+            categoryChips.addEventListener('change', applyFilters);
+        };
+
+        const renderStateOptions = (opts) => {
+            stateSelect.innerHTML = opts.map(o => `<option value="${o}">${o || 'Any state'}</option>`).join('');
+            stateSelect.addEventListener('change', () => {
+                const state = stateSelect.value;
+                const cities = state && citiesByState.has(state) ? ['', ...[...citiesByState.get(state)].sort()] : [''];
+                renderCityOptions(cities);
+                applyFilters();
+            });
+        };
+
+        const renderCityOptions = (opts) => {
+            citySelect.innerHTML = opts.map(o => `<option value="${o}">${o || 'Any city'}</option>`).join('');
+            citySelect.addEventListener('change', applyFilters);
+        };
+
+        const applyFilters = () => {
+            const query = searchInput.value.trim();
+            const chosenCats = [...categoryChips.querySelectorAll('input:checked')].map(i => i.value);
+            const state = stateSelect.value;
+            const city = citySelect.value;
+
+            let base = allOffices;
+            if (query) base = fuse.search(query).map(r => r.item);
+            if (chosenCats.length) base = base.filter(o => chosenCats.includes(o.category));
+            if (state) base = base.filter(o => o.state === state);
+            if (city) base = base.filter(o => o.city === city);
+
+            filteredOffices = base.sort(by('name'));
+            renderList(filteredOffices, query);
+            renderMarkers(filteredOffices);
+            statusBar.textContent = `Showing ${filteredOffices.length} of ${allOffices.length} offices`;
+        };
+
+        // ---------- EVENTS ----------
+        filtersBtn.addEventListener('click', () => {
+            const open = filtersPanel.classList.toggle('hidden');
+            filtersBtn.setAttribute('aria-expanded', String(!open));
+        });
+
+        searchInput.addEventListener('input', applyFilters);
+
+        const setTab = (which) => {
+            const listActive = which === 'list';
+            tabList.setAttribute('aria-selected', String(listActive));
+            tabMap.setAttribute('aria-selected', String(!listActive));
+            tabList.classList.toggle('bg-blue-50', listActive);
+            tabList.classList.toggle('dark:bg-blue-900/30', listActive);
+            tabMap.classList.toggle('bg-blue-50', !listActive);
+            tabMap.classList.toggle('dark:bg-blue-900/30', !listActive);
+            listPane.classList.toggle('hidden', !listActive);
+            listPane.classList.toggle('lg:flex', true);
+            mapPane.classList.toggle('hidden', listActive);
+            mapPane.classList.toggle('lg:block', true);
+            if (!listActive) setTimeout(() => map.invalidateSize(), 150);
+        };
+        tabList.addEventListener('click', () => setTab('list'));
+        tabMap.addEventListener('click', () => setTab('map'));
+
+        nearestBtn.addEventListener('click', () => {
+            if (!navigator.geolocation) { statusBar.textContent = 'Geolocation not supported.'; return; }
+            statusBar.textContent = 'Locating…';
+            nearestBtn.disabled = true;
+            navigator.geolocation.getCurrentPosition((pos) => {
+                const { latitude: lat, longitude: lon } = pos.coords;
+                if (userMarker) userMarker.remove();
+                userMarker = L.marker([lat, lon], { title: 'Your location' }).addTo(map).bindPopup('You are here').openPopup();
+                
+                let best = null, bestD = Infinity;
+                allOffices.forEach(o => { // Search all offices, not just filtered ones
+                    const d = haversine(lat, lon, o.latitude, o.longitude);
+                    if (d < bestD) { bestD = d; best = o; }
+                });
+                
+                if (best) {
+                    statusBar.innerHTML = `Nearest office: <b>${best.name}</b> (~${bestD.toFixed(1)} km)`;
+                    // Clear filters to ensure nearest office is visible
+                    searchInput.value = ''; stateSelect.value = ''; citySelect.value = '';
+                    [...categoryChips.querySelectorAll('input:checked')].forEach(i => i.checked = false);
+                    applyFilters();
+
+                    selectOffice(best.id, true);
+                    if (nearestLine) nearestLine.remove();
+                    nearestLine = L.polyline([[lat, lon], [best.latitude, best.longitude]], { dashArray: '4 6', color: '#1d4ed8' }).addTo(map);
+                }
+                nearestBtn.disabled = false;
+            }, () => {
+                statusBar.textContent = 'Unable to retrieve location.';
+                nearestBtn.disabled = false;
+            });
+        });
+
+        downloadCsvBtn.addEventListener('click', () => downloadCSV(filteredOffices));
+
+        // Init
+        initMap();
+        loadData();
+    </script>
+</body>
+</html>
+
