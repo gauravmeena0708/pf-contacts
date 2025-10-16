@@ -154,7 +154,6 @@
         const categoryChips = document.getElementById('categoryChips');
         const stateSelect = document.getElementById('stateSelect');
         const citySelect = document.getElementById('citySelect');
-        const downloadCsvBtn = document.getElementById('downloadCsvBtn');
         const tabList = document.getElementById('tabList');
         const tabMap = document.getElementById('tabMap');
         const listPane = document.getElementById('listPane');
@@ -391,7 +390,6 @@
             });
         });
 
-        downloadCsvBtn.addEventListener('click', () => downloadCSV(filteredOffices));
 
         // Init
         initMap();
