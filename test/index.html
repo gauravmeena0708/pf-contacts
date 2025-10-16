@@ -42,6 +42,16 @@
             transform: scale(1.02);
             transition: all 0.2s ease-in-out;
         }
+        .leaflet-popup-content-wrapper {
+            border-radius: 12px;
+        }
+        .leaflet-popup-content {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .leaflet-popup-content b {
+            color: #1f2937;
+        }
     </style>
 </head>
 <body class="bg-gray-100 font-sans antialiased">
@@ -56,10 +66,10 @@
 
         <!-- Main Content Area -->
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
-            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[80vh]">
+            <div class="grid grid-cols-1 lg:grid-cols-12 h-[85vh]">
 
                 <!-- Left Panel: Controls and Office List -->
-                <div class="lg:col-span-4 flex flex-col p-4 md:p-6 border-r border-gray-200">
+                <div class="lg:col-span-4 flex flex-col p-4 md:p-6 border-r border-gray-200 overflow-hidden">
                     <!-- Controls -->
                     <div class="flex-shrink-0 mb-4 space-y-4">
                         <button id="find-nearest-btn" class="w-full bg-blue-600 text-white font-bold py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out flex items-center justify-center space-x-2 shadow-md">
@@ -76,7 +86,7 @@
                     <div id="status-message" class="text-center text-gray-500 py-2 text-sm flex-shrink-0"></div>
 
                     <!-- Office List -->
-                    <div id="office-list" class="flex-grow overflow-y-auto custom-scrollbar pr-2 -mr-2">
+                    <div id="office-list" class="flex-grow overflow-y-auto custom-scrollbar pr-2 -mr-2 min-h-0">
                         <!-- Office cards will be dynamically inserted here -->
                     </div>
                 </div>
@@ -107,7 +117,7 @@
         let selectedOfficeId = null;
 
         // --- CSV Data Path ---
-        const CSV_PATH = 'contacts-data-with-geocodes.csv';
+        const CSV_PATH = 'https://gauravmeena0708.github.io/pf-contacts/test/contacts-data-with-geocodes.csv';
 
         // --- Initializer ---
         document.addEventListener('DOMContentLoaded', initializeApp);
@@ -154,12 +164,17 @@
                     if (isNaN(lat) || isNaN(lon) || lat < -90 || lat > 90 || lon < -180 || lon > 180) {
                         return null;
                     }
+                    
+                    const clean = (str) => str?.replace(/"/g, '').trim() || '';
 
                     return {
                         id: index,
-                        name: columns[0]?.replace(/"/g, '') || 'N/A',
-                        address: columns[2]?.replace(/"/g, '') || 'N/A',
-                        city: columns[3]?.replace(/"/g, '') || '',
+                        name: clean(columns[0]) || 'N/A',
+                        category: clean(columns[1]) || 'N/A',
+                        address: clean(columns[2]) || 'N/A',
+                        city: clean(columns[3]) || '',
+                        state: clean(columns[4]) || '',
+                        postalCode: clean(columns[5]) || '',
                         latitude: lat,
                         longitude: lon,
                     };
@@ -172,7 +187,7 @@
             } catch (error) {
                 console.error('Error loading or parsing CSV data:', error);
                 statusMessage.textContent = 'Failed to load office data. Please check the console.';
-                officeList.innerHTML = `<div class="text-center p-4 bg-red-100 text-red-700 rounded-lg">Could not load office locations. Please make sure the file '${CSV_PATH}' is available.</div>`;
+                officeList.innerHTML = `<div class="text-center p-4 bg-red-100 text-red-700 rounded-lg">Could not load office locations. Please make sure the file is available at the specified URL.</div>`;
             }
         }
 
@@ -205,7 +220,16 @@
             officeMarkers.clearLayers();
             offices.forEach(office => {
                 const marker = L.marker([office.latitude, office.longitude]);
-                marker.bindPopup(`<b>${office.name}</b><br>${office.address}`);
+                
+                const popupContent = `
+                    <b>${office.name}</b><br>
+                    <span class="text-gray-500">${office.category}</span>
+                    <hr class="my-2">
+                    ${office.address}<br>
+                    ${office.city}, ${office.state} ${office.postalCode}
+                `;
+                marker.bindPopup(popupContent);
+
                 marker.on('click', () => {
                    selectOffice(office.id);
                 });
@@ -243,14 +267,7 @@
                     if(userLocationMarker) {
                        map.removeLayer(userLocationMarker);
                     }
-                    // Custom icon for user location
-                    const userIcon = L.divIcon({
-                        html: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-8 h-8 text-blue-600"><path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z" clip-rule="evenodd" /></svg>',
-                        className: 'user-location-icon',
-                        iconSize: [32, 32],
-                        iconAnchor: [16, 16]
-                    });
-
+                    
                     userLocationMarker = L.marker([userLat, userLon], { icon: L.icon({ iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png', shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png', iconSize: [25, 41], iconAnchor: [12, 41], popupAnchor: [1, -34], shadowSize: [41, 41] }) }).addTo(map);
                     userLocationMarker.bindPopup("Your Location").openPopup();
                     
@@ -366,3 +383,4 @@
 
 </body>
 </html>
+
