@@ -239,7 +239,7 @@
                     return obj;
                 }).filter(Boolean);
 
-                fuse = new Fuse(allOffices, { threshold: 0.35, includeScore: true, keys: ['name','address','city','state'] });
+                fuse = new Fuse(allOffices, { threshold: 0.3, minMatchCharLength: 2, includeScore: true, ignoreLocation: true, keys: [{name: 'name', weight: 0.5}, {name: 'city', weight: 0.3}, {name: 'address', weight: 0.15}, {name: 'state', weight: 0.05}] });
                 renderCategoryChips([...categories].sort());
                 renderStateOptions(['', ...[...states].sort()]);
                 renderCityOptions(['']);
@@ -327,7 +327,11 @@
             if (state) base = base.filter(o => o.state === state);
             if (city) base = base.filter(o => o.city === city);
 
-            filteredOffices = base.sort(by('name'));
+            // If there was a search query, the results are already sorted by relevance.
+            // If not, we sort the filtered list by name.
+            // A copy is made with [...base] to avoid modifying the original allOffices array.
+            filteredOffices = query ? base : [...base].sort(by('name'));
+            
             renderList(filteredOffices, query);
             renderMarkers(filteredOffices);
             statusBar.textContent = `Showing ${filteredOffices.length} of ${allOffices.length} offices`;
@@ -399,4 +403,3 @@
     </script>
 </body>
 </html>
-
