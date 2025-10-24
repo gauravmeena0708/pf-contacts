@@ -216,7 +216,7 @@
         const by = (k) => (a,b) => (a[k]||'').localeCompare(b[k]||'');
         const highlight = (text, query) => !query ? text : text.replace(new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'ig'), m => `<mark>${m}</mark>`);
         const downloadCSV = (rows) => {
-            const header = ['name','category','zone','zoneCode','address','city','state','postalCode','latitude','longitude'];
+            const header = ['name','category','zone','address','city','state','postalCode','latitude','longitude'];
             const csv = [header.join(',')].concat(rows.map(o => header.map(h => `"${String(o[h]??'').replace(/"/g,'\"')}"`).join(','))).join('\n');
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const url = URL.createObjectURL(blob);
@@ -323,7 +323,6 @@
                         name: clean(cols[0]) || 'N/A',
                         category: clean(cols[1]) || 'N/A',
                         zone: clean(cols[2]) || 'Other',
-                        zoneCode: clean(cols[3]) || '',
                         address: clean(cols[4]) || 'N/A',
                         city: clean(cols[5]) || '',
                         state: clean(cols[6]) || '',
