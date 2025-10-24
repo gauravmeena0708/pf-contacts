@@ -314,8 +314,8 @@
                 const rows = text.split('\n').slice(1);
                 allOffices = rows.map((row, idx) => {
                     const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                    if (cols.length < 10) return null;
-                    const lat = parseFloat(cols[8]), lon = parseFloat(cols[9]);
+                    if (cols.length < 9) return null;
+                    const lat = parseFloat(cols[7]), lon = parseFloat(cols[8]);
                     if (!isFinite(lat) || !isFinite(lon)) return null;
                     const clean = (s) => (s||'').replaceAll('"','').trim();
                     const obj = {
@@ -323,10 +323,10 @@
                         name: clean(cols[0]) || 'N/A',
                         category: clean(cols[1]) || 'N/A',
                         zone: clean(cols[2]) || 'Other',
-                        address: clean(cols[4]) || 'N/A',
-                        city: clean(cols[5]) || '',
-                        state: clean(cols[6]) || '',
-                        postalCode: clean(cols[7]) || '',
+                        address: clean(cols[3]) || 'N/A',
+                        city: clean(cols[4]) || '',
+                        state: clean(cols[5]) || '',
+                        postalCode: clean(cols[6]) || '',
                         latitude: lat,
                         longitude: lon,
                         slug: slug(`${clean(cols[0])}-${idx}`)
