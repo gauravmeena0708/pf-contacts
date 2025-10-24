@@ -40,6 +40,33 @@
         .dark .custom-scrollbar::-webkit-scrollbar-track { background: #2d3748; }
         .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #718096; }
         .dark .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #a0aec0; }
+        .zone-cluster {
+            display: grid;
+            place-items: center;
+            color: #fff;
+            border-radius: 9999px;
+            width: 104px;
+            height: 104px;
+            text-align: center;
+            font-weight: 600;
+            border: 3px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.3);
+        }
+        .zone-cluster-inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            line-height: 1.1;
+            font-size: 15px;
+        }
+        .zone-cluster-count {
+            font-size: 13px;
+            font-weight: 400;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 2px 8px;
+            border-radius: 9999px;
+        }
     </style>
 </head>
 <body class="h-full bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
@@ -159,7 +186,20 @@
         const listPane = document.getElementById('listPane');
         const mapPane = document.getElementById('mapPane');
 
-        let map, clusterGroup, userMarker, nearestLine;
+        const ZONE_ZOOM_THRESHOLD = 6;
+        const zoneColorCache = new Map();
+        const zoneColor = (zone) => {
+            const key = zone || 'Unknown';
+            if (zoneColorCache.has(key)) return zoneColorCache.get(key);
+            const palette = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330];
+            const hash = key.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+            const hue = palette[hash % palette.length];
+            const color = `hsl(${hue}, 70%, 45%)`;
+            zoneColorCache.set(key, color);
+            return color;
+        };
+
+        let map, clusterGroup, zoneLayer, userMarker, nearestLine;
         let allOffices = [], filteredOffices = [];
         let fuse, selectedId = null;
         let categories = new Set(), states = new Set();
@@ -184,13 +224,29 @@
             a.href = url; a.download = 'epfo_filtered_offices.csv'; a.click();
             URL.revokeObjectURL(url);
         };
+        const syncMapLayers = () => {
+            if (!map) return;
+            const zoom = map.getZoom();
+            const shouldShowZones = zoom <= ZONE_ZOOM_THRESHOLD;
+            if (shouldShowZones) {
+                if (map.hasLayer(clusterGroup)) map.removeLayer(clusterGroup);
+                if (!map.hasLayer(zoneLayer)) map.addLayer(zoneLayer);
+            } else {
+                if (map.hasLayer(zoneLayer)) map.removeLayer(zoneLayer);
+                if (!map.hasLayer(clusterGroup)) map.addLayer(clusterGroup);
+            }
+        };
 
         // ---------- MAP ----------
         const initMap = () => {
             map = L.map('map', { zoomControl: true }).setView([20.5937, 78.9629], 5);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
             clusterGroup = L.markerClusterGroup();
+            zoneLayer = L.layerGroup();
             map.addLayer(clusterGroup);
+            map.addLayer(zoneLayer);
+            map.on('zoomend', syncMapLayers);
+            syncMapLayers();
         };
 
         const renderMarkers = (offices) => {
@@ -198,12 +254,14 @@
             offices.forEach(o => {
                 const m = L.marker([o.latitude, o.longitude]);
                 const directionsURL = `https://www.google.com/maps/dir/?api=1&destination=${o.latitude},${o.longitude}`;
-                const popupContent = `<b>${o.name}</b><br><span class='text-gray-500'>${o.category}</span><hr class='my-2'/>${o.address}<br>${o.city}, ${o.state} ${o.postalCode}<br><a href="${directionsURL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:10px; padding: 6px 12px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-size: 12px;">Get Directions</a>`;
+                const popupContent = `<b>${o.name}</b><br><span class='text-gray-500'>${o.category}</span>${o.zone ? `<div style="margin-top:4px; font-size:12px; color:#2563eb;">${o.zone}</div>` : ''}<hr class='my-2'/>${o.address}<br>${o.city}, ${o.state} ${o.postalCode}<br><a href="${directionsURL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:10px; padding: 6px 12px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-size: 12px;">Get Directions</a>`;
                 m.bindPopup(popupContent);
                 m.on('click', () => selectOffice(o.id));
                 m._oid = o.id;
                 clusterGroup.addLayer(m);
             });
+            renderZoneMarkers(offices);
+            syncMapLayers();
         };
 
         const flyToOffice = (id) => {
@@ -211,6 +269,39 @@
             if (!o) return;
             map.flyTo([o.latitude, o.longitude], 13, { duration: 0.7 });
             clusterGroup.eachLayer(layer => { if (layer._oid === id) layer.openPopup(); });
+        };
+        const renderZoneMarkers = (offices) => {
+            zoneLayer.clearLayers();
+            if (!offices.length) return;
+            const grouped = new Map();
+            offices.forEach(o => {
+                const zone = o.zone || 'Other';
+                if (!grouped.has(zone)) grouped.set(zone, []);
+                grouped.get(zone).push(o);
+            });
+            grouped.forEach((list, zone) => {
+                const avgLat = list.reduce((sum, o) => sum + o.latitude, 0) / list.length;
+                const avgLon = list.reduce((sum, o) => sum + o.longitude, 0) / list.length;
+                const color = zoneColor(zone);
+                const icon = L.divIcon({
+                    className: '',
+                    html: `<div class="zone-cluster" style="background:${color};">
+                        <div class="zone-cluster-inner">
+                            <span>${zone}</span>
+                            <span class="zone-cluster-count">${list.length} offices</span>
+                        </div>
+                    </div>`,
+                    iconSize: [104, 104],
+                    iconAnchor: [52, 52]
+                });
+                const marker = L.marker([avgLat, avgLon], { icon });
+                const listHtml = list.slice(0, 6).map(o => `<li>${o.name}${o.city ? ` — ${o.city}` : ''}</li>`).join('');
+                marker.bindPopup(`<div><strong>${zone} Zone</strong><br>${list.length} offices${listHtml ? `<ul style="margin-top:8px;">${listHtml}</ul>${list.length > 6 ? '<div style="margin-top:4px;font-size:12px;">Zoom in for more</div>' : ''}` : ''}</div>`);
+                marker.on('click', () => {
+                    map.setView([avgLat, avgLon], ZONE_ZOOM_THRESHOLD + 1);
+                });
+                zoneLayer.addLayer(marker);
+            });
         };
 
         // ---------- DATA & RENDER ----------
@@ -223,18 +314,31 @@
                 const rows = text.split('\n').slice(1);
                 allOffices = rows.map((row, idx) => {
                     const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                    if (cols.length < 8) return null;
-                    const lat = parseFloat(cols[6]), lon = parseFloat(cols[7]);
+                    if (cols.length < 10) return null;
+                    const lat = parseFloat(cols[8]), lon = parseFloat(cols[9]);
                     if (!isFinite(lat) || !isFinite(lon)) return null;
                     const clean = (s) => (s||'').replaceAll('"','').trim();
-                    const obj = { id: idx, name: clean(cols[0])||'N/A', category: clean(cols[1])||'N/A', address: clean(cols[2])||'N/A', city: clean(cols[3])||'', state: clean(cols[4])||'', postalCode: clean(cols[5])||'', latitude: lat, longitude: lon, slug: slug(`${clean(cols[0])}-${idx}`) };
+                    const obj = {
+                        id: idx,
+                        name: clean(cols[0]) || 'N/A',
+                        category: clean(cols[1]) || 'N/A',
+                        zone: clean(cols[2]) || 'Other',
+                        zoneCode: clean(cols[3]) || '',
+                        address: clean(cols[4]) || 'N/A',
+                        city: clean(cols[5]) || '',
+                        state: clean(cols[6]) || '',
+                        postalCode: clean(cols[7]) || '',
+                        latitude: lat,
+                        longitude: lon,
+                        slug: slug(`${clean(cols[0])}-${idx}`)
+                    };
                     categories.add(obj.category); states.add(obj.state);
                     if (!citiesByState.has(obj.state)) citiesByState.set(obj.state, new Set());
                     if (obj.city) citiesByState.get(obj.state).add(obj.city);
                     return obj;
                 }).filter(Boolean);
 
-                fuse = new Fuse(allOffices, { threshold: 0.3, minMatchCharLength: 2, includeScore: true, ignoreLocation: true, keys: [{name: 'name', weight: 0.5}, {name: 'city', weight: 0.3}, {name: 'address', weight: 0.15}, {name: 'state', weight: 0.05}] });
+                fuse = new Fuse(allOffices, { threshold: 0.3, minMatchCharLength: 2, includeScore: true, ignoreLocation: true, keys: [{name: 'name', weight: 0.45}, {name: 'city', weight: 0.25}, {name: 'address', weight: 0.15}, {name: 'state', weight: 0.05}, {name: 'zone', weight: 0.1}] });
                 renderCategoryChips([...categories].sort());
                 renderStateOptions(['', ...[...states].sort()]);
                 renderCityOptions(['']);
@@ -265,7 +369,7 @@
                 card.type = 'button';
                 card.className = `w-full text-left rounded-xl border border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 p-3 hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500`;
                 card.dataset.id = o.id;
-                card.innerHTML = `<div class='flex items-start justify-between gap-2'><div><h3 class='font-semibold'>${highlight(o.name, query)}</h3><div class='text-xs text-gray-500 dark:text-gray-400 mt-0.5'>${o.category}</div></div><a class='shrink-0 text-xs underline text-blue-600 dark:text-blue-400' href='https://www.google.com/maps/search/?api=1&query=${o.latitude},${o.longitude}' target='_blank' rel='noopener' onclick="event.stopPropagation()">Open Map</a></div><p class='text-sm mt-1'>${highlight(o.address, query)}</p><p class='text-sm text-gray-600 dark:text-gray-400'>${highlight(`${o.city}${o.city && o.state ? ', ' : ''}${o.state} ${o.postalCode}`, query)}</p>`;
+                card.innerHTML = `<div class='flex items-start justify-between gap-2'><div><h3 class='font-semibold'>${highlight(o.name, query)}</h3><div class='text-xs text-gray-500 dark:text-gray-400 mt-0.5'>${o.category}</div>${o.zone ? `<div class='text-xs text-blue-600 dark:text-blue-400 mt-0.5'>${highlight(o.zone, query)}</div>` : ''}</div><a class='shrink-0 text-xs underline text-blue-600 dark:text-blue-400' href='https://www.google.com/maps/search/?api=1&query=${o.latitude},${o.longitude}' target='_blank' rel='noopener' onclick="event.stopPropagation()">Open Map</a></div><p class='text-sm mt-1'>${highlight(o.address, query)}</p><p class='text-sm text-gray-600 dark:text-gray-400'>${highlight(`${o.city}${o.city && o.state ? ', ' : ''}${o.state} ${o.postalCode}`, query)}</p>`;
                 if (o.id === selectedId) card.classList.add('selected');
                 card.addEventListener('click', () => selectOffice(o.id, true));
                 frag.appendChild(card);

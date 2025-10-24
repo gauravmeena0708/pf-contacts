@@ -187,56 +187,16 @@
         const mapPane = document.getElementById('mapPane');
 
         const ZONE_ZOOM_THRESHOLD = 6;
-        const STATE_TO_ZONE = {
-            'Andhra Pradesh': 'South',
-            'Telangana': 'South',
-            'Karnataka': 'South',
-            'Kerala': 'South',
-            'Tamil Nadu': 'South',
-            'Puducherry': 'South',
-            'Lakshadweep': 'South',
-            'Andaman & Nicobar Islands': 'South',
-            'Andaman and Nicobar Islands': 'South',
-            'Goa': 'West',
-            'Gujarat': 'West',
-            'Maharashtra': 'West',
-            'Dadra & Nagar Haveli and Daman & Diu': 'West',
-            'Dadra & Nagar Haveli': 'West',
-            'Daman & Diu': 'West',
-            'Madhya Pradesh': 'Central',
-            'Chhattisgarh': 'Central',
-            'Bihar': 'East',
-            'Jharkhand': 'East',
-            'Odisha': 'East',
-            'West Bengal': 'East',
-            'Sikkim': 'North-East',
-            'Assam': 'North-East',
-            'Arunachal Pradesh': 'North-East',
-            'Manipur': 'North-East',
-            'Meghalaya': 'North-East',
-            'Mizoram': 'North-East',
-            'Nagaland': 'North-East',
-            'Tripura': 'North-East',
-            'Delhi': 'North',
-            'Haryana': 'North',
-            'Himachal Pradesh': 'North',
-            'Jammu and Kashmir': 'North',
-            'Jammu & Kashmir': 'North',
-            'Ladakh': 'North',
-            'Punjab': 'North',
-            'Rajasthan': 'North',
-            'Uttar Pradesh': 'North',
-            'Uttarakhand': 'North',
-            'Chandigarh': 'North'
-        };
-        const ZONE_COLORS = {
-            'North': '#2563eb',
-            'South': '#0ea5e9',
-            'East': '#22c55e',
-            'West': '#f59e0b',
-            'Central': '#f97316',
-            'North-East': '#8b5cf6',
-            'Other': '#64748b'
+        const zoneColorCache = new Map();
+        const zoneColor = (zone) => {
+            const key = zone || 'Unknown';
+            if (zoneColorCache.has(key)) return zoneColorCache.get(key);
+            const palette = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330];
+            const hash = key.split('').reduce((acc, ch) => acc + ch.charCodeAt(0), 0);
+            const hue = palette[hash % palette.length];
+            const color = `hsl(${hue}, 70%, 45%)`;
+            zoneColorCache.set(key, color);
+            return color;
         };
 
         let map, clusterGroup, zoneLayer, userMarker, nearestLine;
@@ -256,17 +216,13 @@
         const by = (k) => (a,b) => (a[k]||'').localeCompare(b[k]||'');
         const highlight = (text, query) => !query ? text : text.replace(new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'ig'), m => `<mark>${m}</mark>`);
         const downloadCSV = (rows) => {
-            const header = ['name','category','address','city','state','postalCode','latitude','longitude'];
+            const header = ['name','category','zone','zoneCode','address','city','state','postalCode','latitude','longitude'];
             const csv = [header.join(',')].concat(rows.map(o => header.map(h => `"${String(o[h]??'').replace(/"/g,'\"')}"`).join(','))).join('\n');
             const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
             const url = URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url; a.download = 'epfo_filtered_offices.csv'; a.click();
             URL.revokeObjectURL(url);
-        };
-        const zoneForState = (state) => {
-            const key = (state || '').trim();
-            return STATE_TO_ZONE[key] || 'Other';
         };
         const syncMapLayers = () => {
             if (!map) return;
@@ -298,7 +254,7 @@
             offices.forEach(o => {
                 const m = L.marker([o.latitude, o.longitude]);
                 const directionsURL = `https://www.google.com/maps/dir/?api=1&destination=${o.latitude},${o.longitude}`;
-                const popupContent = `<b>${o.name}</b><br><span class='text-gray-500'>${o.category}</span><hr class='my-2'/>${o.address}<br>${o.city}, ${o.state} ${o.postalCode}<br><a href="${directionsURL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:10px; padding: 6px 12px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-size: 12px;">Get Directions</a>`;
+                const popupContent = `<b>${o.name}</b><br><span class='text-gray-500'>${o.category}</span>${o.zone ? `<div style="margin-top:4px; font-size:12px; color:#2563eb;">${o.zone}</div>` : ''}<hr class='my-2'/>${o.address}<br>${o.city}, ${o.state} ${o.postalCode}<br><a href="${directionsURL}" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:10px; padding: 6px 12px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 6px; font-size: 12px;">Get Directions</a>`;
                 m.bindPopup(popupContent);
                 m.on('click', () => selectOffice(o.id));
                 m._oid = o.id;
@@ -326,7 +282,7 @@
             grouped.forEach((list, zone) => {
                 const avgLat = list.reduce((sum, o) => sum + o.latitude, 0) / list.length;
                 const avgLon = list.reduce((sum, o) => sum + o.longitude, 0) / list.length;
-                const color = ZONE_COLORS[zone] || ZONE_COLORS['Other'];
+                const color = zoneColor(zone);
                 const icon = L.divIcon({
                     className: '',
                     html: `<div class="zone-cluster" style="background:${color};">
@@ -358,20 +314,31 @@
                 const rows = text.split('\n').slice(1);
                 allOffices = rows.map((row, idx) => {
                     const cols = row.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                    if (cols.length < 8) return null;
-                    const lat = parseFloat(cols[6]), lon = parseFloat(cols[7]);
+                    if (cols.length < 10) return null;
+                    const lat = parseFloat(cols[8]), lon = parseFloat(cols[9]);
                     if (!isFinite(lat) || !isFinite(lon)) return null;
                     const clean = (s) => (s||'').replaceAll('"','').trim();
-                    const state = clean(cols[4]) || '';
-                    const zone = zoneForState(state);
-                    const obj = { id: idx, name: clean(cols[0])||'N/A', category: clean(cols[1])||'N/A', address: clean(cols[2])||'N/A', city: clean(cols[3])||'', state, postalCode: clean(cols[5])||'', latitude: lat, longitude: lon, slug: slug(`${clean(cols[0])}-${idx}`), zone };
+                    const obj = {
+                        id: idx,
+                        name: clean(cols[0]) || 'N/A',
+                        category: clean(cols[1]) || 'N/A',
+                        zone: clean(cols[2]) || 'Other',
+                        zoneCode: clean(cols[3]) || '',
+                        address: clean(cols[4]) || 'N/A',
+                        city: clean(cols[5]) || '',
+                        state: clean(cols[6]) || '',
+                        postalCode: clean(cols[7]) || '',
+                        latitude: lat,
+                        longitude: lon,
+                        slug: slug(`${clean(cols[0])}-${idx}`)
+                    };
                     categories.add(obj.category); states.add(obj.state);
                     if (!citiesByState.has(obj.state)) citiesByState.set(obj.state, new Set());
                     if (obj.city) citiesByState.get(obj.state).add(obj.city);
                     return obj;
                 }).filter(Boolean);
 
-                fuse = new Fuse(allOffices, { threshold: 0.3, minMatchCharLength: 2, includeScore: true, ignoreLocation: true, keys: [{name: 'name', weight: 0.5}, {name: 'city', weight: 0.3}, {name: 'address', weight: 0.15}, {name: 'state', weight: 0.05}] });
+                fuse = new Fuse(allOffices, { threshold: 0.3, minMatchCharLength: 2, includeScore: true, ignoreLocation: true, keys: [{name: 'name', weight: 0.45}, {name: 'city', weight: 0.25}, {name: 'address', weight: 0.15}, {name: 'state', weight: 0.05}, {name: 'zone', weight: 0.1}] });
                 renderCategoryChips([...categories].sort());
                 renderStateOptions(['', ...[...states].sort()]);
                 renderCityOptions(['']);
@@ -402,7 +369,7 @@
                 card.type = 'button';
                 card.className = `w-full text-left rounded-xl border border-gray-200 dark:border-gray-800 bg-white/80 dark:bg-gray-900/80 p-3 hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500`;
                 card.dataset.id = o.id;
-                card.innerHTML = `<div class='flex items-start justify-between gap-2'><div><h3 class='font-semibold'>${highlight(o.name, query)}</h3><div class='text-xs text-gray-500 dark:text-gray-400 mt-0.5'>${o.category}</div></div><a class='shrink-0 text-xs underline text-blue-600 dark:text-blue-400' href='https://www.google.com/maps/search/?api=1&query=${o.latitude},${o.longitude}' target='_blank' rel='noopener' onclick="event.stopPropagation()">Open Map</a></div><p class='text-sm mt-1'>${highlight(o.address, query)}</p><p class='text-sm text-gray-600 dark:text-gray-400'>${highlight(`${o.city}${o.city && o.state ? ', ' : ''}${o.state} ${o.postalCode}`, query)}</p>`;
+                card.innerHTML = `<div class='flex items-start justify-between gap-2'><div><h3 class='font-semibold'>${highlight(o.name, query)}</h3><div class='text-xs text-gray-500 dark:text-gray-400 mt-0.5'>${o.category}</div>${o.zone ? `<div class='text-xs text-blue-600 dark:text-blue-400 mt-0.5'>${highlight(o.zone, query)}</div>` : ''}</div><a class='shrink-0 text-xs underline text-blue-600 dark:text-blue-400' href='https://www.google.com/maps/search/?api=1&query=${o.latitude},${o.longitude}' target='_blank' rel='noopener' onclick="event.stopPropagation()">Open Map</a></div><p class='text-sm mt-1'>${highlight(o.address, query)}</p><p class='text-sm text-gray-600 dark:text-gray-400'>${highlight(`${o.city}${o.city && o.state ? ', ' : ''}${o.state} ${o.postalCode}`, query)}</p>`;
                 if (o.id === selectedId) card.classList.add('selected');
                 card.addEventListener('click', () => selectOffice(o.id, true));
                 frag.appendChild(card);
