@@ -170,30 +170,24 @@
         const totalOfficesEl = document.getElementById('totalOffices');
         const largestGapEl = document.getElementById('largestGap');
         const avgCoverageEl = document.getElementById('avgCoverage');
-        const voronoiCellsEl = document.getElementById('voronoiCells');
+        const mainlandOfficesCountEl = document.getElementById('mainlandOfficesCount');
         const gapList = document.getElementById('gapList');
         const toggleVoronoiBtn = document.getElementById('toggleVoronoi');
         const toggleCoverageBtn = document.getElementById('toggleCoverage');
         const findGapBtn = document.getElementById('findGapBtn');
+        const visualizeGapsBtn = document.getElementById('visualizeGapsBtn');
         const radiusSlider = document.getElementById('radiusSlider');
         const radiusValue = document.getElementById('radiusValue');
 
-        let map, voronoiLayer, coverageLayer, gapMarkersLayer;
+        let map, voronoiLayer, coverageLayer, gapMarkersLayer, hullLayer, gapVisualizationLayer;
         let allOffices = [];
+        let mainlandOffices = [];
+        let convexHull = null;
         let voronoiData = null;
         let largestGapPoint = null;
         let showVoronoi = true;
         let showCoverage = false;
-        let coverageRadius = 50; // km
-
-        // India boundary (simplified polygon for demonstration)
-        // For production, you'd load actual GeoJSON from a file
-        const INDIA_BOUNDS = {
-            north: 35.5,
-            south: 6.5,
-            east: 97.5,
-            west: 68.0
-        };
+        let coverageRadius = 75; // km
 
         // ---------- UTILS ----------
         const haversine = (lat1, lon1, lat2, lon2) => {
@@ -210,42 +204,41 @@
             return `${km.toFixed(2)} km`;
         };
 
-        const isInIndiaBounds = (lat, lon) => {
-            return lat >= INDIA_BOUNDS.south && lat <= INDIA_BOUNDS.north &&
-                   lon >= INDIA_BOUNDS.west && lon <= INDIA_BOUNDS.east;
+        const isWithinAnalysisArea = (lat, lon) => {
+            if (!convexHull) return false;
+            const point = turf.point([lon, lat]);
+            return turf.booleanPointInPolygon(point, convexHull);
         };
 
-        // ---------- VORONOI COMPUTATION ----------
+        // ---------- VORONOI & GAP COMPUTATION ----------
         const computeVoronoi = (offices) => {
-            if (offices.length < 3) return null;
+            if (offices.length < 3 || !convexHull) return null;
 
             const points = offices.map(o => [o.longitude, o.latitude]);
             const delaunay = d3.Delaunay.from(points);
-            const voronoi = delaunay.voronoi([INDIA_BOUNDS.west, INDIA_BOUNDS.south, INDIA_BOUNDS.east, INDIA_BOUNDS.north]);
+            const bbox = turf.bbox(convexHull); // [minX, minY, maxX, maxY]
+            const voronoi = delaunay.voronoi(bbox);
 
             return { delaunay, voronoi, points };
         };
 
-        // Find the point that is farthest from any office (largest empty circle)
         const findLargestGapVoronoi = (offices) => {
             if (offices.length < 3) return null;
 
-            statusText.textContent = 'Computing Voronoi diagram...';
-            const { delaunay, voronoi } = computeVoronoi(offices);
+            statusText.textContent = 'Computing Voronoi diagram for mainland...';
+            const { delaunay, voronoi } = voronoiData;
 
-            statusText.textContent = 'Analyzing coverage gaps...';
+            statusText.textContent = 'Analyzing coverage gaps within convex hull...';
 
             let maxDistance = 0;
             let bestPoint = null;
-            let bestCell = null;
 
-            // Method 1: Check Voronoi vertices (most efficient)
-            // Voronoi vertices are equidistant from 3+ sites
+            // Method 1: Check Voronoi vertices
             const vertices = [];
             for (let i = 0; i < voronoi.circumcenters.length; i += 2) {
                 const lon = voronoi.circumcenters[i];
                 const lat = voronoi.circumcenters[i + 1];
-                if (isInIndiaBounds(lat, lon)) {
+                if (isWithinAnalysisArea(lat, lon)) {
                     vertices.push([lon, lat]);
                 }
             }
@@ -253,7 +246,6 @@
             statusText.textContent = `Evaluating ${vertices.length} potential gap points...`;
 
             vertices.forEach(([lon, lat]) => {
-                // Find distance to nearest office
                 let minDist = Infinity;
                 offices.forEach(office => {
                     const d = haversine(lat, lon, office.latitude, office.longitude);
@@ -265,30 +257,7 @@
                     bestPoint = { lat, lon, distance: minDist };
                 }
             });
-
-            // Method 2: Sample grid points (for verification)
-            statusText.textContent = 'Verifying with grid sampling...';
-            const gridResolution = 50; // Number of points per dimension
-            for (let latStep = 0; latStep < gridResolution; latStep++) {
-                for (let lonStep = 0; lonStep < gridResolution; lonStep++) {
-                    const lat = INDIA_BOUNDS.south + (INDIA_BOUNDS.north - INDIA_BOUNDS.south) * latStep / gridResolution;
-                    const lon = INDIA_BOUNDS.west + (INDIA_BOUNDS.east - INDIA_BOUNDS.west) * lonStep / gridResolution;
-
-                    if (!isInIndiaBounds(lat, lon)) continue;
-
-                    let minDist = Infinity;
-                    offices.forEach(office => {
-                        const d = haversine(lat, lon, office.latitude, office.longitude);
-                        if (d < minDist) minDist = d;
-                    });
-
-                    if (minDist > maxDistance) {
-                        maxDistance = minDist;
-                        bestPoint = { lat, lon, distance: minDist };
-                    }
-                }
-            }
-
+            
             statusText.textContent = 'Analysis complete!';
             return bestPoint;
         };
@@ -300,9 +269,11 @@
                 attribution: '&copy; OpenStreetMap contributors'
             }).addTo(map);
 
+            hullLayer = L.layerGroup().addTo(map);
             voronoiLayer = L.layerGroup().addTo(map);
             coverageLayer = L.layerGroup().addTo(map);
             gapMarkersLayer = L.layerGroup().addTo(map);
+            gapVisualizationLayer = L.layerGroup().addTo(map);
         };
 
         const renderVoronoiCells = () => {
@@ -310,28 +281,18 @@
             if (!showVoronoi || !voronoiData) return;
 
             const { voronoi } = voronoiData;
-            const svgOverlay = L.svg();
-            svgOverlay.addTo(map);
 
-            allOffices.forEach((office, i) => {
+            mainlandOffices.forEach((office, i) => {
                 const cell = voronoi.cellPolygon(i);
                 if (!cell) return;
 
                 const latLngs = cell.map(([lon, lat]) => [lat, lon]);
                 const polygon = L.polygon(latLngs, {
-                    color: '#3b82f6',
-                    weight: 1,
-                    opacity: 0.5,
-                    fillColor: '#3b82f6',
-                    fillOpacity: 0.1
+                    color: '#3b82f6', weight: 1, opacity: 0.5,
+                    fillColor: '#3b82f6', fillOpacity: 0.1
                 });
 
-                polygon.bindPopup(`
-                    <div class="text-sm">
-                        <b>${office.name}</b><br>
-                        <span class="text-gray-500">Voronoi Cell Coverage</span>
-                    </div>
-                `);
+                polygon.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Voronoi Cell</span></div>`);
                 voronoiLayer.addLayer(polygon);
             });
         };
@@ -340,108 +301,74 @@
             coverageLayer.clearLayers();
             if (!showCoverage) return;
 
-            allOffices.forEach(office => {
+            mainlandOffices.forEach(office => {
                 const circle = L.circle([office.latitude, office.longitude], {
-                    radius: coverageRadius * 1000, // Convert to meters
-                    color: '#22c55e',
-                    weight: 2,
-                    opacity: 0.6,
-                    fillColor: '#22c55e',
-                    fillOpacity: 0.1
+                    radius: coverageRadius * 1000,
+                    color: '#22c55e', weight: 2, opacity: 0.6,
+                    fillColor: '#22c55e', fillOpacity: 0.1
                 });
-
-                circle.bindPopup(`
-                    <div class="text-sm">
-                        <b>${office.name}</b><br>
-                        <span class="text-gray-500">Coverage: ${coverageRadius} km radius</span>
-                    </div>
-                `);
+                circle.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Coverage: ${coverageRadius} km</span></div>`);
                 coverageLayer.addLayer(circle);
             });
         };
 
         const renderOfficeMarkers = () => {
-            gapMarkersLayer.clearLayers();
-
             allOffices.forEach(office => {
+                const isMainland = mainlandOffices.some(o => o.id === office.id);
                 const marker = L.marker([office.latitude, office.longitude], {
                     icon: L.divIcon({
                         className: '',
-                        html: `<div style="background: #3b82f6; border: 2px solid #fff; border-radius: 50%; width: 12px; height: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
-                        iconSize: [12, 12],
-                        iconAnchor: [6, 6]
+                        html: `<div style="background: ${isMainland ? '#3b82f6' : '#9ca3af'}; border: 2px solid #fff; border-radius: 50%; width: 12px; height: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
+                        iconSize: [12, 12], iconAnchor: [6, 6]
                     })
                 });
 
-                marker.bindPopup(`
-                    <div class="text-sm">
-                        <b>${office.name}</b><br>
-                        <span class="text-gray-500">${office.category}</span><br>
-                        <span class="text-xs text-gray-400">${office.city}, ${office.state}</span>
-                    </div>
-                `);
-                gapMarkersLayer.addLayer(marker);
+                marker.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">${office.category}</span><br><span class="text-xs text-gray-400">${office.city}, ${office.state}</span></div>`);
+                marker.addTo(map);
             });
         };
 
         const renderLargestGap = () => {
+            gapMarkersLayer.clearLayers();
             if (!largestGapPoint) return;
 
             const gapMarker = L.marker([largestGapPoint.lat, largestGapPoint.lon], {
                 icon: L.divIcon({
                     className: '',
                     html: `<div style="background: #dc2626; border: 3px solid #fff; border-radius: 50%; width: 32px; height: 32px; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.5); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; animation: pulse 2s infinite;">⚠</div>`,
-                    iconSize: [32, 32],
-                    iconAnchor: [16, 16]
+                    iconSize: [32, 32], iconAnchor: [16, 16]
                 })
             });
 
             gapMarker.bindPopup(`
                 <div class="text-center p-2">
                     <div class="text-lg font-bold text-red-600 mb-2">⚠ LARGEST COVERAGE GAP</div>
-                    <div class="text-sm mb-2">
-                        This location is <b class="text-red-600">${formatDistance(largestGapPoint.distance)}</b><br>
-                        from the nearest EPFO office.
-                    </div>
-                    <div class="text-xs text-gray-500 mb-3">
-                        Coordinates: ${largestGapPoint.lat.toFixed(4)}, ${largestGapPoint.lon.toFixed(4)}
-                    </div>
-                    <a href="https://www.google.com/maps/search/?api=1&query=${largestGapPoint.lat},${largestGapPoint.lon}"
-                       target="_blank"
-                       class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700">
-                        View on Google Maps
-                    </a>
+                    <div class="text-sm mb-2">This location is <b class="text-red-600">${formatDistance(largestGapPoint.distance)}</b> from the nearest office.</div>
+                    <div class="text-xs text-gray-500 mb-3">Coordinates: ${largestGapPoint.lat.toFixed(4)}, ${largestGapPoint.lon.toFixed(4)}</div>
+                    <a href="https://www.google.com/maps/search/?api=1&query=${largestGapPoint.lat},${largestGapPoint.lon}" target="_blank" class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700">View on Google Maps</a>
                 </div>
             `).openPopup();
-
             gapMarkersLayer.addLayer(gapMarker);
 
-            // Draw circle showing the gap radius
             const gapCircle = L.circle([largestGapPoint.lat, largestGapPoint.lon], {
                 radius: largestGapPoint.distance * 1000,
-                color: '#dc2626',
-                weight: 2,
-                opacity: 0.5,
-                fillColor: '#dc2626',
-                fillOpacity: 0.1,
-                dashArray: '10, 10'
+                color: '#dc2626', weight: 2, opacity: 0.5,
+                fillColor: '#dc2626', fillOpacity: 0.1, dashArray: '10, 10'
             });
             gapMarkersLayer.addLayer(gapCircle);
-
-            // Fly to the gap location
-            map.flyTo([largestGapPoint.lat, largestGapPoint.lon], 7, { duration: 1.5 });
+            map.flyTo([largestGapPoint.lat, largestGapPoint.lon], 8, { duration: 1.5 });
         };
 
         const renderGapList = (gaps) => {
             gapList.innerHTML = '';
             if (!gaps || gaps.length === 0) {
-                gapList.innerHTML = '<div class="text-sm text-gray-500">No gaps found. Run analysis first.</div>';
+                gapList.innerHTML = '<div class="text-sm text-gray-500 p-4">No gaps found for this criteria.</div>';
                 return;
             }
 
-            gaps.slice(0, 10).forEach((gap, index) => {
+            gaps.slice(0, 20).forEach((gap, index) => {
                 const card = document.createElement('div');
-                card.className = 'rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 p-3 hover:border-red-500 dark:hover:border-red-500 transition cursor-pointer';
+                card.className = 'rounded-lg border border-gray-200 dark:border-gray-800 p-3 hover:border-red-500 dark:hover:border-red-500 transition cursor-pointer';
                 card.innerHTML = `
                     <div class="flex items-start justify-between gap-2">
                         <div class="flex-1">
@@ -449,20 +376,14 @@
                                 <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold">${index + 1}</span>
                                 <span class="text-sm font-semibold text-red-600 dark:text-red-400">${formatDistance(gap.distance)}</span>
                             </div>
-                            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                                ${gap.lat.toFixed(3)}, ${gap.lon.toFixed(3)}
-                            </div>
+                            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">${gap.lat.toFixed(3)}, ${gap.lon.toFixed(3)}</div>
                         </div>
-                        <button class="text-xs text-blue-600 dark:text-blue-400 hover:underline" data-lat="${gap.lat}" data-lon="${gap.lon}">
-                            View
-                        </button>
+                        <button class="text-xs text-blue-600 dark:text-blue-400 hover:underline" data-lat="${gap.lat}" data-lon="${gap.lon}">View</button>
                     </div>
                 `;
                 card.querySelector('button').addEventListener('click', (e) => {
                     e.stopPropagation();
-                    const lat = parseFloat(e.target.dataset.lat);
-                    const lon = parseFloat(e.target.dataset.lon);
-                    map.flyTo([lat, lon], 10, { duration: 1 });
+                    map.flyTo([e.target.dataset.lat, e.target.dataset.lon], 10);
                 });
                 gapList.appendChild(card);
             });
@@ -470,25 +391,73 @@
 
         const updateStats = () => {
             totalOfficesEl.textContent = allOffices.length;
-            voronoiCellsEl.textContent = voronoiData ? allOffices.length : '-';
+            mainlandOfficesCountEl.textContent = mainlandOffices.length;
 
             if (largestGapPoint) {
                 largestGapEl.textContent = formatDistance(largestGapPoint.distance);
             }
 
-            // Calculate average distance to nearest office
             let totalDist = 0;
-            allOffices.forEach(office => {
+            mainlandOffices.forEach(office => {
                 let minDist = Infinity;
-                allOffices.forEach(other => {
+                mainlandOffices.forEach(other => {
                     if (office.id === other.id) return;
                     const d = haversine(office.latitude, office.longitude, other.latitude, other.longitude);
                     if (d < minDist) minDist = d;
                 });
                 totalDist += minDist;
             });
-            const avgDist = totalDist / allOffices.length;
+            const avgDist = totalDist / mainlandOffices.length;
             avgCoverageEl.textContent = formatDistance(avgDist);
+        };
+
+        const visualizeGaps = () => {
+            if (mainlandOffices.length < 3) return;
+            
+            visualizeGapsBtn.disabled = true;
+            visualizeGapsBtn.innerHTML = '<span class="animate-spin">⏳</span> Visualizing...';
+            statusText.textContent = `Visualizing all areas beyond ${coverageRadius} km from an office...`;
+            gapVisualizationLayer.clearLayers();
+
+            setTimeout(() => {
+                const bbox = turf.bbox(convexHull);
+                const cellSide = turf.distance(turf.point([bbox[0], bbox[1]]), turf.point([bbox[2], bbox[1]])) / 150; // approx grid size
+                const grid = turf.pointGrid(bbox, cellSide, { units: 'kilometers' });
+
+                const gapsFound = [];
+                grid.features.forEach(pt => {
+                    const [lon, lat] = pt.geometry.coordinates;
+                    if (isWithinAnalysisArea(lat, lon)) {
+                        let minDist = Infinity;
+                        for(const office of mainlandOffices) {
+                            const d = haversine(lat, lon, office.latitude, office.longitude);
+                            if (d < minDist) minDist = d;
+                        }
+                        if (minDist > coverageRadius) {
+                            gapsFound.push(pt);
+                        }
+                    }
+                });
+
+                if (gapsFound.length > 0) {
+                    const gapCollection = turf.featureCollection(gapsFound);
+                    const heatmapLayer = L.geoJSON(gapCollection, {
+                        pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                            radius: 2,
+                            fillColor: "#ef4444",
+                            color: "#ef4444",
+                            weight: 1,
+                            opacity: 0.5,
+                            fillOpacity: 0.3
+                        })
+                    });
+                    gapVisualizationLayer.addLayer(heatmapLayer);
+                }
+                
+                statusText.textContent = `Found ${gapsFound.length} underserved grid points.`;
+                visualizeGapsBtn.disabled = false;
+                visualizeGapsBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m11-1" /></svg> Visualize All Gaps`;
+            }, 100);
         };
 
         // ---------- DATA LOADING ----------
@@ -506,30 +475,39 @@
                     if (!isFinite(lat) || !isFinite(lon)) return null;
                     const clean = (s) => (s||'').replaceAll('"','').trim();
                     return {
-                        id: idx,
-                        name: clean(cols[0]) || 'N/A',
-                        category: clean(cols[1]) || 'N/A',
-                        zone: clean(cols[2]) || 'Other',
-                        address: clean(cols[3]) || 'N/A',
-                        city: clean(cols[4]) || '',
-                        state: clean(cols[5]) || '',
-                        postalCode: clean(cols[6]) || '',
-                        latitude: lat,
-                        longitude: lon
+                        id: idx, name: clean(cols[0]) || 'N/A', category: clean(cols[1]) || 'N/A',
+                        zone: clean(cols[2]) || 'Other', address: clean(cols[3]) || 'N/A',
+                        city: clean(cols[4]) || '', state: clean(cols[5]) || '',
+                        postalCode: clean(cols[6]) || '', latitude: lat, longitude: lon
                     };
                 }).filter(Boolean);
 
-                statusText.textContent = `Loaded ${allOffices.length} offices`;
+                statusText.textContent = `Loaded ${allOffices.length} offices. Filtering for mainland...`;
 
-                // Compute Voronoi
-                voronoiData = computeVoronoi(allOffices);
+                // Filter out island offices for analysis
+                const islandStates = ["ANDAMAN AND NICOBAR ISLANDS", "LAKSHADWEEP"];
+                mainlandOffices = allOffices.filter(o => !islandStates.includes(o.state.toUpperCase()));
+
+                // Compute convex hull for mainland
+                if (mainlandOffices.length > 2) {
+                    const points = mainlandOffices.map(o => turf.point([o.longitude, o.latitude]));
+                    convexHull = turf.convex(turf.featureCollection(points));
+                    const hullPolygon = L.geoJSON(convexHull, {
+                        style: { color: "#4f46e5", weight: 2, opacity: 0.6, fill: false, dashArray: '5, 5' }
+                    });
+                    hullLayer.addLayer(hullPolygon);
+                }
+
+                // Compute Voronoi on mainland offices
+                voronoiData = computeVoronoi(mainlandOffices);
 
                 // Render
                 renderOfficeMarkers();
                 renderVoronoiCells();
+                renderCoverageCircles();
                 updateStats();
 
-                statusText.textContent = 'Ready! Click "Find Largest Gap" to analyze coverage.';
+                statusText.textContent = 'Ready! Analyze gaps on the Indian mainland.';
             } catch (e) {
                 console.error(e);
                 statusText.textContent = 'Failed to load data. See console.';
@@ -550,46 +528,35 @@
         });
 
         findGapBtn.addEventListener('click', () => {
-            if (allOffices.length < 3) {
-                statusText.textContent = 'Need at least 3 offices to analyze coverage gaps.';
+            if (mainlandOffices.length < 3) {
+                statusText.textContent = 'Need at least 3 mainland offices to analyze.';
                 return;
             }
-
             findGapBtn.disabled = true;
             findGapBtn.innerHTML = '<span class="animate-spin">⏳</span> Analyzing...';
+            gapList.innerHTML = '';
 
             setTimeout(() => {
-                largestGapPoint = findLargestGapVoronoi(allOffices);
-
+                largestGapPoint = findLargestGapVoronoi(mainlandOffices);
                 if (largestGapPoint) {
                     renderLargestGap();
                     updateStats();
-
-                    // Generate list of top gaps (simplified - just using grid samples)
-                    const gaps = [];
-                    for (let i = 0; i < 100; i++) {
-                        const lat = INDIA_BOUNDS.south + Math.random() * (INDIA_BOUNDS.north - INDIA_BOUNDS.south);
-                        const lon = INDIA_BOUNDS.west + Math.random() * (INDIA_BOUNDS.east - INDIA_BOUNDS.west);
-                        let minDist = Infinity;
-                        allOffices.forEach(office => {
-                            const d = haversine(lat, lon, office.latitude, office.longitude);
-                            if (d < minDist) minDist = d;
-                        });
-                        gaps.push({ lat, lon, distance: minDist });
-                    }
-                    gaps.sort((a, b) => b.distance - a.distance);
-                    renderGapList(gaps);
+                    renderGapList([largestGapPoint]); // Show the largest gap in the list
                 }
-
                 findGapBtn.disabled = false;
-                findGapBtn.innerHTML = '<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find Largest Gap';
+                findGapBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find Largest Gap`;
             }, 100);
         });
+
+        visualizeGapsBtn.addEventListener('click', visualizeGaps);
 
         radiusSlider.addEventListener('input', (e) => {
             coverageRadius = parseInt(e.target.value);
             radiusValue.textContent = `${coverageRadius} km`;
             renderCoverageCircles();
+            if (gapVisualizationLayer.getLayers().length > 0) {
+                visualizeGaps(); // Re-run visualization if it's active
+            }
         });
 
         // ---------- INIT ----------
