@@ -613,7 +613,7 @@
 
                 // *** NEW: Define polygon for Rajasthan/Gujarat ***
                 const rajasthanGujaratCoords = [[
-                    [73.18,29.49],
+                    [73.86,30.11],
                     [70.32,28.00],
                     [69.48,26.82],
                     [71.07,24.42],
@@ -621,9 +621,28 @@
                     [70.80,20.73],
                     [72.30,21.63],
                     [72.38,22.26],
-                    [73.18,29.49]
+                    [73.86,30.11]
                 ]];
                 const rajasthanGujaratPolygon = turf.polygon(rajasthanGujaratCoords);
+
+                // *** NEW: Define polygons for northern regions ***
+                const jammuKashmirCoords = [[
+                    [73.5, 32.3], [75.0, 32.2], [77.0, 33.0], [80.0, 32.73], [78.37,32.53],[78.89,31.27],
+                    [79.0, 35.5], [77.0, 36.00], [74.5, 35.5], [73.5, 32.3]
+                ]];
+                const jammuKashmirPolygon = turf.polygon(jammuKashmirCoords);
+
+                const uttarakhandUpCoords = [[
+                    [77.0, 28.0], [82.0, 26.0], [84.0, 27.0], [83.0, 29.0], 
+                    [81.0, 31.0], [77.5, 31.3], [77.0, 28.0]
+                ]];
+                const uttarakhandUpPolygon = turf.polygon(uttarakhandUpCoords);
+
+                const arunachalPradeshCoords = [[
+                    [91.5, 26.8], [94.0, 27.0], [97.0, 27.5], [97.5, 29.5], 
+                    [95.0, 29.8], [92.0, 28.0], [91.5, 26.8]
+                ]];
+                const arunachalPradeshPolygon = turf.polygon(arunachalPradeshCoords);
 
 
                 // *** 3. Compute concave hull using Turf.js ***
@@ -654,12 +673,18 @@
                         }
 
                         // *** Second Step: Add Rajasthan/Gujarat polygon ***
-                        statusText.textContent = "Adding specified western regions...";
+                        statusText.textContent = "Adding specified western & northern regions...";
+                        let currentHull = intermediateHull;
                         try {
-                            // Use turf.union to add the new polygon
-                            analysisHull = turf.union(intermediateHull, rajasthanGujaratPolygon);
+                            // Use turf.union to add the new polygons one by one
+                            currentHull = turf.union(currentHull, rajasthanGujaratPolygon);
+                            currentHull = turf.union(currentHull, jammuKashmirPolygon);
+                            currentHull = turf.union(currentHull, uttarakhandUpPolygon);
+                            currentHull = turf.union(currentHull, arunachalPradeshPolygon);
+                            
+                            analysisHull = currentHull;
                         } catch (e) {
-                            console.error("Turf union error:", e);
+                            console.error("Turf union error:", e, "Failing back to previous hull.");
                             analysisHull = intermediateHull; // Fallback if union fails
                         }
 
@@ -737,7 +762,7 @@
                     renderGapList(coverageGaps); // Renders the consolidated gaps list
                 } else {
                     statusText.textContent = 'No gaps found within the analysis area.';
-                    gapList.innerHTML = '<div class="text-sm text-gray-500 p-4">No gaps found within the analysis area.</div>';
+                    gapList.innerHTML = '<div class="text-sm text-gray-500 p-4">No gaps found for this criteria.</div>';
                 }
                 
                 // 4. Reset button
