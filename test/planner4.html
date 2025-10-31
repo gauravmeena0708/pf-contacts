@@ -27,7 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 
     <!-- Concave Hull library -->
-    <script src="https://cdn.jsdelivr.net/npm/concaveman@2.0.0/index.min.js"></script>
+    <script src="https://unpkg.com/hull.js@0.2.10/dist/hull.js"></script>
 
     <style>
         html, body, #app { height: 100%; }
@@ -160,9 +160,7 @@
 
     <script type="module">
         // ---------- THEME ----------
-		import concaveman from 'concaveman';
-        const htmlEl = document.documentElement;
-        const themeToggle = document.getElementById('themeToggle');
+		        const htmlEl = document.documentElement;        const themeToggle = document.getElementById('themeToggle');
         const iconSun = document.getElementById('iconSun');
         const iconMoon = document.getElementById('iconMoon');
         const savedTheme = localStorage.getItem('theme');
@@ -502,10 +500,7 @@
                 // Compute concave hull for mainland
                 if (mainlandOffices.length > 2) {
                     const points = mainlandOffices.map(o => [o.longitude, o.latitude]);
-                    // concaveman(points, concavity, lengthThreshold)
-                    // concavity: A non-negative number indicating the concavity. 1 results in a relatively detailed hull, Infinity results in a convex hull.
-                    // lengthThreshold: When a segment is longer than this, it will not be considered for the hull.
-                    const hullPoints = concaveman(points, 2, 0.5);
+                    const hullPoints = hull(points, 30); // Higher concavity for more detail
                     analysisHull = turf.polygon([hullPoints]);
 
                     const hullPolygon = L.geoJSON(analysisHull, {
