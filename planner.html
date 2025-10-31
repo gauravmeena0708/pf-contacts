@@ -747,7 +747,7 @@
                 
                 // *** 2. NEW STEP: Consolidate the gaps ***
                 // This is the "magic number" to tune. Higher = fewer, more spread-out points.
-                const consolidationRadius = 50; // 50 km
+                const consolidationRadius = 100; // 50 km
                 statusText.textContent = `Consolidating gaps within a ${consolidationRadius}km radius...`;
                 const consolidated = consolidateGaps(allGaps, consolidationRadius);
 
