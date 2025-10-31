@@ -27,7 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 
     <!-- Concave Hull library -->
-    <script src="https://cdn.jsdelivr.net/npm/concavehull@1/dist/concavehull.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/concaveman@2.0.0/index.min.js"></script>
 
     <style>
         html, body, #app { height: 100%; }
@@ -338,6 +338,7 @@
 
         const renderLargestGap = () => {
             gapMarkersLayer.clearLayers();
+            const largestGapPoint = coverageGaps[0]; // Get the largest gap from the array
             if (!largestGapPoint) return;
 
             const gapMarker = L.marker([largestGapPoint.lat, largestGapPoint.lon], {
@@ -401,6 +402,7 @@
             totalOfficesEl.textContent = allOffices.length;
             mainlandOfficesCountEl.textContent = mainlandOffices.length;
 
+            const largestGapPoint = coverageGaps[0]; // Get the largest gap from the array
             if (largestGapPoint) {
                 largestGapEl.textContent = formatDistance(largestGapPoint.distance);
             }
@@ -415,7 +417,7 @@
                 });
                 totalDist += minDist;
             });
-            const avgDist = totalDist / mainlandOffices.length;
+            const avgDist = totalDist / (mainlandOffices.length || 1); // Avoid division by zero
             avgCoverageEl.textContent = formatDistance(avgDist);
         };
 
@@ -428,7 +430,7 @@
             gapVisualizationLayer.clearLayers();
 
             setTimeout(() => {
-                const bbox = turf.bbox(convexHull);
+                const bbox = turf.bbox(analysisHull);
                 const cellSide = turf.distance(turf.point([bbox[0], bbox[1]]), turf.point([bbox[2], bbox[1]])) / 150; // approx grid size
                 const grid = turf.pointGrid(bbox, cellSide, { units: 'kilometers' });
 
@@ -496,11 +498,16 @@
                 const islandStates = ["ANDAMAN AND NICOBAR ISLANDS", "LAKSHADWEEP"];
                 mainlandOffices = allOffices.filter(o => !islandStates.includes(o.state.toUpperCase()));
 
-                // Compute convex hull for mainland
+                // Compute concave hull for mainland
                 if (mainlandOffices.length > 2) {
-                    const points = mainlandOffices.map(o => turf.point([o.longitude, o.latitude]));
-                    convexHull = turf.convex(turf.featureCollection(points));
-                    const hullPolygon = L.geoJSON(convexHull, {
+                    const points = mainlandOffices.map(o => [o.longitude, o.latitude]);
+                    // concaveman(points, concavity, lengthThreshold)
+                    // concavity: A non-negative number indicating the concavity. 1 results in a relatively detailed hull, Infinity results in a convex hull.
+                    // lengthThreshold: When a segment is longer than this, it will not be considered for the hull.
+                    const hullPoints = concaveman(points, 2, 0.5);
+                    analysisHull = turf.polygon([hullPoints]);
+
+                    const hullPolygon = L.geoJSON(analysisHull, {
                         style: { color: "#4f46e5", weight: 2, opacity: 0.6, fill: false, dashArray: '5, 5' }
                     });
                     hullLayer.addLayer(hullPolygon);
