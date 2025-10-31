@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EPFO Coverage Analyzer - Mainland India</title>
 
-    <!-- Tailwind CSS -->
+    <!--
+        NOTE: The Tailwind CSS CDN is used for rapidly prototyping this single-file application.
+        For production use, it is recommended to install Tailwind CSS as a PostCSS plugin
+        or use the Tailwind CLI for better performance and a smaller file size.
+        https://tailwindcss.com/docs/installation
+    -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = { darkMode: 'class' };
@@ -22,7 +27,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 
     <!-- Concave Hull library -->
-    <script src="./concavehull.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/concavehull@1/dist/concavehull.min.js"></script>
 
     <style>
         html, body, #app { height: 100%; }
@@ -55,6 +60,7 @@
     </style>
 </head>
 <body class="h-full bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
+
     <div id="app" class="flex flex-col h-full">
         <!-- Header -->
         <header class="sticky top-0 z-20 border-b border-gray-200/80 dark:border-gray-800/80 bg-white/90 dark:bg-gray-900/90 backdrop-blur">
