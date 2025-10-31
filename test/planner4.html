@@ -27,7 +27,11 @@
     <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
 
     <!-- Concave Hull library -->
-    <script src="https://unpkg.com/hull.js@0.2.10/dist/hull.js"></script>
+    <!-- <script src="https://unpkg.com/hull.js@0.2.10/dist/hull.js"></script> -->
+    <!-- <script src="https://unpkg.com/concaveman@1.1.1/dist/concaveman.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/concaveman@1.1.1/dist/concaveman.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/concaveman/1.1.1/concaveman.min.js"></script> -->
+
 
     <style>
         html, body, #app { height: 100%; }
@@ -177,7 +181,8 @@
         });
 
         // ---------- CONSTANTS & STATE ----------
-        const CSV_PATH = 'contacts-data-field-offices.csv';
+        // *** 1. Absolute path for GitHub Pages ***
+        const CSV_PATH = 'https://gauravmeena0708.github.io/pf-contacts/test/contacts-data-field-offices.csv';
 
         const statusText = document.getElementById('statusText');
         const totalOfficesEl = document.getElementById('totalOffices');
@@ -283,28 +288,63 @@
             hullLayer = L.layerGroup().addTo(map);
             voronoiLayer = L.layerGroup().addTo(map);
             coverageLayer = L.layerGroup().addTo(map);
-            gapMarkersLayer = L.layerGroup().addTo(map);
+            gapMarkersLayer = L.layerGroup().addTo(map); // This layer will hold the selected gap
             gapVisualizationLayer = L.layerGroup().addTo(map);
         };
 
         const renderVoronoiCells = () => {
             voronoiLayer.clearLayers();
-            if (!showVoronoi || !voronoiData) return;
+            // Add checks for voronoiData and the analysisHull
+            if (!showVoronoi || !voronoiData || !analysisHull) return;
 
             const { voronoi } = voronoiData;
 
             mainlandOffices.forEach((office, i) => {
-                const cell = voronoi.cellPolygon(i);
-                if (!cell) return;
+                const cellPoints = voronoi.cellPolygon(i);
+                if (!cellPoints) return;
 
-                const latLngs = cell.map(([lon, lat]) => [lat, lon]);
-                const polygon = L.polygon(latLngs, {
+                // 1. Ensure cell polygon is closed for Turf
+                if (cellPoints[0][0] !== cellPoints[cellPoints.length - 1][0] || cellPoints[0][1] !== cellPoints[cellPoints.length - 1][1]) {
+                    cellPoints.push(cellPoints[0]);
+                }
+
+                // 2. Create Turf polygon for the cell
+                const cellTurfPolygon = turf.polygon([cellPoints]);
+
+                // 3. Find the intersection with the concave hull
+                let clippedCell = null;
+                try {
+                    // Use turf.intersect to clip the cell to the hull
+                    clippedCell = turf.intersect(cellTurfPolygon, analysisHull);
+                } catch (e) {
+                    console.error("Turf intersect error:", e, cellTurfPolygon, analysisHull);
+                    return; // Skip this cell if intersection fails
+                }
+
+                if (!clippedCell) return; // No intersection, cell is likely outside hull
+
+                // 4. Render the clipped polygon(s)
+                const style = {
                     color: '#3b82f6', weight: 1, opacity: 0.5,
                     fillColor: '#3b82f6', fillOpacity: 0.1
-                });
+                };
 
-                polygon.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Voronoi Cell</span></div>`);
-                voronoiLayer.addLayer(polygon);
+                // turf.intersect can return Polygon or MultiPolygon
+                if (clippedCell.geometry.type === 'Polygon') {
+                    // Coords are [lon, lat], convert to [lat, lon] for Leaflet
+                    const latLngs = clippedCell.geometry.coordinates[0].map(([lon, lat]) => [lat, lon]);
+                    const polygon = L.polygon(latLngs, style);
+                    polygon.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Voronoi Cell</span></div>`);
+                    voronoiLayer.addLayer(polygon);
+                } else if (clippedCell.geometry.type === 'MultiPolygon') {
+                    // Handle MultiPolygon (e.g., if hull creates holes or multiple intersection areas)
+                    clippedCell.geometry.coordinates.forEach(polyCoords => {
+                        const latLngs = polyCoords[0].map(([lon, lat]) => [lat, lon]);
+                        const polygon = L.polygon(latLngs, style);
+                        polygon.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Voronoi Cell</span></div>`);
+                        voronoiLayer.addLayer(polygon);
+                    });
+                }
             });
         };
 
@@ -339,12 +379,13 @@
             });
         };
 
-        const renderLargestGap = () => {
-            gapMarkersLayer.clearLayers();
-            const largestGapPoint = coverageGaps[0]; // Get the largest gap from the array
-            if (!largestGapPoint) return;
+        // *** 4. Refactored function to show any gap ***
+        const showGapOnMap = (gap) => {
+            if (!gap) return;
+            
+            gapMarkersLayer.clearLayers(); // Clear previous gap marker/circle
 
-            const gapMarker = L.marker([largestGapPoint.lat, largestGapPoint.lon], {
+            const gapMarker = L.marker([gap.lat, gap.lon], {
                 icon: L.divIcon({
                     className: '',
                     html: `<div style="background: #dc2626; border: 3px solid #fff; border-radius: 50%; width: 32px; height: 32px; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.5); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; animation: pulse 2s infinite;">⚠</div>`,
@@ -352,24 +393,29 @@
                 })
             });
 
-            // *** FIXED GOOGLE MAPS LINK ***
             gapMarker.bindPopup(`
                 <div class="text-center p-2">
-                    <div class="text-lg font-bold text-red-600 mb-2">⚠ LARGEST COVERAGE GAP</div>
-                    <div class="text-sm mb-2">This location is <b class="text-red-600">${formatDistance(largestGapPoint.distance)}</b> from the nearest office.</div>
-                    <div class="text-xs text-gray-500 mb-3">Coordinates: ${largestGapPoint.lat.toFixed(4)}, ${largestGapPoint.lon.toFixed(4)}</div>
-                    <a href="https://www.google.com/maps?q=${largestGapPoint.lat},${largestGapPoint.lon}" target="_blank" class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700">View on Google Maps</a>
+                    <div class="text-lg font-bold text-red-600 mb-2">⚠ COVERAGE GAP</div>
+                    <div class="text-sm mb-2">This location is <b class="text-red-600">${formatDistance(gap.distance)}</b> from the nearest office.</div>
+                    <div class="text-xs text-gray-500 mb-3">Coordinates: ${gap.lat.toFixed(4)}, ${gap.lon.toFixed(4)}</div>
+                    <a href="https://www.google.com/maps?q=${gap.lat},${gap.lon}" target="_blank" class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700">View on Google Maps</a>
                 </div>
             `).openPopup();
             gapMarkersLayer.addLayer(gapMarker);
 
-            const gapCircle = L.circle([largestGapPoint.lat, largestGapPoint.lon], {
-                radius: largestGapPoint.distance * 1000,
+            const gapCircle = L.circle([gap.lat, gap.lon], {
+                radius: gap.distance * 1000,
                 color: '#dc2626', weight: 2, opacity: 0.5,
                 fillColor: '#dc2626', fillOpacity: 0.1, dashArray: '10, 10'
             });
             gapMarkersLayer.addLayer(gapCircle);
-            map.flyTo([largestGapPoint.lat, largestGapPoint.lon], 8, { duration: 1.5 });
+            map.flyTo([gap.lat, gap.lon], 8, { duration: 1.5 });
+        }
+
+        const renderLargestGap = () => {
+            const largestGapPoint = coverageGaps[0]; // Get the largest gap from the array
+            if (!largestGapPoint) return;
+            showGapOnMap(largestGapPoint); // Use the new function to show it
         };
 
         const renderGapList = (gaps) => {
@@ -391,13 +437,28 @@
                             </div>
                             <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">${gap.lat.toFixed(3)}, ${gap.lon.toFixed(3)}</div>
                         </div>
-                        <button class="text-xs text-blue-600 dark:text-blue-400 hover:underline" data-lat="${gap.lat}" data-lon="${gap.lon}">View</button>
+                        <button class="text-xs text-blue-600 dark:text-blue-400 hover:underline" data-index="${index}">View</button>
                     </div>
                 `;
+                
+                // *** 4. Updated event listener ***
                 card.querySelector('button').addEventListener('click', (e) => {
                     e.stopPropagation();
-                    map.flyTo([e.target.dataset.lat, e.target.dataset.lon], 10);
+                    const selectedIndex = parseInt(e.target.dataset.index);
+                    const selectedGap = coverageGaps[selectedIndex];
+                    if (selectedGap) {
+                        showGapOnMap(selectedGap); // Show the clicked gap
+                    }
                 });
+                // Also make clicking the card do the same
+                card.addEventListener('click', (e) => {
+                    const selectedIndex = parseInt(e.currentTarget.querySelector('button').dataset.index);
+                     const selectedGap = coverageGaps[selectedIndex];
+                    if (selectedGap) {
+                        showGapOnMap(selectedGap); // Show the clicked gap
+                    }
+                });
+
                 gapList.appendChild(card);
             });
         };
@@ -498,32 +559,45 @@
 
                 statusText.textContent = `Loaded ${allOffices.length} offices. Filtering for mainland...`;
 
-                // Filter out island offices for analysis
+                // *** 2. Filter out island states AND Port Blair for hull calculation ***
                 const islandStates = ["ANDAMAN AND NICOBAR ISLANDS", "LAKSHADWEEP"];
-                mainlandOffices = allOffices.filter(o => !islandStates.includes(o.state.toUpperCase()));
+                const excludedNames = ["Regional Office, PORT BLAIR"]; // Specific exclusion
+                mainlandOffices = allOffices.filter(o => 
+                    !islandStates.includes(o.state.toUpperCase()) &&
+                    !excludedNames.includes(o.name)
+                );
 
-                // Compute concave hull for mainland
+                // *** 3. Compute concave hull using Turf.js ***
                 if (mainlandOffices.length > 2) {
-                    const points = mainlandOffices.map(o => [o.longitude, o.latitude]);
-                    // Concavity parameter: higher means more detail, lower is more like convex hull. 30 is a good starting point.
-                    const hullPoints = hull(points, 30); 
-                    // Make sure the polygon is closed
-                    if (hullPoints[0][0] !== hullPoints[hullPoints.length - 1][0] || hullPoints[0][1] !== hullPoints[hullPoints.length - 1][1]) {
-                        hullPoints.push(hullPoints[0]);
-                    }
-                    analysisHull = turf.polygon([hullPoints]);
+                    // Create a FeatureCollection of points for Turf
+                    const points = mainlandOffices.map(o => turf.point([o.longitude, o.latitude]));
+                    const pointsCollection = turf.featureCollection(points);
+                    
+                    // *** 3. Use turf.concave() instead of hull.js ***
+                    // This is the "magic number" to tune.
+                    // Lower = tighter hull, Higher = looser (more convex) hull.
+                    const maxEdgeKm = 450; 
+                    statusText.textContent = `Calculating concave hull with ${maxEdgeKm}km max edge...`;
 
-                    const hullPolygon = L.geoJSON(analysisHull, {
-                        style: { color: "#4f46e5", weight: 2, opacity: 0.6, fill: false, dashArray: '5, 5' }
-                    });
-                    hullLayer.addLayer(hullPolygon);
-                }
+                    // This will return a Feature<Polygon> or Feature<MultiPolygon>
+                    analysisHull = turf.concave(pointsCollection, {maxEdge: maxEdgeKm, units: 'kilometers'}); 
+
+                    if (analysisHull) {
+                        const hullPolygon = L.geoJSON(analysisHull, {
+                            style: { color: "#4f46e5", weight: 2, opacity: 0.6, fill: false, dashArray: '5, 5' }
+                        });
+                        hullLayer.addLayer(hullPolygon);
+                    } else {
+                        console.error("Turf.concave() returned null. The maxEdge might be too small.");
+                        statusText.textContent = "Could not generate mainland boundary. maxEdge may be too small.";
+                    }
+                } 
 
                 // Compute Voronoi on mainland offices
                 voronoiData = computeVoronoi(mainlandOffices);
 
                 // Render
-                renderOfficeMarkers();
+                renderOfficeMarkers(); // Renders ALL offices, including Port Blair
                 renderVoronoiCells();
                 renderCoverageCircles();
                 updateStats(); // Initial update with 0 gaps
@@ -534,7 +608,7 @@
                 console.error(e);
                 statusText.textContent = 'Failed to load data. See console.';
             }
-        };
+        }; 
 
         // ---------- EVENT HANDLERS ----------
         toggleVoronoiBtn.addEventListener('click', () => {
@@ -579,7 +653,7 @@
                 
                 // 4. Reset button
                 findGapBtn.disabled = false;
-                findGapBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find Coverage Gaps`;
+                findGapBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find CoverageGaps`;
             }, 100);
         });
 
@@ -608,3 +682,5 @@
     </style>
 </body>
 </html>
+
+
