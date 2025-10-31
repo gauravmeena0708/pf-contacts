@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EPFO Coverage Analyzer - Mainland India</title>
+
+    <!--
+        NOTE: The Tailwind CSS CDN is used for rapidly prototyping this single-file application.
+        For production use, it is recommended to install Tailwind CSS as a PostCSS plugin
+        or use the Tailwind CLI for better performance and a smaller file size.
+        https://tailwindcss.com/docs/installation
+    -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { darkMode: 'class' };
+    </script>
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- D3 Delaunay for Voronoi -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-delaunay@6"></script>
+
+    <!-- Turf.js for geospatial operations -->
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf@6/turf.min.js"></script>
+
+    <style>
+        html, body, #app { height: 100%; }
+        #map { height: 100%; min-height: 500px; z-index: 10; }
+        .leaflet-popup-content-wrapper { border-radius: 12px; }
+        .voronoi-cell { fill: none; stroke: #3b82f6; stroke-width: 1; opacity: 0.3; }
+        .voronoi-cell:hover { fill: #3b82f6; opacity: 0.2; }
+        .coverage-circle { fill: rgba(34, 197, 94, 0.1); stroke: #22c55e; stroke-width: 2; }
+        .gap-cell { fill: #ef4444; opacity: 0.4; stroke: #ef4444; stroke-width: 1; }
+        .skeleton { position: relative; overflow: hidden; background: #e5e7eb; border-radius: 0.75rem;}
+        .skeleton::after { content: ""; position: absolute; inset: 0; transform: translateX(-100%); background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); animation: shimmer 1.2s infinite; }
+        @keyframes shimmer { 100% { transform: translateX(100%); } }
+        .custom-scrollbar::-webkit-scrollbar { width: 8px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: #555; }
+        .dark .custom-scrollbar::-webkit-scrollbar-track { background: #2d3748; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #718096; }
+        .stat-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(147, 51, 234, 0.1) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+        .dark .stat-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(147, 51, 234, 0.2) 100%);
+        }
+        .toggle-btn.active {
+            background-color: #3b82f6;
+            color: white;
+        }
+    </style>
+</head>
+<body class="h-full bg-gray-100 text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans antialiased">
+
+    <div id="app" class="flex flex-col h-full">
+        <!-- Header -->
+        <header class="sticky top-0 z-20 border-b border-gray-200/80 dark:border-gray-800/80 bg-white/90 dark:bg-gray-900/90 backdrop-blur">
+            <div class="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8 py-3">
+                <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-blue-600 to-purple-600 text-white grid place-items-center font-bold text-lg shadow-lg">V</div>
+                        <div>
+                            <h1 class="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">EPFO Coverage Analyzer</h1>
+                            <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Mainland India Coverage Gap Analysis</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <button id="themeToggle" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-3 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800" aria-label="Toggle dark mode">
+                            <svg id="iconSun" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M6.76 4.84l-1.8-1.79L3.17 4.84l1.79 1.8 1.8-1.8zM1 13h3v-2H1v2zm10 10h2v-3h-2v3zm8.24-18.16l1.8-1.79-1.79-1.79-1.8 1.79 1.79 1.79zM20 13h3v-2h-3v2zM6.76 19.16l-1.8 1.79 1.79 1.79 1.8-1.79-1.79-1.79zM11 1h2v3h-2V1zm6.24 18.16l1.79 1.79 1.79-1.79-1.79-1.79-1.79 1.79zM12 6a6 6 0 100 12A6 6 0 0012 6z"></svg>
+                            <svg id="iconMoon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.742 13.045A8.001 8.001 0 0111 3a8.002 8.002 0 009.045 9.742 7 7 0 11.697.303z"></svg>
+                            <span class="hidden sm:inline">Theme</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Control Panel -->
+        <div class="max-w-[1800px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+                <div class="stat-card rounded-xl p-4">
+                    <div class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wide font-medium">Total Offices</div>
+                    <div id="totalOffices" class="text-2xl font-bold text-blue-600 dark:text-blue-400 mt-1">-</div>
+                </div>
+                <div class="stat-card rounded-xl p-4">
+                    <div class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wide font-medium">Largest Gap</div>
+                    <div id="largestGap" class="text-2xl font-bold text-red-600 dark:text-red-400 mt-1">-</div>
+                </div>
+                <div class="stat-card rounded-xl p-4">
+                    <div class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wide font-medium">Avg. Coverage</div>
+                    <div id="avgCoverage" class="text-2xl font-bold text-green-600 dark:text-green-400 mt-1">-</div>
+                </div>
+                <div class->"stat-card rounded-xl p-4">
+                    <div class="text-xs text-gray-600 dark:text-gray-400 uppercase tracking-wide font-medium">Mainland Offices</div>
+                    <div id="mainlandOfficesCount" class="text-2xl font-bold text-purple-600 dark:text-purple-400 mt-1">-</div>
+                </div>
+            </div>
+
+            <div class="flex flex-wrap gap-2 mb-4">
+                <button id="toggleVoronoi" class="toggle-btn inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800 active">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v7a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1H5a1 1 0 01-1-1v-3zM14 16a1 1 0 011-1h4a1 1 0 011 1v3a1 1 0 01-1 1h-4a1 1 0 01-1-1v-3z"></path></svg>
+                    Show Voronoi Cells
+                </button>
+                <button id="toggleCoverage" class="toggle-btn inline-flex items-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-4 py-2 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                    Show Coverage Circles
+                </button>
+                <button id="findGapBtn" class="inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg px-4 py-2 text-sm hover:from-red-700 hover:to-orange-700 shadow-lg">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                    Find Coverage Gaps
+                </button>
+                <button id="visualizeGapsBtn" class="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg px-4 py-2 text-sm hover:from-purple-700 hover:to-indigo-700 shadow-lg">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m11-1" /></svg>
+                    Visualize All Gaps
+                </button>
+                <div class="ml-auto flex items-center gap-2">
+                    <label class="text-sm text-gray-600 dark:text-gray-400">Planned Coverage (km):</label>
+                    <input id="radiusSlider" type="range" min="10" max="200" value="75" step="5" class="w-32" />
+                    <span id="radiusValue" class="text-sm font-semibold text-blue-600 dark:text-blue-400 w-12">75 km</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Bar -->
+        <div id="statusBar" class="max-w-[1800px] mx-auto w-full px-4 sm:px-6 lg:px-8 pb-2">
+            <div class="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg px-4 py-2 text-sm">
+                <span class="font-semibold text-blue-700 dark:text-blue-400">Status:</span>
+                <span id="statusText" class="text-gray-700 dark:text-gray-300 ml-2">Loading data...</span>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="max-w-[1800px] mx-auto w-full px-4 sm:px-6 lg:px-8 pb-6 flex-1 flex flex-col min-h-0">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 flex-1 min-h-0">
+                <!-- Sidebar -->
+                <aside class="lg:col-span-1 flex flex-col rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 overflow-hidden">
+                    <div class="border-b border-gray-100 dark:border-gray-800 p-4">
+                        <h2 class="text-lg font-semibold">Coverage Gap Analysis</h2>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Top distinct underserved locations</F2>
+                    </div>
+                    <div id="gapList" class="flex-1 overflow-auto custom-scrollbar p-4 space-y-3"></div>
+                </aside>
+
+                <!-- Map -->
+                <section class="lg:col-span-2 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white dark:bg-gray-900 min-h-[500px]">
+                    <div id="map"></div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+<script type="module">
+        // ---------- THEME ----------
+        const htmlEl = document.documentElement;        const themeToggle = document.getElementById('themeToggle');
+        const iconSun = document.getElementById('iconSun');
+        const iconMoon = document.getElementById('iconMoon');
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            htmlEl.classList.add('dark');
+            iconSun.classList.remove('hidden');
+            iconMoon.classList.add('hidden');
+        }
+        themeToggle.addEventListener('click', () => {
+            const isDark = htmlEl.classList.toggle('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            iconSun.classList.toggle('hidden');
+            iconMoon.classList.toggle('hidden');
+        });
+
+        // ---------- CONSTANTS & STATE ----------
+        // *** FIX: Corrected typo 'httpsG' to 'https' ***
+        const CSV_PATH = 'https://gauravmeena0708.github.io/pf-contacts/test/contacts-data-field-offices.csv';
+        const MIN_EDGE_DISTANCE_KM = 30; // *** NEW: Min distance (km) from hull edge ***
+
+        const statusText = document.getElementById('statusText');
+        const totalOfficesEl = document.getElementById('totalOffices');
+        const largestGapEl = document.getElementById('largestGap');
+        const avgCoverageEl = document.getElementById('avgCoverage');
+        const mainlandOfficesCountEl = document.getElementById('mainlandOfficesCount');
+        const gapList = document.getElementById('gapList');
+        const toggleVoronoiBtn = document.getElementById('toggleVoronoi');
+        const toggleCoverageBtn = document.getElementById('toggleCoverage');
+        const findGapBtn = document.getElementById('findGapBtn');
+        const visualizeGapsBtn = document.getElementById('visualizeGapsBtn');
+        const radiusSlider = document.getElementById('radiusSlider');
+        const radiusValue = document.getElementById('radiusValue');
+
+        let map, voronoiLayer, coverageLayer, gapMarkersLayer, hullLayer, gapVisualizationLayer;
+        let allOffices = [];
+        let mainlandOffices = [];
+        let analysisHull = null;
+        let analysisHullOutline = null; // *** NEW: To store the hull's outline ***
+        let voronoiData = null;
+        let coverageGaps = []; // This will store the gap results
+        let currentSelectedGap = null; // Track the selected gap
+        let showVoronoi = true;
+        let showCoverage = false;
+        let coverageRadius = 75; // km
+
+        // ---------- UTILS ----------
+        const haversine = (lat1, lon1, lat2, lon2) => {
+            const R = 6371; // km
+            const dLat = (lat2-lat1) * Math.PI/180, dLon = (lon2-lon1) * Math.PI/180;
+            const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+            return 2*R*Math.asin(Math.sqrt(a));
+        };
+
+        const formatDistance = (km) => {
+            if (!isFinite(km)) return '—';
+            if (km >= 100) return `${km.toFixed(0)} km`;
+            if (km >= 10) return `${km.toFixed(1)} km`;
+            return `${km.toFixed(2)} km`;
+        };
+
+        const isWithinAnalysisArea = (lat, lon) => {
+            if (!analysisHull) return false;
+            const point = turf.point([lon, lat]);
+            return turf.booleanPointInPolygon(point, analysisHull);
+        };
+
+        // ---------- VORONOI & GAP COMPUTATION ----------
+        const computeVoronoi = (offices) => {
+            if (offices.length < 3 || !analysisHull) return null;
+            const points = offices.map(o => [o.longitude, o.latitude]);
+            const delaunay = d3.Delaunay.from(points);
+            const bbox = turf.bbox(analysisHull); 
+            const voronoi = delaunay.voronoi(bbox);
+            return { delaunay, voronoi, points };
+        };
+
+        // Renamed from findCoverageGaps
+        const calculateAllGaps = (offices) => {
+            // *** NEW: Check for hull outline ***
+            if (offices.length < 3 || !voronoiData || !analysisHullOutline) return [];
+
+            statusText.textContent = 'Computing Voronoi diagram for mainland...';
+            const { delaunay, voronoi } = voronoiData;
+
+            statusText.textContent = 'Analyzing coverage gaps within analysis area...';
+
+            const vertices = [];
+            for (let i = 0; i < voronoi.circumcenters.length; i += 2) {
+                const lon = voronoi.circumcenters[i];
+                const lat = voronoi.circumcenters[i + 1];
+                
+                // *** Check 1: Must be inside the hull ***
+                if (isWithinAnalysisArea(lat, lon)) {
+                    
+                    // *** NEW Check 2: Must be far from the hull's edge ***
+                    const point = turf.point([lon, lat]);
+                    const edgeDistance = turf.pointToLineDistance(point, analysisHullOutline, { units: 'kilometers' });
+
+                    if (edgeDistance > MIN_EDGE_DISTANCE_KM) {
+                        vertices.push([lon, lat]);
+                    }
+                }
+            }
+
+            statusText.textContent = `Evaluating ${vertices.length} potential "inland" gap points...`;
+
+            const gaps = vertices.map(([lon, lat]) => {
+                let minDist = Infinity;
+                offices.forEach(office => {
+                    const d = haversine(lat, lon, office.latitude, office.longitude);
+                    if (d < minDist) minDist = d;
+                });
+                return { lat, lon, distance: minDist };
+            });
+
+            gaps.sort((a,b) => b.distance - a.distance);
+            
+            return gaps;
+        };
+
+        const consolidateGaps = (gaps, radiusInKm) => {
+            const consolidated = [];
+            let remainingGaps = [...gaps]; 
+
+            while (remainingGaps.length > 0) {
+                const currentGap = remainingGaps.shift(); 
+                consolidated.push(currentGap);
+
+                remainingGaps = remainingGaps.filter(gap => {
+                    const d = haversine(currentGap.lat, currentGap.lon, gap.lat, gap.lon);
+                    return d > radiusInKm; 
+                });
+            }
+            return consolidated;
+        };
+
+
+        // ---------- MAP RENDERING ----------
+        const initMap = () => {
+            map = L.map('map').setView([20.5937, 78.9629], 5);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            hullLayer = L.layerGroup().addTo(map);
+            voronoiLayer = L.layerGroup().addTo(map);
+            coverageLayer = L.layerGroup().addTo(map);
+            gapMarkersLayer = L.layerGroup().addTo(map); 
+            gapVisualizationLayer = L.layerGroup().addTo(map);
+        };
+
+        const renderVoronoiCells = () => {
+            voronoiLayer.clearLayers();
+            if (!showVoronoi || !voronoiData || !analysisHull) return;
+
+            const { voronoi } = voronoiData;
+
+            mainlandOffices.forEach((office, i) => {
+                const cellPoints = voronoi.cellPolygon(i);
+                if (!cellPoints) return;
+
+                if (cellPoints[0][0] !== cellPoints[cellPoints.length - 1][0] || cellPoints[0][1] !== cellPoints[cellPoints.length - 1][1]) {
+                    cellPoints.push(cellPoints[0]);
+                }
+
+                const cellTurfPolygon = turf.polygon([cellPoints]);
+
+                let clippedCell = null;
+                try {
+                    clippedCell = turf.intersect(cellTurfPolygon, analysisHull);
+                } catch (e) {
+                    console.error("Turf intersect error:", e, cellTurfPolygon, analysisHull);
+                    return; 
+                }
+
+                if (!clippedCell) return; 
+
+                const style = {
+                    color: '#3b82f6', weight: 1, opacity: 0.5,
+                    fillColor: '#3b82f6', fillOpacity: 0.1
+                };
+
+                if (clippedCell.geometry.type === 'Polygon') {
+                    const latLngs = clippedCell.geometry.coordinates[0].map(([lon, lat]) => [lat, lon]);
+                    const polygon = L.polygon(latLngs, style);
+                    polygon.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Voronoi Cell</span></div>`);
+                    voronoiLayer.addLayer(polygon);
+                } else if (clippedCell.geometry.type === 'MultiPolygon') {
+                    clippedCell.geometry.coordinates.forEach(polyCoords => {
+                        const latLngs = polyCoords[0].map(([lon, lat]) => [lat, lon]);
+                        const polygon = L.polygon(latLngs, style);
+                        polygon.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Voronoi Cell</span></div>`);
+                        voronoiLayer.addLayer(polygon);
+                    });
+                }
+            });
+        };
+
+        const renderCoverageCircles = () => {
+            coverageLayer.clearLayers();
+            if (!showCoverage) return;
+
+            mainlandOffices.forEach(office => {
+                const circle = L.circle([office.latitude, office.longitude], {
+                    radius: coverageRadius * 1000,
+                    color: '#22c55e', weight: 2, opacity: 0.6,
+                    fillColor: '#22c55e', fillOpacity: 0.1
+                });
+                circle.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">Coverage: ${coverageRadius} km</span></div>`);
+                coverageLayer.addLayer(circle);
+            });
+        };
+
+        const renderOfficeMarkers = () => {
+            allOffices.forEach(office => {
+                const isMainland = mainlandOffices.some(o => o.id === office.id);
+                const marker = L.marker([office.latitude, office.longitude], {
+                    icon: L.divIcon({
+                        className: '',
+                        html: `<div style="background: ${isMainland ? '#3b82f6' : '#9ca3af'}; border: 2px solid #fff; border-radius: 50%; width: 12px; height: 12px; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
+                        iconSize: [12, 12], iconAnchor: [6, 6]
+                    })
+                });
+
+                marker.bindPopup(`<div class="text-sm"><b>${office.name}</b><br><span class="text-gray-500">${office.category}</span><br><span class="text-xs text-gray-400">${office.city}, ${office.state}</span></div>`);
+                marker.addTo(map);
+            });
+        };
+
+        const showGapOnMap = (gap) => {
+            if (!gap) return;
+            
+            currentSelectedGap = gap; 
+            gapMarkersLayer.clearLayers(); 
+
+            const gapMarker = L.marker([gap.lat, gap.lon], {
+                icon: L.divIcon({
+                    className: '',
+                    html: `<div style="background: #dc2626; border: 3px solid #fff; border-radius: 50%; width: 32px; height: 32px; box-shadow: 0 4px 12px rgba(220, 38, 38, 0.5); display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 18px; animation: pulse 2s infinite;">⚠</div>`,
+                    iconSize: [32, 32], iconAnchor: [16, 16]
+                })
+            });
+
+            gapMarker.bindPopup(`
+                <div class="text-center p-2">
+                    <div class="text-lg font-bold text-red-600 mb-2">⚠ COVERAGE GAP</div>
+                    <div class="text-sm mb-2">This location is <b class="text-red-600">${formatDistance(gap.distance)}</b> from the nearest office.</div>
+                    <div class="text-xs text-gray-500 mb-3">Coordinates: ${gap.lat.toFixed(4)}, ${gap.lon.toFixed(4)}</div>
+                    <a href="https://www.google.com/maps?q=${gap.lat},${gap.lon}" target="_blank" class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700">View on Google Maps</a>
+                </div>
+            `).openPopup();
+            gapMarkersLayer.addLayer(gapMarker);
+
+            // Calculate the "remaining" gap radius
+            const actualGapRadiusKm = gap.distance;
+            const plannedCoverageKm = coverageRadius; // From slider
+            let remainingGapRadiusKm = actualGapRadiusKm - plannedCoverageKm;
+            
+            if (remainingGapRadiusKm < 0) {
+                remainingGapRadiusKm = 0;
+            }
+            const remainingGapRadiusMeters = remainingGapRadiusKm * 1000;
+
+            // "Actual" gap circle (solid red)
+            const gapCircle = L.circle([gap.lat, gap.lon], {
+                radius: gap.distance * 1000, 
+                color: '#dc2626', 
+                weight: 3, 
+                opacity: 0.6,
+                fillColor: '#dc2626', 
+                fillOpacity: 0.1
+            });
+            gapMarkersLayer.addLayer(gapCircle);
+
+            // "Remaining" gap (dashed blue)
+            const plannedCoverageCircle = L.circle([gap.lat, gap.lon], {
+                radius: remainingGapRadiusMeters, 
+                color: '#3b82f6', 
+                weight: 2,
+                opacity: 0.7,
+                fill: false,
+                dashArray: '5, 5' 
+            });
+
+            let popupText = `<b>Remaining Gap: ${formatDistance(remainingGapRadiusKm)}</b><br><span class="text-xs text-gray-500">(${formatDistance(actualGapRadiusKm)} actual gap minus ${plannedCoverageKm}km planned coverage)</span>`;
+            if (remainingGapRadiusKm <= 0) {
+                popupText = `<b>Gap Covered!</b><br><span class="text-xs text-gray-500">(${plannedCoverageKm}km planned coverage is greater than ${formatDistance(actualGapRadiusKm)} actual gap)</span>`;
+            }
+            plannedCoverageCircle.bindPopup(`<div class="text-sm">${popupText}</div>`);
+            gapMarkersLayer.addLayer(plannedCoverageCircle);
+
+            map.flyTo([gap.lat, gap.lon], 8, { duration: 1.5 });
+        }
+
+        const renderLargestGap = () => {
+            const largestGapPoint = coverageGaps[0]; 
+            if (!largestGapPoint) return;
+            showGapOnMap(largestGapPoint); 
+        };
+
+        const renderGapList = (gaps) => {
+            gapList.innerHTML = '';
+            if (!gaps || gaps.length === 0) {
+                gapList.innerHTML = '<div class="text-sm text-gray-500 p-4">No gaps found for this criteria.</div>';
+                return;
+            }
+
+            gaps.slice(0, 20).forEach((gap, index) => {
+                const card = document.createElement('div');
+                card.className = 'rounded-lg border border-gray-200 dark:border-gray-800 p-3 hover:border-red-500 dark:hover:border-red-500 transition cursor-pointer';
+                card.innerHTML = `
+                    <div class="flex items-start justify-between gap-2">
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2">
+                                <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold">${index + 1}</span>
+                                <span class="text-sm font-semibold text-red-600 dark:text-red-400">${formatDistance(gap.distance)}</span>
+                            </div>
+                            <div class="text-xs text-gray-500 dark:text-gray-400 mt-1">${gap.lat.toFixed(3)}, ${gap.lon.toFixed(3)}</div>
+                        </div>
+                        <button class="text-xs text-blue-600 dark:text-blue-400 hover:underline" data-index="${index}">View</button>
+                    </div>
+                `;
+                
+                card.querySelector('button').addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const selectedIndex = parseInt(e.target.dataset.index);
+                    const selectedGap = coverageGaps[selectedIndex];
+                    if (selectedGap) {
+                        showGapOnMap(selectedGap); 
+                    }
+                });
+                card.addEventListener('click', (e) => {
+                    const selectedIndex = parseInt(e.currentTarget.querySelector('button').dataset.index);
+                     const selectedGap = coverageGaps[selectedIndex];
+                    if (selectedGap) {
+                        showGapOnMap(selectedGap); 
+                    }
+                });
+
+                gapList.appendChild(card);
+            });
+        };
+
+        const updateStats = () => {
+            totalOfficesEl.textContent = allOffices.length;
+            mainlandOfficesCountEl.textContent = mainlandOffices.length;
+
+            const largestGapPoint = coverageGaps[0]; 
+            if (largestGapPoint) {
+                largestGapEl.textContent = formatDistance(largestGapPoint.distance);
+            }
+
+            let totalDist = 0;
+            mainlandOffices.forEach(office => {
+                let minDist = Infinity;
+                mainlandOffices.forEach(other => {
+                    if (office.id === other.id) return;
+                    const d = haversine(office.latitude, office.longitude, other.latitude, other.longitude);
+                    if (d < minDist) minDist = d;
+                });
+                totalDist += minDist;
+            });
+            const avgDist = totalDist / (mainlandOffices.length || 1); 
+            avgCoverageEl.textContent = formatDistance(avgDist);
+        };
+
+        const visualizeGaps = () => {
+            if (mainlandOffices.length < 3) return;
+            
+            visualizeGapsBtn.disabled = true;
+            visualizeGapsBtn.innerHTML = '<span class="animate-spin">⏳</span> Visualizing...';
+            statusText.textContent = `Visualizing all areas beyond ${coverageRadius} km from an office...`;
+            gapVisualizationLayer.clearLayers();
+
+            setTimeout(() => {
+                const bbox = turf.bbox(analysisHull);
+                const cellSide = turf.distance(turf.point([bbox[0], bbox[1]]), turf.point([bbox[2], bbox[1]])) / 150; 
+                const grid = turf.pointGrid(bbox, cellSide, { units: 'kilometers' });
+
+                const gapsFound = [];
+                grid.features.forEach(pt => {
+                    const [lon, lat] = pt.geometry.coordinates;
+                    if (isWithinAnalysisArea(lat, lon)) {
+                        let minDist = Infinity;
+                        for(const office of mainlandOffices) {
+                            const d = haversine(lat, lon, office.latitude, office.longitude);
+                            if (d < minDist) minDist = d;
+                        }
+                        if (minDist > coverageRadius) {
+                            gapsFound.push(pt);
+                        }
+                    }
+                });
+
+                if (gapsFound.length > 0) {
+                    const gapCollection = turf.featureCollection(gapsFound);
+                    const heatmapLayer = L.geoJSON(gapCollection, {
+                        pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                            radius: 2,
+                            fillColor: "#ef4444",
+                            color: "#ef4444",
+                            weight: 1,
+                            opacity: 0.5,
+                            fillOpacity: 0.3
+                        })
+                    });
+                    gapVisualizationLayer.addLayer(heatmapLayer);
+                }
+                
+                statusText.textContent = `Found ${gapsFound.length} underserved grid points.`;
+                visualizeGapsBtn.disabled = false;
+                visualizeGapsBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m11-1" /></svg> Visualize All Gaps`;
+            }, 100);
+        };
+
+        // ---------- DATA LOADING ----------
+        const loadData = async () => {
+            try {
+                const res = await fetch(CSV_PATH);
+                if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+                const text = await res.text();
+                const rows = text.split('\n').slice(1);
+
+                allOffices = rows.map((row, idx) => {
+                    const cols = row.split(/,(?=(?:(?:[^"']*"){2})*[^"']*$)/);
+                    if (cols.length < 9) return null;
+                    const lat = parseFloat(cols[7]), lon = parseFloat(cols[8]);
+                    if (!isFinite(lat) || !isFinite(lon)) return null;
+                    const clean = (s) => (s||'').replaceAll('"','').trim();
+                    return {
+                        id: idx, name: clean(cols[0]) || 'N/A', category: clean(cols[1]) || 'N/A',
+                        zone: clean(cols[2]) || 'Other', address: clean(cols[3]) || 'N/A',
+                        city: clean(cols[4]) || '', state: clean(cols[5]) || '',
+                        postalCode: clean(cols[6]) || '', latitude: lat, longitude: lon
+                    };
+                }).filter(Boolean);
+
+                statusText.textContent = `Loaded ${allOffices.length} offices. Filtering for mainland...`;
+
+                const islandStates = ["ANDAMAN AND NICOBAR ISLANDS", "LAKSHADWEEP"];
+                const excludedNames = ["Regional Office, PORT BLAIR"]; 
+                mainlandOffices = allOffices.filter(o => 
+                    !islandStates.includes(o.state.toUpperCase()) &&
+                    !excludedNames.includes(o.name)
+                );
+
+                const bangladeshExclusionCoords = [[
+                    [89.0,21.98], [88.95,23.21], [88.71,24.17], [87.99,24.68], [88.98, 25.29],
+                    [88.10,25.85], [88.40,26.61], [89.69,26.17], [89.84,26.32], [92.07,25.18],
+                    [92.48,24.94], [91.14,23.73], [91.59, 22.95], [91.97,23.74], [92.26,23.73],
+                    [92.86,20.84], [89.0,21.98]
+                ]];
+                const bangladeshPolygon = turf.polygon(bangladeshExclusionCoords);
+
+                const rajasthanGujaratCoords = [[
+                    [73.18,29.49], [70.32,28.00], [69.48,26.82], [71.07,24.42], [68.14,23.70],
+                    [70.80,20.73], [72.30,21.63], [72.38,22.26], [73.18,29.49]
+                ]];
+                const rajasthanGujaratPolygon = turf.polygon(rajasthanGujaratCoords);
+
+                const jammuKashmirCoords = [[
+                    [73.5, 32.3], [75.0, 32.2], [77.0, 33.0], [80.0, 33.0], 
+                    [79.0, 35.5], [77.0, 36.8], [74.5, 35.5], [73.5, 32.3]
+                ]];
+                const jammuKashmirPolygon = turf.polygon(jammuKashmirCoords);
+
+                const uttarakhandUpCoords = [[
+                    [77.0, 28.0], [82.0, 26.0], [84.0, 27.0], [83.0, 29.0], 
+                    [81.0, 31.0], [77.5, 31.3], [77.0, 28.0]
+                ]];
+                const uttarakhandUpPolygon = turf.polygon(uttarakhandUpCoords);
+
+                const arunachalPradeshCoords = [[
+                    [91.5, 26.8], [94.0, 27.0], [97.0, 27.5], [97.5, 29.5], 
+                    [95.0, 29.8], [92.0, 28.0], [91.5, 26.8]
+                ]];
+                const arunachalPradeshPolygon = turf.polygon(arunachalPradeshCoords);
+
+                if (mainlandOffices.length > 2) {
+                    const points = mainlandOffices.map(o => turf.point([o.longitude, o.latitude]));
+                    const pointsCollection = turf.featureCollection(points);
+                    
+                    const maxEdgeKm = 450; 
+                    statusText.textContent = `Calculating concave hull with ${maxEdgeKm}km max edge...`;
+
+                    let hull = turf.concave(pointsCollection, {maxEdge: maxEdgeKm, units: 'kilometers'}); 
+
+                    if (hull) {
+                        statusText.textContent = "Clipping hull to exclude external territories...";
+                        let intermediateHull;
+                        try {
+                            intermediateHull = turf.difference(hull, bangladeshPolygon);
+                        } catch (e) {
+                            console.error("Turf difference error:", e);
+                            intermediateHull = hull; 
+                        }
+
+                        statusText.textContent = "Adding specified western & northern regions...";
+                        let currentHull = intermediateHull;
+                        try {
+                            currentHull = turf.union(currentHull, rajasthanGujaratPolygon);
+                            currentHull = turf.union(currentHull, jammuKashmirPolygon);
+                            currentHull = turf.union(currentHull, uttarakhandUpPolygon);
+                            currentHull = turf.union(currentHull, arunachalPradeshPolygon);
+                            
+                            analysisHull = currentHull;
+                        } catch (e) {
+                            console.error("Turf union error:", e, "Failing back to previous hull.");
+                            analysisHull = intermediateHull; 
+                        }
+
+                        // *** NEW: Create the hull outline for edge distance checks ***
+                        statusText.textContent = "Creating hull outline for border analysis...";
+                        try {
+                            analysisHullOutline = turf.polygonToLine(analysisHull);
+                        } catch (e) {
+                             console.error("Could not create hull outline:", e);
+                             // Fallback: use the hull itself for distance checks, less accurate but won't crash
+                             analysisHullOutline = analysisHull;
+                        }
+                        // *** End new step ***
+
+                        const hullPolygon = L.geoJSON(analysisHull, {
+                            style: { color: "#4f46e5", weight: 2, opacity: 0.6, fill: false, dashArray: '5, 5' }
+                        });
+                        hullLayer.addLayer(hullPolygon);
+                    } else {
+                        console.error("Turf.concave() returned null. The maxEdge might be too small.");
+                        statusText.textContent = "Could not generate mainland boundary. maxEdge may be too small.";
+                    }
+                } 
+
+                voronoiData = computeVoronoi(mainlandOffices);
+
+                renderOfficeMarkers(); 
+                renderVoronoiCells();
+                renderCoverageCircles();
+                updateStats(); 
+
+                statusText.textContent = 'Ready! Analyze gaps on the Indian mainland.';
+                findGapBtn.innerHTML = `Find Coverage Gaps`; 
+            } catch (e) {
+                console.error(e);
+                statusText.textContent = 'Failed to load data. See console.';
+            }
+        }; 
+
+        // ---------- EVENT HANDLERS ----------
+        toggleVoronoiBtn.addEventListener('click', () => {
+            showVoronoi = !showVoronoi;
+            toggleVoronoiBtn.classList.toggle('active', showVoronoi);
+            renderVoronoiCells();
+        });
+
+        toggleCoverageBtn.addEventListener('click', () => {
+            showCoverage = !showCoverage;
+            toggleCoverageBtn.classList.toggle('active', showCoverage);
+            renderCoverageCircles();
+        });
+
+        findGapBtn.addEventListener('click', () => {
+            if (mainlandOffices.length < 3) {
+                statusText.textContent = 'Need at least 3 mainland offices to analyze.';
+                return;
+            }
+            if (!analysisHullOutline) {
+                statusText.textContent = 'Analysis hull outline is not ready. Please wait or reload.';
+                return;
+            }
+            findGapBtn.disabled = true;
+            findGapBtn.innerHTML = '<span class="animate-spin">⏳</span> Analyzing...';
+            gapList.innerHTML = '<div class="skeleton h-16"></div><div class="skeleton h-16"></div><div class="skeleton h-16"></div>';
+
+            setTimeout(() => {
+                statusText.textContent = 'Calculating all potential gap points...';
+                const allGaps = calculateAllGaps(mainlandOffices);
+                
+                const consolidationRadius = 50; 
+                statusText.textContent = `Consolidating gaps within a ${consolidationRadius}km radius...`;
+                const consolidated = consolidateGaps(allGaps, consolidationRadius);
+
+                coverageGaps = consolidated; 
+
+                if (coverageGaps.length > 0) {
+                    statusText.textContent = `Found ${coverageGaps.length} distinct coverage gaps.`;
+                    renderLargestGap(); 
+                    updateStats();       
+                    renderGapList(coverageGaps); 
+                } else {
+                    statusText.textContent = 'No "inland" gaps found. Try reducing MIN_EDGE_DISTANCE_KM.';
+                    gapList.innerHTML = `<div class="text-sm text-gray-500 p-4">No significant "inland" gaps found. All gaps are too close to the analysis border (within ${MIN_EDGE_DISTANCE_KM}km).</div>`;
+                }
+                
+                findGapBtn.disabled = false;
+                findGapBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find CoverageGaps`;
+            }, 100);
+        });
+
+        visualizeGapsBtn.addEventListener('click', visualizeGaps);
+
+        radiusSlider.addEventListener('input', (e) => {
+            coverageRadius = parseInt(e.target.value);
+            radiusValue.textContent = `${coverageRadius} km`;
+            renderCoverageCircles();
+            if (gapVisualizationLayer.getLayers().length > 0) {
+                visualizeGaps(); 
+            }
+
+            if (currentSelectedGap) {
+                showGapOnMap(currentSelectedGap);
+            }
+        });
+
+        // ---------- INIT ----------
+        window.addEventListener('DOMContentLoaded', () => {
+            initMap();
+            loadData();
+        });
+    </script>
+    <style>
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</body>
+</html>
+
