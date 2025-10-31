@@ -497,7 +497,7 @@
                 const islandStates = ["ANDAMAN AND NICOBAR ISLANDS", "LAKSHADWEEP"];
                 mainlandOffices = allOffices.filter(o => !islandStates.includes(o.state.toUpperCase()));
 
-                // Compute concave hull for mainland
+                // Compute concave hull for mainland using hull.js
                 if (mainlandOffices.length > 2) {
                     const points = mainlandOffices.map(o => [o.longitude, o.latitude]);
                     const hullPoints = hull(points, 30); // Higher concavity for more detail
@@ -548,14 +548,16 @@
             gapList.innerHTML = '';
 
             setTimeout(() => {
-                largestGapPoint = findLargestGapVoronoi(mainlandOffices);
-                if (largestGapPoint) {
+                coverageGaps = findCoverageGaps(mainlandOffices);
+                if (coverageGaps.length > 0) {
                     renderLargestGap();
+                    renderGapList(coverageGaps);
                     updateStats();
-                    renderGapList([largestGapPoint]); // Show the largest gap in the list
+                } else {
+                    gapList.innerHTML = '<div class="text-sm text-gray-500 p-4">No gaps found.</div>';
                 }
                 findGapBtn.disabled = false;
-                findGapBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find Largest Gap`;
+                findGapBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find Coverage Gaps`;
             }, 100);
         });
 
