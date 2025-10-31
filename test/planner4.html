@@ -567,6 +567,19 @@
                     !excludedNames.includes(o.name)
                 );
 
+                // *** NEW: Define a simplified polygon to represent Bangladesh for exclusion ***
+                // This is a rough bounding box: [minLon, minLat], [maxLon, maxLat]
+                // Coords: [88.0, 20.7] to [92.7, 26.6]
+                const bangladeshExclusionCoords = [[
+                    [88.0, 24.7], // Top-left
+                    [92.8, 24.7], // Top-right
+                    [92.8, 23.7], // Bottom-right
+                    [88.0, 20.7], // Bottom-left
+                    [88.0, 24.7]  // Close the loop
+                ]];
+                const bangladeshPolygon = turf.polygon(bangladeshExclusionCoords);
+
+
                 // *** 3. Compute concave hull using Turf.js ***
                 if (mainlandOffices.length > 2) {
                     // Create a FeatureCollection of points for Turf
@@ -580,9 +593,19 @@
                     statusText.textContent = `Calculating concave hull with ${maxEdgeKm}km max edge...`;
 
                     // This will return a Feature<Polygon> or Feature<MultiPolygon>
-                    analysisHull = turf.concave(pointsCollection, {maxEdge: maxEdgeKm, units: 'kilometers'}); 
+                    let hull = turf.concave(pointsCollection, {maxEdge: maxEdgeKm, units: 'kilometers'}); 
 
-                    if (analysisHull) {
+                    if (hull) {
+                        // *** NEW STEP: Exclude Bangladesh ***
+                        statusText.textContent = "Clipping hull to exclude external territories...";
+                        try {
+                            // Use turf.difference to cut out the Bangladesh polygon from the hull
+                            analysisHull = turf.difference(hull, bangladeshPolygon);
+                        } catch (e) {
+                            console.error("Turf difference error:", e);
+                            analysisHull = hull; // Fallback to the original hull if difference fails
+                        }
+
                         const hullPolygon = L.geoJSON(analysisHull, {
                             style: { color: "#4f46e5", weight: 2, opacity: 0.6, fill: false, dashArray: '5, 5' }
                         });
@@ -682,5 +705,4 @@
     </style>
 </body>
 </html>
-
 
