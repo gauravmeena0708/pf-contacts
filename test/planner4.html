@@ -158,9 +158,9 @@
         </main>
     </div>
 
-    <script type="module">
+<script type="module">
         // ---------- THEME ----------
-		        const htmlEl = document.documentElement;        const themeToggle = document.getElementById('themeToggle');
+        const htmlEl = document.documentElement;        const themeToggle = document.getElementById('themeToggle');
         const iconSun = document.getElementById('iconSun');
         const iconMoon = document.getElementById('iconMoon');
         const savedTheme = localStorage.getItem('theme');
@@ -197,7 +197,7 @@
         let mainlandOffices = [];
         let analysisHull = null;
         let voronoiData = null;
-        let coverageGaps = [];
+        let coverageGaps = []; // This will store the gap results
         let showVoronoi = true;
         let showCoverage = false;
         let coverageRadius = 75; // km
@@ -220,6 +220,7 @@
         const isWithinAnalysisArea = (lat, lon) => {
             if (!analysisHull) return false;
             const point = turf.point([lon, lat]);
+            // This is where the concave hull is used
             return turf.booleanPointInPolygon(point, analysisHull);
         };
 
@@ -236,7 +237,7 @@
         };
 
         const findCoverageGaps = (offices) => {
-            if (offices.length < 3) return [];
+            if (offices.length < 3 || !voronoiData) return [];
 
             statusText.textContent = 'Computing Voronoi diagram for mainland...';
             const { delaunay, voronoi } = voronoiData;
@@ -247,6 +248,9 @@
             for (let i = 0; i < voronoi.circumcenters.length; i += 2) {
                 const lon = voronoi.circumcenters[i];
                 const lat = voronoi.circumcenters[i + 1];
+                
+                // *** KEY STEP ***
+                // This checks if the Voronoi vertex is inside the concave hull
                 if (isWithinAnalysisArea(lat, lon)) {
                     vertices.push([lon, lat]);
                 }
@@ -266,14 +270,14 @@
             gaps.sort((a,b) => b.distance - a.distance);
             
             statusText.textContent = 'Analysis complete!';
-            return gaps.slice(0, 20);
+            return gaps.slice(0, 20); // Return top 20 gaps
         };
 
         // ---------- MAP RENDERING ----------
         const initMap = () => {
             map = L.map('map').setView([20.5937, 78.9629], 5);
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; OpenStreetMap contributors'
+                attribution: '© OpenStreetMap contributors'
             }).addTo(map);
 
             hullLayer = L.layerGroup().addTo(map);
@@ -348,12 +352,13 @@
                 })
             });
 
+            // *** FIXED GOOGLE MAPS LINK ***
             gapMarker.bindPopup(`
                 <div class="text-center p-2">
                     <div class="text-lg font-bold text-red-600 mb-2">⚠ LARGEST COVERAGE GAP</div>
                     <div class="text-sm mb-2">This location is <b class="text-red-600">${formatDistance(largestGapPoint.distance)}</b> from the nearest office.</div>
                     <div class="text-xs text-gray-500 mb-3">Coordinates: ${largestGapPoint.lat.toFixed(4)}, ${largestGapPoint.lon.toFixed(4)}</div>
-                    <a href="https://www.google.com/maps/search/?api=1&query=${largestGapPoint.lat},${largestGapPoint.lon}" target="_blank" class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700">View on Google Maps</a>
+                    <a href="https://www.google.com/maps?q=${largestGapPoint.lat},${largestGapPoint.lon}" target="_blank" class="inline-block px-3 py-1 bg-blue-600 text-white text-xs rounded hover:bg-blue-700">View on Google Maps</a>
                 </div>
             `).openPopup();
             gapMarkersLayer.addLayer(gapMarker);
@@ -401,7 +406,7 @@
             totalOfficesEl.textContent = allOffices.length;
             mainlandOfficesCountEl.textContent = mainlandOffices.length;
 
-            const largestGapPoint = coverageGaps[0]; // Get the largest gap from the array
+            const largestGapPoint = coverageGaps[0]; // Get the largest gap from the globally stored array
             if (largestGapPoint) {
                 largestGapEl.textContent = formatDistance(largestGapPoint.distance);
             }
@@ -497,10 +502,15 @@
                 const islandStates = ["ANDAMAN AND NICOBAR ISLANDS", "LAKSHADWEEP"];
                 mainlandOffices = allOffices.filter(o => !islandStates.includes(o.state.toUpperCase()));
 
-                // Compute concave hull for mainland using hull.js
+                // Compute concave hull for mainland
                 if (mainlandOffices.length > 2) {
                     const points = mainlandOffices.map(o => [o.longitude, o.latitude]);
-                    const hullPoints = hull(points, 30); // Higher concavity for more detail
+                    // Concavity parameter: higher means more detail, lower is more like convex hull. 30 is a good starting point.
+                    const hullPoints = hull(points, 30); 
+                    // Make sure the polygon is closed
+                    if (hullPoints[0][0] !== hullPoints[hullPoints.length - 1][0] || hullPoints[0][1] !== hullPoints[hullPoints.length - 1][1]) {
+                        hullPoints.push(hullPoints[0]);
+                    }
                     analysisHull = turf.polygon([hullPoints]);
 
                     const hullPolygon = L.geoJSON(analysisHull, {
@@ -516,9 +526,10 @@
                 renderOfficeMarkers();
                 renderVoronoiCells();
                 renderCoverageCircles();
-                updateStats();
+                updateStats(); // Initial update with 0 gaps
 
                 statusText.textContent = 'Ready! Analyze gaps on the Indian mainland.';
+                findGapBtn.innerHTML = `Find Coverage Gaps`; // Update button text
             } catch (e) {
                 console.error(e);
                 statusText.textContent = 'Failed to load data. See console.';
@@ -538,6 +549,7 @@
             renderCoverageCircles();
         });
 
+        // *** THIS IS THE CORRECTED CLICK HANDLER ***
         findGapBtn.addEventListener('click', () => {
             if (mainlandOffices.length < 3) {
                 statusText.textContent = 'Need at least 3 mainland offices to analyze.';
@@ -545,17 +557,27 @@
             }
             findGapBtn.disabled = true;
             findGapBtn.innerHTML = '<span class="animate-spin">⏳</span> Analyzing...';
-            gapList.innerHTML = '';
+            // Add skeleton loaders to the list
+            gapList.innerHTML = '<div class="skeleton h-16"></div><div class="skeleton h-16"></div><div class="skeleton h-16"></div>';
 
             setTimeout(() => {
-                coverageGaps = findCoverageGaps(mainlandOffices);
+                // 1. Call the correct function
+                const gaps = findCoverageGaps(mainlandOffices);
+                
+                // 2. Store results globally
+                coverageGaps = gaps; 
+
                 if (coverageGaps.length > 0) {
-                    renderLargestGap();
-                    renderGapList(coverageGaps);
-                    updateStats();
+                    // 3. Render all results
+                    renderLargestGap(); // Renders coverageGaps[0]
+                    updateStats();       // Updates stats from coverageGaps
+                    renderGapList(gaps); // Renders all gaps in the list
                 } else {
-                    gapList.innerHTML = '<div class="text-sm text-gray-500 p-4">No gaps found.</div>';
+                    statusText.textContent = 'No gaps found within the analysis area.';
+                    gapList.innerHTML = '<div class="text-sm text-gray-500 p-4">No gaps found within the analysis area.</div>';
                 }
+                
+                // 4. Reset button
                 findGapBtn.disabled = false;
                 findGapBtn.innerHTML = `<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Find Coverage Gaps`;
             }, 100);
@@ -578,7 +600,6 @@
             loadData();
         });
     </script>
-
     <style>
         @keyframes pulse {
             0%, 100% { transform: scale(1); }
