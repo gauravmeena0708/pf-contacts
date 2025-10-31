@@ -190,9 +190,9 @@
         let map, voronoiLayer, coverageLayer, gapMarkersLayer, hullLayer, gapVisualizationLayer;
         let allOffices = [];
         let mainlandOffices = [];
-        let convexHull = null;
+        let analysisHull = null;
         let voronoiData = null;
-        let largestGapPoint = null;
+        let coverageGaps = [];
         let showVoronoi = true;
         let showCoverage = false;
         let coverageRadius = 75; // km
@@ -213,35 +213,31 @@
         };
 
         const isWithinAnalysisArea = (lat, lon) => {
-            if (!convexHull) return false;
+            if (!analysisHull) return false;
             const point = turf.point([lon, lat]);
-            return turf.booleanPointInPolygon(point, convexHull);
+            return turf.booleanPointInPolygon(point, analysisHull);
         };
 
         // ---------- VORONOI & GAP COMPUTATION ----------
         const computeVoronoi = (offices) => {
-            if (offices.length < 3 || !convexHull) return null;
+            if (offices.length < 3 || !analysisHull) return null;
 
             const points = offices.map(o => [o.longitude, o.latitude]);
             const delaunay = d3.Delaunay.from(points);
-            const bbox = turf.bbox(convexHull); // [minX, minY, maxX, maxY]
+            const bbox = turf.bbox(analysisHull); // [minX, minY, maxX, maxY]
             const voronoi = delaunay.voronoi(bbox);
 
             return { delaunay, voronoi, points };
         };
 
-        const findLargestGapVoronoi = (offices) => {
-            if (offices.length < 3) return null;
+        const findCoverageGaps = (offices) => {
+            if (offices.length < 3) return [];
 
             statusText.textContent = 'Computing Voronoi diagram for mainland...';
             const { delaunay, voronoi } = voronoiData;
 
-            statusText.textContent = 'Analyzing coverage gaps within convex hull...';
+            statusText.textContent = 'Analyzing coverage gaps within analysis area...';
 
-            let maxDistance = 0;
-            let bestPoint = null;
-
-            // Method 1: Check Voronoi vertices
             const vertices = [];
             for (let i = 0; i < voronoi.circumcenters.length; i += 2) {
                 const lon = voronoi.circumcenters[i];
@@ -253,21 +249,19 @@
 
             statusText.textContent = `Evaluating ${vertices.length} potential gap points...`;
 
-            vertices.forEach(([lon, lat]) => {
+            const gaps = vertices.map(([lon, lat]) => {
                 let minDist = Infinity;
                 offices.forEach(office => {
                     const d = haversine(lat, lon, office.latitude, office.longitude);
                     if (d < minDist) minDist = d;
                 });
-
-                if (minDist > maxDistance) {
-                    maxDistance = minDist;
-                    bestPoint = { lat, lon, distance: minDist };
-                }
+                return { lat, lon, distance: minDist };
             });
+
+            gaps.sort((a,b) => b.distance - a.distance);
             
             statusText.textContent = 'Analysis complete!';
-            return bestPoint;
+            return gaps.slice(0, 20);
         };
 
         // ---------- MAP RENDERING ----------
