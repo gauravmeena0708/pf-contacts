@@ -389,8 +389,8 @@
       "std_code": null,
       "toll_free_no": null,
       "pro_numbers": [
-        "2240046",
-        "2240045"
+        "2240045",
+        "2240046"
       ],
       "fax_numbers": []
     },
@@ -541,6 +541,1142 @@
       "fax_numbers": []
     },
     "officials": []
+  },
+  {
+    "query": "q=HEAD+OFFICE",
+    "office_name_hierarchical": "HEAD OFFICE",
+    "hierarchy_breadcrumbs": [
+      {
+        "name": "Head Office",
+        "query_param": "HO"
+      }
+    ],
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "EPFO Head Office, New Delhi",
+      "office_email": "cpfc@epfindia.gov.in",
+      "office_address": "Employees Provident Fund Organization, (Ministry of Labour & Employment)\nPlate A Ground Floor, Office Block-II, East Kidwai Nagar\nNew Delhi - 110023",
+      "std_code": "011"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "20815653",
+          "20815658"
+        ],
+        "email": "cpfc@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ramesh Krishnamurthi",
+        "designation": "Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shobhit Shrivastava",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sushil Kumar Katariya",
+        "designation": "Section Officer"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt. V. Bhanumati",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Rakesh Dabas",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt. Meenu Mandola",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "20815636"
+        ],
+        "email": "fa.cao@epfindia.gov.in",
+        "fax": [],
+        "name": "Ms. Roli Shukla Malge",
+        "designation": "F.A. & C.A.O."
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt. Poonam Bisht",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "26172676"
+        ],
+        "email": "cvo@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Bhavani Singh Yadav  , I T S",
+        "designation": "Chief Vigilance Officer"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Deepak Kumar",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "24345366"
+        ],
+        "email": "acc.csd@epfindia.gov.in",
+        "fax": [],
+        "name": "Smt. Shahira K. Sangma",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)"
+      },
+      {
+        "phone_numbers": [
+          "20815663"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Gautam Dixit",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt Versha Kataria",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "20815641"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Bhaskar Choradia",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Raj Kumar Vyas",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "20815502"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Chandramauli Chakraborty",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt Yogita Bhargava",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "20815652"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pankaj",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt. V. Radhika Murlidhar",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "20815685"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Amit Katoch",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt. Sunita Arora",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "20815644"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri D. Remmei",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt Rinku Chowdhury Barua",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "24345238"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Vipin Kumar Sharma",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815639"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sanjay Kumar",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815503"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Saurabh Jagati",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815664"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pb Verma",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pankaj Raman",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815640"
+        ],
+        "email": "meraj.ashraf@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri M. M. Ashraf",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815647"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri G R Suchindranath",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815507"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Abhay Ranjan",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815517"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ajay K Mehra",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815505"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Smt Aprajita Jaggi",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "20815506"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Andrew Prabhu",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sunil Kumar Suman",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "24345304"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Col. Pravin Kumar",
+        "designation": "Chief Engineer"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Utkarsh Jeet Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345325"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shashwat Shukla",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345325"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shaswat Shukla",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345259"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shailendra Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345301"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Saurabh Suman Prasad",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345304"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sachin Saurabh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815647"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shashank Kumar Pandey",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shashi Bhushan Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815642"
+        ],
+        "email": "shobhit.singhal@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Shobhit Singhal",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815518"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Saurabh Tripathi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Soumya Kanti Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Nidhi Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345236"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri S. K. Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345366"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sudhir N. Ganvir",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sandeep Singh Negi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345258"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ramesh Kumar Gollapudi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345354"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Robert W. Kapai",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Rajesh Pandey",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815684"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Raman Dhansekhar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri R W Syeim",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815684"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Raman Dhanasekhar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815687"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri P. P. S. Maingi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345243"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pranjeet Joshi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345276"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Ms Pooja Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345262"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri P. Senthil Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345248"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Nitin Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345241"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Navin Kumar Kanaujia",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345255"
+        ],
+        "email": "murugavel.sambasivam@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Murugavel Sambasivam",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345328"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Manish Kr. Thakur",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815524"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Mohammad Shariq",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345246"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Manish Mani",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345287"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Manoj Kumar Yadav",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345241"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Kaushal Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345222"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Julion Tobias",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345242"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Jogender Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345232"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Jitinder Kumar Sangalay",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345251"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Isha",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345359"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Hemant M. Tirpude",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Dr. G. Sivakumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345249"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Deepak",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815504",
+          "24345245"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Bhupendra Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Alok Yadav",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345257"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ankesh Srivastava",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345278"
+        ],
+        "email": "rc.hrm@epfindia.gov.in",
+        "fax": [
+          "26163245"
+        ],
+        "name": "Shri Aditya Shah",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345261"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Amitabh Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345316"
+        ],
+        "email": "avinash.gandhi@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Avinash Gandhi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Abhishek Bhardwaj",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345300"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Amul Raj Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345274"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Arun Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345237"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Regional P. F. Commissioner (Gr.I)",
+        "designation": "(RECOVERY & LEGAL)"
+      },
+      {
+        "phone_numbers": [
+          "24345260"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Regional P. F. Commissioner (Gr.I)",
+        "designation": "(CAIU)"
+      },
+      {
+        "phone_numbers": [
+          "26163245"
+        ],
+        "email": "dir.ol@epfindia.gov.in",
+        "fax": [],
+        "name": "Dr Veena Rani Yadav",
+        "designation": "Director"
+      },
+      {
+        "phone_numbers": [
+          "24345336"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sahalabh Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sahil Grover",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345310"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Rajendera Singh Tanwar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Satay Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345302"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ranjeet Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345334"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Rakesh Dhar Dwivedi",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pankaj Yadav",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "20815515"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pradeep Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "20815523"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Pushpendra",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Priyanshu Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345340"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Nitin Uttam",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345324"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Md. Majaz",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Vishwa Mitra Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345327"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Kushagra Sagar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345337"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Kesar Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345329"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Sandeep Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345312"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Sandeep Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345315"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Srikanth Ghanasham Phulpagar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345285"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Uday Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ebin Vishwanathan",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Deepak Arya",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345328"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Deepak Kant",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Subrata Bhaurmik",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345338"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Braj Mohan Kandpal",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345332"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Anil Kumar Jain",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345320"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Atul Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Sh Abhishek Kunwar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345321"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ajay Kumar Paliwal",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri V.k Upadhay",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Santosh Kumar",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shreedevi",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Hema Pradhan",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Om Prakash",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Neeraj Kumar  Sharma",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Manjeet Singh",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Lalit",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Jodinger Singh Dhankar",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Jintender Kuamr Bansal",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Gopal Krishan Juneja",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Sunita Chowhan",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Neeraja Bhatia",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Charu Arora",
+        "designation": "Assistant Director"
+      },
+      {
+        "phone_numbers": [
+          "26164914"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sanjay Kumar Dass",
+        "designation": "Junior Engineer"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Principal Private Secretary",
+        "designation": null
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Smt. Alfarheen Mukhtar",
+        "designation": "Steno"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Personal Assistant",
+        "designation": null
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Personal Assistant",
+        "designation": null
+      }
+    ]
   },
   {
     "query": "q=DELHI%2C+UTTARAKHAND%2C+JAMMU+%26+KASHMIR+AND+LADAKH",
@@ -6425,118 +7561,9 @@
         "query_param": "TNEC"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Office of the Addl. Central Provident Fund Commissioner, TAMIL NADU(EXCLUDING CHENNAI)",
-      "office_email": "acc.cbe@epfindia.gov.in",
-      "office_address": "P.B.No-3875,\nDr. Balasundaram Road,\nCoimbatore - 641018.",
-      "std_code": "0422"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2243040"
-        ],
-        "email": null,
-        "fax": [
-          "2243042"
-        ],
-        "name": "Smt Ghazala Ali Khan",
-        "designation": "Additional Central P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2243040"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Smt. Jayasree V",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "2240092"
-        ],
-        "email": "kc.joshi@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Kailash Chandra Joshi",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Hari Om Jaiswal",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "2240093"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Vikas Anand",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "2246050"
-        ],
-        "email": null,
-        "fax": [
-          "2247040"
-        ],
-        "name": "Ms. C Amudha",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "2246050"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Personal Assistant",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "2244076"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri S. Santhosh",
-        "designation": "Accounts Officer"
-      },
-      {
-        "phone_numbers": [
-          "2243334"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri A Ganesh",
-        "designation": "Accounts Officer"
-      },
-      {
-        "phone_numbers": [
-          "2243334"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri V K Saikumar",
-        "designation": "Accounts Officer"
-      },
-      {
-        "phone_numbers": [
-          "2242040"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "General Numbers",
-        "designation": null
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=TIRUPPUR",
@@ -8602,24 +9629,39 @@
         "designation": null
       },
       {
-        "phone_numbers": [],
-        "email": "ys.shekhawat@epfindia.gov.in",
+        "phone_numbers": [
+          "26402131"
+        ],
+        "email": "durgesh.kumar@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Yogendra Singh Shekhawat",
+        "name": "Shri Durgesh Kumar",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
-        "phone_numbers": [],
-        "email": "suraj.patil@epfindia.gov.in",
+        "phone_numbers": [
+          "26402127"
+        ],
+        "email": "gouravtiwari@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Suraj D. Patil",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
+        "name": "Shri Gourav Tiwari",
+        "designation": "Assistant P. F. Commissioner"
       },
       {
-        "phone_numbers": [],
-        "email": "kv.praveen@epfindia.gov.in",
+        "phone_numbers": [
+          "26402130"
+        ],
+        "email": "sushmitatripathi@epfindia.gov.in",
         "fax": [],
-        "name": "Shri K.v. Praveen",
+        "name": "Ms Sushmita Tripathi",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "26402150"
+        ],
+        "email": "surabhidwivedi@epfindia.gov.in",
+        "fax": [],
+        "name": "Ms Surabhi Dwivedi",
         "designation": "Assistant P. F. Commissioner"
       },
       {
@@ -8630,12 +9672,12 @@
         ],
         "email": null,
         "fax": [],
-        "name": "Public Relation Officer",
-        "designation": null
+        "name": "Shri Shailesh Mandlik",
+        "designation": "Public Relation Officer"
       },
       {
         "phone_numbers": [
-          "26445443"
+          "26402156"
         ],
         "email": null,
         "fax": [],
@@ -8768,35 +9810,45 @@
     },
     "officials": [
       {
-        "phone_numbers": [],
+        "phone_numbers": [
+          "26402129"
+        ],
         "email": "lokesh.gupta@epfindia.gov.in",
         "fax": [],
         "name": "Shri Lokesh Gupta",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
-        "phone_numbers": [],
+        "phone_numbers": [
+          "26402132"
+        ],
         "email": "sudarshan.bhaladhare@epfindia.gov.in",
         "fax": [],
         "name": "Shri Sudarshan Shamrao Bhaladhare",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
-        "phone_numbers": [],
+        "phone_numbers": [
+          "26402128"
+        ],
         "email": "suraj.patil@epfindia.gov.in",
         "fax": [],
         "name": "Shri Suraj Dattatray Patil",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
-        "phone_numbers": [],
+        "phone_numbers": [
+          "26402139"
+        ],
         "email": "alkamahi@epfindia.gov.in",
         "fax": [],
         "name": "Ms Alka Yadav",
         "designation": "Assistant P. F. Commissioner"
       },
       {
-        "phone_numbers": [],
+        "phone_numbers": [
+          "26402140"
+        ],
         "email": "rajivranjan94@epfindia.gov.in",
         "fax": [],
         "name": "Shri Rajiv Ranjan Pandey",
@@ -8808,14 +9860,14 @@
           "26402158",
           "26449150"
         ],
-        "email": null,
+        "email": "vaishali.samarth@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Shailesh Mandlik",
+        "name": "Smt Vaishali Samartha",
         "designation": "Public Relation Officer"
       },
       {
         "phone_numbers": [
-          "26445443"
+          "26402156"
         ],
         "email": null,
         "fax": [],
@@ -13287,9 +14339,110 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e0d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [
+        "27569602"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, HYDERABAD (MADHAPUR)",
+      "office_email": "ro.hyderabad2@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan, No. 3-4-763,\nBarkatpura Chaman, (Telangana)\nHYDERABAD - 500 027.",
+      "std_code": "040",
+      "toll_free_no": "1800118005"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "27564947"
+        ],
+        "email": "tps.yadav@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Tej Pratap Singh Yadav",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "27556374"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Madhusudhana Chary",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "27556871"
+        ],
+        "email": "v.vasavi@epfindia.gov.in",
+        "fax": [],
+        "name": "Smt V Vasavi",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "27551984"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Smt V Vasavi",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "27552339"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri K V N Rama Krishna",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "27556873"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Smt. M.srilakshmi",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "27556873"
+        ],
+        "email": "ms.lakshmi@epfindia.gov.in",
+        "fax": [],
+        "name": "Smt M Srilakshmi",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "27564947"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Smt. S. Uma Maheshwari",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [
+          "27569602"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "9100026146"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=KUKATPALLI",
@@ -13304,9 +14457,110 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2fb10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [
+        "040-29701879"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, KUKATPALLI",
+      "office_email": "ro.kukatpally@epfindia.gov.in",
+      "office_address": "Prashanti Nagar, TSRTC Bus Complex,\n1st and 2nd Floor, Near 'Y' Junction\nKUKATPALLI - 500018",
+      "std_code": "040"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "040-29703775"
+        ],
+        "email": "rajesh.boddeda@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Rajesh Chandra B",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "0404-29703775"
+        ],
+        "email": "ro.kukatpally@epfindia.gov.in",
+        "fax": [],
+        "name": "Smt. Ch. Satyavani Sri",
+        "designation": "Personal Assistant"
+      },
+      {
+        "phone_numbers": [
+          "040-29709920"
+        ],
+        "email": "vv.donglikar@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Vaibhav Vinayak Donglikar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "040-29706630"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri J.srinivas",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "040-29704410"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Vineet Kumar Saroj",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "040-29707730"
+        ],
+        "email": "babulnath.nayak@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri D Babulnath Nayak",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "040-29701879"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ravindranath",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "040-29706620"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri L. D. Norbert, D P A",
+        "designation": "E D P CELL"
+      },
+      {
+        "phone_numbers": [
+          "9392369549"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "29705520",
+          "29708830"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Invard Section",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=KARIMNAGAR",
@@ -13321,9 +14575,55 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2f890>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [
+        "2231090"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, KARIMNAGAR",
+      "office_email": "ro.karimnagar@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan,2-7-271/A,\nBehind RTC Bus Stand, Mukarampura,\nKarimnagar - 505 001.",
+      "std_code": "0878"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2231089"
+        ],
+        "email": "ro.karimnagar@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Mohammed Fasi Uddin",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2231090"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Brijesh Kumar Vais",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "2231090"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Adepu Srinivas",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "9492429685"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=D.O+-+ADILABAD",
@@ -13342,9 +14642,28 @@
         "query_param": "KARIMNAGAR"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e850>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [
+        "243948"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "District Office, D.O - ADILABAD",
+      "office_email": "do.nirmal@epfindia.gov.in",
+      "office_address": "H.No: 5-7-100/5,\n2nd Floor, Doctors Lane, Budavarpet,\nDistrict: NIRMAL, Telangana State. - 504106",
+      "std_code": "08734"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "243948"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": null
+      }
+    ]
   },
   {
     "query": "q=NIZAMABAD",
@@ -13359,13 +14678,59 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e210>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [
+        "245157"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, NIZAMABAD",
+      "office_email": "ro.nizamabad@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan,\nNyalkal Road, (Telangana)\nNizamabad - 503 001",
+      "std_code": "08462"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "245795"
+        ],
+        "email": "ganesh.kumar@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ganesh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "295119"
+        ],
+        "email": "s.suhaspatil@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Patil Siddhanth Suhas",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "245157"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "8919090653"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
-    "query": "q=PATANCHERU",
-    "office_name_hierarchical": "PATANCHERU",
+    "query": "q=SANGAREDDY",
+    "office_name_hierarchical": "SANGAREDDY",
     "hierarchy_breadcrumbs": [
       {
         "name": "Telangana",
@@ -13376,13 +14741,94 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2da90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, SANGAREDDY",
+      "office_email": "ro.pattancheru@epfindia.gov.in",
+      "office_address": "H.No.12-1, First Floor,\nSusheeram Complex, Sangareddy District\nPatancheru - 502 319",
+      "std_code": "08455"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "246455"
+        ],
+        "email": "ro.pattancheru@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Vishal Agarwal",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "29329535"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri M Durga Prasad",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "241450"
+        ],
+        "email": "ro.pattancheru@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Prashant Priyadarshi",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "295009"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Dilip Meena",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "285135"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Smt. D V V Sathyavathi",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "246445"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "E D P CELL",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "9494182174"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "285134",
+          "246124"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
-    "query": "q=SIDDIPET",
-    "office_name_hierarchical": "SIDDIPET",
+    "query": "q=D.O+-+SIDDIPET",
+    "office_name_hierarchical": "D.O - SIDDIPET",
     "hierarchy_breadcrumbs": [
       {
         "name": "Telangana",
@@ -13391,11 +14837,60 @@
       {
         "name": "TELANGANA (HYDERABAD)",
         "query_param": "TELANGANA (HYDERABAD)"
+      },
+      {
+        "name": "SANGAREDDY",
+        "query_param": "SANGAREDDY"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2ee90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "District Office, D.O - SIDDIPET",
+      "office_email": "sro.siddipet@epfindia.gov.in",
+      "office_address": "Bhavishya Nidhi Bhawan,19-25/1/1, Hyderabad Road,\nPrasanth Nagar\nSiddipet - 502103",
+      "std_code": "08457"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "231465"
+        ],
+        "email": "pawanee.dgk@epfindia.gov.in",
+        "fax": [],
+        "name": "Smt. D.g.k. Paawanee",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "231464"
+        ],
+        "email": "virendra.t@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Veerendra Tandekar",
+        "designation": "ACCOUNTS OFFICER"
+      },
+      {
+        "phone_numbers": [
+          "6300005495"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Helpline Number",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "231466",
+          "231467"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "General Numbers",
+        "designation": null
+      }
+    ]
   },
   {
     "query": "q=WARANGAL",
@@ -13410,9 +14905,62 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e490>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [
+        "2447772"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, WARANGAL",
+      "office_email": "ro.warangal@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan,24-7-207/15,\n100' Darga Road,Kazipet,\nWarangal - 506004",
+      "std_code": "0870"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2461045"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Y D Srinivas",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Sri K Samuel Jaya Kumar",
+        "designation": "Personal Assistant"
+      },
+      {
+        "phone_numbers": [
+          "2447771"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shivkesh Meena",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "2447772"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Sri. B Nagulu",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "9440965784"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=D.O+-+KHAMMAM",
@@ -13431,9 +14979,26 @@
         "query_param": "WARANGAL"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d1d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "District Office, D.O - KHAMMAM",
+      "office_email": "do.khammam@epfindia.gov.in",
+      "office_address": "EPFO, District Office\nOld Municipal Office Complex, Railway Station Road\nKhammam - 507001",
+      "std_code": "08742"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "223994"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shivkesh Meena",
+        "designation": "Assistant P. F. Commissioner"
+      }
+    ]
   },
   {
     "query": "q=ANDHRA+PRADESH+%28VIJAYAWADA%29",
@@ -13444,9 +15009,65 @@
         "query_param": "AP"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d310>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Office of the Addl. Central Provident Fund Commissioner, ANDHRA PRADESH (VIJAYAWADA)",
+      "office_email": "acc.ap@epfindia.gov.in",
+      "office_address": "RTC House, 3rd Floor,\nNTR Administrative Block,\nPNBS, Vijaywada - 520013",
+      "std_code": "0866"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2576700"
+        ],
+        "email": "acc.ap@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri B. Andrew Prabhu",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "2576700"
+        ],
+        "email": "acc.ap@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Pajjuri Gopi",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Hemong Venkatesh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Inakoti Sridevi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "2576700"
+        ],
+        "email": "acc.ap@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Shikhar Sharma",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Subrata Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      }
+    ]
   },
   {
     "query": "q=KADAPA",
@@ -13564,9 +15185,28 @@
         "query_param": "KADAPA"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d310>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "District Office, D.O - ANANTAPUR",
+      "office_email": "do.anantapur@epfindia.gov.in",
+      "office_address": "13-2-794,ANANTAPUR CO.OP STORES  BUILDING,\nOPP.RLY FEEDER  ROAD,SRINIVASA  NAGAR,NEAR ANANTAPUR RLY STATION,\nANANTAPUR - 515001",
+      "std_code": "08554"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "221074"
+        ],
+        "email": "do.anantapur@epfindia.gov.in",
+        "fax": [
+          "221074"
+        ],
+        "name": "Shri A Ravinder",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      }
+    ]
   },
   {
     "query": "q=D.O+-+KURNOOL",
@@ -13587,7 +15227,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d1d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac702d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+NELLORE",
@@ -13608,7 +15248,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e490>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac70550>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+TIRUPATI",
@@ -13629,7 +15269,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2ee90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac707d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=GUNTUR",
@@ -13646,7 +15286,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2efd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac70a50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+ONGOLE",
@@ -13667,7 +15307,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2dd10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac70cd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+VIJAYAWADA",
@@ -13688,7 +15328,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2da90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac70f50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=RAJAMAHENDRAVARAM",
@@ -13705,7 +15345,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2f890>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac711d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+BHIMAVARAM",
@@ -13726,7 +15366,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2fb10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac71450>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+ELURU",
@@ -13747,7 +15387,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e0d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac716d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+KAKINADA",
@@ -13803,7 +15443,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c690>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac71a90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+SRIKAKULAM",
@@ -13824,7 +15464,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7d090>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac71d10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+VIZIANAGARAM",
@@ -13845,7 +15485,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ccd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac71f90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=GUJARAT+%28AHMEDABAD%29",
@@ -13858,7 +15498,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c910>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac72350>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=AHMEDABAD",
@@ -13875,7 +15515,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e0d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac725d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=VADODARA",
@@ -13892,7 +15532,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2fb10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac72210>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BHARUCH",
@@ -13909,7 +15549,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2f890>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac72990>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=NARODA",
@@ -13926,7 +15566,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2da90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac72c10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+HIMMATNAGAR",
@@ -13947,7 +15587,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2dd10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac72e90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+MEHSANA",
@@ -13968,7 +15608,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2efd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac73110>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=RAJKOT",
@@ -13985,7 +15625,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2ee90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac73390>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+GANDHIDHAM",
@@ -14006,7 +15646,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e490>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac73610>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+JAMNAGAR",
@@ -14027,7 +15667,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d1d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac73890>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+JUNAGADH",
@@ -14048,7 +15688,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d310>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac73b10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+SURENDRANAGAR",
@@ -14069,7 +15709,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c910>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ac73d90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=SURAT",
@@ -14086,7 +15726,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ccd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab10050>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=VAPI",
@@ -14103,7 +15743,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ce10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab102d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=VATWA",
@@ -14120,7 +15760,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7cf50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab10550>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+BHAVNAGAR",
@@ -14141,7 +15781,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7d090>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab107d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+NADIAD",
@@ -14162,7 +15802,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c410>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab10a50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=MADHYA+PRADESH+%26+CHATTISGARH+%28BHOPAL%29",
@@ -14175,7 +15815,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d310>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab10cd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=RAIPUR+%28CHATTISGARH%29",
@@ -14192,7 +15832,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d1d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab10f50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+BILASPUR",
@@ -14213,7 +15853,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e490>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab111d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BHOPAL",
@@ -14230,7 +15870,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2ee90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab11450>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+ITARASI",
@@ -14251,7 +15891,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2efd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab116d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=GWALIOR",
@@ -14268,7 +15908,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2dd10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab11a90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=INDORE",
@@ -14285,7 +15925,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2da90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab11d10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+DHAR",
@@ -14306,7 +15946,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2f890>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab11950>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+KHANDWA",
@@ -14327,7 +15967,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2fb10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab120d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=JABALPUR",
@@ -14344,7 +15984,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e0d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab12350>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+CHHINDWARA",
@@ -14365,7 +16005,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c410>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab125d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+SATNA",
@@ -14386,7 +16026,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7d090>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab12850>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=SAGAR",
@@ -14403,7 +16043,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7cf50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab12ad0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=UJJAIN",
@@ -14420,7 +16060,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ce10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab12d50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+RATLAM",
@@ -14441,7 +16081,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ccd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab12fd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BANDRA",
@@ -14454,7 +16094,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c910>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab13250>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=MUMBAI%28BANDRA%29",
@@ -14471,7 +16111,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e0d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab134d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=MUMBAI%28DADAR%29",
@@ -14488,7 +16128,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2fed0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab13750>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=MUMBAI%28NARIMAN+POINT%29",
@@ -14505,7 +16145,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2fc50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab139d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=MUMBAI%28POWAI%29",
@@ -14522,7 +16162,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2fb10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab13c50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=MUMBAI+%28FORT%29",
@@ -14539,7 +16179,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2dd10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab13ed0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=THANE",
@@ -14552,7 +16192,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2efd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab98190>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=KANDIVALI-West",
@@ -14569,7 +16209,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2ee90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab98410>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=KANDIVALI-East",
@@ -14586,7 +16226,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2e490>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab98690>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=THANE+%28MULUND%29",
@@ -14603,7 +16243,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d1d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab98910>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=THANE+%28NORTH%29",
@@ -14620,7 +16260,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ae2d310>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab98b90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=THANE+%28SOUTH%29",
@@ -14637,7 +16277,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ccd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab98f50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=VASHI+%28ANNEXE%29",
@@ -14654,7 +16294,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ce10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=VASHI",
@@ -14669,9 +16309,112 @@
         "query_param": "THANE"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7cf50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [
+        "27814315",
+        "27812255"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, VASHI",
+      "office_email": "ro.vashi@epfindia.gov.in",
+      "office_address": "Tower No.6, 5th Floor,\nVashi Railway Station Complex, (Maharashtra).\nVashi - 400 703",
+      "std_code": "022"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "27812022"
+        ],
+        "email": "rk.tripathi@epfindia.gov.in",
+        "fax": [
+          "27812811"
+        ],
+        "name": "Dr. Ram Krishna Tripathi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "27812022"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Smt. Rajani Bhise",
+        "designation": "Personal Assistant"
+      },
+      {
+        "phone_numbers": [
+          "27813312"
+        ],
+        "email": "aditya.talware@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Aditya Bhimrao Talware",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "27813324"
+        ],
+        "email": "ayush.gautam@epfindia.gov.in",
+        "fax": [],
+        "name": "Sh Ayush Gautam",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "27812266"
+        ],
+        "email": "s.sanghani@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri S. H. Sanghani",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "27813313"
+        ],
+        "email": "akankshapatel@epfindia.gov.in",
+        "fax": [],
+        "name": "Smt Akansha Patel",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Devendra Kushwaha",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "27814315",
+          "27812255",
+          "27810006"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Enquiry",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "27813314"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "P G H S",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "9969036123"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=NORTH-EASTERN+REGION+%28GUWAHATI%29",
@@ -14682,9 +16425,40 @@
         "query_param": "NER"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7d090>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Office of the Addl. Central Provident Fund Commissioner, NORTH-EASTERN REGION (GUWAHATI)",
+      "office_email": "acc.ner@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan, G.S. Road,\nNear Bharalu Bridge, Bhangagarh, (Assam)\nGuwahati - 781 005.",
+      "std_code": "0361"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "0361-2970899"
+        ],
+        "email": "acc.ner@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Shishir Kant Jha",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri T. John Jugli",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Nikheelchandra Anil Zode",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      }
+    ]
   },
   {
     "query": "q=AGARTALA",
@@ -14699,9 +16473,35 @@
         "query_param": "NORTH-EASTERN REGION (GUWAHATI)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c410>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, AGARTALA",
+      "office_email": "ro.agartala@epfindia.gov.in",
+      "office_address": "Airport Road, Near Bholagiri Ashram\nGorkha Basti, PO \u2013 Kathal Bagan, (Tripura)\nAgartala - 799 006",
+      "std_code": "0381"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2324164"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Leo Joseph Marandi",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "9402180891"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=D.O+-+DHARMANAGAR",
@@ -14722,7 +16522,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7c050>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab996d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=GUWAHATI",
@@ -14739,7 +16539,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7d6d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab99950>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+SILCHAR",
@@ -14760,7 +16560,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7d950>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab99bd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+BONGAIGAON",
@@ -14781,7 +16581,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7dbd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab99e50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+TEZPUR",
@@ -14802,7 +16602,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7de50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9a0d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=S.S.O+-+IMPHAL",
@@ -14823,7 +16623,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7e0d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9a350>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=S.S.O+-+DIMAPUR",
@@ -14844,7 +16644,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7e350>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9a5d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=S.S.O+-+ITANAGAR",
@@ -14865,7 +16665,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7e710>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9a850>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=SHILLONG",
@@ -14882,7 +16682,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7e990>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9aad0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=S.S.O+-+AIZAWL",
@@ -14903,7 +16703,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7e5d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9ad50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=TINSUKIA",
@@ -14920,7 +16720,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7ed50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9afd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+JORHAT",
@@ -14941,7 +16741,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7efd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9b250>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=WB%2C+A%26N+ISLANDS+%26+SIKKIM+%28KOLKATA%29",
@@ -14954,7 +16754,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7f250>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9b4d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=PORT+BLAIR",
@@ -14971,7 +16771,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7f4d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9b750>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=KOLKATA",
@@ -14988,7 +16788,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7f750>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9b9d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=DURGAPUR",
@@ -15005,7 +16805,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7f9d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9bc50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=DARJEELING",
@@ -15022,7 +16822,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7fc50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48ab9bed0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=HOWRAH+%28ANNEX+BLDG%29",
@@ -15039,7 +16839,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893ab7fed0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4c190>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+SRIRAMPORE",
@@ -15060,7 +16860,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb8190>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4c410>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=HOWRAH",
@@ -15077,7 +16877,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb8410>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4c7d0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+MIDNAPORE",
@@ -15098,7 +16898,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb8690>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4ca50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=JALPAIGURI",
@@ -15115,7 +16915,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb8910>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4c690>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+ALIPURDUAR",
@@ -15136,7 +16936,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb8b90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4ce10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+MALBAZAR",
@@ -15157,7 +16957,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb8e10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4d090>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=JANGIPUR",
@@ -15174,7 +16974,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb9090>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4d310>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=PARK+STREET",
@@ -15191,7 +16991,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb9310>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4d590>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=SILIGURI",
@@ -15208,7 +17008,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb9590>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4d810>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=SSO+-+GANGTOK",
@@ -15229,7 +17029,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb9810>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4da90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BARRACKPORE",
@@ -15246,7 +17046,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb9bd0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4dd10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BENGALURU+%28BENGALURU%29",
@@ -15259,7 +17059,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb9e50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4df90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BENGALURU+%28CENTRAL%29",
@@ -15276,7 +17076,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adb9a90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4e210>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BENGALURU+%28MALLESWARAM%29",
@@ -15293,7 +17093,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adba210>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4e490>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=RAJARAJESHWARI+NAGAR",
@@ -15310,7 +17110,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adba490>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4e710>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=YELAHANKA",
@@ -15327,7 +17127,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adba710>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4e990>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=PEENYA",
@@ -15344,7 +17144,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adba990>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4ec10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BENGALURU+%28BELLANDUR%29",
@@ -15361,7 +17161,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adbac10>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4ee90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BENGALURU+%28ELECTRONIC+CITY%29",
@@ -15378,7 +17178,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adbae90>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4f110>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BENGALURU+%28KORAMANGALA%29",
@@ -15395,7 +17195,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7f893adbb110>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4f390>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=BENGALURU+%28INDIRANAGAR%29",
@@ -15410,80 +17210,9 @@
         "query_param": "BENGALURU (BENGALURU)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "29900140"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, BENGALURU (INDIRANAGAR)",
-      "office_email": "ro.indiranagar@epfindia.gov.in",
-      "office_address": "No. F-28, NSU Block, ITI Campus (Bengaluru Block),\nDooravani Nagar, Krishnarajapuram\n(WHITEFIELD) - 560016",
-      "std_code": "080"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "29919647"
-        ],
-        "email": "n.gopalakrishnan@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri N Gopalakrishnan",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "29919647"
-        ],
-        "email": "sharad.raj@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Sharad Raj Gupta",
-        "designation": "Personal Assistant"
-      },
-      {
-        "phone_numbers": [
-          "25658005"
-        ],
-        "email": "shashi.kumar@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Shashi Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "25603030"
-        ],
-        "email": "rameez.mehar@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Rameez Mehar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "mukut.meena@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Mukut Bihar Lal Meena",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "29900140"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Shubham Bansal",
-        "designation": "Public Relation Officer"
-      },
-      {
-        "phone_numbers": [
-          "7204913736"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4f610>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=K+R+PURAM+%28WHITEFIELD%29",
@@ -15498,73 +17227,9 @@
         "query_param": "BENGALURU (BENGALURU)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "25658003"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, K R PURAM (WHITEFIELD)",
-      "office_email": "ro.krpuram@epfindia.gov.in",
-      "office_address": "No. F-28, NSU Block\nITI Campus (Bengaluru Block), Dooravani Nagar\nK R PURAM (WHITEFIELD) - 560016",
-      "std_code": "080"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "25658001"
-        ],
-        "email": "ro.krpuram@epfindia.gov.in",
-        "fax": [],
-        "name": "Sri Martand Singh Chandrawal",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "25658004"
-        ],
-        "email": "gs.reddy@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Shadakshar Gopal Reddy",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "25658007"
-        ],
-        "email": "mg2024@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Manish Kumar Gurjar",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "25658003"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Public Relation Officer",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "18604250045"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Enquiry",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "9483255277"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4f890>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=D.O+-+KOLAR",
@@ -15583,26 +17248,9 @@
         "query_param": "K R PURAM (WHITEFIELD)"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "District Office, D.O - KOLAR",
-      "office_email": "do.kolar@epfindia.gov.in",
-      "office_address": "EPFO,District Office, Ground Floor,BSNL Administrative Building,\nRailway Station Road, Kanakanapalya\nKolar - 563102",
-      "std_code": "08152"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "8152227199"
-        ],
-        "email": "s.ramakrishnan@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ramakrishnan S",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4fc50>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=TUMKUR",
@@ -15617,46 +17265,9 @@
         "query_param": "BENGALURU (BENGALURU)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2257455"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, TUMKUR",
-      "office_email": "ro.tumkur@epfindia.gov.in",
-      "office_address": "1st Main, 1st Cross, Chamundeshwari Nagar\nNear Sira Gate\nTumkur - 572106",
-      "std_code": "0816"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2261541"
-        ],
-        "email": "vamsi.dindi@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Vamsi Krishna Dindi",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2257455"
-        ],
-        "email": "srinidhi.gvs@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri G V Srinidhi",
-        "designation": "Public Relation Officer"
-      },
-      {
-        "phone_numbers": [
-          "7204055256"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.epfindia.gov.in', port=443) at 0x7ff48aa4fed0>, 'Connection to www.epfindia.gov.in timed out. (connect timeout=30)'))"
   },
   {
     "query": "q=VIGILANCE+WING",
@@ -16159,6 +17770,27 @@
       },
       {
         "phone_numbers": [],
+        "email": "ankur.gupta@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ankur Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "ravi.meena@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ravi Meena",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "sharique.tanwir@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Sharique Tanwir",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
         "email": "ravindra.babra@epfindia.gov.in",
         "fax": [],
         "name": "Shri Ravindera Babra",
@@ -16194,30 +17826,9 @@
       },
       {
         "phone_numbers": [],
-        "email": "ankur.gupta@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ankur Gupta",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
         "email": "harish.yadav@epfindia.gov.in",
         "fax": [],
         "name": "Shri Harish Yadav",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "ravi.meena@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ravi Meena",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "sharique.tanwir@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Sharique Tanwir",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -16226,6 +17837,27 @@
         "fax": [],
         "name": "Shri Ram Anand",
         "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "dhiren.meena@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Dhirendra Kumar Bharat Singh Meena",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "shivendra.singh@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Shivendra Pratap Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "avinash.sinha@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Avinash Kumar Sinha",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
         "phone_numbers": [],
@@ -16250,13 +17882,6 @@
       },
       {
         "phone_numbers": [],
-        "email": "dhiren.meena@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Dhirendra Kumar Bharat Singh Meena",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
         "email": "surendra.mohan@epfindia.gov.in",
         "fax": [],
         "name": "Shri Surendra Mohan",
@@ -16264,23 +17889,9 @@
       },
       {
         "phone_numbers": [],
-        "email": "shivendra.singh@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Shivendra Pratap Singh",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
         "email": "ankit.chanyal@epfindia.gov.in",
         "fax": [],
         "name": "Shri Ankit Chanyal",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "avinash.sinha@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Avinash Kumar Sinha",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
