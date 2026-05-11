@@ -22,505 +22,6 @@
     "officials": []
   },
   {
-    "query": "q=GH_Guest_House_ANDHRA_PRADESH_Hyderabad_",
-    "office_name_hierarchical": "Guest House, ANDHRA PRADESH(Hyderabad)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, ANDHRA PRADESH(Hyderabad)",
-      "office_address": "EPF staff Quarters,\nBarkatpura\nHyderabad - 500027",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "27560035"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_ANDHRA_PRADESH_Cuddapah_",
-    "office_name_hierarchical": "Guest House, ANDHRA PRADESH(Cuddapah)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, ANDHRA PRADESH(Cuddapah)",
-      "office_address": "EPF staff Quarters,\nP.F. Office Quarters No. 1/30,\nRailway Station Road,\nYerra Mukkapalle\nCuddapah - 516004",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_ANDHRA_PRADESH_Nizamabad_",
-    "office_name_hierarchical": "Guest House, ANDHRA PRADESH(Nizamabad)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, ANDHRA PRADESH(Nizamabad)",
-      "office_address": "Bhavishyanidhi Bhawan,\nNyalkal Road\nNizamabad - 503001",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "245157"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_ANDHRA_PRADESH_Guntur_",
-    "office_name_hierarchical": "Guest House, ANDHRA PRADESH(Guntur)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, ANDHRA PRADESH(Guntur)",
-      "office_address": "EPF Oficers Guest House,\nBhavishyanidhi Bhawan, 3rd Lane\nKrishnanagar\nGuntur - 522006",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_HARYANA_Faridabad_",
-    "office_name_hierarchical": "Guest House, HARYANA(Faridabad)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, HARYANA(Faridabad)",
-      "office_address": "Q. No. 95, Type V\nBhavishya Nidhi Enclave, Sector \u2013 29\nFaridabad -",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_KARNATAKA_Bangalore_",
-    "office_name_hierarchical": "Guest House, KARNATAKA(Bangalore)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, KARNATAKA(Bangalore)",
-      "office_address": "EPF Staff Guest House,\nBhavishya Nidhi Bhavan\nHMT Factory Main Road,\nJalahalli,\nBangalore  - 560 013",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "23450177"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_KARNATAKA_Mangalore_",
-    "office_name_hierarchical": "Guest House, KARNATAKA(Mangalore)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, KARNATAKA(Mangalore)",
-      "office_address": "Bhavishyanidhi Enclave\nQuarter No. 8 & 9, Block-I,\nVamanjoor\nMangalore - 575028",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2263630"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_KERALA_Thiruvananthapuram_",
-    "office_name_hierarchical": "Guest House, KERALA(Thiruvananthapuram)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, KERALA(Thiruvananthapuram)",
-      "office_address": "EPF Staff Quarters\nPattom (PO)\nThiruvananthapuram - 695004",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2446286"
-      ],
-      "fax_numbers": [
-        "2441750"
-      ]
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_KERALA_Kochi_",
-    "office_name_hierarchical": "Guest House, KERALA(Kochi)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, KERALA(Kochi)",
-      "office_address": "EPF Enclave,\nSalim Rajan Road\nGandhi Nagar\nKochi - 682020",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2207104"
-      ],
-      "fax_numbers": [
-        "2338410"
-      ]
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_KERALA_Khozhikode_",
-    "office_name_hierarchical": "Guest House, KERALA(Khozhikode)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, KERALA(Khozhikode)",
-      "office_address": "EPF Staff Quarters\nEranhipalam P.O\nKozhikode - 673006",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2767893"
-      ],
-      "fax_numbers": [
-        "2768850"
-      ]
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_MADHYA_PRADESH_Indore_",
-    "office_name_hierarchical": "Guest House, MADHYA PRADESH(Indore)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, MADHYA PRADESH(Indore)",
-      "office_address": "Nidhi Vihar\nKeshar Bagh Road\nIndore -",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2468296"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_PUNJAB_Chandigarh_",
-    "office_name_hierarchical": "Guest House, PUNJAB(Chandigarh)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, PUNJAB(Chandigarh)",
-      "office_address": "House No. 342\nSector 30-A\nChandigarh  - 160017",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2637302"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_PUNJAB_Amritsar_",
-    "office_name_hierarchical": "Guest House, PUNJAB(Amritsar)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, PUNJAB(Amritsar)",
-      "office_address": "EPF Guest House,\nF-5, Bhavishyanidhi Enclave\nRattan Singh Chowk,\nNear Baba Jiwan Singh Gurdwara\nAmritsar - 143001",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2500335"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_RAJASTHAN_Jaipur_",
-    "office_name_hierarchical": "Guest House, RAJASTHAN(Jaipur)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, RAJASTHAN(Jaipur)",
-      "office_address": "Qr.No.2, Nidhi Vihar Colony\nJyoti Nagar\nJaipur - 302005",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2740662"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_TAMILNADU_Chennai_",
-    "office_name_hierarchical": "Guest House, TAMILNADU(Chennai)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, TAMILNADU(Chennai)",
-      "office_address": "EPF Staff quarters,\nDr.Thirumurthy Nagar\nNungambakkam,\nChennai - 600034",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "28269444"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_TAMILNADU_Coimbatore_",
-    "office_name_hierarchical": "Guest House, TAMILNADU(Coimbatore)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, TAMILNADU(Coimbatore)",
-      "office_address": "EPF Staff quarters, Bhavishyanidhi Nagar\nPeelamedu\nCoimbatore - 641004",
-      "office_email": "ro.coimbatore@epfindia.gov.in",
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2240046",
-        "2240045"
-      ],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_TAMILNADU_Madurai_",
-    "office_name_hierarchical": "Guest House, TAMILNADU(Madurai)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, TAMILNADU(Madurai)",
-      "office_address": "Bhavishyanidhi Bhavan,\nLady Doak College Road\nChokkikulam\nMadurai - 625002",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [
-        "2530310"
-      ],
-      "fax_numbers": [
-        "2530032"
-      ]
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_UTTAR_PRADESH_Kanpur_",
-    "office_name_hierarchical": "Guest House, UTTAR PRADESH(Kanpur)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, UTTAR PRADESH(Kanpur)",
-      "office_address": "OFFICERS:\nBhavishanidhi Colony\nQuarter No.2\nSarvodaya Nagar\nKanpur - 208005",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_UTTAR_PRADESH_Kanpur_",
-    "office_name_hierarchical": "Guest House, UTTAR PRADESH(Kanpur)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, UTTAR PRADESH(Kanpur)",
-      "office_address": "OFFICERS:\nBhavishanidhi Colony\nQuarter No.2\nSarvodaya Nagar\nKanpur - 208005",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_UTTAR_PRADESH_Kanpur_",
-    "office_name_hierarchical": "Guest House, UTTAR PRADESH(Kanpur)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, UTTAR PRADESH(Kanpur)",
-      "office_address": "STAFF:\nNidhi Bhawan\nSarvodaya Nagar\nKanpur - 208005",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_UTTAR_PRADESH_Kanpur_",
-    "office_name_hierarchical": "Guest House, UTTAR PRADESH(Kanpur)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, UTTAR PRADESH(Kanpur)",
-      "office_address": "STAFF:\nNidhi Bhawan\nSarvodaya Nagar\nKanpur - 208005",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_WEST_BENGAL_Kolkata_",
-    "office_name_hierarchical": "Guest House, WEST BENGAL(Kolkata)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, WEST BENGAL(Kolkata)",
-      "office_address": "Bhavishyanidhi Guest House,\nAF-Block, Sector-1\nSalt Lake City,\n(Near Vaisaphi Island)\nKolkata - 700064",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": [
-        "23587407"
-      ]
-    },
-    "officials": []
-  },
-  {
-    "query": "q=GH_Guest_House_ODISHA_Bhubaneswar_",
-    "office_name_hierarchical": "Guest House, ODISHA(Bhubaneswar)",
-    "hierarchy_breadcrumbs": [
-      {
-        "name": "Guest Houses",
-        "query_param": "GH"
-      }
-    ],
-    "office": {
-      "office_name": "Guest House, ODISHA(Bhubaneswar)",
-      "office_address": "Qtr No.K/74, Type - IV,\nEPF Colony, Phase - II,Near Bomikhal Level Crossing,\nSaheed Nagar, Bhubaneswar - 751 007",
-      "office_email": null,
-      "std_code": null,
-      "toll_free_no": null,
-      "pro_numbers": [],
-      "fax_numbers": []
-    },
-    "officials": []
-  },
-  {
     "query": "q=HEAD+OFFICE",
     "office_name_hierarchical": "HEAD OFFICE",
     "hierarchy_breadcrumbs": [
@@ -890,6 +391,15 @@
       },
       {
         "phone_numbers": [
+          "20815642"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shobhit Singhal",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
           "20815518"
         ],
         "email": null,
@@ -906,11 +416,29 @@
       },
       {
         "phone_numbers": [
+          "24345325"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shashwat Shukla",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
           "20815508"
         ],
         "email": null,
         "fax": [],
         "name": "Shri Sudhir N. Ganvir",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345304"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sachin Saurav",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -971,24 +499,6 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
-        "phone_numbers": [
-          "24345325"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Shashwat Shukla",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345304"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sachin Saurav",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
         "phone_numbers": [],
         "email": null,
         "fax": [],
@@ -996,12 +506,19 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri R W Syeim",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
         "phone_numbers": [
-          "20815642"
+          "20815684"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Shobhit Singhal",
+        "name": "Shri Raman Dhanasekhar",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1021,13 +538,6 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Ravi Kant",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
         "phone_numbers": [
           "24345354"
         ],
@@ -1040,7 +550,7 @@
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Shri R W Syeim",
+        "name": "Shri Ravi Kant",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1048,24 +558,6 @@
         "email": null,
         "fax": [],
         "name": "Shri Ramesh Kumar Gollapudi",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "20815684"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Raman Dhanasekhar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345222"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri P. K. Tiwari",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1084,6 +576,15 @@
         "email": null,
         "fax": [],
         "name": "Ms Pooja Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "24345222"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri P. K. Tiwari",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1114,6 +615,24 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
+        "phone_numbers": [
+          "24345248"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Nitin Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815525"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Navin Kumar Kanaujia",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
         "phone_numbers": [],
         "email": null,
         "fax": [],
@@ -1129,20 +648,11 @@
       },
       {
         "phone_numbers": [
-          "20815525"
+          "20815524"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Navin Kumar Kanaujia",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345248"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Nitin Singh",
+        "name": "Shri Mohammad Shariq",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1174,11 +684,11 @@
       },
       {
         "phone_numbers": [
-          "20815524"
+          "24345241"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Mohammad Shariq",
+        "name": "Shri Kaushal Singh",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1186,15 +696,6 @@
         "email": null,
         "fax": [],
         "name": "Shri Kunal Thakur",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345241"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Kaushal Singh",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1282,12 +783,10 @@
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
-        "phone_numbers": [
-          "20815688"
-        ],
+        "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Shri Aditya Shah",
+        "name": "Shri Alok Yadav",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1297,6 +796,15 @@
         "email": null,
         "fax": [],
         "name": "Shri Avinash Gandhi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "20815688"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Aditya Shah",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1317,6 +825,15 @@
       },
       {
         "phone_numbers": [
+          "24345261"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Amitabh Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
           "24345300"
         ],
         "email": null,
@@ -1326,11 +843,11 @@
       },
       {
         "phone_numbers": [
-          "24345261"
+          "24345257"
         ],
         "email": null,
         "fax": [],
-        "name": "Shri Amitabh Prakash",
+        "name": "Shri Ankesh Srivastava",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1338,22 +855,6 @@
         "email": null,
         "fax": [],
         "name": "Shri Amit Bajpai",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Alok Yadav",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "24345257"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Ankesh Srivastava",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -1394,38 +895,6 @@
       },
       {
         "phone_numbers": [
-          "24345310"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Rajendera Singh Tanwar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "24345334"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sahil Grover",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Satay Prakash",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Shubham Aggrawal",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
           "24345332"
         ],
         "email": null,
@@ -1451,7 +920,7 @@
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Shri Shailesh Kumar",
+        "name": "Shri Satay Prakash",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -1461,6 +930,45 @@
         "email": null,
         "fax": [],
         "name": "Shri Sahalabh Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shubham Aggrawal",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345310"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Rajendera Singh Tanwar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Shailesh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345334"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Sahil Grover",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Rajat Rameshwar Bandra",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -1479,13 +987,6 @@
         "email": null,
         "fax": [],
         "name": "Shri Ranjeet Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Rajat Rameshwar Bandra",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -1552,6 +1053,31 @@
       },
       {
         "phone_numbers": [
+          "24345327"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Kushagra Sagra",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Ritu Kanaujia",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "24345337"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Kesar Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
           "24345329"
         ],
         "email": null,
@@ -1572,32 +1098,7 @@
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Ritu Kanaujia",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
         "name": "Gurdip Kaur",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "24345327"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Kushagra Sagra",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "24345337"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Kesar Singh",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -1656,6 +1157,15 @@
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
+        "phone_numbers": [
+          "24345321"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ajay Kumar Paliwal",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
         "phone_numbers": [],
         "email": null,
         "fax": [],
@@ -1667,15 +1177,6 @@
         "email": null,
         "fax": [],
         "name": "Shri Akshay Bhargava",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "24345321"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Ajay Kumar Paliwal",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -1905,132 +1406,9 @@
         "query_param": "DELHI, UTTARAKHAND, JAMMU & KASHMIR AND LADAKH"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "27376775",
-        "27376780"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, DELHI [NORTH]",
-      "office_email": "ro.delhi.north@epfindia.gov.in",
-      "office_address": "Bhavishya Nidhi Bhawan, \n28, Community Centre,\nWazirpur Industrial Area,\nDelhi - 110052",
-      "std_code": "011",
-      "toll_free_no": "1800118006"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "27376772",
-          "27373560"
-        ],
-        "email": null,
-        "fax": [
-          "27376777"
-        ],
-        "name": "Shri Abhaya Nand Tiwari",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "27376772"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Smt Seema Makkar",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "27376410"
-        ],
-        "email": "kr.shiladitya@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Kumar Shiladitya",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "27376387"
-        ],
-        "email": "anil.jain@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Anil Kumar Jain",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "27376380"
-        ],
-        "email": "arpana.gill@epfindia.gov.in",
-        "fax": [],
-        "name": "Ms Arpana Gill",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "27376411"
-        ],
-        "email": "vijay.ohlyan@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Vijay",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [],
-        "email": "prashantsingh.r3@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Prashant Kumar Singh",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "27373831"
-        ],
-        "email": "saurabh1391@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Saurabh Chaturvedi",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "27376408"
-        ],
-        "email": "shristinain99@epfindia.gov.in",
-        "fax": [],
-        "name": "Smt. Shristi Nain",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "27376775",
-          "27376780",
-          "43728826"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Public Relation Officer",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "27373832"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Online Claims / K Y C / U A N Helpdesk",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "8810622842"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=DELHI+%5BCENTRAL%5D",
@@ -2286,14 +1664,14 @@
         "phone_numbers": [],
         "email": "ro.delhi.south@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Shobhit Shrivastava",
+        "name": "Shri Arun Kumar Batra",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
         "phone_numbers": [],
         "email": "ro.delhi.south@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Arun Kumar Batra",
+        "name": "Shri Shobhit Shrivastava",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -2391,20 +1769,20 @@
       },
       {
         "phone_numbers": [
-          "20824808"
-        ],
-        "email": "anirudh.c@epfindia.gov.in",
-        "fax": [],
-        "name": "Sh. Anirudh Chundawat",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
           "20824801"
         ],
         "email": "rajkamal.meena@epfindia.gov.in",
         "fax": [],
         "name": "Sh. Rajkamal Meena",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "20824808"
+        ],
+        "email": "anirudh.c@epfindia.gov.in",
+        "fax": [],
+        "name": "Sh. Anirudh Chundawat",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -2486,94 +1864,9 @@
         "query_param": "DELHI, UTTARAKHAND, JAMMU & KASHMIR AND LADAKH"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2620106",
-        "2723333"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, DEHRADUN",
-      "office_email": "ro.dehradun@epfindia.gov.in",
-      "office_address": "Bhavishyanidhi Bhawan,Vyomprasth\nKanwali GMS Road\nDehradun - 248001",
-      "std_code": "0135",
-      "toll_free_no": "1800118005"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2620101"
-        ],
-        "email": "vvb.singh@epfindia.gov.in",
-        "fax": [
-          "2620105"
-        ],
-        "name": "Shri V V B Singh",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "2971162"
-        ],
-        "email": "udit.sah[@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Udit Sah",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2971161"
-        ],
-        "email": "mohd.zaid@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Mohammad Zaid",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2971710"
-        ],
-        "email": "santoshk.yadav@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Santosh Kumar Yadav",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "22141465"
-        ],
-        "email": "deepanshu.singh@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Deepanshu Singh",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [],
-        "email": "rajesh.kr@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Rajesh Kumar",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2620106",
-          "2723333"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Public Relation Officer",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "6395731375"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "GENERAL NUMBERS"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=HALDWANI",
@@ -2737,44 +2030,9 @@
         "query_param": "DELHI, UTTARAKHAND, JAMMU & KASHMIR AND LADAKH"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, LEH (LADAKH)",
-      "office_email": "ro.ladakh@epfindia.gov.in",
-      "office_address": "EPFO FACILITATION CENTRE, LEH (Ladakh)\nALC Complex, Skampari,\nLeh - 194101",
-      "std_code": "01982"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "259355"
-        ],
-        "email": "ro.ladakh@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Naresh Kumar Yadav",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "259355"
-        ],
-        "email": "ro.ladakh@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ankur Gautam",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2259355"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Enforcement Officer",
-        "designation": null
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=KASHMIR+%28SRINAGAR%29",
@@ -6498,18 +5756,18 @@
         "phone_numbers": [
           "2438907"
         ],
-        "email": null,
+        "email": "sachinshetty@epfindia.gov.in",
         "fax": [],
-        "name": "Smt Rakhi Chakravarty",
+        "name": "Shri Sachin T Shetty",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
         "phone_numbers": [
           "2438908"
         ],
-        "email": null,
+        "email": "hps.kandara@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Atul Vijay Kotkar",
+        "name": "Shri. Harpal Singh Kandara",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -6522,10 +5780,21 @@
         "designation": "Assistant P. F. Commissioner"
       },
       {
-        "phone_numbers": [],
+        "phone_numbers": [
+          "2989810"
+        ],
         "email": "rajneeshdixit@epfindia.gov.in",
         "fax": [],
         "name": "Shri Rajneesh Dixit",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "2438281"
+        ],
+        "email": "arun.gaur@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Arun Kumar Gaur",
         "designation": "Assistant P. F. Commissioner"
       },
       {
@@ -6624,20 +5893,11 @@
       },
       {
         "phone_numbers": [
-          "28139251"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri M H Warsi",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
           "28139253"
         ],
-        "email": null,
+        "email": "ov.nisha@epfindia.gov.in",
         "fax": [],
-        "name": "Shri Himanshu Kumar",
+        "name": "Smt Nisha O V",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -6741,6 +6001,13 @@
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
+        "phone_numbers": [],
+        "email": "reetumeena@epfindia.gov.in",
+        "fax": [],
+        "name": "Ms. Ritu Meena",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
         "phone_numbers": [
           "26561136"
         ],
@@ -6763,13 +6030,6 @@
         "email": "amansaigal@epfindia.gov.in",
         "fax": [],
         "name": "Shri Aman Kumar Saigal",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [],
-        "email": "reetumeena@epfindia.gov.in",
-        "fax": [],
-        "name": "Ms. Ritu Meena",
         "designation": "Assistant P. F. Commissioner"
       },
       {
@@ -7427,6 +6687,15 @@
       },
       {
         "phone_numbers": [
+          "22265332"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "E D P Cell",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
           "22264402"
         ],
         "email": "pension.tbm@epfindia.gov.in",
@@ -7459,15 +6728,6 @@
         "email": "ro.tambaram@epfindia.gov.in",
         "fax": [],
         "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "22265332"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "E D P Cell",
         "designation": "General Numbers"
       },
       {
@@ -8156,21 +7416,21 @@
       },
       {
         "phone_numbers": [
-          "2545726"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "General Numbers",
-        "designation": "(PGHS & Grievance Cell)"
-      },
-      {
-        "phone_numbers": [
           "9489938487"
         ],
         "email": null,
         "fax": [],
         "name": "Whatsapp Business Account",
         "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "2545726"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "General Numbers",
+        "designation": "(PGHS & Grievance Cell)"
       }
     ]
   },
@@ -9505,105 +8765,9 @@
         "query_param": "MAHARASHTRA(EXCLUDING MUMBAI)(PUNE)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2360974"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, NASIK",
-      "office_email": "ro.nasik@epfindia.gov.in",
-      "office_address": "Bhavishya Nidhi Bhavan, Plot No.P-11,\nMIDC Satpur (Maharashtra).\nNasik - 422007",
-      "std_code": "0253"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2362410"
-        ],
-        "email": "anilkumar.pritam@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Anil Kumar Pritam",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Personal Assistant",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "2360973"
-        ],
-        "email": "rajderkarepfo@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Rajendra Pandurang Rajderkar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2360971"
-        ],
-        "email": "kalyan.ashtikar@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri. Kalyan H. Ashtikar",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [],
-        "email": "abdul.hanif@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Abdul Hanif Shaikh",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2360976"
-        ],
-        "email": "dixit.mohit@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri. Mohit Dixit",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2360972"
-        ],
-        "email": "nitsandeep@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri. Sandeep Kumar",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2360974"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Mrs. Jayashree Joyce",
-        "designation": "Public Relation Officer"
-      },
-      {
-        "phone_numbers": [
-          "2532360974"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "2970664"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri M. Satish Kumar",
-        "designation": "Data Processing Assistant"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+AHILYANAGAR",
@@ -9798,103 +8962,9 @@
         "query_param": "MAHARASHTRA(EXCLUDING MUMBAI)(PUNE)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "26402151",
-        "26402158"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, PUNE (PUNE CANTT.)",
-      "office_email": "ro.pune@epfindia.gov.in",
-      "office_address": "2nd and 3rd Floor, Pune Cantonment Board Building,\nNear Golibar Maidan, Camp, (Maharashtra)\nPune - 411001",
-      "std_code": "020"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "26450045"
-        ],
-        "email": "amit.vashist@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Amit Vashist",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "26450045"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Personal Assistant",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "26402131"
-        ],
-        "email": "durgesh.kumar@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Durgesh Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "26402127"
-        ],
-        "email": "gouravtiwari@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Gourav Tiwari",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "26402130"
-        ],
-        "email": "sushmitatripathi@epfindia.gov.in",
-        "fax": [],
-        "name": "Ms Sushmita Tripathi",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "26402150"
-        ],
-        "email": "surabhidwivedi@epfindia.gov.in",
-        "fax": [],
-        "name": "Ms Surabhi Dwivedi",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "26402151",
-          "26402158",
-          "26449150"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Shailesh Mandlik",
-        "designation": "Public Relation Officer"
-      },
-      {
-        "phone_numbers": [
-          "26402156"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "E D P CELL",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "8767108057"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=PUNE+%28AKURDI%29",
@@ -10099,58 +9169,9 @@
         "query_param": "MAHARASHTRA(EXCLUDING MUMBAI)(PUNE)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2313226",
-        "2313266"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, SOLAPUR",
-      "office_email": "ro.solapur@epfindia.gov.in",
-      "office_address": "165-A, Railway Lines\nSurvase Tower,\nSolapur - 413001",
-      "std_code": "0217"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2316830",
-          "2310052"
-        ],
-        "email": "puru.meena@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Purushottam Meena",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2313226",
-          "2313266"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sagar Metri",
-        "designation": "Public Relation officer"
-      },
-      {
-        "phone_numbers": [
-          "2316730"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "E D P CELL",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "9404912406"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=BIHAR+%26+JHARKHAND%28PATNA%29",
@@ -10440,26 +9461,9 @@
         "query_param": "MUZAFFARPUR"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "District Office, D.O - DARBHANGA",
-      "office_email": "do.darbhanga@epfindia.gov.in",
-      "office_address": "Ekmi Road, Said Nagar,\nLaheriasarai\nDarbhanga - 846001",
-      "std_code": "0627"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "295459"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Assistant P. F. Commissioner",
-        "designation": null
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=PATNA",
@@ -10605,26 +9609,9 @@
         "query_param": "PATNA"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "District Office, D.O - GAYA",
-      "office_email": "do.gaya@epfindia.gov.in",
-      "office_address": "231,\nA.P Colony,\nGaya, - 823001",
-      "std_code": "0631"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2222443"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Assistant P. F. Commissioner",
-        "designation": null
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=JAMSHEDPUR",
@@ -10639,73 +9626,9 @@
         "query_param": "BIHAR & JHARKHAND(PATNA)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2230132"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, JAMSHEDPUR",
-      "office_email": "ro.jamshedpur@epfindia.gov.in",
-      "office_address": "Bhavishya Nidhi Bhawan,\nAambagan, Sakchi, (Jharkhand)\nJamshedpur - 831001",
-      "std_code": "0657"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2230169"
-        ],
-        "email": "ro.jamshedpur@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Upendra Pratap Singh",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "2230169"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Private Secretary",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "2230058"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Prashant Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2230132"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Rakesh Kumar",
-        "designation": "Public Relation Officer"
-      },
-      {
-        "phone_numbers": [
-          "2220340"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Satish Kumar, D P A",
-        "designation": "E D P Cell"
-      },
-      {
-        "phone_numbers": [
-          "9471139533"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+CHAIBASA",
@@ -10724,26 +9647,9 @@
         "query_param": "JAMSHEDPUR"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "District Office, D.O - CHAIBASA",
-      "office_email": "do.chaibasa@epfindia.gov.in",
-      "office_address": "Shree Balaji ApartmentNimdih,\nDistt.- West Singhbhum,\nChaibasa - 833201.",
-      "std_code": "06582"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "256427"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Ravi Kumar",
-        "designation": "Enforcement Officer"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=RANCHI",
@@ -10758,75 +9664,9 @@
         "query_param": "BIHAR & JHARKHAND(PATNA)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2910932"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, RANCHI",
-      "office_email": "ro.ranchi@epfindia.gov.in",
-      "office_address": "BHAVISHYA NIDHI BHAWAN\nHINOO, DORANDA\nRanchi - 834002",
-      "std_code": "0651"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2910900"
-        ],
-        "email": "ro.ranchi@epfindia.gov.in",
-        "fax": [],
-        "name": "Sh Ajitesh Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "2910900"
-        ],
-        "email": "ro.ranchi@epfindia.gov.in",
-        "fax": [
-          "2360549"
-        ],
-        "name": "Private Secretary",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "2910937"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Rakesh Kumar Sinha",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2910937"
-        ],
-        "email": "ro.ranchi@epfindia.gov.in",
-        "fax": [],
-        "name": "Private Secretary",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "2910932"
-        ],
-        "email": "ro.ranchi@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Rakesh Kumar",
-        "designation": "Public Relation Officer"
-      },
-      {
-        "phone_numbers": [
-          "8987790956"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+SAHIBGANJ",
@@ -10845,26 +9685,9 @@
         "query_param": "RANCHI"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "District Office, D.O - SAHIBGANJ",
-      "office_email": "do.sahibganj@epfindia.gov.in",
-      "office_address": "2nd Floor,Guha Market\nCollege Road,\nPO & Dist.Sahibganj, - 816109",
-      "std_code": "06436"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "291026"
-        ],
-        "email": "do.sahibganj@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Joydeep Ganguly",
-        "designation": "Assistant P. F. Commissioner"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+KODERMA",
@@ -10921,26 +9744,9 @@
         "query_param": "RANCHI"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "District Office, D.O - BOKARO",
-      "office_email": "do.bakaro@epfindia.gov.in",
-      "office_address": "Near S.P. Office,\nSector-I,\nBokaro Steel City,Jharkhand - 827001",
-      "std_code": "06542"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "242262"
-        ],
-        "email": "do.bakaro@epfindia.gov.in",
-        "fax": [],
-        "name": "Sh Ajay Kumar Purti",
-        "designation": "Assistant P. F. Commissioner"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+GIRIDIH",
@@ -11347,75 +10153,9 @@
         "query_param": "KERALA & LAKSHADWEEP (THIRUVANANTHAPURAM)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2766532"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, KOZHIKODE (CALICUT)",
-      "office_email": "ro.kozhikode@epfindia.gov.in",
-      "office_address": "Bhavishya Nidhi Bhawan, P.B. No. 1806,\nEranhipalam(PO),\nKozhikode - 673 006",
-      "std_code": "0495"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2766528"
-        ],
-        "email": "ro.kozhikode@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Shubham Kashyap",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2766528"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Personal Assistant",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "2768850"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Gaurav Verma",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2766532"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Public Relation Officer",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "2767893",
-          "2368193",
-          "2361293"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Enquiry",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "8301005169"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+PALAKKAD",
@@ -11588,20 +10328,20 @@
       },
       {
         "phone_numbers": [
-          "9497152553"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
           "2767645"
         ],
         "email": null,
         "fax": [],
         "name": "Enquiry",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "9497152553"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
         "designation": "General Numbers"
       },
       {
@@ -11819,7 +10559,7 @@
     ],
     "office": {
       "pro_numbers": [
-        "2557378"
+        "2559546"
       ],
       "phone_numbers_direct": [],
       "fax": [],
@@ -11835,8 +10575,8 @@
         ],
         "email": null,
         "fax": [],
-        "name": "Shri. K G Vinod",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
+        "name": "Shri.s Azhahiya Manavalan",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
         "phone_numbers": [
@@ -11849,18 +10589,20 @@
       },
       {
         "phone_numbers": [
-          "2442800"
+          "2448268"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri.k G Vinod",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2448268"
         ],
         "email": null,
         "fax": [],
         "name": "Shri John Samuel",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Shri Subhash Chandra Das",
         "designation": "Assistant P. F. Commissioner"
       },
       {
@@ -11872,11 +10614,11 @@
       },
       {
         "phone_numbers": [
-          "2557378"
+          "2559546"
         ],
         "email": null,
         "fax": [],
-        "name": "Smt Maji G Krishnan .",
+        "name": "Smt Deepa Somasekharan",
         "designation": "Public Relation Officer"
       },
       {
@@ -11890,20 +10632,20 @@
       },
       {
         "phone_numbers": [
-          "8075348085"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
           "2446286"
         ],
         "email": null,
         "fax": [],
         "name": "Enquiry",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "8075348085"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
         "designation": "General Numbers"
       }
     ]
@@ -12897,9 +11639,9 @@
         "phone_numbers": [
           "4115674"
         ],
-        "email": "ro.gurgaon@epfindia.gov.in",
+        "email": "archana.janu@epfindia.gov.in",
         "fax": [],
-        "name": "Shri A. Kumar",
+        "name": "Dr. Archana Janu",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -12913,21 +11655,39 @@
       },
       {
         "phone_numbers": [
-          "4075565"
-        ],
-        "email": "mohit.kumar@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Mohit Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "4221157"
+          "2882039"
         ],
         "email": "apurv.gautam@epfindia.gov.in",
         "fax": [],
         "name": "Shri Apurv Gautam",
         "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2882038"
+        ],
+        "email": "sunil.kr@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Sunil Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2882025"
+        ],
+        "email": "roshan.lal@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Roshan Lal",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2882016"
+        ],
+        "email": "sumekmeena05@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Sumek Meena",
+        "designation": "Assistant P. F. Commissioner"
       },
       {
         "phone_numbers": [
@@ -14196,7 +12956,7 @@
         ],
         "email": null,
         "fax": [],
-        "name": "Shri M S K V V Satyanarayana",
+        "name": "Shri Vipin Kumar Sharma",
         "designation": "Additional Central P. F. Commissioner"
       },
       {
@@ -14221,9 +12981,9 @@
         "phone_numbers": [
           "040-29880898"
         ],
-        "email": "bindu.bhushan@epfindia.gov.in",
+        "email": null,
         "fax": [],
-        "name": "Shri Bindu Bhushan",
+        "name": "Shri M H Warsi",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
@@ -14273,14 +13033,14 @@
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Shri S Ramleeladhar",
+        "name": "Smt Mary Joseph",
         "designation": "Assistant Director"
       },
       {
         "phone_numbers": [],
         "email": null,
         "fax": [],
-        "name": "Smt Mary Joseph",
+        "name": "Shri S Ramleeladhar",
         "designation": "Assistant Director"
       }
     ]
@@ -14776,9 +13536,55 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [
+        "2231090"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, KARIMNAGAR",
+      "office_email": "ro.karimnagar@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan,2-7-271/A,\nBehind RTC Bus Stand, Mukarampura,\nKarimnagar - 505 001.",
+      "std_code": "0878"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2231089"
+        ],
+        "email": "ro.karimnagar@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Mohammed Fasi Uddin",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2231090"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Brijesh Kumar Vais",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "2231090"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Adepu Srinivas",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "9492429685"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=D.O+-+ADILABAD",
@@ -14833,9 +13639,55 @@
         "query_param": "TELANGANA (HYDERABAD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [
+        "245157"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, NIZAMABAD",
+      "office_email": "ro.nizamabad@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan,\nNyalkal Road, (Telangana)\nNizamabad - 503 001",
+      "std_code": "08462"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "245795"
+        ],
+        "email": "ganesh.kumar@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ganesh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "295119"
+        ],
+        "email": "s.suhaspatil@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Patil Siddhanth Suhas",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "245157"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "8919090653"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=SANGAREDDY",
@@ -14952,9 +13804,54 @@
         "query_param": "SANGAREDDY"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "District Office, D.O - SIDDIPET",
+      "office_email": "sro.siddipet@epfindia.gov.in",
+      "office_address": "Bhavishya Nidhi Bhawan,19-25/1/1, Hyderabad Road,\nPrasanth Nagar\nSiddipet - 502103",
+      "std_code": "08457"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "231465"
+        ],
+        "email": "pawanee.dgk@epfindia.gov.in",
+        "fax": [],
+        "name": "Smt. D.g.k. Paawanee",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "231464"
+        ],
+        "email": "virendra.t@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Veerendra Tandekar",
+        "designation": "ACCOUNTS OFFICER"
+      },
+      {
+        "phone_numbers": [
+          "6300005495"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Helpline Number",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "231466",
+          "231467"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "General Numbers",
+        "designation": null
+      }
+    ]
   },
   {
     "query": "q=WARANGAL",
@@ -15073,9 +13970,65 @@
         "query_param": "AP"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Office of the Addl. Central Provident Fund Commissioner, ANDHRA PRADESH (VIJAYAWADA)",
+      "office_email": "acc.ap@epfindia.gov.in",
+      "office_address": "RTC House, 3rd Floor,\nNTR Administrative Block,\nPNBS, Vijaywada - 520013",
+      "std_code": "0866"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2576700"
+        ],
+        "email": "acc.ap@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri B. Andrew Prabhu",
+        "designation": "Additional Central P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "2576700"
+        ],
+        "email": "acc.ap@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Pajjuri Gopi",
+        "designation": "Private Secretary"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Hemong Venkatesh",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Inakoti Sridevi",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "2576700"
+        ],
+        "email": "acc.ap@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Shikhar Sharma",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Subrata Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      }
+    ]
   },
   {
     "query": "q=KADAPA",
@@ -15090,9 +14043,91 @@
         "query_param": "ANDHRA PRADESH (VIJAYAWADA)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [
+        "244902"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, KADAPA",
+      "office_email": "sro.cuddapah@epfindia.gov.in",
+      "office_address": "Bhavishyanidhi Bhawan, 1/30, Railway Station Road,\nYerramukkapalli,\nKadapa - 516 004",
+      "std_code": "08562"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "244189"
+        ],
+        "email": null,
+        "fax": [
+          "258164"
+        ],
+        "name": "Shri Raviteja Kumar Reddy",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "244189"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri S Srinivasa Kumar",
+        "designation": "Personal Assistant"
+      },
+      {
+        "phone_numbers": [
+          "08562-244108"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Manoj Shankar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "256114"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri S.sreekanth Reddy",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Shri Abhishek",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "244902"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "254053"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "E D P CELL",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "9491138297"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=D.O+-+ANANTAPUR",
@@ -15111,9 +14146,28 @@
         "query_param": "KADAPA"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "District Office, D.O - ANANTAPUR",
+      "office_email": "do.anantapur@epfindia.gov.in",
+      "office_address": "13-2-794,ANANTAPUR CO.OP STORES  BUILDING,\nOPP.RLY FEEDER  ROAD,SRINIVASA  NAGAR,NEAR ANANTAPUR RLY STATION,\nANANTAPUR - 515001",
+      "std_code": "08554"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "221074"
+        ],
+        "email": "do.anantapur@epfindia.gov.in",
+        "fax": [
+          "221074"
+        ],
+        "name": "Shri A Ravinder",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      }
+    ]
   },
   {
     "query": "q=D.O+-+KURNOOL",
@@ -15436,75 +14490,9 @@
         "query_param": "ANDHRA PRADESH (VIJAYAWADA)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "2442571",
-        "2470530"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, RAJAMAHENDRAVARAM",
-      "office_email": "ro.rajahmundry@epfindia.gov.in",
-      "office_address": "BHAVISHYANIDHI BHAWAN\nV.L.Puram, MORAMPUDI JUNCTION\nRAJAMAHENDRAVARAM - 533107",
-      "std_code": "0883"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "2470532"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Venkateswarlu Kaluvai",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "2470532"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri A Suryanarayana",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "2473813"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Radhanath Pattanayak",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2442571",
-          "2470530"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Public Relation Officer",
-        "designation": null
-      },
-      {
-        "phone_numbers": [
-          "9494633563"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "2447818"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri G R L Narayana",
-        "designation": "Data Processing Assistant"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+BHIMAVARAM",
@@ -15966,15 +14954,6 @@
       },
       {
         "phone_numbers": [
-          "27545472"
-        ],
-        "email": "johnson.k@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri K Johnson",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
           "27545475"
         ],
         "email": "ajay.bharat@epfindia.gov.in",
@@ -15993,12 +14972,30 @@
       },
       {
         "phone_numbers": [
+          "27545472"
+        ],
+        "email": "johnson.k@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri K Johnson",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
           "27542251"
         ],
         "email": null,
         "fax": [],
         "name": "Shri P S Panicker",
         "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "7383146934"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
       },
       {
         "phone_numbers": [
@@ -16019,15 +15016,6 @@
         "email": null,
         "fax": [],
         "name": "Inquiry",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "7383146934"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
         "designation": "General Numbers"
       }
     ]
@@ -17745,6 +16733,15 @@
       },
       {
         "phone_numbers": [
+          "2642913"
+        ],
+        "email": "sandeep.mishra@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Sandeep Mishra",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
           "2642911"
         ],
         "email": "suresh.thakur@epfindia.gov.in",
@@ -17759,15 +16756,6 @@
         "email": "pandey.kp@epfindia.gov.in",
         "fax": [],
         "name": "Shri Karunakar Pandey",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "2642913"
-        ],
-        "email": "sandeep.mishra@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Sandeep Mishra",
         "designation": "Assistant P. F. Commissioner"
       },
       {
@@ -18938,6 +17926,13 @@
         "designation": null
       },
       {
+        "phone_numbers": [],
+        "email": null,
+        "fax": [],
+        "name": "Regional P. F. Commissioner (Gr.II)",
+        "designation": null
+      },
+      {
         "phone_numbers": [
           "68806616"
         ],
@@ -18945,13 +17940,6 @@
         "fax": [],
         "name": "Shri Shivang Seth",
         "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [],
-        "email": null,
-        "fax": [],
-        "name": "Regional P. F. Commissioner (Gr.II)",
-        "designation": null
       },
       {
         "phone_numbers": [],
@@ -18980,20 +17968,20 @@
       },
       {
         "phone_numbers": [
-          "8928977985"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
           "68806666"
         ],
         "email": null,
         "fax": [],
         "name": "Enquiry",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "8928977985"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
         "designation": "General Numbers"
       },
       {
@@ -19054,15 +18042,6 @@
       },
       {
         "phone_numbers": [
-          "68806685"
-        ],
-        "email": "shivang.seth@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Shivang Seth",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
           "68806663"
         ],
         "email": "mitesh.rajmane@epfindia.gov.in",
@@ -19082,6 +18061,15 @@
         "email": null,
         "fax": [],
         "name": "Shri Milind Laxman Deulkar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "68806685"
+        ],
+        "email": "shivang.seth@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Shivang Seth",
         "designation": "Regional P. F. Commissioner (Gr.II)"
       },
       {
@@ -19237,20 +18225,20 @@
       },
       {
         "phone_numbers": [
-          "8928977985"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
           "68806666"
         ],
         "email": null,
         "fax": [],
         "name": "Enquiry",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "8928977985"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
         "designation": "General Numbers"
       }
     ]
@@ -19683,26 +18671,9 @@
         "query_param": "GUWAHATI"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "District Office, D.O - BONGAIGAON",
-      "office_email": "do.bongaigaon@epfindia.gov.in",
-      "office_address": "Main Road,Borpara,\nBongaigaon,\nAssam -  7883380.",
-      "std_code": "03664"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "231724"
-        ],
-        "email": "do.bongaigaon@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Samrendra Dey",
-        "designation": "Assistant P. F. Commissioner"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=D.O+-+TEZPUR",
@@ -19878,9 +18849,55 @@
         "query_param": "NORTH-EASTERN REGION (GUWAHATI)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [
+        "2507333"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, SHILLONG",
+      "office_email": "ro.shillong@epfindia.gov.in",
+      "office_address": "2nd Floor, BSNL Bhawan, Opposite Lady Hydari Park\nBarik, Shillong\nMeghalaya - 793 01",
+      "std_code": "0364"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2507212"
+        ],
+        "email": "k.hungyo@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Kapennao Hungyo",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2507333"
+        ],
+        "email": "k.achamlu@epfindia.gov.in",
+        "fax": [],
+        "name": "Ms Kamei Achamlu",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "2507265"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "E D P CELL",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "6033243231"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=S.S.O+-+AIZAWL",
@@ -20002,7 +19019,7 @@
     ],
     "office": {},
     "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=WB%2C+A%26N+ISLANDS+%26+SIKKIM+%28KOLKATA%29",
@@ -20013,64 +19030,9 @@
         "query_param": "WBANDSK"
       }
     ],
-    "office": {
-      "pro_numbers": [],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Office of the Addl. Central Provident Fund Commissioner, WB, A&N ISLANDS & SIKKIM (KOLKATA)",
-      "office_email": "acc.wbjhne@epfindia.gov.in",
-      "office_address": "Office of the Addl. Central Provident Fund Commissioner\n(West Bengal, NER)\nDK-Block, Sector-II, \nSalt Lake City, Karunamoyee,\nKolkata -  700 091.",
-      "std_code": "033"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "29521855"
-        ],
-        "email": null,
-        "fax": [
-          "23580296"
-        ],
-        "name": "Shri B Lalzamang",
-        "designation": "Additional Central P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "29521855"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Subrata Chakraborty",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "29521865"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Rituraj Medhi",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "29521865"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Krishna Shankar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "29521865"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Snehasish Kundu",
-        "designation": "Private Secretary"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=PORT+BLAIR",
@@ -20150,167 +19112,9 @@
         "query_param": "WB, A&N ISLANDS & SIKKIM (KOLKATA)"
       }
     ],
-    "office": {
-      "pro_numbers": [
-        "29522121"
-      ],
-      "phone_numbers_direct": [],
-      "fax": [],
-      "office_name": "Regional Office, KOLKATA",
-      "office_email": "ro.kolkata@epfindia.gov.in",
-      "office_address": "Bhavishyanidhi Bhawan, DK Block, Sector-II,\nSalt Lake City,\nNear Karunamoyee Bus Stop,  (West Bengal)\nKolkata  - 700 091",
-      "std_code": "033"
-    },
-    "officials": [
-      {
-        "phone_numbers": [
-          "29521852"
-        ],
-        "email": null,
-        "fax": [
-          "23585825"
-        ],
-        "name": "Shri Randhir Kumar",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [
-          "29521852",
-          "29521860"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Debjit Mukherjee",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "29521856"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Smt. Bakul Basu",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "29521866"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Subroto Biswas",
-        "designation": "Regional P. F. Commissioner (Gr.II)"
-      },
-      {
-        "phone_numbers": [
-          "29521866"
-        ],
-        "email": "jj.bardhan@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Jagatjyoti Bardhan",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "29531853",
-          "29521847"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sandip Das",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "29521859"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Shiba Prasad Bhattacharya",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "29521867"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Joydeep Ganguly",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "29521858"
-        ],
-        "email": "ak.muduli@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri A K Muduli",
-        "designation": "Assistant P. F. Commissioner"
-      },
-      {
-        "phone_numbers": [
-          "29522115"
-        ],
-        "email": "samir.das@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Samir Chandra Das",
-        "designation": "Private Secretary"
-      },
-      {
-        "phone_numbers": [
-          "29522101"
-        ],
-        "email": "siddhartha.boral@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Siddhartha Boral",
-        "designation": "Care Taker"
-      },
-      {
-        "phone_numbers": [
-          "29522121"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Shri Sanjay Biswas",
-        "designation": "PUBLIC RELATION OFFICER"
-      },
-      {
-        "phone_numbers": [
-          "9433968309"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Whatsapp Business Account",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
-          "9477314109"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "General Numbers",
-        "designation": "(Pension Related Queries)"
-      },
-      {
-        "phone_numbers": [
-          "29521861"
-        ],
-        "email": "debkumar.maitra@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Deb Kumar Maitra",
-        "designation": "Data Processing Assistant"
-      },
-      {
-        "phone_numbers": [
-          "29521861"
-        ],
-        "email": "mahesh.prasad@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Mahesh Prasad",
-        "designation": "Data Processing Assistant"
-      }
-    ]
+    "office": {},
+    "officials": [],
+    "error": "HTTP Error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
   },
   {
     "query": "q=DURGAPUR",
@@ -21237,16 +20041,6 @@
       },
       {
         "phone_numbers": [
-          "32544334",
-          "8100912840"
-        ],
-        "email": null,
-        "fax": [],
-        "name": "Customer Service Division",
-        "designation": "General Numbers"
-      },
-      {
-        "phone_numbers": [
           "03325010481"
         ],
         "email": null,
@@ -21261,6 +20055,16 @@
         "email": "hrpenwgs.tlo@epfindia.gov.in",
         "fax": [],
         "name": "Pensioner's Helpdesk",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "32544334",
+          "8100912840"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Customer Service Division",
         "designation": "General Numbers"
       }
     ]
@@ -21672,9 +20476,81 @@
         "query_param": "BENGALURU (BENGALURU)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, PEENYA",
+      "office_email": "ro.peenya@epfindia.gov.in",
+      "office_address": "No.62, Industrial Suburb,\n3rd Cross, Yeshwanthpur 2nd stage,\nBengaluru - 560022",
+      "std_code": "080"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "23571344"
+        ],
+        "email": "ajaykumar@epfindia.gov.in,ro.peenya@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ajay Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "29602103"
+        ],
+        "email": "veeresh.tr@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Veeresh T R",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "23578538"
+        ],
+        "email": "trilochan.bariha@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Trilochan Prasad Bariha",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "29602102"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Ankit Kandpal",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "23571440"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "E D P CELL",
+        "designation": null
+      },
+      {
+        "phone_numbers": [
+          "23571355",
+          "23571366"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "8023571377"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=BENGALURU+%28BELLANDUR%29",
@@ -21780,9 +20656,82 @@
         "query_param": "BENGALURU (BENGALURU)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [
+        "25734492"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, BENGALURU (ELECTRONIC CITY)",
+      "office_email": "ro.ecity@epfindia.gov.in",
+      "office_address": "Annapoorneshwari Complex, Survey No. 37/1,\n6th Main, Singasandra, Hosur Main Road,\nBOMMASANDRA - 560 068",
+      "std_code": "080"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "29911226"
+        ],
+        "email": "santosh.jaiswal@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Santosh Jaiswal",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "25732379"
+        ],
+        "email": "hansaraj.roy@epfindia.gov.in",
+        "fax": [],
+        "name": "Sri Hansaraj Roy",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "29770596"
+        ],
+        "email": "yatharthapfc@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Yatharth Choudhary",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "25734492"
+        ],
+        "email": "ro.ecity@epfindia.gov.in",
+        "fax": [],
+        "name": "Public Relation Officer",
+        "designation": "PUBLIC RELATION OFFICER"
+      },
+      {
+        "phone_numbers": [
+          "25733655"
+        ],
+        "email": "ro.ecity@epfindia.gov.in",
+        "fax": [],
+        "name": "Claim Enquiry",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "7204453662"
+        ],
+        "email": "ro.ecity@epfindia.gov.in",
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      },
+      {
+        "phone_numbers": [
+          "25744337"
+        ],
+        "email": "balaraj.t@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri T Balaraj",
+        "designation": "Data Processing Assistant"
+      }
+    ]
   },
   {
     "query": "q=BENGALURU+%28KORAMANGALA%29",
@@ -21887,9 +20836,80 @@
         "query_param": "BENGALURU (BENGALURU)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [
+        "29900140"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, BENGALURU (INDIRANAGAR)",
+      "office_email": "ro.indiranagar@epfindia.gov.in",
+      "office_address": "No. F-28, NSU Block, ITI Campus (Bengaluru Block),\nDooravani Nagar, Krishnarajapuram\n(WHITEFIELD) - 560016",
+      "std_code": "080"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "29919647"
+        ],
+        "email": "n.gopalakrishnan@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri N Gopalakrishnan",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [
+          "29919647"
+        ],
+        "email": "sharad.raj@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Sharad Raj Gupta",
+        "designation": "Personal Assistant"
+      },
+      {
+        "phone_numbers": [
+          "25658005"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri P Rama Subbaiah",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "25603030"
+        ],
+        "email": "rameez.mehar@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Rameez Mehar",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [],
+        "email": "mukut.meena@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Mukut Bihar Lal Meena",
+        "designation": "Assistant P. F. Commissioner"
+      },
+      {
+        "phone_numbers": [
+          "29900140"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Shri Mohan Raju V",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "7204913736"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=K+R+PURAM+%28WHITEFIELD%29",
@@ -21989,9 +21009,26 @@
         "query_param": "K R PURAM (WHITEFIELD)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "District Office, D.O - KOLAR",
+      "office_email": "do.kolar@epfindia.gov.in",
+      "office_address": "EPFO,District Office, Ground Floor,BSNL Administrative Building,\nRailway Station Road, Kanakanapalya\nKolar - 563102",
+      "std_code": "08152"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "8152227199"
+        ],
+        "email": "s.ramakrishnan@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ramakrishnan S",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      }
+    ]
   },
   {
     "query": "q=TUMKUR",
@@ -22006,9 +21043,46 @@
         "query_param": "BENGALURU (BENGALURU)"
       }
     ],
-    "office": {},
-    "officials": [],
-    "error": "HTTP Error: HTTPSConnectionPool(host='www.epfindia.gov.in', port=443): Max retries exceeded with url: /site_en/get_directory.php (Caused by NewConnectionError(\"HTTPSConnection(host='www.epfindia.gov.in', port=443): Failed to establish a new connection: [Errno 111] Connection refused\"))"
+    "office": {
+      "pro_numbers": [
+        "2257455"
+      ],
+      "phone_numbers_direct": [],
+      "fax": [],
+      "office_name": "Regional Office, TUMKUR",
+      "office_email": "ro.tumkur@epfindia.gov.in",
+      "office_address": "1st Main, 1st Cross, Chamundeshwari Nagar\nNear Sira Gate\nTumkur - 572106",
+      "std_code": "0816"
+    },
+    "officials": [
+      {
+        "phone_numbers": [
+          "2261541"
+        ],
+        "email": "vamsi.dindi@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Vamsi Krishna Dindi",
+        "designation": "Regional P. F. Commissioner (Gr.II)"
+      },
+      {
+        "phone_numbers": [
+          "2257455"
+        ],
+        "email": "bjeetenderb@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Jeetendra Bhati",
+        "designation": "Public Relation Officer"
+      },
+      {
+        "phone_numbers": [
+          "7204055256"
+        ],
+        "email": null,
+        "fax": [],
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers"
+      }
+    ]
   },
   {
     "query": "q=VIGILANCE+WING",
@@ -22511,6 +21585,13 @@
       },
       {
         "phone_numbers": [],
+        "email": "ram.anand@epfindia.gov.in",
+        "fax": [],
+        "name": "Shri Ram Anand",
+        "designation": "Regional P. F. Commissioner (Gr.I)"
+      },
+      {
+        "phone_numbers": [],
         "email": "ankur.gupta@epfindia.gov.in",
         "fax": [],
         "name": "Shri Ankur Gupta",
@@ -22570,13 +21651,6 @@
         "email": "harish.yadav@epfindia.gov.in",
         "fax": [],
         "name": "Shri Harish Yadav",
-        "designation": "Regional P. F. Commissioner (Gr.I)"
-      },
-      {
-        "phone_numbers": [],
-        "email": "ram.anand@epfindia.gov.in",
-        "fax": [],
-        "name": "Shri Ram Anand",
         "designation": "Regional P. F. Commissioner (Gr.I)"
       },
       {
