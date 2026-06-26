@@ -23,12 +23,26 @@ let epfoContactsData = [];
 let searchableOffices = [];
 let officeMap = null;
 let mapMarkersGroup = null;
+let activeSuggestionIndex = -1;      // currently highlighted autocomplete item (keyboard nav)
+let isRestoringFromHistory = false;  // suppress pushState while handling browser Back/Forward
 
 // --- Utility Functions ---
+// Escape any user- or data-derived string before inserting it via innerHTML,
+// to prevent DOM-based XSS (e.g. from crafted ?office=/?officer= URL params).
+function escapeHtml(value) {
+    if (value == null) return '';
+    return String(value)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
 function formatPhoneNumber(stdCode, number) {
     if (!number || String(number).trim() === '') return 'N/A';
     number = String(number).trim();
-    return stdCode ? `(${String(stdCode).trim()}) ${number}` : number;
+    return escapeHtml(stdCode ? `(${String(stdCode).trim()}) ${number}` : number);
 }
 
 function createPhoneLink(stdCode, number) {
@@ -42,7 +56,7 @@ function createPhoneLink(stdCode, number) {
 
 function createEmailLink(email) {
     if (!email || email.trim() === '' || email.toLowerCase() === 'null') return 'N/A';
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return email.trim();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) return escapeHtml(email.trim());
     return `<a href="mailto:${email.trim()}" class="email-link">${email.trim()}</a>`;
 }
 
@@ -138,8 +152,17 @@ function initializeUI() {
 
     // Attach event listeners
     officeSearchInput.addEventListener('input', handleOfficeSearchInput);
-    officeSearchInput.addEventListener('keypress', e => e.key === 'Enter' && searchOfficeByName());
+    officeSearchInput.addEventListener('keydown', handleOfficeSearchKeydown);
     searchOfficeBtn.addEventListener('click', searchOfficeByName);
+
+    // Restore the view when the user navigates with the browser Back/Forward buttons.
+    window.addEventListener('popstate', () => {
+        isRestoringFromHistory = true;
+        if (!handleUrlParameters()) {
+            showOfficeByQuery('q=HEAD+OFFICE'); // No params in URL -> default view
+        }
+        isRestoringFromHistory = false;
+    });
 
     officialNameInput.addEventListener('keypress', e => e.key === 'Enter' && searchOfficialByDetails());
     searchOfficialBtn.addEventListener('click', searchOfficialByDetails);
@@ -161,6 +184,9 @@ function initializeUI() {
 
 // --- URL Parameter Handling ---
 function updateUrl(params) {
+    // Don't push a new history entry while we're restoring a view from Back/Forward,
+    // otherwise navigation would loop and Back would never reach earlier states.
+    if (isRestoringFromHistory) return;
     const url = new URL(window.location);
     url.search = new URLSearchParams(params).toString();
     window.history.pushState({
@@ -247,7 +273,7 @@ function initializeOfficeMap() {
             if (!isNaN(lat) && !isNaN(lon)) {
                 const officeName = contact.office_name_hierarchical || contact.office.office_name || "EPFO Office";
                 const marker = L.marker([lat, lon]);
-                marker.bindPopup(`<b>${officeName}</b>`);
+                marker.bindPopup(`<b>${escapeHtml(officeName)}</b>`);
                 // When marker is clicked, show details and scroll the content view
                 marker.on('click', () => {
                     showOfficeByQuery(contact.query);
@@ -276,7 +302,13 @@ function searchOfficeByName() {
         officeHierarchySidebar.style.display = 'none';
         return;
     }
-    const matchedOffice = searchableOffices.find(o => o.name.toLowerCase() === searchTerm.toLowerCase());
+    const lowerSearchTerm = searchTerm.toLowerCase();
+    // Prefer an exact match; otherwise fall back to the first partial match so the
+    // Search button behaves like the autocomplete (typing a partial name still works).
+    let matchedOffice = searchableOffices.find(o => o.name.toLowerCase() === lowerSearchTerm);
+    if (!matchedOffice) {
+        matchedOffice = searchableOffices.find(o => o.name.toLowerCase().includes(lowerSearchTerm));
+    }
 
     if (matchedOffice) {
         displayOfficeDetails(matchedOffice.originalData);
@@ -286,7 +318,7 @@ function searchOfficeByName() {
         document.getElementById('hierarchyDisplay').scrollIntoView({ behavior: 'smooth', block: 'center' });
         
     } else {
-        officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${searchTerm}".</p>`;
+        officeDetailsContainer.innerHTML = `<p class="no-results">No office found matching "${escapeHtml(searchTerm)}".</p>`;
         officialsListContainer.innerHTML = '';
         officeHierarchySidebar.style.display = 'none';
     }
@@ -294,9 +326,53 @@ function searchOfficeByName() {
 }
 
 
+// Keyboard navigation for the office autocomplete: Arrow Up/Down to move,
+// Enter to choose the highlighted item (or run the search), Escape to dismiss.
+function handleOfficeSearchKeydown(e) {
+    const items = officeAutocompleteSuggestions.querySelectorAll('div[role="option"]');
+    const listVisible = officeAutocompleteSuggestions.style.display === 'block' && items.length > 0;
+
+    switch (e.key) {
+        case 'ArrowDown':
+            if (!listVisible) return;
+            e.preventDefault();
+            activeSuggestionIndex = (activeSuggestionIndex + 1) % items.length;
+            updateActiveSuggestion(items);
+            break;
+        case 'ArrowUp':
+            if (!listVisible) return;
+            e.preventDefault();
+            activeSuggestionIndex = (activeSuggestionIndex - 1 + items.length) % items.length;
+            updateActiveSuggestion(items);
+            break;
+        case 'Enter':
+            if (listVisible && activeSuggestionIndex >= 0 && items[activeSuggestionIndex]) {
+                e.preventDefault();
+                items[activeSuggestionIndex].click();
+            } else {
+                searchOfficeByName();
+            }
+            break;
+        case 'Escape':
+            officeAutocompleteSuggestions.style.display = 'none';
+            activeSuggestionIndex = -1;
+            break;
+    }
+}
+
+function updateActiveSuggestion(items) {
+    items.forEach((item, i) => {
+        const isActive = i === activeSuggestionIndex;
+        item.classList.toggle('active', isActive);
+        item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (isActive) item.scrollIntoView({ block: 'nearest' });
+    });
+}
+
 function handleOfficeSearchInput() {
     const searchTerm = officeSearchInput.value.trim().toLowerCase();
     officeAutocompleteSuggestions.innerHTML = '';
+    activeSuggestionIndex = -1; // reset keyboard highlight whenever the list rebuilds
     if (searchTerm.length < 2) {
         officeAutocompleteSuggestions.style.display = 'none';
         return;
@@ -306,6 +382,8 @@ function handleOfficeSearchInput() {
         matchedOffices.slice(0, 10).forEach(office => {
             const suggestionDiv = document.createElement('div');
             suggestionDiv.textContent = office.name;
+            suggestionDiv.setAttribute('role', 'option');
+            suggestionDiv.setAttribute('aria-selected', 'false');
             suggestionDiv.addEventListener('click', () => {
                 officeSearchInput.value = office.name;
                 officeAutocompleteSuggestions.style.display = 'none';
@@ -360,9 +438,9 @@ function displayOfficeDetails(contactData) {
     if (!officeDisplayName || officeDisplayName === '-') officeDisplayName = 'Office Details';
 
     let detailsHtml = `<div class="card bg-blue-50">
-                            <h3 class="text-xl font-semibold text-blue-700 mb-3">${officeDisplayName}</h3>`;
+                            <h3 class="text-xl font-semibold text-blue-700 mb-3">${escapeHtml(officeDisplayName)}</h3>`;
     if (office.office_address && office.office_address !== 'STD-Code :') {
-        detailsHtml += `<p class="detail-item"><span class="detail-label">Address:</span> <span class="detail-value">${String(office.office_address).replace(/\n/g, '<br>')}</span></p>`;
+        detailsHtml += `<p class="detail-item"><span class="detail-label">Address:</span> <span class="detail-value">${escapeHtml(String(office.office_address)).replace(/\n/g, '<br>')}</span></p>`;
     }
     if (office.office_email) {
         detailsHtml += `<p class="detail-item"><span class="detail-label">Email:</span> <span class="detail-value">${createEmailLink(office.office_email)}</span></p>`;
@@ -420,8 +498,8 @@ function displayEnhancedHierarchy(currentContactData) {
                 <h4>Parent Office</h4>
                 <ul>
                     <li class="parent-office">
-                        <a href="#" class="dynamic-office-link" data-officequery="${parentContact.query}">
-                            ${parentContact.office_name_hierarchical}
+                        <a href="#" class="dynamic-office-link" data-officequery="${escapeHtml(parentContact.query)}">
+                            ${escapeHtml(parentContact.office_name_hierarchical)}
                         </a>
                     </li>
                 </ul>`;
@@ -434,7 +512,7 @@ function displayEnhancedHierarchy(currentContactData) {
         let listHtml = `<h4>${title}</h4><ul>`;
         officeArray.forEach(office => {
             const officeName = office.office_name_hierarchical || office.office.office_name;
-            listHtml += `<li><a href="#" class="dynamic-office-link" data-officequery="${office.query}">${officeName}</a></li>`;
+            listHtml += `<li><a href="#" class="dynamic-office-link" data-officequery="${escapeHtml(office.query)}">${escapeHtml(officeName)}</a></li>`;
         });
         listHtml += '</ul>';
         return listHtml;
@@ -498,8 +576,8 @@ function displayOfficials(officials, stdCode, container, title) {
                                 <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
     officials.forEach(official => {
         officialsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                                <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
-                                ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+                                <p class="font-semibold text-gray-800">${escapeHtml(official.name) || 'N/A'}</p>
+                                ${official.designation ? `<p class="text-sm text-gray-600">${escapeHtml(official.designation)}</p>` : ''}
                                 ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(stdCode, num)).join(', ')}</p>` : ''}
                                 ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
                                 ${official.fax && official.fax.length > 0 ? `<p class="text-sm text-gray-500">Fax: ${official.fax.map(num => formatPhoneNumber(stdCode, num)).join(', ')}</p>` : ''}
@@ -544,16 +622,16 @@ function searchOfficialByDetails() {
     });
 
     if (results.length === 0) {
-        officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${searchTerm}".</p>`;
+        officialSearchResultsContainer.innerHTML = `<p class="no-results">No officials found matching "${escapeHtml(searchTerm)}".</p>`;
     } else {
         let resultsHtml = `<div class="card bg-yellow-50">
                                <h3 class="text-xl font-semibold text-yellow-700 mb-3">Search Results (${results.length} found)</h3>
                                <ul class="space-y-4 custom-scrollbar max-h-96 overflow-y-auto pr-2">`;
         results.forEach(official => {
-            const officeLink = official.officeQuery ? `<a href="#" class="dynamic-office-link" data-officequery="${official.officeQuery}">${official.officeName}</a>` : official.officeName;
+            const officeLink = official.officeQuery ? `<a href="#" class="dynamic-office-link" data-officequery="${escapeHtml(official.officeQuery)}">${escapeHtml(official.officeName)}</a>` : escapeHtml(official.officeName);
             resultsHtml += `<li class="p-4 border border-gray-200 rounded-lg bg-white shadow-sm hover:shadow-md transition-shadow">
-                                    <p class="font-semibold text-gray-800">${official.name || 'N/A'}</p>
-                                    ${official.designation ? `<p class="text-sm text-gray-600">${official.designation}</p>` : ''}
+                                    <p class="font-semibold text-gray-800">${escapeHtml(official.name) || 'N/A'}</p>
+                                    ${official.designation ? `<p class="text-sm text-gray-600">${escapeHtml(official.designation)}</p>` : ''}
                                     <p class="text-sm text-gray-500 italic">Office: ${officeLink}</p>
                                     ${official.phone_numbers && official.phone_numbers.length > 0 ? `<p class="text-sm text-gray-500 mt-1">Phone: ${official.phone_numbers.map(num => createPhoneLink(official.officeStdCode, num)).join(', ')}</p>` : ''}
                                     ${official.email ? `<p class="text-sm text-gray-500">Email: ${createEmailLink(official.email)}</p>` : ''}
