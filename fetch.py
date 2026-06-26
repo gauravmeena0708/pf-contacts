@@ -3,6 +3,8 @@ import json
 from bs4 import BeautifulSoup
 import time
 import re
+import os
+import sys
 import urllib.parse
 
 OFFICE_LIST_URL = "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
@@ -68,6 +70,21 @@ HEADERS = {
     'Referer': 'https://www.epfindia.gov.in/site_en/Contact_us.php'
 }
 DETAIL_FETCH_URL = "https://www.epfindia.gov.in/site_en/get_directory.php"
+
+def post_with_retries(url, data, headers, timeout=30, retries=3, backoff=5):
+    """POST with simple incremental backoff. Re-raises the last exception if all attempts fail."""
+    last_exc = None
+    for attempt in range(1, retries + 1):
+        try:
+            response = requests.post(url, data=data, headers=headers, timeout=timeout)
+            response.raise_for_status()
+            return response
+        except requests.exceptions.RequestException as e:
+            last_exc = e
+            print(f"  Attempt {attempt}/{retries} failed for {url}: {e}")
+            if attempt < retries:
+                time.sleep(backoff * attempt)
+    raise last_exc
 
 def clean_email(email_text):
     if email_text:
@@ -255,6 +272,7 @@ def extract_contact_info(html_content):
 if __name__ == "__main__":
     all_items_to_fetch_details_for = []
     all_results = []
+    category_list_failures = []
 
     print("Starting to fetch office categories and parse hierarchy...")
     for category_id in OFFICE_CATEGORY_IDS:
@@ -262,8 +280,7 @@ if __name__ == "__main__":
         category_display_name = CATEGORY_ID_TO_NAME_MAP.get(category_id, category_id)
         print(f"Fetching data for category: {category_display_name} (ID: {category_id})")
         try:
-            response = requests.post(OFFICE_LIST_URL, data=payload, headers=HEADERS, timeout=30)
-            response.raise_for_status()
+            response = post_with_retries(OFFICE_LIST_URL, payload, HEADERS)
             html_content_category_page = response.text
 
             if category_id in SPECIAL_CATEGORY_IDS:
@@ -290,8 +307,10 @@ if __name__ == "__main__":
             time.sleep(0.5)
         except requests.exceptions.RequestException as e:
             print(f"HTTP Request error for category ID {category_id}: {e}")
+            category_list_failures.append(category_id)
         except Exception as e:
             print(f"General error processing category ID {category_id}: {e}")
+            category_list_failures.append(category_id)
 
     # Add ADDITIONAL_QUERIES_WITH_HIERARCHY
     all_items_to_fetch_details_for.extend(ADDITIONAL_QUERIES_WITH_HIERARCHY)
@@ -312,8 +331,7 @@ if __name__ == "__main__":
 
         print(f"Processing details for: {item_name_hierarchical} ({query_param_str})")
         try:
-            response_detail = requests.post(DETAIL_FETCH_URL, data=query_param_str, headers=HEADERS, timeout=30)
-            response_detail.raise_for_status()
+            response_detail = post_with_retries(DETAIL_FETCH_URL, query_param_str, HEADERS)
             html_content_detail_page = response_detail.text
             office_details, staff_contacts = extract_contact_info(html_content_detail_page)
 
@@ -336,7 +354,49 @@ if __name__ == "__main__":
             all_results.append({"query": query_param_str, "office_name_hierarchical": item_name_hierarchical, "hierarchy_breadcrumbs": hierarchy_breadcrumbs, "office": {}, "officials": [], "error": f"Parsing/General Error: {str(e)}"})
 
     output_filename = "contacts-data.json"
-    with open(output_filename, 'w') as f:
-        json.dump(all_results, f, indent=2)
 
-    print(f"\nData fetching complete. All results saved to {output_filename}")
+    # --- Sanity gate: never overwrite good data with a degraded scrape ---
+    new_count = len(all_results)
+    new_errors = sum(1 for r in all_results if r.get('error'))
+    error_ratio = (new_errors / new_count) if new_count else 1.0
+
+    previous_results = []
+    if os.path.exists(output_filename):
+        try:
+            with open(output_filename, 'r', encoding='utf-8') as f:
+                loaded = json.load(f)
+                if isinstance(loaded, list):
+                    previous_results = loaded
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"Warning: could not read existing '{output_filename}': {e}")
+    prev_count = len(previous_results)
+
+    abort_reasons = []
+    if category_list_failures:
+        abort_reasons.append(
+            f"{len(category_list_failures)} category list fetch(es) failed: {category_list_failures}")
+    if new_count == 0:
+        abort_reasons.append("scrape produced zero entries")
+    if prev_count and new_count < 0.9 * prev_count:
+        abort_reasons.append(
+            f"entry count dropped to {new_count} (was {prev_count}; below 90% threshold)")
+    if new_count and error_ratio > 0.10:
+        abort_reasons.append(
+            f"error ratio {error_ratio:.0%} exceeds 10% ({new_errors}/{new_count} entries errored)")
+
+    if abort_reasons:
+        print("\n*** ABORTING WRITE — existing data left UNTOUCHED. Reasons:")
+        for reason in abort_reasons:
+            print(f"  - {reason}")
+        sys.exit(1)
+
+    # Stable ordering keeps day-to-day diffs small and reviewable.
+    all_results.sort(key=lambda r: (r.get('query') or '', r.get('office_name_hierarchical') or ''))
+
+    # Atomic write: build a temp file, then replace the real one only on success.
+    tmp_filename = output_filename + ".tmp"
+    with open(tmp_filename, 'w') as f:
+        json.dump(all_results, f, indent=2)
+    os.replace(tmp_filename, output_filename)
+
+    print(f"\nData fetching complete. {new_count} entries ({new_errors} with errors) saved to {output_filename}.")
