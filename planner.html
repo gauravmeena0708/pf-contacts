@@ -166,7 +166,7 @@
                         <details class="mt-3 text-xs text-gray-600 dark:text-gray-400">
                             <summary class="cursor-pointer font-medium text-blue-700 dark:text-blue-300">How gaps are calculated</summary>
                             <p class="mt-2 leading-relaxed">
-                                Candidates come from Voronoi centres and sampled mainland boundary points. A candidate is a gap when its nearest EPFO office is farther away than the selected service radius; results within 50 km of a larger gap are consolidated.
+                                Candidates come from Voronoi centres at least 50 km inside the mainland boundary. A candidate is a gap when its nearest EPFO office is farther away than the selected service radius; results within 50 km of a larger gap are consolidated.
                             </p>
                             <p class="mt-2 leading-relaxed">
                                 Boundary: Natural Earth 5.1.1, India point of view, mainland polygon only.
@@ -181,7 +181,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.7" d="M12 21s6-4.35 6-10A6 6 0 106 11c0 5.65 6 10 6 10zM9.5 11h5M12 8.5v5" />
                                 </svg>
                                 <p class="mt-3 text-sm font-semibold">Choose a service radius, then find gaps</p>
-                                <p class="mt-1 text-xs leading-relaxed text-gray-500 dark:text-gray-400">The ranked list will show mainland locations beyond that distance from the nearest EPFO office.</p>
+                                <p class="mt-1 text-xs leading-relaxed text-gray-500 dark:text-gray-400">The ranked list will show interior mainland locations beyond that distance from the nearest EPFO office.</p>
                             </div>
                         </div>
                     </div>
@@ -231,7 +231,7 @@
         // ---------- CONSTANTS & STATE ----------
         const CSV_PATH = 'https://gauravmeena0708.github.io/pf-contacts/contacts-data-field-offices.csv';
         const BOUNDARY_PATH = 'data/india-mainland.geojson';
-        const BOUNDARY_SAMPLE_INTERVAL_KM = 25;
+        const MIN_BOUNDARY_CLEARANCE_KM = 50;
         const CONSOLIDATION_RADIUS_KM = 50;
         const RADIUS_UPDATE_DELAY_MS = 250;
         const VISUALIZATION_BATCH_SIZE = 300;
@@ -255,6 +255,7 @@
         let allOffices = [];
         let mainlandOffices = [];
         let analysisHull = null;
+        let analysisInterior = null;
         let analysisHullOutline = null;
         let voronoiData = null;
         let allGapCandidates = [];
@@ -291,6 +292,12 @@
             return turf.booleanPointInPolygon(point, analysisHull);
         };
 
+        const isWithinAnalysisInterior = (lat, lon) => {
+            if (!analysisInterior) return false;
+            const point = turf.point([lon, lat]);
+            return turf.booleanPointInPolygon(point, analysisInterior);
+        };
+
         // ---------- VORONOI & GAP COMPUTATION ----------
         const computeVoronoi = (offices) => {
             if (offices.length < 3 || !analysisHull) return null;
@@ -309,7 +316,7 @@
             const candidates = [];
             const seenCandidates = new Set();
             const addCandidate = (lon, lat) => {
-                if (!Number.isFinite(lon) || !Number.isFinite(lat) || !isWithinAnalysisArea(lat, lon)) return;
+                if (!Number.isFinite(lon) || !Number.isFinite(lat) || !isWithinAnalysisInterior(lat, lon)) return;
                 const key = `${lon.toFixed(4)},${lat.toFixed(4)}`;
                 if (seenCandidates.has(key)) return;
                 seenCandidates.add(key);
@@ -320,16 +327,7 @@
                 addCandidate(voronoi.circumcenters[i], voronoi.circumcenters[i + 1]);
             }
 
-            const boundaryChunks = turf.lineChunk(analysisHullOutline, BOUNDARY_SAMPLE_INTERVAL_KM, {
-                units: 'kilometers'
-            });
-            boundaryChunks.features.forEach((feature) => {
-                const coordinates = feature.geometry.coordinates;
-                addCandidate(...coordinates[0]);
-                addCandidate(...coordinates[coordinates.length - 1]);
-            });
-
-            statusText.textContent = `Measuring ${candidates.length} mainland candidate points...`;
+            statusText.textContent = `Measuring ${candidates.length} candidates at least ${MIN_BOUNDARY_CLEARANCE_KM} km inside the mainland boundary...`;
 
             const gaps = candidates.map(([lon, lat]) => {
                 let minDist = Infinity;
@@ -660,7 +658,7 @@
             hasVisualizedGaps = true;
             visualizeGapsBtn.disabled = true;
             visualizeGapsBtn.innerHTML = '<span aria-hidden="true" class="animate-spin">⏳</span> Visualizing...';
-            statusText.textContent = `Visualizing areas beyond ${coverageRadius} km from an office...`;
+            statusText.textContent = `Visualizing interior areas beyond ${coverageRadius} km from an office...`;
             gapVisualizationLayer.clearLayers();
 
             try {
@@ -675,7 +673,7 @@
 
                     batch.forEach((point) => {
                         const [lon, lat] = point.geometry.coordinates;
-                        if (!isWithinAnalysisArea(lat, lon)) return;
+                        if (!isWithinAnalysisInterior(lat, lon)) return;
 
                         let minDist = Infinity;
                         for (const office of mainlandOffices) {
@@ -707,7 +705,7 @@
                     gapVisualizationLayer.addLayer(heatmapLayer);
                 }
 
-                statusText.textContent = `Found ${gapsFound.length} underserved sample points beyond ${coverageRadius} km.`;
+                statusText.textContent = `Found ${gapsFound.length} interior underserved sample points beyond ${coverageRadius} km.`;
             } catch (error) {
                 console.error('Gap visualization failed:', error);
                 if (runId === visualizationRunId) {
@@ -737,6 +735,12 @@
                 }
                 analysisHull = boundary;
                 analysisHullOutline = turf.polygonToLine(analysisHull);
+                analysisInterior = turf.buffer(analysisHull, -MIN_BOUNDARY_CLEARANCE_KM, {
+                    units: 'kilometers'
+                });
+                if (!analysisInterior) {
+                    throw new Error('Could not create the mainland interior analysis area.');
+                }
 
                 const rows = text.split('\n').slice(1);
 
@@ -760,8 +764,7 @@
                 const excludedNames = ["Regional Office, PORT BLAIR"]; 
                 mainlandOffices = allOffices.filter(o => 
                     !islandStates.includes(o.state.toUpperCase()) &&
-                    !excludedNames.includes(o.name) &&
-                    isWithinAnalysisArea(o.latitude, o.longitude)
+                    !excludedNames.includes(o.name)
                 );
 
                 const hullPolygon = L.geoJSON(analysisHull, {
@@ -863,4 +866,3 @@
     </style>
 </body>
 </html>
-
