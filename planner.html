@@ -190,7 +190,7 @@
                 <!-- Map -->
                 <section aria-label="EPFO office coverage map" class="relative lg:col-span-2 rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden bg-white dark:bg-gray-900 min-h-[500px]">
                     <div id="map" role="region" aria-label="Interactive map of EPFO offices and coverage analysis"></div>
-                    <div class="absolute bottom-7 left-3 z-[400] max-w-[calc(100%-1.5rem)] rounded-lg border border-gray-200/90 dark:border-gray-700/90 bg-white/95 dark:bg-gray-900/95 px-3 py-2 text-[11px] shadow-lg backdrop-blur" aria-label="Map legend">
+                    <div role="group" class="absolute bottom-7 left-3 z-[400] max-w-[calc(100%-1.5rem)] rounded-lg border border-gray-200/90 dark:border-gray-700/90 bg-white/95 dark:bg-gray-900/95 px-3 py-2 text-[11px] shadow-lg backdrop-blur" aria-label="Map legend">
                         <div class="mb-1.5 font-semibold text-gray-800 dark:text-gray-100">Map legend</div>
                         <div class="grid grid-cols-2 gap-x-4 gap-y-1 text-gray-600 dark:text-gray-300">
                             <span class="flex items-center gap-1.5"><i aria-hidden="true" class="block h-2.5 w-2.5 rounded-full bg-blue-500 ring-2 ring-white"></i>EPFO office</span>
@@ -606,7 +606,8 @@
             updateStats();
 
             if (coverageGaps.length > 0) {
-                statusText.textContent = `Found ${coverageGaps.length} distinct gaps beyond the ${coverageRadius} km service radius.`;
+                const gapLabel = coverageGaps.length === 1 ? 'gap' : 'gaps';
+                statusText.textContent = `Found ${coverageGaps.length} distinct ${gapLabel} beyond the ${coverageRadius} km service radius.`;
                 if (focusLargest) renderLargestGap();
             } else {
                 statusText.textContent = `No mainland gaps exceed the ${coverageRadius} km service radius.`;
@@ -705,7 +706,8 @@
                     gapVisualizationLayer.addLayer(heatmapLayer);
                 }
 
-                statusText.textContent = `Found ${gapsFound.length} interior underserved sample points beyond ${coverageRadius} km.`;
+                const pointLabel = gapsFound.length === 1 ? 'point' : 'points';
+                statusText.textContent = `Found ${gapsFound.length} interior underserved sample ${pointLabel} beyond ${coverageRadius} km.`;
             } catch (error) {
                 console.error('Gap visualization failed:', error);
                 if (runId === visualizationRunId) {
@@ -717,6 +719,41 @@
         };
 
         // ---------- DATA LOADING ----------
+        const parseCsv = (text) => {
+            const rows = [];
+            let row = [];
+            let field = '';
+            let inQuotes = false;
+
+            for (let i = 0; i < text.length; i++) {
+                const char = text[i];
+
+                if (char === '"') {
+                    if (inQuotes && text[i + 1] === '"') {
+                        field += '"';
+                        i++;
+                    } else {
+                        inQuotes = !inQuotes;
+                    }
+                } else if (char === ',' && !inQuotes) {
+                    row.push(field);
+                    field = '';
+                } else if ((char === '\n' || char === '\r') && !inQuotes) {
+                    if (char === '\r' && text[i + 1] === '\n') i++;
+                    row.push(field);
+                    if (row.some(value => value.trim() !== '')) rows.push(row);
+                    row = [];
+                    field = '';
+                } else {
+                    field += char;
+                }
+            }
+
+            row.push(field);
+            if (row.some(value => value.trim() !== '')) rows.push(row);
+            return rows;
+        };
+
         const loadData = async () => {
             try {
                 const [officeResponse, boundaryResponse] = await Promise.all([
@@ -742,14 +779,14 @@
                     throw new Error('Could not create the mainland interior analysis area.');
                 }
 
-                const rows = text.split('\n').slice(1);
+                const rows = parseCsv(text).slice(1);
 
-                allOffices = rows.map((row, idx) => {
-                    const cols = row.split(/,(?=(?:(?:[^"']*"){2})*[^"']*$)/);
+                allOffices = rows.map((cols, idx) => {
                     if (cols.length < 9) return null;
                     const lat = parseFloat(cols[7]), lon = parseFloat(cols[8]);
-                    if (!isFinite(lat) || !isFinite(lon)) return null;
-                    const clean = (s) => (s||'').replaceAll('"','').trim();
+                    const inIndia = lat >= 6 && lat <= 37.5 && lon >= 68 && lon <= 97.5;
+                    if (!isFinite(lat) || !isFinite(lon) || !inIndia) return null;
+                    const clean = (s) => (s || '').trim();
                     return {
                         id: idx, name: clean(cols[0]) || 'N/A', category: clean(cols[1]) || 'N/A',
                         zone: clean(cols[2]) || 'Other', address: clean(cols[3]) || 'N/A',
