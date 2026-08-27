@@ -48,6 +48,18 @@ class StaticApiTest(unittest.TestCase):
             self.officials_payload["record_count"],
         )
 
+    def test_repeated_build_keeps_version_timestamp_and_ids_stable(self):
+        before_ids = [office["id"] for office in self.offices]
+        repeated_manifest = build(
+            PROJECT_ROOT / "contacts-data.json",
+            PROJECT_ROOT / "geocodes.json",
+            self.output,
+        )
+        repeated_offices = self.load("offices.json")["offices"]
+
+        self.assertEqual(self.manifest["generated_at"], repeated_manifest["generated_at"])
+        self.assertEqual(before_ids, [office["id"] for office in repeated_offices])
+
     def test_office_ids_and_detail_resources_are_unique(self):
         office_ids = [office["id"] for office in self.offices]
         self.assertEqual(len(office_ids), len(set(office_ids)))

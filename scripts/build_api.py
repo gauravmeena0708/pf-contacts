@@ -220,8 +220,35 @@ def resolve_parent_source_key(
     return identity_map.get(parent_identity.strip().casefold())
 
 
-def assign_ids(preliminary: list[dict[str, Any]]) -> None:
+def previous_office_ids(output_dir: Path) -> tuple[dict[str, str], dict[tuple[str, str], str]]:
+    collection_path = output_dir / "offices.json"
+    if not collection_path.exists():
+        return {}, {}
+    try:
+        previous = json.loads(collection_path.read_text(encoding="utf-8")).get("offices", [])
+    except (OSError, json.JSONDecodeError, AttributeError):
+        return {}, {}
+
+    source_counts = Counter(str(office.get("source_key") or "") for office in previous)
+    by_unique_source = {
+        str(office.get("source_key") or ""): str(office.get("id") or "")
+        for office in previous
+        if source_counts[str(office.get("source_key") or "")] == 1
+    }
+    by_source_and_address = {
+        (
+            str(office.get("source_key") or ""),
+            str(office.get("address") or "").strip(),
+        ): str(office.get("id") or "")
+        for office in previous
+    }
+    return by_unique_source, by_source_and_address
+
+
+def assign_ids(preliminary: list[dict[str, Any]], output_dir: Path) -> None:
     by_candidate: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    current_source_counts = Counter(item["source_key"] for item in preliminary)
+    previous_by_source, previous_by_identity = previous_office_ids(output_dir)
     for item in preliminary:
         category = item["category"]
         _, prefix = CATEGORY_DEFINITIONS[category]
@@ -238,7 +265,16 @@ def assign_ids(preliminary: list[dict[str, Any]]) -> None:
                 item["name"],
                 str(office.get("office_address") or ""),
             ])
-            identifier = candidate if len(items) == 1 else f"{candidate}-{stable_digest(identity)}"
+            source_address_identity = (
+                item["source_key"],
+                str(office.get("office_address") or "").strip(),
+            )
+            previous_id = previous_by_identity.get(source_address_identity)
+            if previous_id is None and current_source_counts[item["source_key"]] == 1:
+                previous_id = previous_by_source.get(item["source_key"])
+            identifier = previous_id or (
+                candidate if len(items) == 1 else f"{candidate}-{stable_digest(identity)}"
+            )
             suffix_length = 8
             while identifier in used:
                 suffix_length += 2
@@ -362,7 +398,7 @@ def build(source_path: Path, geocodes_path: Path, output_dir: Path) -> dict[str,
             "category": category,
         })
 
-    assign_ids(preliminary)
+    assign_ids(preliminary, output_dir)
     source_to_id: dict[str, str] = {}
     for item in preliminary:
         source_to_id.setdefault(item["source_key"], item["id"])

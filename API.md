@@ -34,6 +34,7 @@ server. Download `offices.json` once and filter it in the consuming application.
 ## Data semantics
 
 - `id` is a stable, URL-safe identifier generated from the source office identity.
+  Once published, the builder reuses it while the same source key remains present.
 - `source_key` preserves the source directory query key.
 - `parent_id` and `ancestor_ids` describe the normalized hierarchy.
 - `contact.emails` contains only email addresses published for the office itself.
