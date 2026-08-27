@@ -123,7 +123,7 @@ const EPFO = (function () {
 
     function field(label, val, mono) {
         if (!val) return '';
-        return `<div class="field"><div class="flabel">${label}</div><div class="fval ${mono ? 'mono' : ''}">${val}</div></div>`;
+        return `<div class="field"><dt class="flabel">${label}</dt><dd class="fval ${mono ? 'mono' : ''}">${val}</dd></div>`;
     }
 
     // The shared office-detail card, reused by all three layouts.
@@ -133,9 +133,9 @@ const EPFO = (function () {
         const t = officeType(ct);
         const b = breadcrumbs(ct);
 
-        let h = `<div class="detail-head"><span class="tag tag-${t.code}">${t.code}</span>` +
+        let h = `<div class="detail-head"><span class="tag tag-${t.code}" aria-label="${escapeHtml(t.label)}">${t.code}</span>` +
             `<h2>${escapeHtml(officeName(ct))}</h2></div>`;
-        if (b.length) h += `<nav class="crumbs">${b.map(x => escapeHtml(x.name)).join(' <span>▸</span> ')}</nav>`;
+        if (b.length) h += `<nav class="crumbs" aria-label="Office hierarchy"><ol>${b.map(x => `<li>${escapeHtml(x.name)}</li>`).join('')}</ol></nav>`;
 
         let fields = '';
         if (o.office_address && o.office_address !== 'STD-Code :') {
@@ -148,7 +148,7 @@ const EPFO = (function () {
         if (o.office_email) fields += field('Email', mailLink(o.office_email), true);
         const p = pin(ct);
         if (p) fields += field('PIN', p, true);
-        if (fields) h += `<div class="fields">${fields}</div>`;
+        if (fields) h += `<dl class="fields">${fields}</dl>`;
 
         const offs = ct.officials || [];
         if (offs.length) {
@@ -157,8 +157,8 @@ const EPFO = (function () {
                 h += `<li><div class="off-name">${escapeHtml(of.name) || '—'}</div>`;
                 if (of.designation) h += `<div class="off-desig">${escapeHtml(of.designation)}</div>`;
                 const opn = (of.phone_numbers || []).map(n => telLink(o.std_code, n)).filter(Boolean);
-                if (opn.length) h += `<div class="off-line mono">☎ ${opn.join(', ')}</div>`;
-                if (of.email) h += `<div class="off-line mono">✉ ${mailLink(of.email)}</div>`;
+                if (opn.length) h += `<div class="off-line mono"><span class="sr-only">Phone: </span>${opn.join(', ')}</div>`;
+                if (of.email) h += `<div class="off-line mono"><span class="sr-only">Email: </span>${mailLink(of.email)}</div>`;
                 h += `</li>`;
             });
             h += `</ul>`;

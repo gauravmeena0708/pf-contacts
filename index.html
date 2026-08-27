@@ -3,211 +3,614 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contacts Directory — Two-pane Locator (prototype)</title>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<meta name="theme-color" content="#0a2d30">
+<meta name="description" content="Search EPFO offices, officials, phone numbers and email addresses across India.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PF Directory — Find EPFO offices and officials">
+<meta property="og:description" content="Find the right EPFO office, faster. Search 327 offices and more than 1,600 officials across India.">
+<meta property="og:image" content="./og.png">
+<meta property="og:image:width" content="1737">
+<meta property="og:image:height" content="909">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="PF Directory — Find EPFO offices and officials">
+<meta name="twitter:description" content="Find the right EPFO office, faster.">
+<meta name="twitter:image" content="./og.png">
+<title>PF Directory — Find EPFO offices and officials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <link rel="stylesheet" href="tokens.css">
 <style>
-    .header-wrap { position: relative; flex: 1; max-width: 520px; }
-    .near-btn { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.35); color: #fff; white-space: nowrap; }
-    .near-btn:hover { background: rgba(255,255,255,.22); }
+    body { overflow: hidden; }
+    .app-shell { height: calc(100dvh - 68px); display: flex; flex-direction: column; }
+    .mobile-tabs { display: none; }
+    .workspace {
+        width: 100%; max-width: var(--content); height: 100%; margin: 0 auto;
+        display: grid; grid-template-columns: minmax(520px, 58%) minmax(340px, 42%);
+        background: var(--surface); border-inline: 1px solid rgba(189,202,196,.65);
+    }
+    .directory-pane { min-width: 0; display: flex; flex-direction: column; overflow: hidden; border-right: 1px solid var(--line); }
+    .discover {
+        position: relative; flex: 0 0 auto; padding: clamp(22px, 3vw, 34px) clamp(20px, 3.2vw, 42px) 18px;
+        background:
+            radial-gradient(circle at 94% 8%, rgba(231,242,239,.96), transparent 15rem),
+            linear-gradient(180deg, #fff 0%, #fbfcf9 100%);
+        border-bottom: 1px solid var(--line);
+    }
+    .eyebrow { margin: 0 0 7px; color: var(--accent); font: 700 10px 'IBM Plex Mono', monospace; letter-spacing: .11em; text-transform: uppercase; }
+    .discover h1 { max-width: 680px; margin: 0; font-size: clamp(27px, 3.2vw, 43px); line-height: 1.07; }
+    .lede { max-width: 640px; margin: 9px 0 18px; color: var(--muted); font-size: 14px; }
+    .search-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 9px; align-items: start; }
+    .search-wrap { position: relative; }
+    .near-btn { min-height: 54px; padding-inline: 16px; }
+    .search-meta { min-height: 20px; margin: 9px 2px 0; display: flex; justify-content: space-between; gap: 12px; color: var(--subtle); font-size: 11px; }
+    .filter-wrap { display: flex; align-items: center; gap: 10px; margin-top: 12px; }
+    .filter-label { flex: 0 0 auto; color: var(--subtle); font-size: 11px; font-weight: 700; }
+    .stats { display: flex; flex-wrap: wrap; gap: 13px; margin-top: 16px; color: var(--muted); font-size: 11px; }
+    .stat { display: inline-flex; align-items: baseline; gap: 4px; }
+    .stat strong { color: var(--primary-deep); font-family: 'Manrope', sans-serif; font-size: 14px; }
+    .detail-scroll { flex: 1; overflow-y: auto; overscroll-behavior: contain; scrollbar-gutter: stable; padding: 22px clamp(20px, 3.2vw, 42px) 46px; background: var(--surface-soft); }
+    .record-card { padding: clamp(20px, 3vw, 30px); }
+    .source-note { margin: 24px 0 0; padding: 14px 0 0; border-top: 1px solid var(--line); color: var(--subtle); font-size: 11px; }
+    .source-note a { font-weight: 700; }
 
-    .ac { position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #fff; border: 1px solid var(--line);
-          border-radius: var(--radius-sm); box-shadow: var(--shadow); z-index: 1200; max-height: 360px; overflow-y: auto; display: none; }
-    .ac div { padding: 9px 14px; cursor: pointer; font-size: 14px; display: flex; gap: 9px; align-items: center; }
-    .ac div:hover, .ac div.active { background: var(--teal-50); }
-    .ac .ac-body { min-width: 0; }
-    .ac .ac-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .ac .ac-sub { font-size: 11.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .ac .who { width: 22px; height: 22px; border-radius: 50%; background: var(--teal-50); color: var(--teal);
-               display: grid; place-items: center; font-size: 12px; flex: 0 0 auto; }
+    .browse-head { display: flex; align-items: end; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+    .browse-head h2 { margin: 0; font-size: 21px; }
+    .browse-head p { margin: 3px 0 0; color: var(--muted); font-size: 12px; }
+    .office-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .office-list button {
+        width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 10px;
+        padding: 13px 14px; border: 1px solid var(--line); border-radius: 11px; background: var(--surface);
+        color: var(--ink); text-align: left; cursor: pointer;
+    }
+    .office-list button:hover { border-color: var(--success); box-shadow: var(--shadow); }
+    .office-list-copy { min-width: 0; display: grid; }
+    .office-list-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 800; }
+    .office-list-sub { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--muted); font-size: 11px; }
+    .office-list-arrow { color: var(--success); font-weight: 800; }
+    .nearby-list button { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .distance { color: var(--accent); font: 700 11px 'IBM Plex Mono', monospace; white-space: nowrap; }
 
-    .layout { display: grid; grid-template-columns: 1fr 40%; gap: 0; height: calc(100vh - 58px); }
-    .pane-left { overflow-y: auto; padding: 22px 26px; }
-    .pane-right { position: relative; border-left: 1px solid var(--line); }
-    #map { position: absolute; inset: 0; }
+    .map-pane { min-width: 0; position: relative; overflow: hidden; background: var(--canvas-deep); }
+    #map { position: absolute; inset: 0; z-index: 1; }
+    .map-topbar {
+        position: absolute; top: 16px; left: 16px; right: 16px; z-index: 500;
+        display: flex; align-items: center; justify-content: space-between; gap: 12px;
+        padding: 11px 13px; border: 1px solid rgba(217,224,218,.94); border-radius: 12px;
+        background: rgba(255,255,255,.94); box-shadow: var(--shadow); backdrop-filter: blur(12px);
+    }
+    .map-title { min-width: 0; }
+    .map-title strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--primary-deep); font-family: 'Manrope', sans-serif; font-size: 13px; }
+    .map-title span { color: var(--muted); font-size: 10px; }
+    .map-count { flex: 0 0 auto; padding: 4px 8px; border-radius: 999px; background: var(--primary-soft); color: var(--primary); font: 700 10px 'IBM Plex Mono', monospace; }
+    .map-key {
+        position: absolute; left: 16px; bottom: 26px; z-index: 500;
+        display: inline-flex; align-items: center; gap: 7px; padding: 7px 10px;
+        border: 1px solid var(--line); border-radius: 9px; background: rgba(255,255,255,.94);
+        color: var(--muted); box-shadow: var(--shadow); font-size: 10px; backdrop-filter: blur(10px);
+    }
+    .map-key i { width: 8px; height: 8px; border-radius: 50%; background: var(--success); box-shadow: 0 0 0 4px rgba(23,107,85,.14); }
+    .map-fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 30px; color: var(--muted); text-align: center; }
+    .toast {
+        position: fixed; left: 50%; bottom: 24px; z-index: 2500; transform: translate(-50%, 140%);
+        max-width: calc(100% - 32px); padding: 11px 15px; border-radius: 10px;
+        background: var(--primary-deep); color: #fff; box-shadow: var(--shadow-raised); font-size: 13px;
+        transition: transform .2s ease;
+    }
+    .toast.show { transform: translate(-50%, 0); }
+    .leaflet-popup-content { font-family: 'DM Sans', sans-serif; }
+    .leaflet-popup-content strong { color: var(--primary-deep); }
 
-    .hierarchy { margin: 0 0 18px; padding: 0; overflow: hidden; }
-    .hierarchy summary { cursor: pointer; list-style: none; display: grid; grid-template-columns: 1fr auto;
-                         gap: 12px; align-items: center; padding: 13px 16px; }
-    .hierarchy summary::-webkit-details-marker { display: none; }
-    .hier-summary-copy { min-width: 0; }
-    .hier-title { display: block; font-family: 'Space Grotesk', sans-serif; font-weight: 700;
-                  font-size: 15px; color: var(--primary-700); }
-    .hier-hint { display: block; margin-top: 2px; color: var(--muted); font-size: 12.5px; }
-    .hier-toggle { font-family: 'IBM Plex Mono', monospace; font-size: 11px; text-transform: uppercase;
-                   letter-spacing: .08em; color: var(--accent-600); border: 1px solid var(--line);
-                   border-radius: 999px; padding: 4px 9px; white-space: nowrap; }
-    .hier-toggle::before { content: "Expand"; }
-    .hierarchy[open] .hier-toggle::before { content: "Collapse"; }
-    .hier-body { border-top: 1px solid var(--line); padding: 14px 16px 16px; }
-    .hier-path { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin-bottom: 14px; }
-    .hier-step { font-size: 12.5px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 9px;
-                 background: var(--surface-2); color: var(--ink); }
-    a.hier-step:hover { border-color: var(--teal); text-decoration: none; }
-    .hier-step.current { background: var(--primary); border-color: var(--primary); color: #fff; }
-    .hier-sep { color: var(--faint); font-size: 12px; }
-    .hier-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    .hier-block { min-width: 0; }
-    .hier-block h4 { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase;
-                     letter-spacing: .08em; color: var(--faint); margin: 0 0 7px; }
-    .hier-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
-    .hier-list a { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
-                   border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 7px 9px;
-                   color: var(--ink); background: var(--surface); font-size: 13px; }
-    .hier-list a:hover { border-color: var(--teal); color: var(--teal); text-decoration: none; }
-    .hier-more { color: var(--faint); font-size: 12px; padding: 2px 1px; }
-    @media (max-width: 620px) { .hier-grid { grid-template-columns: 1fr; } }
-
-    /* highlight a specific officer arrived at via officer search */
-    .offs li.hi { outline: 2px solid var(--accent); background: #FFF7EF; }
-
-    /* "near me" list */
-    .nearby-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px; }
-    .nearby-head h2 { font-size: 19px; color: var(--primary-700); }
-    .linkish { border: 0; background: transparent; color: var(--teal); cursor: pointer; font-size: 13px; }
-    .nearby { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
-    .nearby li { display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: var(--radius-sm);
-                 padding: 10px 12px; background: var(--surface); cursor: pointer; }
-    .nearby li:hover { border-color: var(--teal); }
-    .nearby .nm { flex: 1; min-width: 0; }
-    .nearby .dist { color: var(--accent-600); font-size: 13px; white-space: nowrap; }
-
-    .mobile-map-toggle { display: none; }
-    @media (max-width: 820px) {
-        .layout { grid-template-columns: 1fr; height: auto; }
-        .pane-right { height: 60vh; border-left: 0; border-top: 1px solid var(--line); display: none; }
-        .pane-right.show { display: block; }
-        .mobile-map-toggle { display: inline-block; position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
-                             z-index: 1300; box-shadow: var(--shadow); }
-        .appbar { flex-wrap: wrap; }
-        .header-wrap { order: 3; max-width: none; flex-basis: 100%; }
+    @media (max-width: 1000px) {
+        .workspace { grid-template-columns: minmax(460px, 60%) minmax(300px, 40%); }
+        .discover h1 { font-size: 30px; }
+        .stats { display: none; }
+    }
+    @media (max-width: 780px) {
+        body { overflow: hidden; }
+        .app-shell { height: calc(100dvh - 62px); }
+        .mobile-tabs {
+            flex: 0 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 6px;
+            background: var(--primary-deep); border-top: 1px solid rgba(255,255,255,.08);
+        }
+        .mobile-tabs button { min-height: 38px; border: 0; border-radius: 8px; background: transparent; color: rgba(255,255,255,.68); font-weight: 800; }
+        .mobile-tabs button[aria-pressed="true"] { background: #fff; color: var(--primary-deep); }
+        .workspace { display: block; height: 100%; border: 0; }
+        .directory-pane, .map-pane { width: 100%; height: 100%; border: 0; }
+        .workspace[data-mobile-view="directory"] .map-pane { display: none; }
+        .workspace[data-mobile-view="map"] .directory-pane { display: none; }
+        .discover { padding: 18px 16px 14px; }
+        .discover h1 { font-size: clamp(25px, 8vw, 34px); }
+        .lede { margin-bottom: 14px; }
+        .search-row { grid-template-columns: minmax(0, 1fr) 50px; }
+        .near-btn { width: 50px; padding: 0; font-size: 0; }
+        .near-btn::before { content: 'Near'; font-size: 10px; }
+        .filter-wrap { align-items: flex-start; }
+        .chip-row { flex-wrap: nowrap; overflow-x: auto; padding: 2px 3px 5px; scrollbar-width: none; }
+        .chip-row::-webkit-scrollbar { display: none; }
+        .detail-scroll { padding: 16px 14px 40px; }
+        .map-topbar { top: 12px; left: 12px; right: 12px; }
+    }
+    @media (max-width: 420px) {
+        .lede { font-size: 13px; }
+        .search-meta span:last-child { display: none; }
+        .record-card { padding: 18px; }
     }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#directoryContent">Skip to directory results</a>
 <header class="appbar">
-    <span class="brand"><span class="seal">₹</span> PF Directory</span>
-    <div class="header-wrap">
-        <div class="search"><span class="ico">🔍</span><input id="q" type="text" placeholder="Search office, officer, designation or phone…" autocomplete="off"></div>
-        <div class="ac" id="ac"></div>
-    </div>
-    <button class="btn near-btn" id="nearBtn">📍 Near me</button>
-    <span class="unofficial">Unofficial</span>
+    <a class="brand" href="./" aria-label="PF Directory home">
+        <span class="brand-mark" aria-hidden="true">PF</span>
+        <span class="brand-copy">
+            <span class="brand-title">PF Directory</span>
+            <span class="brand-sub">India-wide office finder</span>
+        </span>
+    </a>
+    <nav class="top-nav" aria-label="Primary navigation">
+        <a href="./" aria-current="page">Directory</a>
+        <a href="./planner.html">Coverage lab</a>
+        <a href="./API.md">Data API</a>
+        <a href="./privacy_policy.html">Privacy</a>
+    </nav>
+    <span class="trust-pill">Public data · 2025 snapshot</span>
 </header>
 
-<div class="layout">
-    <section class="pane-left" id="detail"><p class="empty">Loading directory…</p></section>
-    <section class="pane-right" id="mapPane"><div id="map"></div></section>
-</div>
-<button class="btn btn-accent mobile-map-toggle" id="mapToggle">Show map</button>
+<div class="app-shell">
+    <nav class="mobile-tabs" aria-label="Directory view">
+        <button id="directoryTab" type="button" aria-pressed="true" aria-controls="directoryPane">Directory</button>
+        <button id="mapTab" type="button" aria-pressed="false" aria-controls="mapPane">Map</button>
+    </nav>
 
+    <main class="workspace" id="workspace" data-mobile-view="directory">
+        <section class="directory-pane" id="directoryPane" aria-labelledby="pageTitle">
+            <div class="discover">
+                <p class="eyebrow">Unofficial public-service directory</p>
+                <h1 id="pageTitle">Find the right EPFO office, faster.</h1>
+                <p class="lede">Search offices, officers, designations, phone numbers or email addresses across India.</p>
+
+                <div class="search-row">
+                    <div class="search-wrap">
+                        <label class="sr-only" for="directorySearch">Search the PF directory</label>
+                        <div class="search">
+                            <span class="search-symbol" aria-hidden="true">⌕</span>
+                            <input id="directorySearch" type="search" placeholder="Try “Bengaluru”, “RPFC” or a phone number" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="searchSuggestions">
+                            <span class="key-hint" aria-hidden="true">Ctrl K</span>
+                        </div>
+                        <div class="autocomplete" id="searchSuggestions" role="listbox" aria-label="Search suggestions"></div>
+                    </div>
+                    <button class="btn btn-primary near-btn" id="nearBtn" type="button" aria-describedby="nearHelp">Near me</button>
+                </div>
+                <span id="nearHelp" class="sr-only">Uses your location once to find nearby offices. Your location is not stored.</span>
+
+                <div class="search-meta" aria-live="polite">
+                    <span id="resultSummary">Loading directory…</span>
+                    <span>Use ↑ ↓ and Enter to choose</span>
+                </div>
+
+                <div class="filter-wrap">
+                    <span class="filter-label">Office type</span>
+                    <div class="chip-row" id="typeFilters" aria-label="Filter offices by type">
+                        <button class="chip" type="button" data-type="ALL" aria-pressed="true">All</button>
+                        <button class="chip" type="button" data-type="HO" aria-pressed="false">Head</button>
+                        <button class="chip" type="button" data-type="ZO" aria-pressed="false">Zonal</button>
+                        <button class="chip" type="button" data-type="RO" aria-pressed="false">Regional</button>
+                        <button class="chip" type="button" data-type="DO" aria-pressed="false">District</button>
+                        <button class="chip" type="button" data-type="SPECIAL" aria-pressed="false">Guest & training</button>
+                    </div>
+                </div>
+
+                <div class="stats" aria-label="Directory statistics">
+                    <span class="stat"><strong id="officeCount">—</strong> offices</span>
+                    <span class="stat"><strong id="officialCount">—</strong> officials</span>
+                    <span class="stat"><strong id="mappedCount">—</strong> mapped locations</span>
+                </div>
+            </div>
+
+            <div class="detail-scroll" id="directoryContent" tabindex="-1">
+                <div class="record-card card" id="detail" aria-live="polite" aria-busy="true">
+                    <p class="empty">Loading the latest directory snapshot…</p>
+                </div>
+            </div>
+        </section>
+
+        <aside class="map-pane" id="mapPane" aria-label="Map of EPFO offices">
+            <div id="map" role="region" aria-label="Interactive map showing EPFO office locations"></div>
+            <div class="map-fallback" id="mapFallback" hidden>
+                <p>The map could not load. You can still search and use every contact in the directory.</p>
+            </div>
+            <div class="map-topbar">
+                <div class="map-title">
+                    <strong id="mapOfficeTitle">EPFO offices across India</strong>
+                    <span id="mapStatus">Select an office to focus the map</span>
+                </div>
+                <span class="map-count" id="mapCount">— mapped</span>
+            </div>
+            <div class="map-key"><i aria-hidden="true"></i> Select a marker for office details</div>
+        </aside>
+    </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9coqIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="common.js"></script>
 <script>
-let map, cluster, userMarker = null, markersByQuery = {}, index = [], acIndex = -1, defaultQuery = null;
-const qEl = document.getElementById('q'), acEl = document.getElementById('ac'), detailEl = document.getElementById('detail');
+let map = null;
+let cluster = null;
+let userMarker = null;
+let markersByQuery = new Map();
+let searchIndex = [];
+let suggestionHits = [];
+let activeSuggestion = -1;
+let activeType = 'ALL';
+let currentQuery = null;
+let toastTimer = null;
 
-init();
-async function init() {
-    try { await EPFO.load(); } catch (e) { detailEl.innerHTML = `<p class="empty">Could not load data: ${EPFO.escapeHtml(e.message)}</p>`; return; }
-    buildIndex();
-    buildMap();
-    const ho = EPFO.all().find(c => /HEAD\+?OFFICE/i.test(c.query || '')) || EPFO.all()[0];
-    if (ho) { defaultQuery = ho.query; select(ho.query); }
-    wire();
+const searchInput = document.getElementById('directorySearch');
+const suggestionsEl = document.getElementById('searchSuggestions');
+const detailEl = document.getElementById('detail');
+const resultSummary = document.getElementById('resultSummary');
+const workspace = document.getElementById('workspace');
+
+start();
+
+async function start() {
+    try {
+        await EPFO.load();
+        buildSearchIndex();
+        updateStats();
+        buildMap();
+        wireInteractions();
+
+        const hashQuery = readHash();
+        const initial = (hashQuery && EPFO.byQuery(hashQuery)) ||
+            EPFO.all().find(contact => EPFO.officeType(contact).code === 'HO') ||
+            EPFO.all()[0];
+        if (initial) selectOffice(initial.query, { updateHistory: false, announce: false });
+        detailEl.setAttribute('aria-busy', 'false');
+    } catch (error) {
+        detailEl.setAttribute('aria-busy', 'false');
+        detailEl.innerHTML = `<div class="notice"><strong>Directory unavailable.</strong><br>${EPFO.escapeHtml(error.message)}. Please refresh and try again.</div>`;
+        resultSummary.textContent = 'The directory could not be loaded';
+    }
 }
 
-// Combined search index: offices AND individual officials.
-function buildIndex() {
-    EPFO.all().forEach(ct => {
-        const name = EPFO.officeName(ct);
-        if (name && name.trim() !== '-') {
-            index.push({ kind: 'office', label: name, sub: (EPFO.breadcrumbs(ct)[0] || {}).name || '',
-                         type: EPFO.officeType(ct).code, query: ct.query, hay: name.toLowerCase() });
-        }
-        (ct.officials || []).forEach((of, i) => {
-            const hay = [of.name, of.designation, (of.phone_numbers || []).join(' '), of.email].filter(Boolean).join(' ').toLowerCase();
-            index.push({ kind: 'official', label: of.name || '—', sub: `${of.designation || ''}${of.designation ? ' · ' : ''}${name}`,
-                         query: ct.query, officialIndex: i, hay });
+function buildSearchIndex() {
+    searchIndex = [];
+    EPFO.all().forEach(contact => {
+        const officeName = EPFO.officeName(contact);
+        const type = EPFO.officeType(contact);
+        const location = EPFO.breadcrumbs(contact).map(item => item.name).join(' · ');
+        searchIndex.push({
+            kind: 'office',
+            label: officeName,
+            sub: location || type.label,
+            type: type.code,
+            query: contact.query,
+            haystack: [officeName, location, type.label, EPFO.pin(contact), ...EPFO.phones(contact)].join(' ').toLowerCase()
+        });
+        (contact.officials || []).forEach((official, officialIndex) => {
+            const details = [official.designation, officeName].filter(Boolean).join(' · ');
+            searchIndex.push({
+                kind: 'official',
+                label: official.name || 'Unnamed official',
+                sub: details,
+                type: type.code,
+                query: contact.query,
+                officialIndex,
+                haystack: [official.name, official.designation, official.email, ...(official.phone_numbers || []), officeName].filter(Boolean).join(' ').toLowerCase()
+            });
         });
     });
 }
 
+function updateStats() {
+    const contacts = EPFO.all();
+    const officialTotal = contacts.reduce((total, contact) => total + (contact.officials || []).length, 0);
+    const mappedTotal = contacts.filter(EPFO.hasLatLng).length;
+    document.getElementById('officeCount').textContent = contacts.length.toLocaleString('en-IN');
+    document.getElementById('officialCount').textContent = officialTotal.toLocaleString('en-IN');
+    document.getElementById('mappedCount').textContent = mappedTotal.toLocaleString('en-IN');
+    document.getElementById('mapCount').textContent = `${mappedTotal.toLocaleString('en-IN')} mapped`;
+    resultSummary.textContent = `${contacts.length.toLocaleString('en-IN')} offices ready to search`;
+}
+
 function buildMap() {
-    map = L.map('map', { scrollWheelZoom: true }).setView([22, 79], 5);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap', maxZoom: 18 }).addTo(map);
-    cluster = L.markerClusterGroup({ maxClusterRadius: 45 });
-    EPFO.all().forEach(ct => {
-        if (!EPFO.hasLatLng(ct)) return;
-        const lat = parseFloat(ct.office.latitude), lon = parseFloat(ct.office.longitude);
-        if (isNaN(lat) || isNaN(lon)) return;
-        const m = L.marker([lat, lon]).bindPopup(`<b>${EPFO.escapeHtml(EPFO.officeName(ct))}</b>`);
-        m.on('click', () => select(ct.query));
-        markersByQuery[ct.query] = m;
-        cluster.addLayer(m);
+    if (!window.L) {
+        document.getElementById('mapFallback').hidden = false;
+        document.getElementById('mapStatus').textContent = 'Map unavailable; directory is ready';
+        return;
+    }
+    map = L.map('map', { scrollWheelZoom: false, zoomControl: false }).setView([22.8, 79.4], 5);
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors',
+        maxZoom: 18
+    }).addTo(map);
+    cluster = typeof L.markerClusterGroup === 'function'
+        ? L.markerClusterGroup({ maxClusterRadius: 42, showCoverageOnHover: false })
+        : L.layerGroup();
+    EPFO.all().forEach(contact => {
+        if (!EPFO.hasLatLng(contact)) return;
+        const lat = Number(contact.office.latitude);
+        const lon = Number(contact.office.longitude);
+        if (!Number.isFinite(lat) || !Number.isFinite(lon)) return;
+        const marker = L.marker([lat, lon], { title: EPFO.officeName(contact) })
+            .bindPopup(`<strong>${EPFO.escapeHtml(EPFO.officeName(contact))}</strong><br><span style="color:#506366">Open directory record</span>`);
+        marker.on('click', () => {
+            selectOffice(contact.query);
+            setMobileView('directory');
+        });
+        markersByQuery.set(contact.query, marker);
+        cluster.addLayer(marker);
     });
     map.addLayer(cluster);
 }
 
-function select(query, opts = {}) {
-    const ct = EPFO.byQuery(query);
-    if (!ct) return;
-    detailEl.innerHTML = hierarchyHtml(ct) + EPFO.renderDetail(ct);
-    detailEl.scrollTop = 0;
-    qEl.value = '';
-    hideAc();
-    if (EPFO.hasLatLng(ct)) {
-        const lat = parseFloat(ct.office.latitude), lon = parseFloat(ct.office.longitude);
-        map.setView([lat, lon], 11);
-        const m = markersByQuery[query];
-        if (m) cluster.zoomToShowLayer(m, () => m.openPopup());
+function wireInteractions() {
+    searchInput.addEventListener('input', handleSearchInput);
+    searchInput.addEventListener('keydown', handleSearchKeys);
+    searchInput.addEventListener('focus', () => {
+        if (searchInput.value.trim().length >= 2) renderSuggestions(searchDirectory(searchInput.value));
+    });
+    document.addEventListener('click', event => {
+        if (!suggestionsEl.contains(event.target) && event.target !== searchInput) closeSuggestions();
+    });
+    document.addEventListener('keydown', event => {
+        if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 'k') {
+            event.preventDefault();
+            searchInput.focus();
+            searchInput.select();
+        }
+    });
+    document.getElementById('nearBtn').addEventListener('click', findNearby);
+    document.getElementById('typeFilters').addEventListener('click', event => {
+        const button = event.target.closest('[data-type]');
+        if (!button) return;
+        activeType = button.dataset.type;
+        document.querySelectorAll('[data-type]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+        closeSuggestions();
+        renderBrowse(searchInput.value.trim());
+    });
+    document.getElementById('directoryTab').addEventListener('click', () => setMobileView('directory'));
+    document.getElementById('mapTab').addEventListener('click', () => setMobileView('map'));
+    window.addEventListener('popstate', () => {
+        const query = readHash();
+        if (query && query !== currentQuery && EPFO.byQuery(query)) selectOffice(query, { updateHistory: false });
+    });
+}
+
+function typeMatches(type) {
+    if (activeType === 'ALL') return true;
+    if (activeType === 'SPECIAL') return ['AP', 'HH', 'GH'].includes(type);
+    return type === activeType;
+}
+
+function searchDirectory(rawTerm) {
+    const term = rawTerm.trim().toLowerCase();
+    if (term.length < 2) return [];
+    const tokens = term.split(/\s+/).filter(Boolean);
+    return searchIndex
+        .filter(item => typeMatches(item.type) && tokens.every(token => item.haystack.includes(token)))
+        .map(item => {
+            let score = item.kind === 'office' ? 2 : 0;
+            if (item.label.toLowerCase() === term) score += 10;
+            else if (item.label.toLowerCase().startsWith(term)) score += 6;
+            else if (item.haystack.startsWith(term)) score += 3;
+            return { ...item, score };
+        })
+        .sort((a, b) => b.score - a.score || a.label.localeCompare(b.label));
+}
+
+function handleSearchInput() {
+    const term = searchInput.value.trim();
+    activeSuggestion = -1;
+    if (term.length < 2) {
+        closeSuggestions();
+        resultSummary.textContent = term ? 'Type at least 2 characters' : `${EPFO.all().length} offices ready to search`;
+        return;
     }
-    detailEl.querySelectorAll('a[data-q]').forEach(a =>
-        a.addEventListener('click', e => { e.preventDefault(); select(a.dataset.q); }));
-    if (opts.officialIndex != null) {
-        const li = detailEl.querySelectorAll('.offs li')[opts.officialIndex];
-        if (li) { li.classList.add('hi'); li.scrollIntoView({ block: 'center' }); }
+    const hits = searchDirectory(term);
+    resultSummary.textContent = hits.length ? `${hits.length.toLocaleString('en-IN')} matching records` : 'No matching offices or officials';
+    renderSuggestions(hits);
+}
+
+function renderSuggestions(hits) {
+    suggestionHits = hits.slice(0, 12);
+    activeSuggestion = -1;
+    searchInput.removeAttribute('aria-activedescendant');
+    if (!suggestionHits.length) {
+        suggestionsEl.innerHTML = '<div class="empty" role="status">No results. Try a city, designation or phone number.</div>';
+        openSuggestions();
+        return;
+    }
+    suggestionsEl.innerHTML = suggestionHits.map((item, index) => {
+        const leading = item.kind === 'office'
+            ? `<span class="tag tag-${item.type}" aria-label="${EPFO.escapeHtml(item.type)} office">${item.type}</span>`
+            : '<span class="person-mark" aria-hidden="true">OFF</span>';
+        return `<button type="button" role="option" id="suggestion-${index}" aria-selected="false" data-index="${index}">
+            ${leading}
+            <span class="autocomplete-copy">
+                <span class="autocomplete-name">${EPFO.escapeHtml(item.label)}</span>
+                <span class="autocomplete-sub">${EPFO.escapeHtml(item.sub)}</span>
+            </span>
+        </button>`;
+    }).join('');
+    suggestionsEl.querySelectorAll('[role="option"]').forEach(button => {
+        button.addEventListener('click', () => chooseSuggestion(suggestionHits[Number(button.dataset.index)]));
+    });
+    openSuggestions();
+}
+
+function openSuggestions() {
+    suggestionsEl.classList.add('open');
+    searchInput.setAttribute('aria-expanded', 'true');
+}
+
+function closeSuggestions() {
+    suggestionsEl.classList.remove('open');
+    searchInput.setAttribute('aria-expanded', 'false');
+    searchInput.removeAttribute('aria-activedescendant');
+    activeSuggestion = -1;
+}
+
+function handleSearchKeys(event) {
+    const options = suggestionsEl.querySelectorAll('[role="option"]');
+    if (event.key === 'Escape') {
+        closeSuggestions();
+        return;
+    }
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+        if (!options.length) return;
+        event.preventDefault();
+        const direction = event.key === 'ArrowDown' ? 1 : -1;
+        activeSuggestion = (activeSuggestion + direction + options.length) % options.length;
+        options.forEach((option, index) => {
+            const active = index === activeSuggestion;
+            option.classList.toggle('active', active);
+            option.setAttribute('aria-selected', String(active));
+        });
+        const activeOption = options[activeSuggestion];
+        searchInput.setAttribute('aria-activedescendant', activeOption.id);
+        activeOption.scrollIntoView({ block: 'nearest' });
+        return;
+    }
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        if (suggestionHits.length) chooseSuggestion(suggestionHits[Math.max(activeSuggestion, 0)]);
+        else renderBrowse(searchInput.value.trim());
     }
 }
 
-function hierarchyHtml(ct) {
-    const b = EPFO.breadcrumbs(ct);
-    const parent = EPFO.parentOf(ct);
-    const children = EPFO.childrenOf(ct);
-    const siblings = EPFO.siblingsOf(ct);
-    if (!b.length && !parent && !children.length && !siblings.length) return '';
+function chooseSuggestion(item) {
+    if (!item) return;
+    searchInput.value = '';
+    closeSuggestions();
+    selectOffice(item.query, { officialIndex: item.officialIndex });
+}
 
-    const path = b.map(crumb => {
-        const linked = EPFO.contactForHierarchyValue(crumb.query_param);
-        return { label: crumb.name, query: linked && linked.query !== ct.query ? linked.query : null };
-    });
-    if (parent && !path.some(item => item.query === parent.query)) {
-        path.unshift({ label: EPFO.officeName(parent), query: parent.query });
+function renderBrowse(term = '') {
+    const normalized = term.trim().toLowerCase();
+    const officeItems = searchIndex.filter(item => item.kind === 'office' && typeMatches(item.type) && (!normalized || item.haystack.includes(normalized)));
+    const typeLabel = activeType === 'ALL' ? 'All offices' : activeType === 'SPECIAL' ? 'Guest, holiday and training offices' : `${activeType} offices`;
+    resultSummary.textContent = `${officeItems.length.toLocaleString('en-IN')} offices in this view`;
+    detailEl.className = '';
+    detailEl.innerHTML = `
+        <div class="browse-head">
+            <div><h2>${EPFO.escapeHtml(typeLabel)}</h2><p>${normalized ? `Filtered by “${EPFO.escapeHtml(term)}”` : 'Choose an office to view its contacts'}</p></div>
+            <button class="btn btn-quiet" type="button" id="browseReset">Reset</button>
+        </div>
+        ${officeItems.length ? `<ul class="office-list">${officeItems.slice(0, 100).map(office => `
+            <li><button type="button" data-query="${EPFO.escapeHtml(office.query)}">
+                <span class="tag tag-${office.type}">${office.type}</span>
+                <span class="office-list-copy"><span class="office-list-name">${EPFO.escapeHtml(office.label)}</span><span class="office-list-sub">${EPFO.escapeHtml(office.sub)}</span></span>
+                <span class="office-list-arrow" aria-hidden="true">→</span>
+            </button></li>`).join('')}</ul>` : '<div class="notice">No offices match this filter. Reset the filters or try another search.</div>'}
+    `;
+    detailEl.querySelectorAll('[data-query]').forEach(button => button.addEventListener('click', () => selectOffice(button.dataset.query)));
+    document.getElementById('browseReset').addEventListener('click', resetDirectory);
+    document.getElementById('directoryContent').scrollTop = 0;
+}
+
+function resetDirectory() {
+    activeType = 'ALL';
+    searchInput.value = '';
+    document.querySelectorAll('[data-type]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.type === 'ALL')));
+    const home = EPFO.all().find(contact => EPFO.officeType(contact).code === 'HO') || EPFO.all()[0];
+    if (home) selectOffice(home.query);
+}
+
+function selectOffice(query, options = {}) {
+    const contact = EPFO.byQuery(query);
+    if (!contact) return;
+    currentQuery = query;
+    const updateHistory = options.updateHistory !== false;
+    const officeName = EPFO.officeName(contact);
+    const type = EPFO.officeType(contact);
+
+    detailEl.className = 'record-card card';
+    detailEl.innerHTML = hierarchyHtml(contact) + EPFO.renderDetail(contact) + recordActionsHtml(contact) + `
+        <p class="source-note">Community-maintained snapshot of publicly listed EPFO contacts. Confirm time-sensitive details on the <a href="https://www.epfindia.gov.in/" target="_blank" rel="noopener noreferrer">official EPFO website</a>. <a href="./privacy_policy.html">Privacy</a></p>`;
+    detailEl.querySelectorAll('[data-query]').forEach(link => link.addEventListener('click', event => {
+        event.preventDefault();
+        selectOffice(link.dataset.query);
+    }));
+    document.getElementById('copyLinkBtn').addEventListener('click', copyCurrentLink);
+
+    if (options.officialIndex != null) {
+        const official = detailEl.querySelectorAll('.offs li')[options.officialIndex];
+        if (official) {
+            official.classList.add('highlighted');
+            requestAnimationFrame(() => official.scrollIntoView({ block: 'center', behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }));
+        }
+    } else {
+        document.getElementById('directoryContent').scrollTop = 0;
     }
-    path.push({ label: EPFO.officeName(ct), current: true });
+
+    resultSummary.textContent = `${type.label} selected`;
+    document.getElementById('mapOfficeTitle').textContent = officeName;
+    if (EPFO.hasLatLng(contact) && map) {
+        const lat = Number(contact.office.latitude);
+        const lon = Number(contact.office.longitude);
+        map.setView([lat, lon], 11);
+        const marker = markersByQuery.get(query);
+        if (marker && typeof cluster.zoomToShowLayer === 'function') cluster.zoomToShowLayer(marker, () => marker.openPopup());
+        else if (marker) marker.openPopup();
+        document.getElementById('mapStatus').textContent = 'Map centred on this office';
+    } else {
+        document.getElementById('mapStatus').textContent = 'No mapped location for this record';
+    }
+    if (updateHistory) history.pushState({ query }, '', `#${encodeURIComponent(query)}`);
+    document.title = `${officeName} — PF Directory`;
+    if (options.announce !== false) showToast(`${officeName} selected`);
+}
+
+function recordActionsHtml(contact) {
+    const mapLink = EPFO.hasLatLng(contact)
+        ? `<a class="btn" href="https://www.openstreetmap.org/?mlat=${encodeURIComponent(contact.office.latitude)}&mlon=${encodeURIComponent(contact.office.longitude)}#map=16/${encodeURIComponent(contact.office.latitude)}/${encodeURIComponent(contact.office.longitude)}" target="_blank" rel="noopener noreferrer">Open map ↗</a>`
+        : '';
+    return `<div class="record-actions">
+        <button class="btn btn-primary" type="button" id="copyLinkBtn">Copy record link</button>
+        ${mapLink}
+    </div>`;
+}
+
+function hierarchyHtml(contact) {
+    const breadcrumbs = EPFO.breadcrumbs(contact);
+    const parent = EPFO.parentOf(contact);
+    const children = EPFO.childrenOf(contact);
+    const siblings = EPFO.siblingsOf(contact);
+    if (!breadcrumbs.length && !parent && !children.length && !siblings.length) return '';
+
+    const path = breadcrumbs.map(crumb => {
+        const linked = EPFO.contactForHierarchyValue(crumb.query_param);
+        return { label: crumb.name, query: linked && linked.query !== contact.query ? linked.query : null };
+    });
+    if (parent && !path.some(item => item.query === parent.query)) path.unshift({ label: EPFO.officeName(parent), query: parent.query });
+    path.push({ label: EPFO.officeName(contact), current: true });
 
     return `<details class="hierarchy card">
         <summary>
-            <span class="hier-summary-copy">
-                <span class="hier-title">Office hierarchy</span>
-                <span class="hier-hint">Expand for parent, nearby / sister offices in this office line.</span>
-            </span>
+            <span><span class="hier-title">Office hierarchy</span><span class="hier-hint">Explore parent and related offices</span></span>
             <span class="hier-toggle" aria-hidden="true"></span>
         </summary>
         <div class="hier-body">
-            <div class="hier-path">${path.map((item, i) => {
-            const step = item.query
-                ? `<a href="#" class="hier-step" data-q="${EPFO.escapeHtml(item.query)}">${EPFO.escapeHtml(item.label)}</a>`
-                : `<span class="hier-step${item.current ? ' current' : ''}">${EPFO.escapeHtml(item.label)}</span>`;
-            return i === 0 ? step : `<span class="hier-sep">/</span>${step}`;
-        }).join('')}</div>
+            <div class="hier-path">${path.map((item, index) => {
+                const step = item.query
+                    ? `<a href="#${encodeURIComponent(item.query)}" class="hier-step" data-query="${EPFO.escapeHtml(item.query)}">${EPFO.escapeHtml(item.label)}</a>`
+                    : `<span class="hier-step${item.current ? ' current' : ''}">${EPFO.escapeHtml(item.label)}</span>`;
+                return index ? `<span class="hier-sep">/</span>${step}` : step;
+            }).join('')}</div>
             <div class="hier-grid">
                 ${parent ? hierarchyBlock('Parent office', [parent]) : ''}
                 ${children.length ? hierarchyBlock('Under this office', children) : ''}
-                ${siblings.length ? hierarchyBlock(parent ? 'Nearby / sister offices' : 'Related offices', siblings) : ''}
+                ${siblings.length ? hierarchyBlock(parent ? 'Sister offices' : 'Related offices', siblings) : ''}
             </div>
         </div>
     </details>`;
@@ -216,108 +619,122 @@ function hierarchyHtml(ct) {
 function hierarchyBlock(title, offices) {
     const visible = offices.slice(0, 8);
     const remaining = offices.length - visible.length;
-    return `<div class="hier-block">
-        <h4>${title}</h4>
-        <ul class="hier-list">${visible.map(officeLink).join('')}</ul>
-        ${remaining > 0 ? `<div class="hier-more">+ ${remaining} more</div>` : ''}
-    </div>`;
+    return `<div class="hier-block"><h4>${title}</h4><ul class="hier-list">
+        ${visible.map(contact => {
+            const type = EPFO.officeType(contact);
+            return `<li><a href="#${encodeURIComponent(contact.query)}" data-query="${EPFO.escapeHtml(contact.query)}"><span class="tag tag-${type.code}">${type.code}</span><span class="office-link-label">${EPFO.escapeHtml(EPFO.officeName(contact))}</span></a></li>`;
+        }).join('')}
+        </ul>${remaining > 0 ? `<div class="hier-more">+${remaining} more offices</div>` : ''}</div>`;
 }
 
-function officeLink(ct) {
-    const t = EPFO.officeType(ct);
-    return `<li><a href="#" data-q="${EPFO.escapeHtml(ct.query)}">
-        <span class="tag tag-${t.code}">${t.code}</span> ${EPFO.escapeHtml(EPFO.officeName(ct))}
-    </a></li>`;
+async function copyCurrentLink() {
+    const url = window.location.href;
+    try {
+        await navigator.clipboard.writeText(url);
+        showToast('Record link copied');
+    } catch (_) {
+        const temp = document.createElement('input');
+        temp.value = url;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        temp.remove();
+        showToast('Record link copied');
+    }
 }
 
-/* ---------- Search (offices + officials) ---------- */
-function wire() {
-    qEl.addEventListener('input', () => {
-        const term = qEl.value.trim().toLowerCase();
-        acIndex = -1;
-        if (term.length < 2) return hideAc();
-        const hits = index.filter(o => o.hay.includes(term)).slice(0, 12);
-        if (!hits.length) return hideAc();
-        acEl.innerHTML = hits.map((o, i) => {
-            const left = o.kind === 'office'
-                ? `<span class="tag tag-${o.type}">${o.type}</span>`
-                : `<span class="who">👤</span>`;
-            return `<div data-i="${i}"><span style="flex:0 0 auto">${left}</span>
-                <span class="ac-body"><span class="ac-name">${EPFO.escapeHtml(o.label)}</span>
-                <span class="ac-sub">${EPFO.escapeHtml(o.sub)}</span></span></div>`;
-        }).join('');
-        acEl.querySelectorAll('div[data-i]').forEach(d =>
-            d.addEventListener('click', () => choose(hits[+d.dataset.i])));
-        acEl._hits = hits;
-        acEl.style.display = 'block';
-    });
-    qEl.addEventListener('keydown', e => {
-        const items = acEl.querySelectorAll('div[data-i]');
-        if (acEl.style.display !== 'block' || !items.length) { if (e.key === 'Enter' && acEl._hits) choose(acEl._hits[0]); return; }
-        if (e.key === 'ArrowDown') { e.preventDefault(); acIndex = (acIndex + 1) % items.length; paintAc(items); }
-        else if (e.key === 'ArrowUp') { e.preventDefault(); acIndex = (acIndex - 1 + items.length) % items.length; paintAc(items); }
-        else if (e.key === 'Enter') { e.preventDefault(); choose(acEl._hits[acIndex >= 0 ? acIndex : 0]); }
-        else if (e.key === 'Escape') hideAc();
-    });
-    document.addEventListener('click', e => { if (!acEl.contains(e.target) && e.target !== qEl) hideAc(); });
-    document.getElementById('nearBtn').addEventListener('click', findNearby);
-    document.getElementById('mapToggle').addEventListener('click', () => {
-        const pane = document.getElementById('mapPane');
-        const shown = pane.classList.toggle('show');
-        document.getElementById('mapToggle').textContent = shown ? 'Hide map' : 'Show map';
-        if (shown) setTimeout(() => map.invalidateSize(), 50);
-    });
-}
-function choose(hit) { if (hit) select(hit.query, { officialIndex: hit.officialIndex }); }
-function paintAc(items) { items.forEach((it, i) => it.classList.toggle('active', i === acIndex)); if (items[acIndex]) items[acIndex].scrollIntoView({ block: 'nearest' }); }
-function hideAc() { acEl.style.display = 'none'; acIndex = -1; }
-
-/* ---------- Near me (geolocation) ---------- */
 function findNearby() {
-    const btn = document.getElementById('nearBtn');
-    if (!navigator.geolocation) { detailEl.innerHTML = '<p class="empty">Your browser doesn\'t support location. Use search instead.</p>'; return; }
-    btn.textContent = 'Locating…'; btn.disabled = true;
+    const button = document.getElementById('nearBtn');
+    if (!navigator.geolocation) {
+        showToast('Location is not supported in this browser');
+        return;
+    }
+    button.disabled = true;
+    button.textContent = 'Locating…';
+    resultSummary.textContent = 'Requesting your location…';
     navigator.geolocation.getCurrentPosition(
-        pos => { btn.textContent = '📍 Near me'; btn.disabled = false; showNearby(pos.coords.latitude, pos.coords.longitude); },
-        err => { btn.textContent = '📍 Near me'; btn.disabled = false;
-                 detailEl.innerHTML = `<p class="empty">Couldn't get your location (${EPFO.escapeHtml(err.message)}). You can still search above.</p>`; },
-        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 });
+        position => {
+            button.disabled = false;
+            button.textContent = 'Near me';
+            showNearby(position.coords.latitude, position.coords.longitude);
+        },
+        error => {
+            button.disabled = false;
+            button.textContent = 'Near me';
+            resultSummary.textContent = 'Location unavailable; search is still ready';
+            showToast(error.code === 1 ? 'Location permission was not granted' : 'Could not determine your location');
+        },
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+    );
 }
 
-function showNearby(ulat, ulon) {
-    const ranked = EPFO.all().filter(EPFO.hasLatLng).map(ct => ({
-        ct, d: haversineKm(ulat, ulon, +ct.office.latitude, +ct.office.longitude)
-    })).sort((a, b) => a.d - b.d).slice(0, 20);
+function showNearby(latitude, longitude) {
+    const ranked = EPFO.all()
+        .filter(EPFO.hasLatLng)
+        .map(contact => ({ contact, distance: distanceKm(latitude, longitude, Number(contact.office.latitude), Number(contact.office.longitude)) }))
+        .sort((a, b) => a.distance - b.distance)
+        .slice(0, 20);
+    resultSummary.textContent = 'Showing the 20 nearest mapped offices';
+    detailEl.className = '';
+    detailEl.innerHTML = `
+        <div class="browse-head"><div><h2>Offices near you</h2><p>Your location was used for this calculation only and was not stored.</p></div><button class="btn btn-quiet" type="button" id="nearBack">Back</button></div>
+        <ul class="office-list nearby-list">${ranked.map(({ contact, distance }) => {
+            const type = EPFO.officeType(contact);
+            return `<li><button type="button" data-query="${EPFO.escapeHtml(contact.query)}">
+                <span class="tag tag-${type.code}">${type.code}</span>
+                <span class="office-list-copy"><span class="office-list-name">${EPFO.escapeHtml(EPFO.officeName(contact))}</span><span class="office-list-sub">${EPFO.escapeHtml(type.label)}</span></span>
+                <span class="distance">${formatDistance(distance)}</span>
+            </button></li>`;
+        }).join('')}</ul>`;
+    detailEl.querySelectorAll('[data-query]').forEach(button => button.addEventListener('click', () => selectOffice(button.dataset.query)));
+    document.getElementById('nearBack').addEventListener('click', () => currentQuery ? selectOffice(currentQuery) : resetDirectory());
+    document.getElementById('directoryContent').scrollTop = 0;
 
-    detailEl.innerHTML = `<div class="nearby-head"><h2>Offices near you</h2>
-        <button class="linkish" id="clearNear">← Back</button></div>
-        <ul class="nearby">` + ranked.map(({ ct, d }) => {
-        const t = EPFO.officeType(ct);
-        return `<li data-q="${EPFO.escapeHtml(ct.query)}"><span class="tag tag-${t.code}">${t.code}</span>
-            <span class="nm">${EPFO.escapeHtml(EPFO.officeName(ct))}</span>
-            <span class="dist mono">${fmtKm(d)}</span></li>`;
-    }).join('') + `</ul>`;
-    detailEl.scrollTop = 0;
-    detailEl.querySelectorAll('.nearby li').forEach(li => li.addEventListener('click', () => select(li.dataset.q)));
-    document.getElementById('clearNear').addEventListener('click', () => { if (defaultQuery) select(defaultQuery); });
-
-    // "You are here" + fit to nearest handful
-    if (userMarker) map.removeLayer(userMarker);
-    userMarker = L.circleMarker([ulat, ulon], { radius: 8, color: '#DB7A33', fillColor: '#DB7A33', fillOpacity: .9, weight: 2 })
-        .bindPopup('You are here').addTo(map);
-    const pts = ranked.slice(0, 8).map(x => [+x.ct.office.latitude, +x.ct.office.longitude]);
-    pts.push([ulat, ulon]);
-    setTimeout(() => map.invalidateSize(), 30);
-    map.fitBounds(pts, { padding: [40, 40] });
+    if (map) {
+        if (userMarker) map.removeLayer(userMarker);
+        userMarker = L.circleMarker([latitude, longitude], { radius: 8, color: '#843908', fillColor: '#a64b13', fillOpacity: .9, weight: 3 }).bindPopup('Your approximate location').addTo(map);
+        const points = ranked.slice(0, 8).map(item => [Number(item.contact.office.latitude), Number(item.contact.office.longitude)]);
+        points.push([latitude, longitude]);
+        map.fitBounds(points, { padding: [45, 45] });
+        document.getElementById('mapOfficeTitle').textContent = 'Offices near you';
+        document.getElementById('mapStatus').textContent = 'Map fitted to the nearest results';
+    }
 }
 
-function haversineKm(la1, lo1, la2, lo2) {
-    const R = 6371, toR = d => d * Math.PI / 180;
-    const dLa = toR(la2 - la1), dLo = toR(lo2 - lo1);
-    const a = Math.sin(dLa / 2) ** 2 + Math.cos(toR(la1)) * Math.cos(toR(la2)) * Math.sin(dLo / 2) ** 2;
-    return 2 * R * Math.asin(Math.sqrt(a));
+function distanceKm(lat1, lon1, lat2, lon2) {
+    const radius = 6371;
+    const radians = degrees => degrees * Math.PI / 180;
+    const dLat = radians(lat2 - lat1);
+    const dLon = radians(lon2 - lon1);
+    const value = Math.sin(dLat / 2) ** 2 + Math.cos(radians(lat1)) * Math.cos(radians(lat2)) * Math.sin(dLon / 2) ** 2;
+    return 2 * radius * Math.asin(Math.sqrt(value));
 }
-function fmtKm(d) { return d < 1 ? `${Math.round(d * 1000)} m` : `${d.toFixed(d < 10 ? 1 : 0)} km`; }
+
+function formatDistance(distance) {
+    return distance < 1 ? `${Math.round(distance * 1000)} m` : `${distance.toFixed(distance < 10 ? 1 : 0)} km`;
+}
+
+function setMobileView(view) {
+    workspace.dataset.mobileView = view;
+    const directorySelected = view === 'directory';
+    document.getElementById('directoryTab').setAttribute('aria-pressed', String(directorySelected));
+    document.getElementById('mapTab').setAttribute('aria-pressed', String(!directorySelected));
+    if (!directorySelected && map) setTimeout(() => map.invalidateSize(), 50);
+}
+
+function readHash() {
+    if (!window.location.hash) return '';
+    try { return decodeURIComponent(window.location.hash.slice(1)); }
+    catch (_) { return ''; }
+}
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);
+}
 </script>
 </body>
 </html>
