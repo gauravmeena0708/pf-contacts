@@ -1,0 +1,122 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-howrah",
+    "source_key": "q=HOWRAH",
+    "name": "HOWRAH",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "Bhavishyanidhi Bhawan,24 Bellilious Road\n6th Floor, West Bengal.\nHowrah - 711101",
+    "contact": {
+      "emails": [
+        "ro.howrah@epfindia.gov.in"
+      ],
+      "std_code": "033",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.5972055,
+      "longitude": 88.3459571
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-b3e6871bccc5",
+        "office_id": "ro-howrah",
+        "name": "Shri Saurabh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.howrah@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "26660893"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f31d3f02fbf6",
+        "office_id": "ro-howrah",
+        "name": "Shri Surya Sadhan Sahoo",
+        "designation": "Private Secretary",
+        "emails": [
+          "ro.howrah@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "26660893"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6edd2e1997b1",
+        "office_id": "ro-howrah",
+        "name": "Shri Bijay Prasad",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "26625392"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5ab9ba8aabfa",
+        "office_id": "ro-howrah",
+        "name": "Ms. Mausumi Biswas",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "mausumi.biswas@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "26662617"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ec81740e2ada",
+        "office_id": "ro-howrah",
+        "name": "Shri Kali Kinkar Mohanty",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "kali.mohanty@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "26665517"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a7699b3a80f7",
+        "office_id": "ro-howrah",
+        "name": "Shri Ashok Kumar Jha",
+        "designation": "Assistant Director",
+        "emails": [
+          "ro.howrah@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ef5c9ecacc5d",
+        "office_id": "ro-howrah",
+        "name": "WhatsApp Grievance Number",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "9433966889"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

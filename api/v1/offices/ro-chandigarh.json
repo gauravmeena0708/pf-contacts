@@ -1,0 +1,144 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-chandigarh",
+    "source_key": "q=CHANDIGARH",
+    "name": "CHANDIGARH",
+    "category": "regional_office",
+    "parent_id": "zo-punjab-himachal-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh"
+    ],
+    "address": "S.C.O. 4-7,\nSector 17-D,\nChandigarh. - 160017",
+    "contact": {
+      "emails": [
+        "ro.chandigarh@epfindia.gov.in"
+      ],
+      "std_code": "0172",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2701300",
+        "2701335"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 30.7366775,
+      "longitude": 76.5876109
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6573b74b2887",
+        "office_id": "ro-chandigarh",
+        "name": "Shri Kishan Pratap",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "kp.singhi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2701355"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2eb897673062",
+        "office_id": "ro-chandigarh",
+        "name": "Private Secretary",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2701355"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-60886bbe75ed",
+        "office_id": "ro-chandigarh",
+        "name": "Shri Saurabh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "saurabh.k@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "5041968"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-10ceb9436870",
+        "office_id": "ro-chandigarh",
+        "name": "Shri Deepak Pal",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "deepak.pal@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8cf12283fa45",
+        "office_id": "ro-chandigarh",
+        "name": "Ms. Pooja",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "pooja.yadav@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5b188fc19c29",
+        "office_id": "ro-chandigarh",
+        "name": "Shri Hritik Rajput",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "hritik.rajput@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b1297e0939ba",
+        "office_id": "ro-chandigarh",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2701300",
+          "2701335"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-df05cf3946a0",
+        "office_id": "ro-chandigarh",
+        "name": "Pension Revision Enquiry",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "18001802123"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-debf3c5c2e7f",
+        "office_id": "ro-chandigarh",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9463733422"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

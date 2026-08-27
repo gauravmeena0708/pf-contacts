@@ -1,0 +1,2696 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "roots": [
+    "head-office"
+  ],
+  "nodes": [
+    {
+      "id": "head-office",
+      "name": "HEAD OFFICE",
+      "category": "head_office",
+      "parent_id": null,
+      "children_ids": [
+        "guest-house-guest-house-andhra-pradesh-cuddapah",
+        "guest-house-guest-house-andhra-pradesh-guntur",
+        "guest-house-guest-house-andhra-pradesh-hyderabad",
+        "guest-house-guest-house-andhra-pradesh-nizamabad",
+        "guest-house-guest-house-haryana-faridabad",
+        "guest-house-guest-house-karnataka-bangalore",
+        "guest-house-guest-house-karnataka-mangalore",
+        "guest-house-guest-house-kerala-khozhikode",
+        "guest-house-guest-house-kerala-kochi",
+        "guest-house-guest-house-kerala-thiruvananthapuram",
+        "guest-house-guest-house-madhya-pradesh-indore",
+        "guest-house-guest-house-odisha-bhubaneswar",
+        "guest-house-guest-house-punjab-amritsar",
+        "guest-house-guest-house-punjab-chandigarh",
+        "guest-house-guest-house-rajasthan-jaipur",
+        "guest-house-guest-house-tamilnadu-chennai",
+        "guest-house-guest-house-tamilnadu-coimbatore",
+        "guest-house-guest-house-tamilnadu-madurai",
+        "guest-house-guest-house-uttar-pradesh-kanpur-9eceeec8",
+        "guest-house-guest-house-uttar-pradesh-kanpur-ed449613",
+        "guest-house-guest-house-west-bengal-kolkata",
+        "holiday-home-holiday-home-west-zone-goa",
+        "internal-audit-internal-audit-wing",
+        "ndc-national-data-centre",
+        "pdunass-pdunass",
+        "vigilance-vigilance-wing",
+        "zo-andhra-pradesh-vijayawada",
+        "zo-bandra",
+        "zo-bengaluru-bengaluru",
+        "zo-bihar-jharkhand-patna",
+        "zo-chennai-puducherry-chennai",
+        "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+        "zo-gujarat-ahmedabad",
+        "zo-haryana",
+        "zo-karnataka-other-than-bengaluru-goa-hubli",
+        "zo-kerala-lakshadweep-thiruvananthapuram",
+        "zo-madhya-pradesh-chattisgarh-bhopal",
+        "zo-maharashtra-excluding-mumbai-pune",
+        "zo-north-eastern-region-guwahati",
+        "zo-orissa-bhubaneswar",
+        "zo-punjab-himachal-pradesh",
+        "zo-rajasthan",
+        "zo-tamil-nadu-excluding-chennai",
+        "zo-telangana-hyderabad",
+        "zo-thane",
+        "zo-uttar-pradesh",
+        "zo-wb-a-n-islands-sikkim-kolkata"
+      ]
+    },
+    {
+      "id": "guest-house-guest-house-andhra-pradesh-cuddapah",
+      "name": "Guest House, ANDHRA PRADESH(Cuddapah)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-andhra-pradesh-guntur",
+      "name": "Guest House, ANDHRA PRADESH(Guntur)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-andhra-pradesh-hyderabad",
+      "name": "Guest House, ANDHRA PRADESH(Hyderabad)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-andhra-pradesh-nizamabad",
+      "name": "Guest House, ANDHRA PRADESH(Nizamabad)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-haryana-faridabad",
+      "name": "Guest House, HARYANA(Faridabad)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-karnataka-bangalore",
+      "name": "Guest House, KARNATAKA(Bangalore)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-karnataka-mangalore",
+      "name": "Guest House, KARNATAKA(Mangalore)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-kerala-khozhikode",
+      "name": "Guest House, KERALA(Khozhikode)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-kerala-kochi",
+      "name": "Guest House, KERALA(Kochi)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-kerala-thiruvananthapuram",
+      "name": "Guest House, KERALA(Thiruvananthapuram)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-madhya-pradesh-indore",
+      "name": "Guest House, MADHYA PRADESH(Indore)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-odisha-bhubaneswar",
+      "name": "Guest House, ODISHA(Bhubaneswar)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-punjab-amritsar",
+      "name": "Guest House, PUNJAB(Amritsar)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-punjab-chandigarh",
+      "name": "Guest House, PUNJAB(Chandigarh)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-rajasthan-jaipur",
+      "name": "Guest House, RAJASTHAN(Jaipur)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-tamilnadu-chennai",
+      "name": "Guest House, TAMILNADU(Chennai)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-tamilnadu-coimbatore",
+      "name": "Guest House, TAMILNADU(Coimbatore)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-tamilnadu-madurai",
+      "name": "Guest House, TAMILNADU(Madurai)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-uttar-pradesh-kanpur-ed449613",
+      "name": "Guest House, UTTAR PRADESH(Kanpur)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-uttar-pradesh-kanpur-9eceeec8",
+      "name": "Guest House, UTTAR PRADESH(Kanpur)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "guest-house-guest-house-west-bengal-kolkata",
+      "name": "Guest House, WEST BENGAL(Kolkata)",
+      "category": "guest_house",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "holiday-home-holiday-home-west-zone-goa",
+      "name": "Holiday Home, WEST ZONE(GOA)",
+      "category": "holiday_home",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "internal-audit-internal-audit-wing",
+      "name": "INTERNAL AUDIT WING",
+      "category": "internal_audit_wing",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "ndc-national-data-centre",
+      "name": "NATIONAL DATA CENTRE",
+      "category": "national_data_centre",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "pdunass-pdunass",
+      "name": "PDUNASS",
+      "category": "pdunass_natrss",
+      "parent_id": "head-office",
+      "children_ids": [
+        "szti-sub-zonal-training-institute-east-zone",
+        "zti-zonal-training-institute-east-zone",
+        "zti-zonal-training-institute-north-zone",
+        "zti-zonal-training-institute-south-zone",
+        "zti-zonal-training-institute-west-zone"
+      ]
+    },
+    {
+      "id": "vigilance-vigilance-wing",
+      "name": "VIGILANCE WING",
+      "category": "vigilance_wing",
+      "parent_id": "head-office",
+      "children_ids": []
+    },
+    {
+      "id": "zo-andhra-pradesh-vijayawada",
+      "name": "ANDHRA PRADESH (VIJAYAWADA)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-guntur",
+        "ro-kadapa",
+        "ro-rajamahendravaram",
+        "ro-visakhapatnam"
+      ]
+    },
+    {
+      "id": "zo-bandra",
+      "name": "BANDRA",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-mumbai-bandra",
+        "ro-mumbai-dadar",
+        "ro-mumbai-fort",
+        "ro-mumbai-nariman-point",
+        "ro-mumbai-powai"
+      ]
+    },
+    {
+      "id": "zo-bengaluru-bengaluru",
+      "name": "BENGALURU (BENGALURU)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-bengaluru-bellandur",
+        "ro-bengaluru-central",
+        "ro-bengaluru-electronic-city",
+        "ro-bengaluru-indiranagar",
+        "ro-bengaluru-koramangala",
+        "ro-bengaluru-malleswaram",
+        "ro-k-r-puram-whitefield",
+        "ro-peenya",
+        "ro-rajarajeshwari-nagar",
+        "ro-tumkur",
+        "ro-yelahanka"
+      ]
+    },
+    {
+      "id": "zo-bihar-jharkhand-patna",
+      "name": "BIHAR & JHARKHAND(PATNA)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-bhagalpur",
+        "ro-jamshedpur",
+        "ro-muzaffarpur",
+        "ro-patna",
+        "ro-ranchi"
+      ]
+    },
+    {
+      "id": "zo-chennai-puducherry-chennai",
+      "name": "CHENNAI & PUDUCHERRY (CHENNAI)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-ambattur",
+        "ro-chennai-north",
+        "ro-chennai-south",
+        "ro-puducherry",
+        "ro-sriperumbudur",
+        "ro-tambaram",
+        "ro-thiruvallur",
+        "ro-vellore"
+      ]
+    },
+    {
+      "id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "name": "DELHI, UTTARAKHAND, JAMMU & KASHMIR AND LADAKH",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-dehradun",
+        "ro-delhi-central",
+        "ro-delhi-east",
+        "ro-delhi-north",
+        "ro-delhi-south",
+        "ro-delhi-west",
+        "ro-haldwani",
+        "ro-jammu",
+        "ro-kashmir-srinagar",
+        "ro-leh-ladakh"
+      ]
+    },
+    {
+      "id": "zo-gujarat-ahmedabad",
+      "name": "GUJARAT (AHMEDABAD)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-ahmedabad",
+        "ro-bharuch",
+        "ro-naroda",
+        "ro-rajkot",
+        "ro-surat",
+        "ro-vadodara",
+        "ro-vapi",
+        "ro-vatwa"
+      ]
+    },
+    {
+      "id": "zo-haryana",
+      "name": "HARYANA",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-faridabad",
+        "ro-gurugram-central",
+        "ro-gurugram-east",
+        "ro-gurugram-west",
+        "ro-htak",
+        "ro-karnal"
+      ]
+    },
+    {
+      "id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "name": "KARNATAKA (OTHER THAN BENGALURU) & GOA (HUBLI)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-bellary",
+        "ro-chikamagalur",
+        "ro-goa",
+        "ro-gulbarga",
+        "ro-hubli",
+        "ro-mangaluru",
+        "ro-mysore",
+        "ro-raichur",
+        "ro-shimoga",
+        "ro-udupi"
+      ]
+    },
+    {
+      "id": "zo-kerala-lakshadweep-thiruvananthapuram",
+      "name": "KERALA & LAKSHADWEEP (THIRUVANANTHAPURAM)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-kannur",
+        "ro-kochi",
+        "ro-kollam",
+        "ro-kottayam",
+        "ro-kozhikode-calicut",
+        "ro-thiruvananthapuram"
+      ]
+    },
+    {
+      "id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "name": "MADHYA PRADESH & CHATTISGARH (BHOPAL)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-bhopal",
+        "ro-gwalior",
+        "ro-indore",
+        "ro-jabalpur",
+        "ro-raipur-chattisgarh",
+        "ro-sagar",
+        "ro-ujjain"
+      ]
+    },
+    {
+      "id": "zo-maharashtra-excluding-mumbai-pune",
+      "name": "MAHARASHTRA(EXCLUDING MUMBAI)(PUNE)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-akola",
+        "ro-chhatrapati-sambhajinagar",
+        "ro-kolhapur",
+        "ro-nagpur",
+        "ro-nagpur-annex-bldg",
+        "ro-nasik",
+        "ro-pune-akurdi",
+        "ro-pune-hinjawadi",
+        "ro-pune-pune-cantt",
+        "ro-pune-viman-nagar",
+        "ro-solapur"
+      ]
+    },
+    {
+      "id": "zo-north-eastern-region-guwahati",
+      "name": "NORTH-EASTERN REGION (GUWAHATI)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-agartala",
+        "ro-guwahati",
+        "ro-shillong",
+        "ro-tinsukia"
+      ]
+    },
+    {
+      "id": "zo-orissa-bhubaneswar",
+      "name": "ORISSA (BHUBANESWAR)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-bhubaneshwar",
+        "ro-brahmapur",
+        "ro-keonjhar",
+        "ro-urkela"
+      ]
+    },
+    {
+      "id": "zo-punjab-himachal-pradesh",
+      "name": "PUNJAB & HIMACHAL PRADESH",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-amritsar",
+        "ro-bhatinda",
+        "ro-chandigarh",
+        "ro-jalandhar",
+        "ro-ludhiana",
+        "ro-shimla"
+      ]
+    },
+    {
+      "id": "zo-rajasthan",
+      "name": "RAJASTHAN",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-alwar",
+        "ro-jaipur",
+        "ro-jodhpur",
+        "ro-kota",
+        "ro-udaipur"
+      ]
+    },
+    {
+      "id": "zo-tamil-nadu-excluding-chennai",
+      "name": "TAMIL NADU(EXCLUDING CHENNAI)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-coimbatore",
+        "ro-madurai",
+        "ro-nagercoil",
+        "ro-salem",
+        "ro-tirunelveli",
+        "ro-tiruppur",
+        "ro-trichy"
+      ]
+    },
+    {
+      "id": "zo-telangana-hyderabad",
+      "name": "TELANGANA (HYDERABAD)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-banjara-hills",
+        "ro-hyderabad-barkatpura",
+        "ro-hyderabad-madhapur",
+        "ro-karimnagar",
+        "ro-kukatpalli",
+        "ro-nizamabad",
+        "ro-sangareddy",
+        "ro-warangal"
+      ]
+    },
+    {
+      "id": "zo-thane",
+      "name": "THANE",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-kandivali-east",
+        "ro-kandivali-west",
+        "ro-thane-mulund",
+        "ro-thane-north",
+        "ro-thane-south",
+        "ro-vashi",
+        "ro-vashi-annexe"
+      ]
+    },
+    {
+      "id": "zo-uttar-pradesh",
+      "name": "UTTAR PRADESH",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-agra",
+        "ro-allahabad",
+        "ro-bareilly",
+        "ro-gorakhpur",
+        "ro-greater-noida",
+        "ro-kanpur",
+        "ro-lucknow",
+        "ro-meerut",
+        "ro-noida",
+        "ro-varanasi"
+      ]
+    },
+    {
+      "id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "name": "WB, A&N ISLANDS & SIKKIM (KOLKATA)",
+      "category": "zonal_office",
+      "parent_id": "head-office",
+      "children_ids": [
+        "ro-barrackpore",
+        "ro-darjeeling",
+        "ro-durgapur",
+        "ro-howrah",
+        "ro-howrah-annex-bldg",
+        "ro-jalpaiguri",
+        "ro-jangipur",
+        "ro-kolkata",
+        "ro-park-street",
+        "ro-port-blair",
+        "ro-siliguri"
+      ]
+    },
+    {
+      "id": "ro-agartala",
+      "name": "AGARTALA",
+      "category": "regional_office",
+      "parent_id": "zo-north-eastern-region-guwahati",
+      "children_ids": [
+        "do-dharmanagar"
+      ]
+    },
+    {
+      "id": "ro-agra",
+      "name": "AGRA",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": [
+        "do-aligarh"
+      ]
+    },
+    {
+      "id": "ro-ahmedabad",
+      "name": "AHMEDABAD",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-akola",
+      "name": "AKOLA",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": [
+        "do-amravati"
+      ]
+    },
+    {
+      "id": "ro-allahabad",
+      "name": "ALLAHABAD",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-alwar",
+      "name": "ALWAR",
+      "category": "regional_office",
+      "parent_id": "zo-rajasthan",
+      "children_ids": [
+        "do-bharatpur"
+      ]
+    },
+    {
+      "id": "ro-ambattur",
+      "name": "AMBATTUR",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-amritsar",
+      "name": "AMRITSAR",
+      "category": "regional_office",
+      "parent_id": "zo-punjab-himachal-pradesh",
+      "children_ids": [
+        "do-batala"
+      ]
+    },
+    {
+      "id": "ro-banjara-hills",
+      "name": "BANJARA HILLS",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bareilly",
+      "name": "BAREILLY",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": [
+        "do-moradabad"
+      ]
+    },
+    {
+      "id": "ro-barrackpore",
+      "name": "BARRACKPORE",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bellary",
+      "name": "BELLARY",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bengaluru-bellandur",
+      "name": "BENGALURU (BELLANDUR)",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bengaluru-central",
+      "name": "BENGALURU (CENTRAL)",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bengaluru-electronic-city",
+      "name": "BENGALURU (ELECTRONIC CITY)",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bengaluru-indiranagar",
+      "name": "BENGALURU (INDIRANAGAR)",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bengaluru-koramangala",
+      "name": "BENGALURU (KORAMANGALA)",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bengaluru-malleswaram",
+      "name": "BENGALURU (MALLESWARAM)",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bhagalpur",
+      "name": "BHAGALPUR",
+      "category": "regional_office",
+      "parent_id": "zo-bihar-jharkhand-patna",
+      "children_ids": [
+        "do-katihar",
+        "do-munger"
+      ]
+    },
+    {
+      "id": "ro-bharuch",
+      "name": "BHARUCH",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-bhatinda",
+      "name": "BHATINDA",
+      "category": "regional_office",
+      "parent_id": "zo-punjab-himachal-pradesh",
+      "children_ids": [
+        "do-moga",
+        "do-sangrur"
+      ]
+    },
+    {
+      "id": "ro-bhopal",
+      "name": "BHOPAL",
+      "category": "regional_office",
+      "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "children_ids": [
+        "do-itarasi"
+      ]
+    },
+    {
+      "id": "ro-bhubaneshwar",
+      "name": "BHUBANESHWAR",
+      "category": "regional_office",
+      "parent_id": "zo-orissa-bhubaneswar",
+      "children_ids": [
+        "do-balasore",
+        "do-cuttack"
+      ]
+    },
+    {
+      "id": "ro-brahmapur",
+      "name": "BRAHMAPUR",
+      "category": "regional_office",
+      "parent_id": "zo-orissa-bhubaneswar",
+      "children_ids": [
+        "do-rayagada"
+      ]
+    },
+    {
+      "id": "ro-chandigarh",
+      "name": "CHANDIGARH",
+      "category": "regional_office",
+      "parent_id": "zo-punjab-himachal-pradesh",
+      "children_ids": [
+        "do-mandi-gobindgarh",
+        "do-patiala"
+      ]
+    },
+    {
+      "id": "ro-chennai-north",
+      "name": "CHENNAI (NORTH)",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-chennai-south",
+      "name": "CHENNAI (SOUTH)",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-chhatrapati-sambhajinagar",
+      "name": "CHHATRAPATI SAMBHAJINAGAR",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-chikamagalur",
+      "name": "CHIKAMAGALUR",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": [
+        "do-hassan"
+      ]
+    },
+    {
+      "id": "ro-coimbatore",
+      "name": "COIMBATORE",
+      "category": "regional_office",
+      "parent_id": "zo-tamil-nadu-excluding-chennai",
+      "children_ids": [
+        "do-coonoor",
+        "do-ooty",
+        "do-pollachi"
+      ]
+    },
+    {
+      "id": "ro-darjeeling",
+      "name": "DARJEELING",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": []
+    },
+    {
+      "id": "ro-dehradun",
+      "name": "DEHRADUN",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-delhi-central",
+      "name": "DELHI [CENTRAL]",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-delhi-east",
+      "name": "DELHI [EAST]",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-delhi-north",
+      "name": "DELHI [NORTH]",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-delhi-south",
+      "name": "DELHI [SOUTH]",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-delhi-west",
+      "name": "DELHI [WEST]",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-durgapur",
+      "name": "DURGAPUR",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": []
+    },
+    {
+      "id": "ro-faridabad",
+      "name": "FARIDABAD",
+      "category": "regional_office",
+      "parent_id": "zo-haryana",
+      "children_ids": []
+    },
+    {
+      "id": "ro-goa",
+      "name": "GOA",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": []
+    },
+    {
+      "id": "ro-gorakhpur",
+      "name": "GORAKHPUR",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-greater-noida",
+      "name": "GREATER NOIDA",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-gulbarga",
+      "name": "GULBARGA",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": [
+        "do-bidar",
+        "do-bijapur"
+      ]
+    },
+    {
+      "id": "ro-guntur",
+      "name": "GUNTUR",
+      "category": "regional_office",
+      "parent_id": "zo-andhra-pradesh-vijayawada",
+      "children_ids": [
+        "do-ongole",
+        "do-vijayawada"
+      ]
+    },
+    {
+      "id": "ro-gurugram-central",
+      "name": "GURUGRAM (CENTRAL)",
+      "category": "regional_office",
+      "parent_id": "zo-haryana",
+      "children_ids": []
+    },
+    {
+      "id": "ro-gurugram-east",
+      "name": "GURUGRAM (EAST)",
+      "category": "regional_office",
+      "parent_id": "zo-haryana",
+      "children_ids": []
+    },
+    {
+      "id": "ro-gurugram-west",
+      "name": "GURUGRAM (WEST)",
+      "category": "regional_office",
+      "parent_id": "zo-haryana",
+      "children_ids": []
+    },
+    {
+      "id": "ro-guwahati",
+      "name": "GUWAHATI",
+      "category": "regional_office",
+      "parent_id": "zo-north-eastern-region-guwahati",
+      "children_ids": [
+        "do-bongaigaon",
+        "do-s-s-o-dimapur",
+        "do-s-s-o-imphal",
+        "do-s-s-o-itanagar",
+        "do-silchar",
+        "do-tezpur"
+      ]
+    },
+    {
+      "id": "ro-gwalior",
+      "name": "GWALIOR",
+      "category": "regional_office",
+      "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "children_ids": []
+    },
+    {
+      "id": "ro-haldwani",
+      "name": "HALDWANI",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-howrah",
+      "name": "HOWRAH",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": [
+        "do-midnapore"
+      ]
+    },
+    {
+      "id": "ro-howrah-annex-bldg",
+      "name": "HOWRAH (ANNEX BLDG)",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": [
+        "do-srirampore"
+      ]
+    },
+    {
+      "id": "ro-hubli",
+      "name": "HUBLI",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": [
+        "do-belgavi",
+        "do-karawar"
+      ]
+    },
+    {
+      "id": "ro-hyderabad-barkatpura",
+      "name": "HYDERABAD (BARKATPURA)",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": [
+        "do-nalgonda"
+      ]
+    },
+    {
+      "id": "ro-hyderabad-madhapur",
+      "name": "HYDERABAD (MADHAPUR)",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-indore",
+      "name": "INDORE",
+      "category": "regional_office",
+      "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "children_ids": [
+        "do-dhar",
+        "do-khandwa"
+      ]
+    },
+    {
+      "id": "ro-jabalpur",
+      "name": "JABALPUR",
+      "category": "regional_office",
+      "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "children_ids": [
+        "do-chhindwara",
+        "do-satna"
+      ]
+    },
+    {
+      "id": "ro-jaipur",
+      "name": "JAIPUR",
+      "category": "regional_office",
+      "parent_id": "zo-rajasthan",
+      "children_ids": [
+        "do-ajmer",
+        "do-jhunjhunun"
+      ]
+    },
+    {
+      "id": "ro-jalandhar",
+      "name": "JALANDHAR",
+      "category": "regional_office",
+      "parent_id": "zo-punjab-himachal-pradesh",
+      "children_ids": [
+        "do-hoshiarpur",
+        "do-phagwara"
+      ]
+    },
+    {
+      "id": "ro-jalpaiguri",
+      "name": "JALPAIGURI",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": [
+        "do-alipurduar",
+        "do-malbazar"
+      ]
+    },
+    {
+      "id": "ro-jammu",
+      "name": "JAMMU",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-jamshedpur",
+      "name": "JAMSHEDPUR",
+      "category": "regional_office",
+      "parent_id": "zo-bihar-jharkhand-patna",
+      "children_ids": [
+        "do-chaibasa"
+      ]
+    },
+    {
+      "id": "ro-jangipur",
+      "name": "JANGIPUR",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": []
+    },
+    {
+      "id": "ro-jodhpur",
+      "name": "JODHPUR",
+      "category": "regional_office",
+      "parent_id": "zo-rajasthan",
+      "children_ids": [
+        "do-bikaner",
+        "do-pali",
+        "do-sriganganagar"
+      ]
+    },
+    {
+      "id": "ro-k-r-puram-whitefield",
+      "name": "K R PURAM (WHITEFIELD)",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": [
+        "do-kolar"
+      ]
+    },
+    {
+      "id": "ro-kadapa",
+      "name": "KADAPA",
+      "category": "regional_office",
+      "parent_id": "zo-andhra-pradesh-vijayawada",
+      "children_ids": [
+        "do-anantapur",
+        "do-kurnool",
+        "do-nellore",
+        "do-tirupati"
+      ]
+    },
+    {
+      "id": "ro-kandivali-east",
+      "name": "KANDIVALI-East",
+      "category": "regional_office",
+      "parent_id": "zo-thane",
+      "children_ids": []
+    },
+    {
+      "id": "ro-kandivali-west",
+      "name": "KANDIVALI-West",
+      "category": "regional_office",
+      "parent_id": "zo-thane",
+      "children_ids": []
+    },
+    {
+      "id": "ro-kannur",
+      "name": "KANNUR",
+      "category": "regional_office",
+      "parent_id": "zo-kerala-lakshadweep-thiruvananthapuram",
+      "children_ids": []
+    },
+    {
+      "id": "ro-kanpur",
+      "name": "KANPUR",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-karimnagar",
+      "name": "KARIMNAGAR",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": [
+        "do-adilabad"
+      ]
+    },
+    {
+      "id": "ro-karnal",
+      "name": "KARNAL",
+      "category": "regional_office",
+      "parent_id": "zo-haryana",
+      "children_ids": [
+        "do-ambala",
+        "do-panipat",
+        "do-sonipat",
+        "do-yamunanagar"
+      ]
+    },
+    {
+      "id": "ro-kashmir-srinagar",
+      "name": "KASHMIR (SRINAGAR)",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-keonjhar",
+      "name": "KEONJHAR",
+      "category": "regional_office",
+      "parent_id": "zo-orissa-bhubaneswar",
+      "children_ids": [
+        "do-barbil"
+      ]
+    },
+    {
+      "id": "ro-kochi",
+      "name": "KOCHI",
+      "category": "regional_office",
+      "parent_id": "zo-kerala-lakshadweep-thiruvananthapuram",
+      "children_ids": [
+        "do-alleyppey",
+        "do-thrissur"
+      ]
+    },
+    {
+      "id": "ro-kolhapur",
+      "name": "KOLHAPUR",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-kolkata",
+      "name": "KOLKATA",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": []
+    },
+    {
+      "id": "ro-kollam",
+      "name": "KOLLAM",
+      "category": "regional_office",
+      "parent_id": "zo-kerala-lakshadweep-thiruvananthapuram",
+      "children_ids": []
+    },
+    {
+      "id": "ro-kota",
+      "name": "KOTA",
+      "category": "regional_office",
+      "parent_id": "zo-rajasthan",
+      "children_ids": []
+    },
+    {
+      "id": "ro-kottayam",
+      "name": "KOTTAYAM",
+      "category": "regional_office",
+      "parent_id": "zo-kerala-lakshadweep-thiruvananthapuram",
+      "children_ids": [
+        "do-munnar"
+      ]
+    },
+    {
+      "id": "ro-kozhikode-calicut",
+      "name": "KOZHIKODE (CALICUT)",
+      "category": "regional_office",
+      "parent_id": "zo-kerala-lakshadweep-thiruvananthapuram",
+      "children_ids": [
+        "do-palakkad",
+        "do-wayanad"
+      ]
+    },
+    {
+      "id": "ro-kukatpalli",
+      "name": "KUKATPALLI",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-leh-ladakh",
+      "name": "LEH (LADAKH)",
+      "category": "regional_office",
+      "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-lucknow",
+      "name": "LUCKNOW",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-ludhiana",
+      "name": "LUDHIANA",
+      "category": "regional_office",
+      "parent_id": "zo-punjab-himachal-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-madurai",
+      "name": "MADURAI",
+      "category": "regional_office",
+      "parent_id": "zo-tamil-nadu-excluding-chennai",
+      "children_ids": [
+        "do-dindigul",
+        "do-sivakasi"
+      ]
+    },
+    {
+      "id": "ro-mangaluru",
+      "name": "MANGALURU",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": []
+    },
+    {
+      "id": "ro-meerut",
+      "name": "MEERUT",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": [
+        "do-muzaffarnagar",
+        "do-saharanpur"
+      ]
+    },
+    {
+      "id": "ro-mumbai-fort",
+      "name": "MUMBAI (FORT)",
+      "category": "regional_office",
+      "parent_id": "zo-bandra",
+      "children_ids": []
+    },
+    {
+      "id": "ro-mumbai-bandra",
+      "name": "MUMBAI(BANDRA)",
+      "category": "regional_office",
+      "parent_id": "zo-bandra",
+      "children_ids": []
+    },
+    {
+      "id": "ro-mumbai-dadar",
+      "name": "MUMBAI(DADAR)",
+      "category": "regional_office",
+      "parent_id": "zo-bandra",
+      "children_ids": []
+    },
+    {
+      "id": "ro-mumbai-nariman-point",
+      "name": "MUMBAI(NARIMAN POINT)",
+      "category": "regional_office",
+      "parent_id": "zo-bandra",
+      "children_ids": []
+    },
+    {
+      "id": "ro-mumbai-powai",
+      "name": "MUMBAI(POWAI)",
+      "category": "regional_office",
+      "parent_id": "zo-bandra",
+      "children_ids": []
+    },
+    {
+      "id": "ro-muzaffarpur",
+      "name": "MUZAFFARPUR",
+      "category": "regional_office",
+      "parent_id": "zo-bihar-jharkhand-patna",
+      "children_ids": [
+        "do-darbhanga"
+      ]
+    },
+    {
+      "id": "ro-mysore",
+      "name": "MYSORE",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": [
+        "do-madikeri",
+        "do-mandya"
+      ]
+    },
+    {
+      "id": "ro-nagercoil",
+      "name": "NAGERCOIL",
+      "category": "regional_office",
+      "parent_id": "zo-tamil-nadu-excluding-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-nagpur",
+      "name": "NAGPUR",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-nagpur-annex-bldg",
+      "name": "NAGPUR (ANNEX BLDG)",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": [
+        "do-chandrapur"
+      ]
+    },
+    {
+      "id": "ro-naroda",
+      "name": "NARODA",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": [
+        "do-himmatnagar",
+        "do-mehsana"
+      ]
+    },
+    {
+      "id": "ro-nasik",
+      "name": "NASIK",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": [
+        "do-ahilyanagar",
+        "do-jalgaon"
+      ]
+    },
+    {
+      "id": "ro-nizamabad",
+      "name": "NIZAMABAD",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-noida",
+      "name": "NOIDA",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-park-street",
+      "name": "PARK STREET",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": []
+    },
+    {
+      "id": "ro-patna",
+      "name": "PATNA",
+      "category": "regional_office",
+      "parent_id": "zo-bihar-jharkhand-patna",
+      "children_ids": [
+        "do-gaya",
+        "do-rohtas"
+      ]
+    },
+    {
+      "id": "ro-peenya",
+      "name": "PEENYA",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-port-blair",
+      "name": "PORT BLAIR",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": []
+    },
+    {
+      "id": "ro-puducherry",
+      "name": "PUDUCHERRY",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-pune-akurdi",
+      "name": "PUNE (AKURDI)",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-pune-hinjawadi",
+      "name": "PUNE (HINJAWADI)",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-pune-pune-cantt",
+      "name": "PUNE (PUNE CANTT.)",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-pune-viman-nagar",
+      "name": "PUNE (VIMAN NAGAR)",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-raichur",
+      "name": "RAICHUR",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": [
+        "do-bagalkot"
+      ]
+    },
+    {
+      "id": "ro-raipur-chattisgarh",
+      "name": "RAIPUR (CHATTISGARH)",
+      "category": "regional_office",
+      "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "children_ids": [
+        "do-bilaspur"
+      ]
+    },
+    {
+      "id": "ro-rajamahendravaram",
+      "name": "RAJAMAHENDRAVARAM",
+      "category": "regional_office",
+      "parent_id": "zo-andhra-pradesh-vijayawada",
+      "children_ids": [
+        "do-bhimavaram",
+        "do-eluru",
+        "do-kakinada"
+      ]
+    },
+    {
+      "id": "ro-rajarajeshwari-nagar",
+      "name": "RAJARAJESHWARI NAGAR",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-rajkot",
+      "name": "RAJKOT",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": [
+        "do-gandhidham",
+        "do-jamnagar",
+        "do-junagadh",
+        "do-surendranagar"
+      ]
+    },
+    {
+      "id": "ro-ranchi",
+      "name": "RANCHI",
+      "category": "regional_office",
+      "parent_id": "zo-bihar-jharkhand-patna",
+      "children_ids": [
+        "do-bokaro",
+        "do-deoghar",
+        "do-dhanbad",
+        "do-giridih",
+        "do-koderma",
+        "do-sahibganj"
+      ]
+    },
+    {
+      "id": "ro-htak",
+      "name": "ROHTAK",
+      "category": "regional_office",
+      "parent_id": "zo-haryana",
+      "children_ids": [
+        "do-hisar"
+      ]
+    },
+    {
+      "id": "ro-urkela",
+      "name": "ROURKELA",
+      "category": "regional_office",
+      "parent_id": "zo-orissa-bhubaneswar",
+      "children_ids": [
+        "do-sambalpur"
+      ]
+    },
+    {
+      "id": "ro-sagar",
+      "name": "SAGAR",
+      "category": "regional_office",
+      "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "children_ids": []
+    },
+    {
+      "id": "ro-salem",
+      "name": "SALEM",
+      "category": "regional_office",
+      "parent_id": "zo-tamil-nadu-excluding-chennai",
+      "children_ids": [
+        "do-erode",
+        "do-krishnagiri"
+      ]
+    },
+    {
+      "id": "ro-sangareddy",
+      "name": "SANGAREDDY",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": [
+        "do-siddipet"
+      ]
+    },
+    {
+      "id": "ro-shillong",
+      "name": "SHILLONG",
+      "category": "regional_office",
+      "parent_id": "zo-north-eastern-region-guwahati",
+      "children_ids": [
+        "do-s-s-o-aizawl"
+      ]
+    },
+    {
+      "id": "ro-shimla",
+      "name": "SHIMLA",
+      "category": "regional_office",
+      "parent_id": "zo-punjab-himachal-pradesh",
+      "children_ids": [
+        "do-baddi",
+        "do-kullu",
+        "do-nahan",
+        "do-palampur"
+      ]
+    },
+    {
+      "id": "ro-shimoga",
+      "name": "SHIMOGA",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": [
+        "do-davangere"
+      ]
+    },
+    {
+      "id": "ro-siliguri",
+      "name": "SILIGURI",
+      "category": "regional_office",
+      "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+      "children_ids": [
+        "sso-gangtok"
+      ]
+    },
+    {
+      "id": "ro-solapur",
+      "name": "SOLAPUR",
+      "category": "regional_office",
+      "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+      "children_ids": []
+    },
+    {
+      "id": "ro-sriperumbudur",
+      "name": "SRIPERUMBUDUR",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-surat",
+      "name": "SURAT",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-tambaram",
+      "name": "TAMBARAM",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-thane-mulund",
+      "name": "THANE (MULUND)",
+      "category": "regional_office",
+      "parent_id": "zo-thane",
+      "children_ids": []
+    },
+    {
+      "id": "ro-thane-north",
+      "name": "THANE (NORTH)",
+      "category": "regional_office",
+      "parent_id": "zo-thane",
+      "children_ids": []
+    },
+    {
+      "id": "ro-thane-south",
+      "name": "THANE (SOUTH)",
+      "category": "regional_office",
+      "parent_id": "zo-thane",
+      "children_ids": []
+    },
+    {
+      "id": "ro-thiruvallur",
+      "name": "THIRUVALLUR",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-thiruvananthapuram",
+      "name": "THIRUVANANTHAPURAM",
+      "category": "regional_office",
+      "parent_id": "zo-kerala-lakshadweep-thiruvananthapuram",
+      "children_ids": []
+    },
+    {
+      "id": "ro-tinsukia",
+      "name": "TINSUKIA",
+      "category": "regional_office",
+      "parent_id": "zo-north-eastern-region-guwahati",
+      "children_ids": [
+        "do-jorhat"
+      ]
+    },
+    {
+      "id": "ro-tirunelveli",
+      "name": "TIRUNELVELI",
+      "category": "regional_office",
+      "parent_id": "zo-tamil-nadu-excluding-chennai",
+      "children_ids": [
+        "do-tuticorin"
+      ]
+    },
+    {
+      "id": "ro-tiruppur",
+      "name": "TIRUPPUR",
+      "category": "regional_office",
+      "parent_id": "zo-tamil-nadu-excluding-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-trichy",
+      "name": "TRICHY",
+      "category": "regional_office",
+      "parent_id": "zo-tamil-nadu-excluding-chennai",
+      "children_ids": [
+        "do-cuddalore",
+        "do-karur",
+        "do-kumbakonam",
+        "do-thanjavur"
+      ]
+    },
+    {
+      "id": "ro-tumkur",
+      "name": "TUMKUR",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "ro-udaipur",
+      "name": "UDAIPUR",
+      "category": "regional_office",
+      "parent_id": "zo-rajasthan",
+      "children_ids": [
+        "do-bhilwara"
+      ]
+    },
+    {
+      "id": "ro-udupi",
+      "name": "UDUPI",
+      "category": "regional_office",
+      "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "children_ids": []
+    },
+    {
+      "id": "ro-ujjain",
+      "name": "UJJAIN",
+      "category": "regional_office",
+      "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+      "children_ids": [
+        "do-ratlam"
+      ]
+    },
+    {
+      "id": "ro-vadodara",
+      "name": "VADODARA",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-vapi",
+      "name": "VAPI",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": []
+    },
+    {
+      "id": "ro-varanasi",
+      "name": "VARANASI",
+      "category": "regional_office",
+      "parent_id": "zo-uttar-pradesh",
+      "children_ids": []
+    },
+    {
+      "id": "ro-vashi",
+      "name": "VASHI",
+      "category": "regional_office",
+      "parent_id": "zo-thane",
+      "children_ids": []
+    },
+    {
+      "id": "ro-vashi-annexe",
+      "name": "VASHI (ANNEXE)",
+      "category": "regional_office",
+      "parent_id": "zo-thane",
+      "children_ids": []
+    },
+    {
+      "id": "ro-vatwa",
+      "name": "VATWA",
+      "category": "regional_office",
+      "parent_id": "zo-gujarat-ahmedabad",
+      "children_ids": [
+        "do-bhavnagar",
+        "do-nadiad"
+      ]
+    },
+    {
+      "id": "ro-vellore",
+      "name": "VELLORE",
+      "category": "regional_office",
+      "parent_id": "zo-chennai-puducherry-chennai",
+      "children_ids": []
+    },
+    {
+      "id": "ro-visakhapatnam",
+      "name": "VISAKHAPATNAM",
+      "category": "regional_office",
+      "parent_id": "zo-andhra-pradesh-vijayawada",
+      "children_ids": [
+        "do-srikakulam",
+        "do-vizianagaram"
+      ]
+    },
+    {
+      "id": "ro-warangal",
+      "name": "WARANGAL",
+      "category": "regional_office",
+      "parent_id": "zo-telangana-hyderabad",
+      "children_ids": [
+        "do-khammam"
+      ]
+    },
+    {
+      "id": "ro-yelahanka",
+      "name": "YELAHANKA",
+      "category": "regional_office",
+      "parent_id": "zo-bengaluru-bengaluru",
+      "children_ids": []
+    },
+    {
+      "id": "szti-sub-zonal-training-institute-east-zone",
+      "name": "Sub Zonal Training Institute, East Zone",
+      "category": "sub_zonal_training_institute",
+      "parent_id": "pdunass-pdunass",
+      "children_ids": []
+    },
+    {
+      "id": "zti-zonal-training-institute-east-zone",
+      "name": "Zonal Training Institute, East Zone",
+      "category": "zonal_training_institute",
+      "parent_id": "pdunass-pdunass",
+      "children_ids": []
+    },
+    {
+      "id": "zti-zonal-training-institute-north-zone",
+      "name": "Zonal Training Institute, North Zone",
+      "category": "zonal_training_institute",
+      "parent_id": "pdunass-pdunass",
+      "children_ids": []
+    },
+    {
+      "id": "zti-zonal-training-institute-south-zone",
+      "name": "Zonal Training Institute, South Zone",
+      "category": "zonal_training_institute",
+      "parent_id": "pdunass-pdunass",
+      "children_ids": []
+    },
+    {
+      "id": "zti-zonal-training-institute-west-zone",
+      "name": "Zonal Training Institute, West Zone",
+      "category": "zonal_training_institute",
+      "parent_id": "pdunass-pdunass",
+      "children_ids": []
+    },
+    {
+      "id": "do-adilabad",
+      "name": "D.O - ADILABAD",
+      "category": "district_office",
+      "parent_id": "ro-karimnagar",
+      "children_ids": []
+    },
+    {
+      "id": "do-ahilyanagar",
+      "name": "D.O - AHILYANAGAR",
+      "category": "district_office",
+      "parent_id": "ro-nasik",
+      "children_ids": []
+    },
+    {
+      "id": "do-ajmer",
+      "name": "D.O - AJMER",
+      "category": "district_office",
+      "parent_id": "ro-jaipur",
+      "children_ids": []
+    },
+    {
+      "id": "do-aligarh",
+      "name": "D.O - ALIGARH",
+      "category": "district_office",
+      "parent_id": "ro-agra",
+      "children_ids": []
+    },
+    {
+      "id": "do-alipurduar",
+      "name": "D.O - ALIPURDUAR",
+      "category": "district_office",
+      "parent_id": "ro-jalpaiguri",
+      "children_ids": []
+    },
+    {
+      "id": "do-alleyppey",
+      "name": "D.O - ALLEYPPEY",
+      "category": "district_office",
+      "parent_id": "ro-kochi",
+      "children_ids": []
+    },
+    {
+      "id": "do-ambala",
+      "name": "D.O - AMBALA",
+      "category": "district_office",
+      "parent_id": "ro-karnal",
+      "children_ids": []
+    },
+    {
+      "id": "do-amravati",
+      "name": "D.O - AMRAVATI",
+      "category": "district_office",
+      "parent_id": "ro-akola",
+      "children_ids": []
+    },
+    {
+      "id": "do-anantapur",
+      "name": "D.O - ANANTAPUR",
+      "category": "district_office",
+      "parent_id": "ro-kadapa",
+      "children_ids": []
+    },
+    {
+      "id": "do-baddi",
+      "name": "D.O - BADDI",
+      "category": "district_office",
+      "parent_id": "ro-shimla",
+      "children_ids": []
+    },
+    {
+      "id": "do-bagalkot",
+      "name": "D.O - BAGALKOT",
+      "category": "district_office",
+      "parent_id": "ro-raichur",
+      "children_ids": []
+    },
+    {
+      "id": "do-balasore",
+      "name": "D.O - BALASORE",
+      "category": "district_office",
+      "parent_id": "ro-bhubaneshwar",
+      "children_ids": []
+    },
+    {
+      "id": "do-barbil",
+      "name": "D.O - BARBIL",
+      "category": "district_office",
+      "parent_id": "ro-keonjhar",
+      "children_ids": []
+    },
+    {
+      "id": "do-batala",
+      "name": "D.O - BATALA",
+      "category": "district_office",
+      "parent_id": "ro-amritsar",
+      "children_ids": []
+    },
+    {
+      "id": "do-belgavi",
+      "name": "D.O - BELGAVI",
+      "category": "district_office",
+      "parent_id": "ro-hubli",
+      "children_ids": []
+    },
+    {
+      "id": "do-bharatpur",
+      "name": "D.O - BHARATPUR",
+      "category": "district_office",
+      "parent_id": "ro-alwar",
+      "children_ids": []
+    },
+    {
+      "id": "do-bhavnagar",
+      "name": "D.O - BHAVNAGAR",
+      "category": "district_office",
+      "parent_id": "ro-vatwa",
+      "children_ids": []
+    },
+    {
+      "id": "do-bhilwara",
+      "name": "D.O - BHILWARA",
+      "category": "district_office",
+      "parent_id": "ro-udaipur",
+      "children_ids": []
+    },
+    {
+      "id": "do-bhimavaram",
+      "name": "D.O - BHIMAVARAM",
+      "category": "district_office",
+      "parent_id": "ro-rajamahendravaram",
+      "children_ids": []
+    },
+    {
+      "id": "do-bidar",
+      "name": "D.O - BIDAR",
+      "category": "district_office",
+      "parent_id": "ro-gulbarga",
+      "children_ids": []
+    },
+    {
+      "id": "do-bijapur",
+      "name": "D.O - BIJAPUR",
+      "category": "district_office",
+      "parent_id": "ro-gulbarga",
+      "children_ids": []
+    },
+    {
+      "id": "do-bikaner",
+      "name": "D.O - BIKANER",
+      "category": "district_office",
+      "parent_id": "ro-jodhpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-bilaspur",
+      "name": "D.O - BILASPUR",
+      "category": "district_office",
+      "parent_id": "ro-raipur-chattisgarh",
+      "children_ids": []
+    },
+    {
+      "id": "do-bokaro",
+      "name": "D.O - BOKARO",
+      "category": "district_office",
+      "parent_id": "ro-ranchi",
+      "children_ids": []
+    },
+    {
+      "id": "do-bongaigaon",
+      "name": "D.O - BONGAIGAON",
+      "category": "district_office",
+      "parent_id": "ro-guwahati",
+      "children_ids": []
+    },
+    {
+      "id": "do-chaibasa",
+      "name": "D.O - CHAIBASA",
+      "category": "district_office",
+      "parent_id": "ro-jamshedpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-chandrapur",
+      "name": "D.O - CHANDRAPUR",
+      "category": "district_office",
+      "parent_id": "ro-nagpur-annex-bldg",
+      "children_ids": []
+    },
+    {
+      "id": "do-chhindwara",
+      "name": "D.O - CHHINDWARA",
+      "category": "district_office",
+      "parent_id": "ro-jabalpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-coonoor",
+      "name": "D.O - COONOOR",
+      "category": "district_office",
+      "parent_id": "ro-coimbatore",
+      "children_ids": []
+    },
+    {
+      "id": "do-cuddalore",
+      "name": "D.O - CUDDALORE",
+      "category": "district_office",
+      "parent_id": "ro-trichy",
+      "children_ids": []
+    },
+    {
+      "id": "do-cuttack",
+      "name": "D.O - CUTTACK",
+      "category": "district_office",
+      "parent_id": "ro-bhubaneshwar",
+      "children_ids": []
+    },
+    {
+      "id": "do-darbhanga",
+      "name": "D.O - DARBHANGA",
+      "category": "district_office",
+      "parent_id": "ro-muzaffarpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-davangere",
+      "name": "D.O - DAVANGERE",
+      "category": "district_office",
+      "parent_id": "ro-shimoga",
+      "children_ids": []
+    },
+    {
+      "id": "do-deoghar",
+      "name": "D.O - DEOGHAR",
+      "category": "district_office",
+      "parent_id": "ro-ranchi",
+      "children_ids": []
+    },
+    {
+      "id": "do-dhanbad",
+      "name": "D.O - DHANBAD",
+      "category": "district_office",
+      "parent_id": "ro-ranchi",
+      "children_ids": []
+    },
+    {
+      "id": "do-dhar",
+      "name": "D.O - DHAR",
+      "category": "district_office",
+      "parent_id": "ro-indore",
+      "children_ids": []
+    },
+    {
+      "id": "do-dharmanagar",
+      "name": "D.O - DHARMANAGAR",
+      "category": "district_office",
+      "parent_id": "ro-agartala",
+      "children_ids": []
+    },
+    {
+      "id": "do-dindigul",
+      "name": "D.O - DINDIGUL",
+      "category": "district_office",
+      "parent_id": "ro-madurai",
+      "children_ids": []
+    },
+    {
+      "id": "do-eluru",
+      "name": "D.O - ELURU",
+      "category": "district_office",
+      "parent_id": "ro-rajamahendravaram",
+      "children_ids": []
+    },
+    {
+      "id": "do-erode",
+      "name": "D.O - ERODE",
+      "category": "district_office",
+      "parent_id": "ro-salem",
+      "children_ids": []
+    },
+    {
+      "id": "do-gandhidham",
+      "name": "D.O - GANDHIDHAM",
+      "category": "district_office",
+      "parent_id": "ro-rajkot",
+      "children_ids": []
+    },
+    {
+      "id": "do-gaya",
+      "name": "D.O - GAYA",
+      "category": "district_office",
+      "parent_id": "ro-patna",
+      "children_ids": []
+    },
+    {
+      "id": "do-giridih",
+      "name": "D.O - GIRIDIH",
+      "category": "district_office",
+      "parent_id": "ro-ranchi",
+      "children_ids": []
+    },
+    {
+      "id": "do-hassan",
+      "name": "D.O - HASSAN",
+      "category": "district_office",
+      "parent_id": "ro-chikamagalur",
+      "children_ids": []
+    },
+    {
+      "id": "do-himmatnagar",
+      "name": "D.O - HIMMATNAGAR",
+      "category": "district_office",
+      "parent_id": "ro-naroda",
+      "children_ids": []
+    },
+    {
+      "id": "do-hisar",
+      "name": "D.O - HISAR",
+      "category": "district_office",
+      "parent_id": "ro-htak",
+      "children_ids": []
+    },
+    {
+      "id": "do-hoshiarpur",
+      "name": "D.O - HOSHIARPUR",
+      "category": "district_office",
+      "parent_id": "ro-jalandhar",
+      "children_ids": []
+    },
+    {
+      "id": "do-itarasi",
+      "name": "D.O - ITARASI",
+      "category": "district_office",
+      "parent_id": "ro-bhopal",
+      "children_ids": []
+    },
+    {
+      "id": "do-jalgaon",
+      "name": "D.O - JALGAON",
+      "category": "district_office",
+      "parent_id": "ro-nasik",
+      "children_ids": []
+    },
+    {
+      "id": "do-jamnagar",
+      "name": "D.O - JAMNAGAR",
+      "category": "district_office",
+      "parent_id": "ro-rajkot",
+      "children_ids": []
+    },
+    {
+      "id": "do-jhunjhunun",
+      "name": "D.O - JHUNJHUNUN",
+      "category": "district_office",
+      "parent_id": "ro-jaipur",
+      "children_ids": []
+    },
+    {
+      "id": "do-jorhat",
+      "name": "D.O - JORHAT",
+      "category": "district_office",
+      "parent_id": "ro-tinsukia",
+      "children_ids": []
+    },
+    {
+      "id": "do-junagadh",
+      "name": "D.O - JUNAGADH",
+      "category": "district_office",
+      "parent_id": "ro-rajkot",
+      "children_ids": []
+    },
+    {
+      "id": "do-kakinada",
+      "name": "D.O - KAKINADA",
+      "category": "district_office",
+      "parent_id": "ro-rajamahendravaram",
+      "children_ids": []
+    },
+    {
+      "id": "do-karawar",
+      "name": "D.O - KARAWAR",
+      "category": "district_office",
+      "parent_id": "ro-hubli",
+      "children_ids": []
+    },
+    {
+      "id": "do-karur",
+      "name": "D.O - KARUR",
+      "category": "district_office",
+      "parent_id": "ro-trichy",
+      "children_ids": []
+    },
+    {
+      "id": "do-katihar",
+      "name": "D.O - KATIHAR",
+      "category": "district_office",
+      "parent_id": "ro-bhagalpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-khammam",
+      "name": "D.O - KHAMMAM",
+      "category": "district_office",
+      "parent_id": "ro-warangal",
+      "children_ids": []
+    },
+    {
+      "id": "do-khandwa",
+      "name": "D.O - KHANDWA",
+      "category": "district_office",
+      "parent_id": "ro-indore",
+      "children_ids": []
+    },
+    {
+      "id": "do-koderma",
+      "name": "D.O - KODERMA",
+      "category": "district_office",
+      "parent_id": "ro-ranchi",
+      "children_ids": []
+    },
+    {
+      "id": "do-kolar",
+      "name": "D.O - KOLAR",
+      "category": "district_office",
+      "parent_id": "ro-k-r-puram-whitefield",
+      "children_ids": []
+    },
+    {
+      "id": "do-krishnagiri",
+      "name": "D.O - KRISHNAGIRI",
+      "category": "district_office",
+      "parent_id": "ro-salem",
+      "children_ids": []
+    },
+    {
+      "id": "do-kullu",
+      "name": "D.O - KULLU",
+      "category": "district_office",
+      "parent_id": "ro-shimla",
+      "children_ids": []
+    },
+    {
+      "id": "do-kumbakonam",
+      "name": "D.O - KUMBAKONAM",
+      "category": "district_office",
+      "parent_id": "ro-trichy",
+      "children_ids": []
+    },
+    {
+      "id": "do-kurnool",
+      "name": "D.O - KURNOOL",
+      "category": "district_office",
+      "parent_id": "ro-kadapa",
+      "children_ids": []
+    },
+    {
+      "id": "do-madikeri",
+      "name": "D.O - MADIKERI",
+      "category": "district_office",
+      "parent_id": "ro-mysore",
+      "children_ids": []
+    },
+    {
+      "id": "do-malbazar",
+      "name": "D.O - MALBAZAR",
+      "category": "district_office",
+      "parent_id": "ro-jalpaiguri",
+      "children_ids": []
+    },
+    {
+      "id": "do-mandi-gobindgarh",
+      "name": "D.O - MANDI GOBINDGARH",
+      "category": "district_office",
+      "parent_id": "ro-chandigarh",
+      "children_ids": []
+    },
+    {
+      "id": "do-mandya",
+      "name": "D.O - MANDYA",
+      "category": "district_office",
+      "parent_id": "ro-mysore",
+      "children_ids": []
+    },
+    {
+      "id": "do-mehsana",
+      "name": "D.O - MEHSANA",
+      "category": "district_office",
+      "parent_id": "ro-naroda",
+      "children_ids": []
+    },
+    {
+      "id": "do-midnapore",
+      "name": "D.O - MIDNAPORE",
+      "category": "district_office",
+      "parent_id": "ro-howrah",
+      "children_ids": []
+    },
+    {
+      "id": "do-moga",
+      "name": "D.O - MOGA",
+      "category": "district_office",
+      "parent_id": "ro-bhatinda",
+      "children_ids": []
+    },
+    {
+      "id": "do-moradabad",
+      "name": "D.O - MORADABAD",
+      "category": "district_office",
+      "parent_id": "ro-bareilly",
+      "children_ids": []
+    },
+    {
+      "id": "do-munger",
+      "name": "D.O - MUNGER",
+      "category": "district_office",
+      "parent_id": "ro-bhagalpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-munnar",
+      "name": "D.O - MUNNAR",
+      "category": "district_office",
+      "parent_id": "ro-kottayam",
+      "children_ids": []
+    },
+    {
+      "id": "do-muzaffarnagar",
+      "name": "D.O - MUZAFFARNAGAR",
+      "category": "district_office",
+      "parent_id": "ro-meerut",
+      "children_ids": []
+    },
+    {
+      "id": "do-nadiad",
+      "name": "D.O - NADIAD",
+      "category": "district_office",
+      "parent_id": "ro-vatwa",
+      "children_ids": []
+    },
+    {
+      "id": "do-nahan",
+      "name": "D.O - NAHAN",
+      "category": "district_office",
+      "parent_id": "ro-shimla",
+      "children_ids": []
+    },
+    {
+      "id": "do-nalgonda",
+      "name": "D.O - NALGONDA",
+      "category": "district_office",
+      "parent_id": "ro-hyderabad-barkatpura",
+      "children_ids": []
+    },
+    {
+      "id": "do-nellore",
+      "name": "D.O - NELLORE",
+      "category": "district_office",
+      "parent_id": "ro-kadapa",
+      "children_ids": []
+    },
+    {
+      "id": "do-ongole",
+      "name": "D.O - ONGOLE",
+      "category": "district_office",
+      "parent_id": "ro-guntur",
+      "children_ids": []
+    },
+    {
+      "id": "do-ooty",
+      "name": "D.O - OOTY",
+      "category": "district_office",
+      "parent_id": "ro-coimbatore",
+      "children_ids": []
+    },
+    {
+      "id": "do-palakkad",
+      "name": "D.O - PALAKKAD",
+      "category": "district_office",
+      "parent_id": "ro-kozhikode-calicut",
+      "children_ids": []
+    },
+    {
+      "id": "do-palampur",
+      "name": "D.O - PALAMPUR",
+      "category": "district_office",
+      "parent_id": "ro-shimla",
+      "children_ids": []
+    },
+    {
+      "id": "do-pali",
+      "name": "D.O - PALI",
+      "category": "district_office",
+      "parent_id": "ro-jodhpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-panipat",
+      "name": "D.O - PANIPAT",
+      "category": "district_office",
+      "parent_id": "ro-karnal",
+      "children_ids": []
+    },
+    {
+      "id": "do-patiala",
+      "name": "D.O - PATIALA",
+      "category": "district_office",
+      "parent_id": "ro-chandigarh",
+      "children_ids": []
+    },
+    {
+      "id": "do-phagwara",
+      "name": "D.O - PHAGWARA",
+      "category": "district_office",
+      "parent_id": "ro-jalandhar",
+      "children_ids": []
+    },
+    {
+      "id": "do-pollachi",
+      "name": "D.O - POLLACHI",
+      "category": "district_office",
+      "parent_id": "ro-coimbatore",
+      "children_ids": []
+    },
+    {
+      "id": "do-ratlam",
+      "name": "D.O - RATLAM",
+      "category": "district_office",
+      "parent_id": "ro-ujjain",
+      "children_ids": []
+    },
+    {
+      "id": "do-rayagada",
+      "name": "D.O - RAYAGADA",
+      "category": "district_office",
+      "parent_id": "ro-brahmapur",
+      "children_ids": []
+    },
+    {
+      "id": "do-rohtas",
+      "name": "D.O - ROHTAS",
+      "category": "district_office",
+      "parent_id": "ro-patna",
+      "children_ids": []
+    },
+    {
+      "id": "do-saharanpur",
+      "name": "D.O - SAHARANPUR",
+      "category": "district_office",
+      "parent_id": "ro-meerut",
+      "children_ids": []
+    },
+    {
+      "id": "do-sahibganj",
+      "name": "D.O - SAHIBGANJ",
+      "category": "district_office",
+      "parent_id": "ro-ranchi",
+      "children_ids": []
+    },
+    {
+      "id": "do-sambalpur",
+      "name": "D.O - SAMBALPUR",
+      "category": "district_office",
+      "parent_id": "ro-urkela",
+      "children_ids": []
+    },
+    {
+      "id": "do-sangrur",
+      "name": "D.O - SANGRUR",
+      "category": "district_office",
+      "parent_id": "ro-bhatinda",
+      "children_ids": []
+    },
+    {
+      "id": "do-satna",
+      "name": "D.O - SATNA",
+      "category": "district_office",
+      "parent_id": "ro-jabalpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-siddipet",
+      "name": "D.O - SIDDIPET",
+      "category": "district_office",
+      "parent_id": "ro-sangareddy",
+      "children_ids": []
+    },
+    {
+      "id": "do-silchar",
+      "name": "D.O - SILCHAR",
+      "category": "district_office",
+      "parent_id": "ro-guwahati",
+      "children_ids": []
+    },
+    {
+      "id": "do-sivakasi",
+      "name": "D.O - SIVAKASI",
+      "category": "district_office",
+      "parent_id": "ro-madurai",
+      "children_ids": []
+    },
+    {
+      "id": "do-sonipat",
+      "name": "D.O - SONIPAT",
+      "category": "district_office",
+      "parent_id": "ro-karnal",
+      "children_ids": []
+    },
+    {
+      "id": "do-sriganganagar",
+      "name": "D.O - SRIGANGANAGAR",
+      "category": "district_office",
+      "parent_id": "ro-jodhpur",
+      "children_ids": []
+    },
+    {
+      "id": "do-srikakulam",
+      "name": "D.O - SRIKAKULAM",
+      "category": "district_office",
+      "parent_id": "ro-visakhapatnam",
+      "children_ids": []
+    },
+    {
+      "id": "do-srirampore",
+      "name": "D.O - SRIRAMPORE",
+      "category": "district_office",
+      "parent_id": "ro-howrah-annex-bldg",
+      "children_ids": []
+    },
+    {
+      "id": "do-surendranagar",
+      "name": "D.O - SURENDRANAGAR",
+      "category": "district_office",
+      "parent_id": "ro-rajkot",
+      "children_ids": []
+    },
+    {
+      "id": "do-tezpur",
+      "name": "D.O - TEZPUR",
+      "category": "district_office",
+      "parent_id": "ro-guwahati",
+      "children_ids": []
+    },
+    {
+      "id": "do-thanjavur",
+      "name": "D.O - THANJAVUR",
+      "category": "district_office",
+      "parent_id": "ro-trichy",
+      "children_ids": []
+    },
+    {
+      "id": "do-thrissur",
+      "name": "D.O - THRISSUR",
+      "category": "district_office",
+      "parent_id": "ro-kochi",
+      "children_ids": []
+    },
+    {
+      "id": "do-tirupati",
+      "name": "D.O - TIRUPATI",
+      "category": "district_office",
+      "parent_id": "ro-kadapa",
+      "children_ids": []
+    },
+    {
+      "id": "do-tuticorin",
+      "name": "D.O - TUTICORIN",
+      "category": "district_office",
+      "parent_id": "ro-tirunelveli",
+      "children_ids": []
+    },
+    {
+      "id": "do-vijayawada",
+      "name": "D.O - VIJAYAWADA",
+      "category": "district_office",
+      "parent_id": "ro-guntur",
+      "children_ids": []
+    },
+    {
+      "id": "do-vizianagaram",
+      "name": "D.O - VIZIANAGARAM",
+      "category": "district_office",
+      "parent_id": "ro-visakhapatnam",
+      "children_ids": []
+    },
+    {
+      "id": "do-wayanad",
+      "name": "D.O - WAYANAD",
+      "category": "district_office",
+      "parent_id": "ro-kozhikode-calicut",
+      "children_ids": []
+    },
+    {
+      "id": "do-yamunanagar",
+      "name": "D.O - YAMUNANAGAR",
+      "category": "district_office",
+      "parent_id": "ro-karnal",
+      "children_ids": []
+    },
+    {
+      "id": "do-s-s-o-aizawl",
+      "name": "S.S.O - AIZAWL",
+      "category": "district_office",
+      "parent_id": "ro-shillong",
+      "children_ids": []
+    },
+    {
+      "id": "do-s-s-o-dimapur",
+      "name": "S.S.O - DIMAPUR",
+      "category": "district_office",
+      "parent_id": "ro-guwahati",
+      "children_ids": []
+    },
+    {
+      "id": "do-s-s-o-imphal",
+      "name": "S.S.O - IMPHAL",
+      "category": "district_office",
+      "parent_id": "ro-guwahati",
+      "children_ids": []
+    },
+    {
+      "id": "do-s-s-o-itanagar",
+      "name": "S.S.O - ITANAGAR",
+      "category": "district_office",
+      "parent_id": "ro-guwahati",
+      "children_ids": []
+    },
+    {
+      "id": "sso-gangtok",
+      "name": "SSO - GANGTOK",
+      "category": "special_state_office",
+      "parent_id": "ro-siliguri",
+      "children_ids": []
+    }
+  ]
+}

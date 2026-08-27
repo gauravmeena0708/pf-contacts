@@ -1,0 +1,64 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-batala",
+    "source_key": "q=D.O+-+BATALA",
+    "name": "D.O - BATALA",
+    "category": "district_office",
+    "parent_id": "ro-amritsar",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh",
+      "ro-amritsar"
+    ],
+    "address": "Sunder Vatika Complex, Opp. Sita Mata Mandir,\nSmadh Road,\nBatala, Distt. Gurdaspur - 143505",
+    "contact": {
+      "emails": [
+        "do.batala@epfindia.gov.in"
+      ],
+      "std_code": "01871",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "292755"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 31.8182019,
+      "longitude": 75.2115788
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-f4e4ececcddd",
+        "office_id": "do-batala",
+        "name": "Shri Krishan Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "krishan.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "292755"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ddafd19ce7bf",
+        "office_id": "do-batala",
+        "name": "PUBLIC RELATION OFFICER",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "292755"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

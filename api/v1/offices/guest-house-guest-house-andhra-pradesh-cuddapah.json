@@ -1,0 +1,33 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-andhra-pradesh-cuddapah",
+    "source_key": "q=GH_Guest_House_ANDHRA_PRADESH_Cuddapah_",
+    "name": "Guest House, ANDHRA PRADESH(Cuddapah)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "EPF staff Quarters,\nP.F. Office Quarters No. 1/30,\nRailway Station Road,\nYerra Mukkapalle\nCuddapah - 516004",
+    "contact": {
+      "emails": [],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 14.4794394,
+      "longitude": 78.8216528
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

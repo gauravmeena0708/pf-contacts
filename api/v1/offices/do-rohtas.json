@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-rohtas",
+    "source_key": "q=D.O+-+ROHTAS",
+    "name": "D.O - ROHTAS",
+    "category": "district_office",
+    "parent_id": "ro-patna",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna",
+      "ro-patna"
+    ],
+    "address": "Shanti Niketan,\nPali Road,\nDehri-On-Sone, - 821307",
+    "contact": {
+      "emails": [
+        "do.rohtas@epfindia.gov.in"
+      ],
+      "std_code": "06184",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 24.9017893,
+      "longitude": 84.1849776
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-823e6c6f0ab1",
+        "office_id": "do-rohtas",
+        "name": "Shri Soumya Shanta Saha",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "295610"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

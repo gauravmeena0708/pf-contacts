@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-phagwara",
+    "source_key": "q=D.O+-+PHAGWARA",
+    "name": "D.O - PHAGWARA",
+    "category": "district_office",
+    "parent_id": "ro-jalandhar",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh",
+      "ro-jalandhar"
+    ],
+    "address": "EPFO, District Office, BSNL building, Model Town,\nG.T.Road, Phagwara.\nPhagwara - 144401",
+    "contact": {
+      "emails": [
+        "do.phagwara@epfindia.gov.in"
+      ],
+      "std_code": "01824",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 31.221133,
+      "longitude": 75.786044
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-35edb31585cf",
+        "office_id": "do-phagwara",
+        "name": "Shri Harmeet Kajal",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.phagwara@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "223409"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

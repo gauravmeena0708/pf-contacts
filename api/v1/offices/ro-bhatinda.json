@@ -1,0 +1,142 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-bhatinda",
+    "source_key": "q=BHATINDA",
+    "name": "BHATINDA",
+    "category": "regional_office",
+    "parent_id": "zo-punjab-himachal-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh"
+    ],
+    "address": "Bhavishaya Nidhi Bhawan,Urban Estate Phase-I,\nNear TV Tower,\nBhatinda - 151 001",
+    "contact": {
+      "emails": [
+        "ro.bhatinda@epfindia.gov.in"
+      ],
+      "std_code": "0164",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2215892"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-f1f7a44de010",
+        "office_id": "ro-bhatinda",
+        "name": "Ms Rina Mandal",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "rina.mondal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2219916"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d89c1f11041b",
+        "office_id": "ro-bhatinda",
+        "name": "Private Secretary",
+        "designation": null,
+        "emails": [
+          "ro.bhatinda@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2219916"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fd32378f6cb0",
+        "office_id": "ro-bhatinda",
+        "name": "Shri Siddhartha",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "siddhartha@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6fda41926a1c",
+        "office_id": "ro-bhatinda",
+        "name": "Shr Narinder Soni",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "narinder07@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-42238d15bd3c",
+        "office_id": "ro-bhatinda",
+        "name": "Shri Manoj Kumar Patel",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "manojpatel18854@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f855a1d26e0a",
+        "office_id": "ro-bhatinda",
+        "name": "Shri Amandeep Singh Dogra",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "amandeep.dogra@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-71088bb83b88",
+        "office_id": "ro-bhatinda",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2215892"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8f5687f733d6",
+        "office_id": "ro-bhatinda",
+        "name": "E D P Cell",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2240778"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bea134a7c75b",
+        "office_id": "ro-bhatinda",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "6284364807"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

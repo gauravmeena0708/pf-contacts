@@ -1,0 +1,159 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-vadodara",
+    "source_key": "q=VADODARA",
+    "name": "VADODARA",
+    "category": "regional_office",
+    "parent_id": "zo-gujarat-ahmedabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad"
+    ],
+    "address": "Bhavishyanidhi Bhawan, B/H VMC Ward-6 Office,\nAkota Stadium Road, Akota,\nVadodara - 390020",
+    "contact": {
+      "emails": [
+        "ro.vadodara@epfindia.gov.in"
+      ],
+      "std_code": "0265",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2606251",
+        "2606271"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.2968692,
+      "longitude": 73.1705383
+    },
+    "official_count": 10,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-b304c25d5f8e",
+        "office_id": "ro-vadodara",
+        "name": "Shri Vikas Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "2606221"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b06e3782895a",
+        "office_id": "ro-vadodara",
+        "name": "Shri Anil K Bhatt",
+        "designation": "Private Secretary",
+        "emails": [
+          "anilkumar.bhatt@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2606220"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-35f4c7feaeb6",
+        "office_id": "ro-vadodara",
+        "name": "Shri Mitesh Eknath Rajmane",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2606222"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3a6cf427c1ee",
+        "office_id": "ro-vadodara",
+        "name": "Shri Sushant Prakash Patil",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2606225"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-4b468ca30ad1",
+        "office_id": "ro-vadodara",
+        "name": "Shri Sachiv Nehra",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2606258"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b4435c385290",
+        "office_id": "ro-vadodara",
+        "name": "Shri Pranay Jha",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "pranayjha786@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2606259"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-64a2eb76eb38",
+        "office_id": "ro-vadodara",
+        "name": "Sh. Sudheer Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2606224"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6e812457079f",
+        "office_id": "ro-vadodara",
+        "name": "Smt Geeta M Nair",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2606259"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9d78003a14a8",
+        "office_id": "ro-vadodara",
+        "name": "Smt Manisha Pandya",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2606251",
+          "2606271"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-eeba9f5d2c0d",
+        "office_id": "ro-vadodara",
+        "name": "General Enquiry",
+        "designation": "General Numbers",
+        "emails": [
+          "ro.vadodra@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2606265",
+          "2606266",
+          "2606271"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

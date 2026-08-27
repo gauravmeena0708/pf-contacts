@@ -1,0 +1,87 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-ujjain",
+    "source_key": "q=UJJAIN",
+    "name": "UJJAIN",
+    "category": "regional_office",
+    "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+    "ancestor_ids": [
+      "head-office",
+      "zo-madhya-pradesh-chattisgarh-bhopal"
+    ],
+    "address": "7, Bharatpuri\nAdministrative Area,  (M.P).\nUjjain - 456 010",
+    "contact": {
+      "emails": [
+        "ro.ujjain@epfindia.gov.in"
+      ],
+      "std_code": "0734",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2518588"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "MPCG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-efd9c97d0858",
+        "office_id": "ro-ujjain",
+        "name": "Shri Ritesh Kumar Soni",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.ujjain@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2517730"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-98dfb42b2245",
+        "office_id": "ro-ujjain",
+        "name": "Shri Vijay Choithani",
+        "designation": "Public Relation Officer",
+        "emails": [
+          "ro.ujjain@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2518588"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3d6a602a1b17",
+        "office_id": "ro-ujjain",
+        "name": "Shri Vikram Kushwah",
+        "designation": "E D P CELL",
+        "emails": [],
+        "phone_numbers": [
+          "2525273"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a7dfb846dbe0",
+        "office_id": "ro-ujjain",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9424441512"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

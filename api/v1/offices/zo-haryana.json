@@ -1,0 +1,80 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-haryana",
+    "source_key": "q=HARYANA",
+    "name": "HARYANA",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Office of the Addl. Central Provident Fund Commissioner(Haryana), Dr. Shyama Prasad Mukherjee Institute of Social Security Administration Building,\nSector 16-A, Old Faridabad\nHaryana - 121002",
+    "contact": {
+      "emails": [
+        "acc.hr@epfindia.gov.in"
+      ],
+      "std_code": "0129",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 28.4154772,
+      "longitude": 77.3293565
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "HR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-f6d1d1731267",
+        "office_id": "zo-haryana",
+        "name": "Ms. Mridula Ghai",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)",
+        "emails": [
+          "acc.hr@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2227843"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a08ef20bae4c",
+        "office_id": "zo-haryana",
+        "name": "Ms Kavita",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2227843"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1c422d5cb7cf",
+        "office_id": "zo-haryana",
+        "name": "Shri Manoj Yadav",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d4933e72a0f1",
+        "office_id": "zo-haryana",
+        "name": "Shri Vineet Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "4875010"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

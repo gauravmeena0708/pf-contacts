@@ -1,0 +1,152 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-delhi-west",
+    "source_key": "q=DELHI+%5BWEST%5D",
+    "name": "DELHI [WEST]",
+    "category": "regional_office",
+    "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh"
+    ],
+    "address": "EPFO Complex, Plot No. 23,\nSector-23, Dwarka,\nNew Delhi - 110077",
+    "contact": {
+      "emails": [
+        "ro.delhiwest@epfindia.gov.in"
+      ],
+      "std_code": "011",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "28093110",
+        "28093112"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 28.5731545,
+      "longitude": 77.0654305
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "DLUK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-df3375398ec5",
+        "office_id": "ro-delhi-west",
+        "name": "Shri Mohammad Shariq",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "28093001"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7ac6a8eb5a9d",
+        "office_id": "ro-delhi-west",
+        "name": "Shri Sanjay Mullick",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "sanjay.mullick@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20892144"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6452e7b5dce2",
+        "office_id": "ro-delhi-west",
+        "name": "Shri Manoj Kumar Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "manoj.gupta@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093008"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b9f5b0a24cc8",
+        "office_id": "ro-delhi-west",
+        "name": "Shri Rajey Malik",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "rajeymalik@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "44749562"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d99e4ec5c6af",
+        "office_id": "ro-delhi-west",
+        "name": "Shri Shashi Shekhar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "shashi.shekhar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093009"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-723cf43e7bf8",
+        "office_id": "ro-delhi-west",
+        "name": "Smt Surbhi Jain",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "surbhi.jain@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093006"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-952636d4830c",
+        "office_id": "ro-delhi-west",
+        "name": "Shri Prikshit Deswal",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "lprikshitdeswal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20892252"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2c1bf4e61f8d",
+        "office_id": "ro-delhi-west",
+        "name": "PUBLIC RELATION OFFICER",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "28093110",
+          "28093112"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8821bb139c00",
+        "office_id": "ro-delhi-west",
+        "name": "Whatsapp Business Account",
+        "designation": "GENERAL NUMBERS",
+        "emails": [],
+        "phone_numbers": [
+          "9220872624"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

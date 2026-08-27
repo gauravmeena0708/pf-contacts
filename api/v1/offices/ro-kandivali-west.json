@@ -1,0 +1,140 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kandivali-west",
+    "source_key": "q=KANDIVALI-West",
+    "name": "KANDIVALI-West",
+    "category": "regional_office",
+    "parent_id": "zo-thane",
+    "ancestor_ids": [
+      "head-office",
+      "zo-thane"
+    ],
+    "address": "Bhavishya Nidhi Bhavan, Plot No.222, Sector No.3,\nCharkop Market, Charkop Poisar Road,\n (West)\nKandivali - 400 067",
+    "contact": {
+      "emails": [
+        "ro.kandivali@epfindia.gov.in"
+      ],
+      "std_code": "022",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "28692604",
+        "20892438"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "MBTH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-7ab1a5540818",
+        "office_id": "ro-kandivali-west",
+        "name": "Shri Ningshen Thottar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ningshen.thothar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20896488"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-dd63e360f59c",
+        "office_id": "ro-kandivali-west",
+        "name": "Smt. Anagha A Savant",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "20896488"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f6b61a0046d7",
+        "office_id": "ro-kandivali-west",
+        "name": "Sh Shiurkar Satwatsing Gopal",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ks.gopal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20892720"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-32f7c9268c4a",
+        "office_id": "ro-kandivali-west",
+        "name": "Shri Prem Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "prem.prakash@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20897091"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d906e966243c",
+        "office_id": "ro-kandivali-west",
+        "name": "Sh Rudal Prasad",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "rudal.prasad@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20894660"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7f8e33d7cab9",
+        "office_id": "ro-kandivali-west",
+        "name": "Shri Siba Charan Sahoo",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "sibach.sahoo@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20894808"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-787000763b13",
+        "office_id": "ro-kandivali-west",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "28692604",
+          "20892438",
+          "28692508"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3dd0bc17256c",
+        "office_id": "ro-kandivali-west",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "7977298051"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-gurugram-west",
+    "source_key": "q=GURUGRAM+%28WEST%29",
+    "name": "GURUGRAM (WEST)",
+    "category": "regional_office",
+    "parent_id": "zo-haryana",
+    "ancestor_ids": [
+      "head-office",
+      "zo-haryana"
+    ],
+    "address": "Regional Office, Gurugram (West),\nTelephone Exchange Building, Sec- 56,\nGurugram - 122011",
+    "contact": {
+      "emails": [
+        "ro.gurgaon2@epfindia.gov.in"
+      ],
+      "std_code": "0124",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2389629"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "HR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-dfda4290f834",
+        "office_id": "ro-gurugram-west",
+        "name": "Shri Pramod Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "pramod.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2389621"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-740a51a30f3f",
+        "office_id": "ro-gurugram-west",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2389621"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-40d47af342d3",
+        "office_id": "ro-gurugram-west",
+        "name": "Shri Vikram Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "vikram.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2389617"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-24f851054e9b",
+        "office_id": "ro-gurugram-west",
+        "name": "Shri Indraj Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "indraj.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2389635"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a5777136ea96",
+        "office_id": "ro-gurugram-west",
+        "name": "Smt Poonam Chawla",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "poonam.chawla@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2389622"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-acf9a936ad5d",
+        "office_id": "ro-gurugram-west",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2389629"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

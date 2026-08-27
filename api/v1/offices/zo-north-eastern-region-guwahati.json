@@ -1,0 +1,67 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-north-eastern-region-guwahati",
+    "source_key": "q=NORTH-EASTERN+REGION+%28GUWAHATI%29",
+    "name": "NORTH-EASTERN REGION (GUWAHATI)",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Bhavishyanidhi Bhawan, G.S. Road,\nNear Bharalu Bridge, Bhangagarh, (Assam)\nGuwahati - 781 005.",
+    "contact": {
+      "emails": [
+        "acc.ner@epfindia.gov.in"
+      ],
+      "std_code": "0361",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 3,
+    "source": {
+      "category_code": "NER",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-ec11d8ecc98c",
+        "office_id": "zo-north-eastern-region-guwahati",
+        "name": "Shri Shishir Kant Jha",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "acc.ner@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0361-2970899"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e2f43efc34dc",
+        "office_id": "zo-north-eastern-region-guwahati",
+        "name": "Shri T. John Jugli",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-39fb3657a202",
+        "office_id": "zo-north-eastern-region-guwahati",
+        "name": "Shri Nikheelchandra Anil Zode",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

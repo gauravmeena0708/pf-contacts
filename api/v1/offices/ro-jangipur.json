@@ -1,0 +1,105 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-jangipur",
+    "source_key": "q=JANGIPUR",
+    "name": "JANGIPUR",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "SANCHARIKA BUILDING SWARANAMOYEE, STATION ROAD\nNEAR MURSHIDABAD MEDICAL COLLEGE\nBerhampore, District - Murshidabad (West Bengal) - 742101",
+    "contact": {
+      "emails": [
+        "ro.berhampore.wb@epfindia.gov.in"
+      ],
+      "std_code": "03482",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "260071"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 24.0931777,
+      "longitude": 88.2586944
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-3593609ca0c8",
+        "office_id": "ro-jangipur",
+        "name": "Shri Rakesh Kumar Sinha",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "260078"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9701b458a467",
+        "office_id": "ro-jangipur",
+        "name": "Shri Samir Chandra Roy",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "260078"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-17d7c10275a5",
+        "office_id": "ro-jangipur",
+        "name": "Shri Sandip Datta Majumder",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8ad35f88508a",
+        "office_id": "ro-jangipur",
+        "name": "Shri Sajal Brahma",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "sajal.brahma@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "260075"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f66d55a39113",
+        "office_id": "ro-jangipur",
+        "name": "PUBLIC RELATION OFFICER",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "260071"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-22d9ea838a73",
+        "office_id": "ro-jangipur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9434111646"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

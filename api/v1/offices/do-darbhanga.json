@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-darbhanga",
+    "source_key": "q=D.O+-+DARBHANGA",
+    "name": "D.O - DARBHANGA",
+    "category": "district_office",
+    "parent_id": "ro-muzaffarpur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna",
+      "ro-muzaffarpur"
+    ],
+    "address": "Ekmi Road, Said Nagar,\nLaheriasarai\nDarbhanga - 846001",
+    "contact": {
+      "emails": [
+        "do.darbhanga@epfindia.gov.in"
+      ],
+      "std_code": "0627",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 26.1157212,
+      "longitude": 85.9001198
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-74f06f3b1eda",
+        "office_id": "do-darbhanga",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "295459"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

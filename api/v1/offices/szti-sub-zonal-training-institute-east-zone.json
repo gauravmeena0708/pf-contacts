@@ -1,0 +1,50 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "szti-sub-zonal-training-institute-east-zone",
+    "source_key": "q=SUB+ZONAL+TRAINING+INSTITUTE,+EAST+ZONE",
+    "name": "Sub Zonal Training Institute, East Zone",
+    "category": "sub_zonal_training_institute",
+    "parent_id": "pdunass-pdunass",
+    "ancestor_ids": [
+      "head-office",
+      "pdunass-pdunass"
+    ],
+    "address": "Meghalaya State Housing Finance Co-operative Limited,\nNongrim Hills, (Meghalaya)\nShillong - 793003",
+    "contact": {
+      "emails": [
+        "szti.shillong@epfindia.gov.in"
+      ],
+      "std_code": "0364",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 11.0368087,
+      "longitude": 77.0356542
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "PDUNASS",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-2ddde05bbb13",
+        "office_id": "szti-sub-zonal-training-institute-east-zone",
+        "name": "Shri Samarendra Dey",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "samarendra.dey@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2520230"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

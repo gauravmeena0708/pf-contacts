@@ -1,0 +1,64 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-mehsana",
+    "source_key": "q=D.O+-+MEHSANA",
+    "name": "D.O - MEHSANA",
+    "category": "district_office",
+    "parent_id": "ro-naroda",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad",
+      "ro-naroda"
+    ],
+    "address": "First Floor,Samarpan Shopping Complex,\nNear Radhanpur Char Rasta, Highway Road,\nMehsana - 384 001.",
+    "contact": {
+      "emails": [
+        "do.mehsana@epfindia.gov.in"
+      ],
+      "std_code": "02762",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-b8d65419b836",
+        "office_id": "do-mehsana",
+        "name": "Shri Rajat Damachya",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.mehsana@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "244454"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3ad024d20dbf",
+        "office_id": "do-mehsana",
+        "name": "Shri Thota Sreedhar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.mehsana@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "244454"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

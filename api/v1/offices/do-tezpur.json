@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-tezpur",
+    "source_key": "q=D.O+-+TEZPUR",
+    "name": "D.O - TEZPUR",
+    "category": "district_office",
+    "parent_id": "ro-guwahati",
+    "ancestor_ids": [
+      "head-office",
+      "zo-north-eastern-region-guwahati",
+      "ro-guwahati"
+    ],
+    "address": "Tribeni Complex,Kacharigaon,\nTezpur,\nAssam -  784001.",
+    "contact": {
+      "emails": [
+        "do.tezpur@epfindia.gov.in"
+      ],
+      "std_code": "03712",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 26.6185106,
+      "longitude": 92.7617183
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "NER",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-ccf62581fa15",
+        "office_id": "do-tezpur",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [
+          "do.tezpur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "231231"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

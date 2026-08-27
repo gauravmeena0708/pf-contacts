@@ -1,0 +1,106 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-bengaluru-bengaluru",
+    "source_key": "q=BENGALURU+%28BENGALURU%29",
+    "name": "BENGALURU (BENGALURU)",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Bengaluru Zone (Karnataka) Bhavishya Nidhi Bhavan,\nNo.13 Raja Ram Mohan Roy Road,\nBangalore - 560025",
+    "contact": {
+      "emails": [
+        "acc.kargoa@epfindia.gov.in"
+      ],
+      "std_code": "080",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 12.963021,
+      "longitude": 77.6035715
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "BG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-55e37e8e7ef1",
+        "office_id": "zo-bengaluru-bengaluru",
+        "name": "Ms Vaishali Dayal",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)",
+        "emails": [
+          "acc.kargoa@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29600983"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3655e1fafa23",
+        "office_id": "zo-bengaluru-bengaluru",
+        "name": "Smt. N V V Satya Sai",
+        "designation": "Principal Private Secretary",
+        "emails": [
+          "nvv.satyasai@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29600983"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7d38b278e1d1",
+        "office_id": "zo-bengaluru-bengaluru",
+        "name": "Shri Shashank Dinkar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "shashank.dinkar@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-cb3a3d6d0d3e",
+        "office_id": "zo-bengaluru-bengaluru",
+        "name": "Shri Sunil Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "sunil.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c7e8b75c337a",
+        "office_id": "zo-bengaluru-bengaluru",
+        "name": "Shri Jasveer",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "jasvir@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1dcc8b3c090c",
+        "office_id": "zo-bengaluru-bengaluru",
+        "name": "Smt T Indira",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "29600984"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zti-zonal-training-institute-west-zone",
+    "source_key": "q=ZONAL+TRAINING+INSTITUTE,+WEST+ZONE",
+    "name": "Zonal Training Institute, West Zone",
+    "category": "zonal_training_institute",
+    "parent_id": "pdunass-pdunass",
+    "ancestor_ids": [
+      "head-office",
+      "pdunass-pdunass"
+    ],
+    "address": "1, Bharatpuri Administrative Area,\nDewas Road, (MP)\nUjjain(MP) - 456 010",
+    "contact": {
+      "emails": [
+        "zti.west@epfindia.gov.in"
+      ],
+      "std_code": "0734",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 23.1629929,
+      "longitude": 75.7975336
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "PDUNASS",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c205491e6030",
+        "office_id": "zti-zonal-training-institute-west-zone",
+        "name": "Shri C S Sanjay Misra",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "zti.west@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2920034"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-52aef570eae2",
+        "office_id": "zti-zonal-training-institute-west-zone",
+        "name": "Shri Vikas Sodai",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "vikas.sodai@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-340472821537",
+        "office_id": "zti-zonal-training-institute-west-zone",
+        "name": "Dr. Archana Janu",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "archana.janu@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2513451"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e9ff4c2fdf0f",
+        "office_id": "zti-zonal-training-institute-west-zone",
+        "name": "Shri Kundan Choudhary",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "kundan.choudhary@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2527260"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9f079509fe92",
+        "office_id": "zti-zonal-training-institute-west-zone",
+        "name": "Administration",
+        "designation": "General Numbers",
+        "emails": [
+          "zti.west@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "3552230"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

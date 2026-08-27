@@ -1,0 +1,115 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-nagpur",
+    "source_key": "q=NAGPUR",
+    "name": "NAGPUR",
+    "category": "regional_office",
+    "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+    "ancestor_ids": [
+      "head-office",
+      "zo-maharashtra-excluding-mumbai-pune"
+    ],
+    "address": "132-A, Ridge Road,\nTukdoji Square,Raghuji Nagar\nNagpur - 440 009",
+    "contact": {
+      "emails": [
+        "ro.nagpur@epfindia.gov.in"
+      ],
+      "std_code": "0712",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2742012",
+        "2742013"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "MHEM",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-59389d286923",
+        "office_id": "ro-nagpur",
+        "name": "Shri Sekhar Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "shekhar.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2742231"
+        ],
+        "fax_numbers": [
+          "2744228"
+        ]
+      },
+      {
+        "id": "official-77aba55382cd",
+        "office_id": "ro-nagpur",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2742231"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5d87b23a6993",
+        "office_id": "ro-nagpur",
+        "name": "Shri T N Nandan Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "thakur.nnsingh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2706740"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6945984fda91",
+        "office_id": "ro-nagpur",
+        "name": "Shri Piyush Kumar Mishra",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "piyush13895@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2758410"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-73c4be16a664",
+        "office_id": "ro-nagpur",
+        "name": "Shri Shrish Pattalwar",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2742012",
+          "2742013"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2f8c047cee6c",
+        "office_id": "ro-nagpur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9555313189"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

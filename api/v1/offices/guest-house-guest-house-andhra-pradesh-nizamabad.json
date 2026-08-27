@@ -1,0 +1,35 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-andhra-pradesh-nizamabad",
+    "source_key": "q=GH_Guest_House_ANDHRA_PRADESH_Nizamabad_",
+    "name": "Guest House, ANDHRA PRADESH(Nizamabad)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Bhavishyanidhi Bhawan,\nNyalkal Road\nNizamabad - 503001",
+    "contact": {
+      "emails": [],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "245157"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

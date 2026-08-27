@@ -1,0 +1,169 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-park-street",
+    "source_key": "q=PARK+STREET",
+    "name": "PARK STREET",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "44 Park Street,\n7th & 8th Floor,Kolkata (West Bengal)\nPARK STREET - 700 016",
+    "contact": {
+      "emails": [
+        "ro.parkstreet@epfindia.gov.in"
+      ],
+      "std_code": "033",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "22801244"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 11,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-56038880827e",
+        "office_id": "ro-park-street",
+        "name": "Shri Tushar Kant Mukherjee",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "tushar.mukherjee@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22831949"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fc0a2e110f09",
+        "office_id": "ro-park-street",
+        "name": "Shri Subhas Chandra Basu",
+        "designation": "Private Secretary",
+        "emails": [
+          "subhas.chandra@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22831949"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-166e3a989fd5",
+        "office_id": "ro-park-street",
+        "name": "Shri Basuki Charan",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8db7b81350a1",
+        "office_id": "ro-park-street",
+        "name": "Shri Suraj Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "gupta.suraj@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22804079"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-43622a4b9ac2",
+        "office_id": "ro-park-street",
+        "name": "Miss Neha Kumari Pandey",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.parkstreet@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22901930"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c97087b8e80e",
+        "office_id": "ro-park-street",
+        "name": "Shri Saurabh Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.parkstreet@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22901930"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-de4127342f8e",
+        "office_id": "ro-park-street",
+        "name": "Shri Shiv Pratap Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.parkstreet@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-650bc47c2919",
+        "office_id": "ro-park-street",
+        "name": "Shri Pijush Sarkar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.parkstreet@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d8d0fe162073",
+        "office_id": "ro-park-street",
+        "name": "Shri Laltu Roy",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "22801244"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-cdf84d997a8e",
+        "office_id": "ro-park-street",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "22816841",
+          "8902498933"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-4ca010a6db37",
+        "office_id": "ro-park-street",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "7439133837"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

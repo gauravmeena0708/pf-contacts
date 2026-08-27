@@ -1,0 +1,131 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kolhapur",
+    "source_key": "q=KOLHAPUR",
+    "name": "KOLHAPUR",
+    "category": "regional_office",
+    "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+    "ancestor_ids": [
+      "head-office",
+      "zo-maharashtra-excluding-mumbai-pune"
+    ],
+    "address": "Bhavishya Nidhi Bhavan, 238/6,\nE' Ward, Tarabai Park,\nKolhapur - 416003",
+    "contact": {
+      "emails": [
+        "ro.kolhapur@epfindia.gov.in"
+      ],
+      "std_code": "0231",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2661570"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 16.7123155,
+      "longitude": 74.2433791
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "MHEM",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-bc75bd10c1f6",
+        "office_id": "ro-kolhapur",
+        "name": "Shri Manish Kumar Haldony",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "mk.haldony@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2656215"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b41d7351eb4d",
+        "office_id": "ro-kolhapur",
+        "name": "Shri Umesh Hiralal Borkar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "umesh.borkar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2655651"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-722511fbcee8",
+        "office_id": "ro-kolhapur",
+        "name": "Shri Varun Katiyar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "varun.katiyar@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-16f2270f1223",
+        "office_id": "ro-kolhapur",
+        "name": "Ms Nidhi Yadav",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "nidhi.yadav@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-59962d5aba4e",
+        "office_id": "ro-kolhapur",
+        "name": "Shri Suraj Goswami",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "suraj.goswami@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-563f429cece4",
+        "office_id": "ro-kolhapur",
+        "name": "Shri Kunal Ghorpade",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2661570"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-310c2097f8de",
+        "office_id": "ro-kolhapur",
+        "name": "Enquiry",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "2655652"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0f29ae95db01",
+        "office_id": "ro-kolhapur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9309866697"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-vapi",
+    "source_key": "q=VAPI",
+    "name": "VAPI",
+    "category": "regional_office",
+    "parent_id": "zo-gujarat-ahmedabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad"
+    ],
+    "address": "CM- 8/5, Snehdeep Commercial Complex,\nNH-8, G.I.D.C, Gunjan,\nVapi - 396195",
+    "contact": {
+      "emails": [
+        "ro.vapi@epfindia.gov.in"
+      ],
+      "std_code": "0260",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2400611"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 20.3644741,
+      "longitude": 72.9263033
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-10b21cec6ab2",
+        "office_id": "ro-vapi",
+        "name": "Shri Praveen Garhwal",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "praveen.garhwal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2427976"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b8681e69282a",
+        "office_id": "ro-vapi",
+        "name": "Shri Anil Kumar",
+        "designation": "Personal Assistant",
+        "emails": [
+          "ro.vapi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2427976"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b5ee7aacdf40",
+        "office_id": "ro-vapi",
+        "name": "Shri Aakash Sonker",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2970150"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6c300c3e706e",
+        "office_id": "ro-vapi",
+        "name": "Shri Rohit Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2428976"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-70dbaec24b5e",
+        "office_id": "ro-vapi",
+        "name": "Smt Poonam",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "poonamnandal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2432611"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9a0ea6efc398",
+        "office_id": "ro-vapi",
+        "name": "Shri Rahul",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "rahul.gujjar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2425676"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-797be376e02a",
+        "office_id": "ro-vapi",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2400611"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1bacb2b810cd",
+        "office_id": "ro-vapi",
+        "name": "Whatsup Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9499703166"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-14e404a3e75d",
+        "office_id": "ro-vapi",
+        "name": "Shri Dinesh Kumar",
+        "designation": "Data Processing Assistant",
+        "emails": [
+          "dinesh.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2970180"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

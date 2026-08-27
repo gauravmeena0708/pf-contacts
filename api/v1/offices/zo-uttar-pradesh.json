@@ -1,0 +1,108 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-uttar-pradesh",
+    "source_key": "q=UTTAR+PRADESH",
+    "name": "UTTAR PRADESH",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Office of the Addl. Central Provident Fund Commissioner\n(Uttar Pradesh),\nNidhi Bhawan,Sarvodaya Nagar,\nKanpur  - 208 005",
+    "contact": {
+      "emails": [
+        "acc.upbh@epfindia.gov.in"
+      ],
+      "std_code": "0512",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c69ffcadff27",
+        "office_id": "zo-uttar-pradesh",
+        "name": "Shri Uday Baxi",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "acc.upbh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2225205"
+        ],
+        "fax_numbers": [
+          "2225204"
+        ]
+      },
+      {
+        "id": "official-269f8a1c4bb7",
+        "office_id": "zo-uttar-pradesh",
+        "name": "Shri Pankaj Chauhan",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "2225205"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-298146d99a02",
+        "office_id": "zo-uttar-pradesh",
+        "name": "Shri Gautam",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "upz.rc.fa@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2217462"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fbc51682f1e4",
+        "office_id": "zo-uttar-pradesh",
+        "name": "Shri Pawan Kumar Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "2296957"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b207af766077",
+        "office_id": "zo-uttar-pradesh",
+        "name": "Shri Manoj Kumar Trivedi",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2217462"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3731572df2de",
+        "office_id": "zo-uttar-pradesh",
+        "name": "Shri Sanjay Bajpai",
+        "designation": "Accounts Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2222940"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

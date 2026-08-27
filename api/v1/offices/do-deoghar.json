@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-deoghar",
+    "source_key": "q=D.O+-+DEOGHAR",
+    "name": "D.O - DEOGHAR",
+    "category": "district_office",
+    "parent_id": "ro-ranchi",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna",
+      "ro-ranchi"
+    ],
+    "address": "Saket Vihar,\nOpp. D.C. Residence\nDeoghar, Jharkhand, - 814112",
+    "contact": {
+      "emails": [
+        "do.deoghar@epfindia.gov.in"
+      ],
+      "std_code": "06432",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 24.4891934,
+      "longitude": 86.6924113
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-7f5fe46815e1",
+        "office_id": "do-deoghar",
+        "name": "Shri Prashant Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.deoghar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "222714"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

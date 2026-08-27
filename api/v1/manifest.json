@@ -1,0 +1,20 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "generated_at": "2026-08-27T11:08:10Z",
+  "source_url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php",
+  "source_sha256": "faaa82288adcffc722da2be1a7a774f53ab52d940ee7c8b9ecbfb048cf9aec7f",
+  "geocodes_sha256": "3c070f6e542e4232df503ceb2de7795ea15b1ba533a45712389e39c4416b722c",
+  "raw_record_count": 327,
+  "record_count": 325,
+  "duplicate_records_removed": 2,
+  "official_count": 1684,
+  "endpoints": {
+    "offices": "offices.json",
+    "office": "offices/{id}.json",
+    "officials": "officials.json",
+    "hierarchy": "hierarchy.json",
+    "categories": "categories.json",
+    "schema": "schema.json"
+  }
+}

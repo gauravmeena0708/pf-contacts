@@ -1,0 +1,154 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-lucknow",
+    "source_key": "q=LUCKNOW",
+    "name": "LUCKNOW",
+    "category": "regional_office",
+    "parent_id": "zo-uttar-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh"
+    ],
+    "address": "BhavishyaNidhi Bhawan, Vibhuti Khand,\nGomti Nagar, (U.P)\nLucknow - 226 010.",
+    "contact": {
+      "emails": [
+        "ro.lucknow@epfindia.gov.in"
+      ],
+      "std_code": "0522",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2304935",
+        "2306055"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-d6e4aa355b77",
+        "office_id": "ro-lucknow",
+        "name": "Shri Ashwini Kumar Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ashwinik.gupta@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0522-2304984"
+        ],
+        "fax_numbers": [
+          "2304944"
+        ]
+      },
+      {
+        "id": "official-ab0eaf20ab65",
+        "office_id": "ro-lucknow",
+        "name": "Shri Ashish Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ashish.k@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0522-2720884"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a8381a770312",
+        "office_id": "ro-lucknow",
+        "name": "Shri Amitabh Shukla",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "amitabh.shukla@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0522-2721824"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-65fe6db4fa23",
+        "office_id": "ro-lucknow",
+        "name": "Shri Rakesh Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "rakesh.k@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0522-2720882"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7f5df1b7f7a9",
+        "office_id": "ro-lucknow",
+        "name": "Shri Dheeraj Verma",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "dheeraj4397@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0522-2721281"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-75292c530bc3",
+        "office_id": "ro-lucknow",
+        "name": "Shri Vinay Kumar Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "vinaysingh1608@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0522-2720882"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9b88fccb610e",
+        "office_id": "ro-lucknow",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2304935",
+          "2306055"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a7d604dadbda",
+        "office_id": "ro-lucknow",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2304911"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9f3c6a3918b5",
+        "office_id": "ro-lucknow",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9219980240"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

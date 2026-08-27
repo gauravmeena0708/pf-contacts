@@ -1,0 +1,172 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-karnal",
+    "source_key": "q=KARNAL",
+    "name": "KARNAL",
+    "category": "regional_office",
+    "parent_id": "zo-haryana",
+    "ancestor_ids": [
+      "head-office",
+      "zo-haryana"
+    ],
+    "address": "Bhavishyanidhi Bhawan,SCO-5-8, Sector 12,\n(New Mini Secretariat), (HR)\nKarnal - 132 001",
+    "contact": {
+      "emails": [
+        "ro.karnal@epfindia.gov.in"
+      ],
+      "std_code": "0184",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2209825"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 12,
+    "source": {
+      "category_code": "HR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-27a9c828f4c4",
+        "office_id": "ro-karnal",
+        "name": "Shri Ranveer Kumar Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "2209800"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1cff7f9fde4d",
+        "office_id": "ro-karnal",
+        "name": "Smt Sunita Gaba",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "2209800"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d9888a094ff2",
+        "office_id": "ro-karnal",
+        "name": "Smt. Jashandeep Kaur",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2209820"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f8463b672823",
+        "office_id": "ro-karnal",
+        "name": "Shri Vaibhav Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2209832"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-540c351a8a50",
+        "office_id": "ro-karnal",
+        "name": "Shri Amit Nain",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2209821"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-25d5647b9563",
+        "office_id": "ro-karnal",
+        "name": "Shri Ramkesh Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2209839"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5500f71624d2",
+        "office_id": "ro-karnal",
+        "name": "Shri Pankaj",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2209819"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c4fc99a454db",
+        "office_id": "ro-karnal",
+        "name": "Smt. Manju",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2209815"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b1f34ba53a35",
+        "office_id": "ro-karnal",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2209825"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6c5474ffa722",
+        "office_id": "ro-karnal",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9996962805"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b471c564addd",
+        "office_id": "ro-karnal",
+        "name": "General Numbers",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2209808",
+          "2209824"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-06c6f0aaa96f",
+        "office_id": "ro-karnal",
+        "name": "Shri Anil Arya",
+        "designation": "Data Processing Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "2209833"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

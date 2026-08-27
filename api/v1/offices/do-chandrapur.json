@@ -1,0 +1,53 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-chandrapur",
+    "source_key": "q=D.O+-+CHANDRAPUR",
+    "name": "D.O - CHANDRAPUR",
+    "category": "district_office",
+    "parent_id": "ro-nagpur-annex-bldg",
+    "ancestor_ids": [
+      "head-office",
+      "zo-maharashtra-excluding-mumbai-pune",
+      "ro-nagpur-annex-bldg"
+    ],
+    "address": "Ground Floor, BSNL Building\nNear Zila Stadium, Civil Lines\nChandrapur - 442401",
+    "contact": {
+      "emails": [
+        "do.chandrapur@epfindia.gov.in"
+      ],
+      "std_code": "07172",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "252997"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 19.857815,
+      "longitude": 79.34412
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "MHEM",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-71bc0e88e829",
+        "office_id": "do-chandrapur",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "252997"
+        ],
+        "fax_numbers": [
+          "252997"
+        ]
+      }
+    ]
+  }
+}

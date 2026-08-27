@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-amravati",
+    "source_key": "q=D.O+-+AMRAVATI",
+    "name": "D.O - AMRAVATI",
+    "category": "district_office",
+    "parent_id": "ro-akola",
+    "ancestor_ids": [
+      "head-office",
+      "zo-maharashtra-excluding-mumbai-pune",
+      "ro-akola"
+    ],
+    "address": "EPFO, District Office-Amravati,C/o Ms. Nandini Dole,\nDole bungalow, In front of Amravati Railway Station, Maltekdi Road,\nAmravati - 444606",
+    "contact": {
+      "emails": [],
+      "std_code": "0721",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 20.9217118,
+      "longitude": 77.7670285
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "MHEM",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-0bd7577d1ac2",
+        "office_id": "do-amravati",
+        "name": "Shri Arvind Hadke",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2663348"
+        ],
+        "fax_numbers": [
+          "2663348"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-gorakhpur",
+    "source_key": "q=GORAKHPUR",
+    "name": "GORAKHPUR",
+    "category": "regional_office",
+    "parent_id": "zo-uttar-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh"
+    ],
+    "address": "EPFO, Bhavishya Nidhi Bhavan,\nCivil Lines, Labour Camp, Infornt of Carmel school,\nGorakhpur, Uttar Pradesh - 273009",
+    "contact": {
+      "emails": [
+        "ro.gorakhpur@epfindia.gov.in"
+      ],
+      "std_code": "0551",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2200603"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 26.7585344,
+      "longitude": 83.3787947
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-8798a2ce986c",
+        "office_id": "ro-gorakhpur",
+        "name": "Shri Abhishek Kumar Mishra",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.gorakhpur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2336126"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-54517b9272ae",
+        "office_id": "ro-gorakhpur",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7dc05ecb6e88",
+        "office_id": "ro-gorakhpur",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2200603"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c35ec8308e09",
+        "office_id": "ro-gorakhpur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9044977792"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

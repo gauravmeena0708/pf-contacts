@@ -1,0 +1,53 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-sangrur",
+    "source_key": "q=D.O+-+SANGRUR",
+    "name": "D.O - SANGRUR",
+    "category": "district_office",
+    "parent_id": "ro-bhatinda",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh",
+      "ro-bhatinda"
+    ],
+    "address": "EPFO, 13 ,\nKaula park,\nSangrur (Punjab) - 148001",
+    "contact": {
+      "emails": [
+        "do.sangrur@epfindia.gov.in"
+      ],
+      "std_code": "01672",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "241019"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 30.247844,
+      "longitude": 75.8372819
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-5525d76b537e",
+        "office_id": "do-sangrur",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [
+          "do.sangrur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "241019"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

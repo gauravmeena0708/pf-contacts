@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gauravmeena0708.github.io/pf-contacts/api/v1/schema.json",
+  "title": "EPFO office",
+  "description": "Normalized office-level resource from the EPFO contact directory.",
+  "type": "object",
+  "required": [
+    "id",
+    "source_key",
+    "name",
+    "category",
+    "parent_id",
+    "ancestor_ids",
+    "address",
+    "contact",
+    "coordinates",
+    "official_count",
+    "source"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "source_key": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "head_office",
+        "zonal_office",
+        "regional_office",
+        "district_office",
+        "special_state_office",
+        "vigilance_wing",
+        "internal_audit_wing",
+        "national_data_centre",
+        "pdunass_natrss",
+        "zonal_training_institute",
+        "sub_zonal_training_institute",
+        "holiday_home",
+        "guest_house"
+      ]
+    },
+    "parent_id": {
+      "type": ["string", "null"]
+    },
+    "ancestor_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "address": {
+      "type": ["string", "null"]
+    },
+    "contact": {
+      "type": "object",
+      "required": [
+        "emails",
+        "std_code",
+        "toll_free_number",
+        "phone_numbers",
+        "pro_numbers",
+        "fax_numbers"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "emails": {"$ref": "#/$defs/stringList"},
+        "std_code": {"type": ["string", "null"]},
+        "toll_free_number": {"type": ["string", "null"]},
+        "phone_numbers": {"$ref": "#/$defs/stringList"},
+        "pro_numbers": {"$ref": "#/$defs/stringList"},
+        "fax_numbers": {"$ref": "#/$defs/stringList"}
+      }
+    },
+    "coordinates": {
+      "type": "object",
+      "required": ["latitude", "longitude"],
+      "additionalProperties": false,
+      "properties": {
+        "latitude": {"type": ["number", "null"], "minimum": -90, "maximum": 90},
+        "longitude": {"type": ["number", "null"], "minimum": -180, "maximum": 180}
+      }
+    },
+    "official_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source": {
+      "type": "object",
+      "required": ["category_code", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "category_code": {"type": ["string", "null"]},
+        "url": {"type": "string", "format": "uri"}
+      }
+    }
+  },
+  "$defs": {
+    "stringList": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    }
+  }
+}

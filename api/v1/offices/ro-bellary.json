@@ -1,0 +1,137 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-bellary",
+    "source_key": "q=BELLARY",
+    "name": "BELLARY",
+    "category": "regional_office",
+    "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli"
+    ],
+    "address": "“Bhavishya Nidhi Bhawan” Survey. No. 872, 873 & 876,\nMain Raod, 2nd Stage, Raghvendra Colony,\nBellary - 583 103",
+    "contact": {
+      "emails": [
+        "ro.bellary@epfindia.gov.in"
+      ],
+      "std_code": "08392",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "268943"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-4915efd35a0c",
+        "office_id": "ro-bellary",
+        "name": "Shri.k V Praveen",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "kv.praveen@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "294547"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a027c560d900",
+        "office_id": "ro-bellary",
+        "name": "Shri T N Nandan Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "thakur.nnsingh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "294562"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b621d2d3bd9b",
+        "office_id": "ro-bellary",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "268943"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d2c958b52b33",
+        "office_id": "ro-bellary",
+        "name": "Shri Nagaraj G",
+        "designation": "Accounts Officer",
+        "emails": [
+          "g.nagaraja@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "294576"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-26d817b17394",
+        "office_id": "ro-bellary",
+        "name": "Shri A. Abdul Hafeez",
+        "designation": "Enforcement Officer",
+        "emails": [
+          "abdul.hafeez@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "294576"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a3e0d1dd587e",
+        "office_id": "ro-bellary",
+        "name": "Shri K. S. Venugopal",
+        "designation": "Enforcement Officer",
+        "emails": [
+          "venugopal.ks@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "294576"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8bf6ba137e23",
+        "office_id": "ro-bellary",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "268943"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-78ef2dee0c76",
+        "office_id": "ro-bellary",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "6363778135"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

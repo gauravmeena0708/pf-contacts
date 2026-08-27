@@ -1,0 +1,140 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-vatwa",
+    "source_key": "q=VATWA",
+    "name": "VATWA",
+    "category": "regional_office",
+    "parent_id": "zo-gujarat-ahmedabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad"
+    ],
+    "address": "3rd & 4th floor, Satyam Shivam Sunderam Tower,\nOpposite Maninagar Railway Station, Maninagar\nVATWA - 380 008.",
+    "contact": {
+      "emails": [
+        "ro.vatwa@epfindia.gov.in"
+      ],
+      "std_code": "079",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "25465280",
+        "25460180"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c7cfccfe8b68",
+        "office_id": "ro-vatwa",
+        "name": "Shri Yogendra Singh Shekhawat",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ys.shekhawat@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25460140"
+        ],
+        "fax_numbers": [
+          "25460155"
+        ]
+      },
+      {
+        "id": "official-156983099871",
+        "office_id": "ro-vatwa",
+        "name": "Shri Supratik Dash",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "supratik.dash@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25465275"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-be67dda45046",
+        "office_id": "ro-vatwa",
+        "name": "Shri Ghanshyam Purbey",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ghanshyam.purbey@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25460156"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a5c0fbc05a5d",
+        "office_id": "ro-vatwa",
+        "name": "Smt. Shilpa P. Nambiar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "shilpa.nambiar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25467155"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-25d8525771c2",
+        "office_id": "ro-vatwa",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "25465280",
+          "25460180",
+          "25467155"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8a07abb51f57",
+        "office_id": "ro-vatwa",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "25460148"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f9a05edd3027",
+        "office_id": "ro-vatwa",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8733063428"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3574d514e4fb",
+        "office_id": "ro-vatwa",
+        "name": "Whatsapp Business Account(pension)",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8866577436"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

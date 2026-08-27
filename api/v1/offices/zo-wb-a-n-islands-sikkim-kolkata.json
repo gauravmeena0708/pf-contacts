@@ -1,0 +1,93 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "source_key": "q=WB%2C+A%26N+ISLANDS+%26+SIKKIM+%28KOLKATA%29",
+    "name": "WB, A&N ISLANDS & SIKKIM (KOLKATA)",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Office of the Addl. Central Provident Fund Commissioner\n(West Bengal, NER)\nDK-Block, Sector-II, \nSalt Lake City, Karunamoyee,\nKolkata -  700 091.",
+    "contact": {
+      "emails": [
+        "acc.wbjhne@epfindia.gov.in"
+      ],
+      "std_code": "033",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-560b61ae135e",
+        "office_id": "zo-wb-a-n-islands-sikkim-kolkata",
+        "name": "Shri B Lalzamang",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "29521855"
+        ],
+        "fax_numbers": [
+          "23580296"
+        ]
+      },
+      {
+        "id": "official-016a3aa5ea34",
+        "office_id": "zo-wb-a-n-islands-sikkim-kolkata",
+        "name": "Shri Subrata Chakraborty",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "29521855"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-648d3f4ed924",
+        "office_id": "zo-wb-a-n-islands-sikkim-kolkata",
+        "name": "Shri Rituraj Medhi",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "29521865"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c10c2bfbc161",
+        "office_id": "zo-wb-a-n-islands-sikkim-kolkata",
+        "name": "Shri Krishna Shankar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "29521865"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-22adc26a3536",
+        "office_id": "zo-wb-a-n-islands-sikkim-kolkata",
+        "name": "Shri Snehasish Kundu",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "29521865"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

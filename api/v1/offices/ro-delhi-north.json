@@ -1,0 +1,189 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-delhi-north",
+    "source_key": "q=DELHI+%5BNORTH%5D",
+    "name": "DELHI [NORTH]",
+    "category": "regional_office",
+    "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh"
+    ],
+    "address": "Bhavishya Nidhi Bhawan, \n28, Community Centre,\nWazirpur Industrial Area,\nDelhi - 110052",
+    "contact": {
+      "emails": [
+        "ro.delhi.north@epfindia.gov.in"
+      ],
+      "std_code": "011",
+      "toll_free_number": "1800118006",
+      "phone_numbers": [],
+      "pro_numbers": [
+        "27376775",
+        "27376780"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 28.6830922,
+      "longitude": 77.1756241
+    },
+    "official_count": 12,
+    "source": {
+      "category_code": "DLUK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6cea9d855bcf",
+        "office_id": "ro-delhi-north",
+        "name": "Shri Abhaya Nand Tiwari",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "27376772",
+          "27373560"
+        ],
+        "fax_numbers": [
+          "27376777"
+        ]
+      },
+      {
+        "id": "official-15154e144b55",
+        "office_id": "ro-delhi-north",
+        "name": "Smt Seema Makkar",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "27376772"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0e549f8afde3",
+        "office_id": "ro-delhi-north",
+        "name": "Shri Kumar Shiladitya",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "kr.shiladitya@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27376410"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d2e29d1c75c3",
+        "office_id": "ro-delhi-north",
+        "name": "Shri Anil Kumar Jain",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "anil.jain@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27376387"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2b2df5461d73",
+        "office_id": "ro-delhi-north",
+        "name": "Ms Arpana Gill",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "arpana.gill@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27376380"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1b04aa456ce3",
+        "office_id": "ro-delhi-north",
+        "name": "Shri Vijay",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "vijay.ohlyan@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27376411"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-baa017dd97d0",
+        "office_id": "ro-delhi-north",
+        "name": "Shri Prashant Kumar Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "prashantsingh.r3@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-303807bf89a5",
+        "office_id": "ro-delhi-north",
+        "name": "Shri Saurabh Chaturvedi",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "saurabh1391@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27373831"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a3156fc43ae4",
+        "office_id": "ro-delhi-north",
+        "name": "Smt. Shristi Nain",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "shristinain99@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27376408"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6dae4d403d27",
+        "office_id": "ro-delhi-north",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "27376775",
+          "27376780",
+          "43728826"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ec9d853c02cb",
+        "office_id": "ro-delhi-north",
+        "name": "Online Claims / K Y C / U A N Helpdesk",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "27373832"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a91eca3a5def",
+        "office_id": "ro-delhi-north",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8810622842"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

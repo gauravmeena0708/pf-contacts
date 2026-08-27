@@ -1,0 +1,38 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-tamilnadu-coimbatore",
+    "source_key": "q=GH_Guest_House_TAMILNADU_Coimbatore_",
+    "name": "Guest House, TAMILNADU(Coimbatore)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "EPF Staff quarters, Bhavishyanidhi Nagar\nPeelamedu\nCoimbatore - 641004",
+    "contact": {
+      "emails": [
+        "ro.coimbatore@epfindia.gov.in"
+      ],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2240046",
+        "2240045"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 11.0334859,
+      "longitude": 76.9666722
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

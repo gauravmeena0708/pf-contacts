@@ -1,0 +1,126 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-bengaluru-malleswaram",
+    "source_key": "q=BENGALURU+%28MALLESWARAM%29",
+    "name": "BENGALURU (MALLESWARAM)",
+    "category": "regional_office",
+    "parent_id": "zo-bengaluru-bengaluru",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bengaluru-bengaluru"
+    ],
+    "address": "Bhavishyanidhi Bhavan, No. 13,\nRaja Ram Mohan Roy Road,  (KN).\nBangalore - 560 025",
+    "contact": {
+      "emails": [
+        "ro.malleswaram@epfindia.gov.in"
+      ],
+      "std_code": "080",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "BG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c7bb7b593304",
+        "office_id": "ro-bengaluru-malleswaram",
+        "name": "Sri Mihir Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.malleswaram@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22249133"
+        ],
+        "fax_numbers": [
+          "22244161"
+        ]
+      },
+      {
+        "id": "official-4c9ae5862a89",
+        "office_id": "ro-bengaluru-malleswaram",
+        "name": "Sri Aniket Anil Ambekar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "aniket.ambekar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22214962"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-294a0e12bf38",
+        "office_id": "ro-bengaluru-malleswaram",
+        "name": "Smt. C. P. Jeseena",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "jeseena.cp@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22227949"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6f6ad019f880",
+        "office_id": "ro-bengaluru-malleswaram",
+        "name": "Shri J V S S Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "jvvsskumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22230062"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-daa512447254",
+        "office_id": "ro-bengaluru-malleswaram",
+        "name": "Shri Avinash Kumar Maurya",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "avinash.m@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22202362"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-85bd2bc810a0",
+        "office_id": "ro-bengaluru-malleswaram",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9606821272"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-15b88c68e331",
+        "office_id": "ro-bengaluru-malleswaram",
+        "name": "Public Relation Officer",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "22216596"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

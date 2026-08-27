@@ -83,12 +83,15 @@ database during normal requests instead of calling this API on every page load.
 ## Building locally
 
 ```text
+python -m pip install -r requirements.txt
 python scripts/build_api.py
 python -m unittest discover -s tests -p "test_*.py"
 ```
 
-The builder has no third-party dependencies. It reuses `generated_at` when the
-source files have not changed, so no-change builds remain reproducible.
+The builder itself has no third-party dependencies. The test suite uses
+`jsonschema` to validate every generated office against the published contract.
+The builder reuses `generated_at` when the source files have not changed, so
+no-change builds remain reproducible.
 
 ## Compatibility policy
 

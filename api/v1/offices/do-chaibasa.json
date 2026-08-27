@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-chaibasa",
+    "source_key": "q=D.O+-+CHAIBASA",
+    "name": "D.O - CHAIBASA",
+    "category": "district_office",
+    "parent_id": "ro-jamshedpur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna",
+      "ro-jamshedpur"
+    ],
+    "address": "Shree Balaji ApartmentNimdih,\nDistt.- West Singhbhum,\nChaibasa - 833201.",
+    "contact": {
+      "emails": [
+        "do.chaibasa@epfindia.gov.in"
+      ],
+      "std_code": "06582",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.525231,
+      "longitude": 85.8349463
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-9cfbd265b31e",
+        "office_id": "do-chaibasa",
+        "name": "Shri Ravi Kumar",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [
+          "256427"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

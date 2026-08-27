@@ -1,0 +1,35 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-madhya-pradesh-indore",
+    "source_key": "q=GH_Guest_House_MADHYA_PRADESH_Indore_",
+    "name": "Guest House, MADHYA PRADESH(Indore)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Nidhi Vihar\nKeshar Bagh Road\nIndore -",
+    "contact": {
+      "emails": [],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2468296"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

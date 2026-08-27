@@ -1,0 +1,111 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-k-r-puram-whitefield",
+    "source_key": "q=K+R+PURAM+%28WHITEFIELD%29",
+    "name": "K R PURAM (WHITEFIELD)",
+    "category": "regional_office",
+    "parent_id": "zo-bengaluru-bengaluru",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bengaluru-bengaluru"
+    ],
+    "address": "No. F-28, NSU Block\nITI Campus (Bengaluru Block), Dooravani Nagar\nK R PURAM (WHITEFIELD) - 560016",
+    "contact": {
+      "emails": [
+        "ro.krpuram@epfindia.gov.in"
+      ],
+      "std_code": "080",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "25658003"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 13.01969,
+      "longitude": 77.6773774
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "BG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-ed7783797039",
+        "office_id": "ro-k-r-puram-whitefield",
+        "name": "Sri Martand Singh Chandrawal",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.krpuram@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25658001"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7ca49e70d6d3",
+        "office_id": "ro-k-r-puram-whitefield",
+        "name": "Shri Deepak Arya",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "deepak.arya@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25658004"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-12e883441410",
+        "office_id": "ro-k-r-puram-whitefield",
+        "name": "Shri Manish Kumar Gurjar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "mg2024@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25658007"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7d04dd0237b4",
+        "office_id": "ro-k-r-puram-whitefield",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "25658003"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f66cef346157",
+        "office_id": "ro-k-r-puram-whitefield",
+        "name": "Enquiry",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "18604250045"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a30a827105ee",
+        "office_id": "ro-k-r-puram-whitefield",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9483255277"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

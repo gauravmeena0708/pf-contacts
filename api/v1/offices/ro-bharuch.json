@@ -1,0 +1,111 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-bharuch",
+    "source_key": "q=BHARUCH",
+    "name": "BHARUCH",
+    "category": "regional_office",
+    "parent_id": "zo-gujarat-ahmedabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad"
+    ],
+    "address": "2nd & 3rd Floor,Blue Chip Commercial Complex,\nSevashram Road,Near Panch Batti, (Gujarat)\nBharuch - 392001",
+    "contact": {
+      "emails": [
+        "ro.bharuch@epfindia.gov.in"
+      ],
+      "std_code": "02642",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "268702"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 21.7047928,
+      "longitude": 72.9895128
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-b002456918cc",
+        "office_id": "ro-bharuch",
+        "name": "Shri Dhanwant Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "dhanwant.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "267702"
+        ],
+        "fax_numbers": [
+          "266702"
+        ]
+      },
+      {
+        "id": "official-68b86fe2a095",
+        "office_id": "ro-bharuch",
+        "name": "Shri Shashank Jaiswal",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "244702"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6162d5f7db7e",
+        "office_id": "ro-bharuch",
+        "name": "Shri Akhilesh Sharma",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "244702"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bb1bb78abcb3",
+        "office_id": "ro-bharuch",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [
+          "ro.bharuch@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "268702"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bb9bc30b9794",
+        "office_id": "ro-bharuch",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "244702"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-36c468f7118d",
+        "office_id": "ro-bharuch",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "02642-266702"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

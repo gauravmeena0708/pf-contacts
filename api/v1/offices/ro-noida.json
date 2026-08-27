@@ -1,0 +1,161 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-noida",
+    "source_key": "q=NOIDA",
+    "name": "NOIDA",
+    "category": "regional_office",
+    "parent_id": "zo-uttar-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh"
+    ],
+    "address": "A-2C,\nSector 24,\nNoida - 201301",
+    "contact": {
+      "emails": [
+        "ro.noida@epfindia.gov.in"
+      ],
+      "std_code": "0120",
+      "toll_free_number": "18001807953",
+      "phone_numbers": [],
+      "pro_numbers": [
+        "18001807953"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 28.5719098,
+      "longitude": 77.3677636
+    },
+    "official_count": 10,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6873de64d3ba",
+        "office_id": "ro-noida",
+        "name": "Shri Suyash Pandey",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.noida@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0120-4558591"
+        ],
+        "fax_numbers": [
+          "0120-4558591"
+        ]
+      },
+      {
+        "id": "official-5ed17105e8db",
+        "office_id": "ro-noida",
+        "name": "Shri Raj Kumar",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "0120-2412058"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1ae0af3849c2",
+        "office_id": "ro-noida",
+        "name": "Shri Mukesh Saraswat",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "saraswat.m@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0120-2973224"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-06cb8193ed38",
+        "office_id": "ro-noida",
+        "name": "Shri Kumar Raghvendra",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "kr.raghvendra@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0120-4558590"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-edeac0204921",
+        "office_id": "ro-noida",
+        "name": "Shri Praveen Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "praveen.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0120-2970120"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bc9d2cef5e84",
+        "office_id": "ro-noida",
+        "name": "Shri Ravindra Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "r.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0120-2411120"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e7b4e4247cee",
+        "office_id": "ro-noida",
+        "name": "Enquiry",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "18001807953"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e0c6c8b621b9",
+        "office_id": "ro-noida",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "0120-2411904"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-aa5c880dec2c",
+        "office_id": "ro-noida",
+        "name": "Helpdesk",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "0120-2412600"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-17d11a7948b7",
+        "office_id": "ro-noida",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8826871990"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

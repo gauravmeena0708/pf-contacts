@@ -1,0 +1,53 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-ajmer",
+    "source_key": "q=D.O+-+AJMER",
+    "name": "D.O - AJMER",
+    "category": "district_office",
+    "parent_id": "ro-jaipur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-rajasthan",
+      "ro-jaipur"
+    ],
+    "address": "EPFO,A-3, Haribhau Upadhyay Nagar,\nNear Regional College Chouraha, Pushkar Road,\nAjmer - 305001",
+    "contact": {
+      "emails": [
+        "do.ajmer@epfindia.gov.in"
+      ],
+      "std_code": "0145",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 26.4617102,
+      "longitude": 74.6352367
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "RJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-0bea3547d7a1",
+        "office_id": "do-ajmer",
+        "name": "Shri Kapil Kumar Verma",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "kapilkumar.verma@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2627789"
+        ],
+        "fax_numbers": [
+          "2627789"
+        ]
+      }
+    ]
+  }
+}

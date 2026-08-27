@@ -1,0 +1,94 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kota",
+    "source_key": "q=KOTA",
+    "name": "KOTA",
+    "category": "regional_office",
+    "parent_id": "zo-rajasthan",
+    "ancestor_ids": [
+      "head-office",
+      "zo-rajasthan"
+    ],
+    "address": "Nidhi Bhawan,\nVigyan Nagar, (Rajasthan)\nKota - 324005",
+    "contact": {
+      "emails": [
+        "ro.kota@epfindia.gov.in"
+      ],
+      "std_code": "0744",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2422449"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 25.1468057,
+      "longitude": 75.8473646
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "RJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-7489ef4446cb",
+        "office_id": "ro-kota",
+        "name": "Shri Sudhir Batra",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.kota@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2425392"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fe6aa248bed1",
+        "office_id": "ro-kota",
+        "name": "Shri Himanshu Kaushik",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a3fadd1414f3",
+        "office_id": "ro-kota",
+        "name": "Ms Anuradha",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "anuradha.raghav@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c925fa5f2932",
+        "office_id": "ro-kota",
+        "name": "Shri Vijay Tantia",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2422449"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-cbf9f2797649",
+        "office_id": "ro-kota",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9116339333"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ndc-national-data-centre",
+    "source_key": "q=NATIONAL+DATA+CENTRE",
+    "name": "NATIONAL DATA CENTRE",
+    "category": "national_data_centre",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "NDC, 1st Floor,EPFO Complex,\nPlot No. 23,Sector-23, Dwarka,\nNew Delhi - 110077",
+    "contact": {
+      "emails": [],
+      "std_code": "011",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 28.5731545,
+      "longitude": 77.0654305
+    },
+    "official_count": 29,
+    "source": {
+      "category_code": "NDC",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-719a206966c6",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Salil Shankar",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "acc.is@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895814"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8cd0a56db3d1",
+        "office_id": "ndc-national-data-centre",
+        "name": "Chief Technology Officer",
+        "designation": null,
+        "emails": [
+          "cto.epfo@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6f838470cf00",
+        "office_id": "ndc-national-data-centre",
+        "name": "Col Mahendra Singh Taragi",
+        "designation": "Chief Information Security Officer",
+        "emails": [
+          "ciso.epfo@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-aae1e8924191",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri V V B Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "vee8.is@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f595bf75c01b",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Ravi Kant",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "rc.is@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895824"
+        ],
+        "fax_numbers": [
+          "28093029"
+        ]
+      },
+      {
+        "id": "official-215ae4ff4087",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Sanjay Kumar Panda",
+        "designation": "Joint Director",
+        "emails": [
+          "sk.panda@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895815"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7306826558e3",
+        "office_id": "ndc-national-data-centre",
+        "name": "Smt Sathyabama Athiyaman",
+        "designation": "Joint Director",
+        "emails": [
+          "sathya.bama@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895809"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2057d9aacf2e",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri D. K. Dharni",
+        "designation": "Joint Director",
+        "emails": [
+          "dk.dharni@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895826"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-34894440e6ac",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Harsh Vardhan Kaushik",
+        "designation": "Joint Director",
+        "emails": [
+          "harsh.kaushik@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895812"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fd34e3018cc4",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri N. K. Meshram",
+        "designation": "Joint Director",
+        "emails": [
+          "narendra.kr.meshram@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895830"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-087e62194545",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri R. Suresh Kumar",
+        "designation": "Joint Director",
+        "emails": [
+          "r.sureshkumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "20895825"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7a6a0f893c73",
+        "office_id": "ndc-national-data-centre",
+        "name": "Smt. Ritu Kanojia",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ritu.kanojia@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-953776a86471",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Priyanshu Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "vee5.is@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1ddb2c9a96c9",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Pawan",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "vee5.is@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5b4b68a740b1",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Akshay Bhargava",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-4bffa1bf81cb",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Vikram Dattatri",
+        "designation": "Deputy Director",
+        "emails": [
+          "vikram.dattatri@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093046"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d1c6eb1325ac",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Prashant Kumar",
+        "designation": "Deputy Director",
+        "emails": [
+          "er.prashant@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a8375379ea7b",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Rahul Tanwar",
+        "designation": "Deputy Director",
+        "emails": [
+          "rahul.tanwar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093047"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-aa8ac2e8e053",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Baiju Nv",
+        "designation": "Deputy Director",
+        "emails": [
+          "baijuenvy@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-115d03f34159",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Ajay Agarwal",
+        "designation": "Deputy Director",
+        "emails": [
+          "ajay.agarwal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093020"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-07a90265755b",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Anil Kumar",
+        "designation": "Deputy Director",
+        "emails": [
+          "anil.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093064"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7a8cc2deffaa",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Arun Kumar",
+        "designation": "Deputy Director",
+        "emails": [
+          "arun.ks@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-85a3ae0e0f80",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Arvind Dhar Dwivedi",
+        "designation": "Deputy Director",
+        "emails": [
+          "arvind.dwivedi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093049"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-366132d11929",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Saurabh Bajpai",
+        "designation": "Deputy Director",
+        "emails": [
+          "saurabh.bajpai@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-dea246b61fd2",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Sumit Prakash",
+        "designation": "Deputy Director",
+        "emails": [
+          "sumit.prakash@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-af5d237008ea",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri Nhvn Chanda Sekhar",
+        "designation": "Deputy Director",
+        "emails": [
+          "cs.nhvn@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-785b95699b94",
+        "office_id": "ndc-national-data-centre",
+        "name": "Shri T Hari Kiran",
+        "designation": "Deputy Director",
+        "emails": [
+          "hari.kiran@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-76dae7db2f37",
+        "office_id": "ndc-national-data-centre",
+        "name": "Ms. Divya Arora",
+        "designation": "Deputy Director",
+        "emails": [
+          "divya.arora@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093023"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-65948bed03ea",
+        "office_id": "ndc-national-data-centre",
+        "name": "Ms. Smita Soni",
+        "designation": "Deputy Director",
+        "emails": [
+          "soni.smita@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "28093043"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

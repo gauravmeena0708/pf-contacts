@@ -1,0 +1,109 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kozhikode-calicut",
+    "source_key": "q=KOZHIKODE+%28CALICUT%29",
+    "name": "KOZHIKODE (CALICUT)",
+    "category": "regional_office",
+    "parent_id": "zo-kerala-lakshadweep-thiruvananthapuram",
+    "ancestor_ids": [
+      "head-office",
+      "zo-kerala-lakshadweep-thiruvananthapuram"
+    ],
+    "address": "Bhavishya Nidhi Bhawan, P.B. No. 1806,\nEranhipalam(PO),\nKozhikode - 673 006",
+    "contact": {
+      "emails": [
+        "ro.kozhikode@epfindia.gov.in"
+      ],
+      "std_code": "0495",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2766532"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "KRLD",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-625967961b89",
+        "office_id": "ro-kozhikode-calicut",
+        "name": "Shri Shubham Kashyap",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.kozhikode@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2766528"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c5603c821dd3",
+        "office_id": "ro-kozhikode-calicut",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2766528"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a32740904f75",
+        "office_id": "ro-kozhikode-calicut",
+        "name": "Shri Gaurav Verma",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2768850"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0e243687435e",
+        "office_id": "ro-kozhikode-calicut",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2766532"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-dc5f23f464b0",
+        "office_id": "ro-kozhikode-calicut",
+        "name": "Enquiry",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "2767893",
+          "2368193",
+          "2361293"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0e1b3ee41a3f",
+        "office_id": "ro-kozhikode-calicut",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8301005169"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

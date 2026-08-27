@@ -1,0 +1,158 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kukatpalli",
+    "source_key": "q=KUKATPALLI",
+    "name": "KUKATPALLI",
+    "category": "regional_office",
+    "parent_id": "zo-telangana-hyderabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-telangana-hyderabad"
+    ],
+    "address": "Prashanti Nagar, TSRTC Bus Complex,\n1st and 2nd Floor, Near 'Y' Junction\nKUKATPALLI - 500018",
+    "contact": {
+      "emails": [
+        "ro.kukatpally@epfindia.gov.in"
+      ],
+      "std_code": "040",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "040-29701879"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 17.4734487,
+      "longitude": 78.4267654
+    },
+    "official_count": 10,
+    "source": {
+      "category_code": "TL",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-8842657b70b9",
+        "office_id": "ro-kukatpalli",
+        "name": "Shri Rajesh Chandra B",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "rajesh.boddeda@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "040-29703775"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-14aa95184f61",
+        "office_id": "ro-kukatpalli",
+        "name": "Smt. Ch. Satyavani Sri",
+        "designation": "Personal Assistant",
+        "emails": [
+          "ro.kukatpally@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0404-29703775"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-857fffdfbf68",
+        "office_id": "ro-kukatpalli",
+        "name": "Shri Vaibhav Vinayak Donglikar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "vv.donglikar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "040-29709920"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3b2a49de46b5",
+        "office_id": "ro-kukatpalli",
+        "name": "Shri J.srinivas",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "040-29706630"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-18b3c79562a8",
+        "office_id": "ro-kukatpalli",
+        "name": "Shri Vineet Kumar Saroj",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "040-29704410"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-39812e06107a",
+        "office_id": "ro-kukatpalli",
+        "name": "Shri D Babulnath Nayak",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "babulnath.nayak@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "040-29707730"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-52f086ad6c9b",
+        "office_id": "ro-kukatpalli",
+        "name": "Shri Ravindranath",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "040-29701879"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-054cb9f72ff5",
+        "office_id": "ro-kukatpalli",
+        "name": "Shri L. D. Norbert, D P A",
+        "designation": "E D P CELL",
+        "emails": [],
+        "phone_numbers": [
+          "040-29706620"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-deff97c975ad",
+        "office_id": "ro-kukatpalli",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9392369549"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-42add14489e1",
+        "office_id": "ro-kukatpalli",
+        "name": "Invard Section",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "29705520",
+          "29708830"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

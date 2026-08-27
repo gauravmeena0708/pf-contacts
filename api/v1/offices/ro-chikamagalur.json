@@ -1,0 +1,105 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-chikamagalur",
+    "source_key": "q=CHIKAMAGALUR",
+    "name": "CHIKAMAGALUR",
+    "category": "regional_office",
+    "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli"
+    ],
+    "address": "Karnataka Housing Board (KHB) 5th Phase,\nBehind Fire Station,\nChikmagalur - 577102",
+    "contact": {
+      "emails": [
+        "ro.chikmagalur@epfindia.gov.in"
+      ],
+      "std_code": "08262",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "200755"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 13.337263,
+      "longitude": 75.8138381
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-f5c74021c307",
+        "office_id": "ro-chikamagalur",
+        "name": "Sh Ashwin Raj",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "200751"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-53ec1c91a23b",
+        "office_id": "ro-chikamagalur",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "200755"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0386edf3eb4e",
+        "office_id": "ro-chikamagalur",
+        "name": "Shri Bharath G",
+        "designation": "Accounts Officer",
+        "emails": [],
+        "phone_numbers": [
+          "200753"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5372c616544d",
+        "office_id": "ro-chikamagalur",
+        "name": "Shri Madhuranath S",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [
+          "200753"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-377cfe9c191e",
+        "office_id": "ro-chikamagalur",
+        "name": "Shri Balachandar K",
+        "designation": "E D P CELL",
+        "emails": [],
+        "phone_numbers": [
+          "200754"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3405f90742ea",
+        "office_id": "ro-chikamagalur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9482177426"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-guntur",
+    "source_key": "q=GUNTUR",
+    "name": "GUNTUR",
+    "category": "regional_office",
+    "parent_id": "zo-andhra-pradesh-vijayawada",
+    "ancestor_ids": [
+      "head-office",
+      "zo-andhra-pradesh-vijayawada"
+    ],
+    "address": "Bhavishyanidhi Bhawan, Krishna Nagar,\n3rd Lane,\nGuntur  - 522 006",
+    "contact": {
+      "emails": [
+        "ro.guntur@epfindia.gov.in"
+      ],
+      "std_code": "0863",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 10,
+    "source": {
+      "category_code": "AP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-00c05d026250",
+        "office_id": "ro-guntur",
+        "name": "Shri Prabhu Dutta Prusty",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "prabhu.dutta@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2231227"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-464c251e3298",
+        "office_id": "ro-guntur",
+        "name": "Shri M. Ramesh Babu",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2231227"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-864d88c74c85",
+        "office_id": "ro-guntur",
+        "name": "Shri Selvatkar Thanaiah",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "thanaiah.selvatkar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2344136"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-27d08f18372a",
+        "office_id": "ro-guntur",
+        "name": "Shri V. V. Subba Rao",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2344135"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-28fc714fa88e",
+        "office_id": "ro-guntur",
+        "name": "Shri Malla Ramarao",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "mrama.rao@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2344111"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c7bc20e24ff4",
+        "office_id": "ro-guntur",
+        "name": "Shri P. Gopal Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "pgopal.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2344110"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a9a868f26d36",
+        "office_id": "ro-guntur",
+        "name": "Shri K. Subhash",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "subhash.k@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2344125"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a798ae164b5d",
+        "office_id": "ro-guntur",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2344123"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c29ec5dc672d",
+        "office_id": "ro-guntur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9494657469"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5ad396a646bd",
+        "office_id": "ro-guntur",
+        "name": "Facilitation Center",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2232921",
+          "2344106"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

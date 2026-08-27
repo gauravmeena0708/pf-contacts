@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-bagalkot",
+    "source_key": "q=D.O+-+BAGALKOT",
+    "name": "D.O - BAGALKOT",
+    "category": "district_office",
+    "parent_id": "ro-raichur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "ro-raichur"
+    ],
+    "address": "District Office, Bagalkot, Room No.237\nDistrict Administration Building, Navanagar\nBAGALKOT - 587103",
+    "contact": {
+      "emails": [
+        "do.bagalkot@epfindia.gov.in"
+      ],
+      "std_code": "08354",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 16.1633047,
+      "longitude": 75.6656174
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-328f92074c63",
+        "office_id": "do-bagalkot",
+        "name": "Shri Anil R Bhosale",
+        "designation": "Enforcement Officer",
+        "emails": [
+          "anil.bhosale@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "222224"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

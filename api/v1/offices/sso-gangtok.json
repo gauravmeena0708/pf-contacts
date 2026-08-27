@@ -1,0 +1,58 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "sso-gangtok",
+    "source_key": "q=SSO+-+GANGTOK",
+    "name": "SSO - GANGTOK",
+    "category": "special_state_office",
+    "parent_id": "ro-siliguri",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata",
+      "ro-siliguri"
+    ],
+    "address": "Nying-re building\nNear A.I.R. Quarters, Upper Arithang\nGANGTOK - 737101",
+    "contact": {
+      "emails": [
+        "sso.gangtok@epfindia.gov.in"
+      ],
+      "std_code": "03592",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-62cf64aa8a1e",
+        "office_id": "sso-gangtok",
+        "name": "Shri Kesang Namthak Tenzing",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "03592-221224"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-147a632ab090",
+        "office_id": "sso-gangtok",
+        "name": "Shri Hemant Kumar Das",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

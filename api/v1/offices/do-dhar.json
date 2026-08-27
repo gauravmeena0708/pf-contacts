@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-dhar",
+    "source_key": "q=D.O+-+DHAR",
+    "name": "D.O - DHAR",
+    "category": "district_office",
+    "parent_id": "ro-indore",
+    "ancestor_ids": [
+      "head-office",
+      "zo-madhya-pradesh-chattisgarh-bhopal",
+      "ro-indore"
+    ],
+    "address": "Employees Provident Fund Organization,\nFirst Floor, BSNL Building, Near Power House, Sector 1,\nPithampur, District Dhar(M.P.) - 454775",
+    "contact": {
+      "emails": [
+        "do.dhar@epfindia.gov.in"
+      ],
+      "std_code": "07292",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.6095219,
+      "longitude": 75.6796638
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "MPCG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c84cce96553e",
+        "office_id": "do-dhar",
+        "name": "Shri  Devendra Sontake",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "devendra.sontake@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "299212"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

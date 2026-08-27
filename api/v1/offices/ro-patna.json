@@ -1,0 +1,119 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-patna",
+    "source_key": "q=PATNA",
+    "name": "PATNA",
+    "category": "regional_office",
+    "parent_id": "zo-bihar-jharkhand-patna",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna"
+    ],
+    "address": "Bhavishyanidhi Bhawan, R-Block,\nRoad No. 06,\nPatna -  800 001",
+    "contact": {
+      "emails": [
+        "ro.patna@epfindia.gov.in"
+      ],
+      "std_code": "0612",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2227410"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-0b1650d215df",
+        "office_id": "ro-patna",
+        "name": "Shri Hemant Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.patna@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2227139"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-715e5c9dc699",
+        "office_id": "ro-patna",
+        "name": "Shri J. K. Das",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2227139"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2217ce763194",
+        "office_id": "ro-patna",
+        "name": "Shri Atul Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "atul.prakash@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2973277"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f7b6fd2a1690",
+        "office_id": "ro-patna",
+        "name": "Shri Krishna Kumar Ray",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2506630"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-29c03a9e5578",
+        "office_id": "ro-patna",
+        "name": "Ms Upasana Kumari",
+        "designation": "Steno",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2231a2b59f26",
+        "office_id": "ro-patna",
+        "name": "Sh Nehal Akhter",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2227410"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fa3507da6b3d",
+        "office_id": "ro-patna",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "6202458036",
+          "2973301"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

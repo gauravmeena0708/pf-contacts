@@ -1,0 +1,62 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-gandhidham",
+    "source_key": "q=D.O+-+GANDHIDHAM",
+    "name": "D.O - GANDHIDHAM",
+    "category": "district_office",
+    "parent_id": "ro-rajkot",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad",
+      "ro-rajkot"
+    ],
+    "address": "Plot No. 251,252, Ward 4A,\nVandana Circle, Rambaug Road, Adipur, Taluka Gandhidham\nKutch - 370205",
+    "contact": {
+      "emails": [
+        "do.gandhidham@epfindia.gov.in"
+      ],
+      "std_code": "02836",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 23.0598686,
+      "longitude": 70.082076
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-0d110418cf4e",
+        "office_id": "do-gandhidham",
+        "name": "Shri Raunak Jain",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "265583"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2b605e910c7c",
+        "office_id": "do-gandhidham",
+        "name": "General Numbers",
+        "designation": "(Phone & Whatsapp Number)",
+        "emails": [],
+        "phone_numbers": [
+          "265583"
+        ],
+        "fax_numbers": [
+          "297157"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-punjab-himachal-pradesh",
+    "source_key": "q=PUNJAB+%26+HIMACHAL+PRADESH",
+    "name": "PUNJAB & HIMACHAL PRADESH",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Office of the Addl. Central Provident Fund Commissioner\n(Punjab & Himachal Pradesh),\nS.C.O. 4-7, Sector 17-D,\nChandigarh. -",
+    "contact": {
+      "emails": [
+        "acc.pbhp@epfindia.gov.in"
+      ],
+      "std_code": "0172",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c716f38d2bfa",
+        "office_id": "zo-punjab-himachal-pradesh",
+        "name": "Shri Rajiv Bisht",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2996175"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c0c68c143fac",
+        "office_id": "zo-punjab-himachal-pradesh",
+        "name": "Shri Rajesh Tanwar",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2996175"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-43141d702aa1",
+        "office_id": "zo-punjab-himachal-pradesh",
+        "name": "Shri Neeraj Srivastava",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "neeraj.srivastav@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2720042"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1a32b4233a37",
+        "office_id": "zo-punjab-himachal-pradesh",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2701199"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0c359b7d72e8",
+        "office_id": "zo-punjab-himachal-pradesh",
+        "name": "Shri Kumar Punit",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "kumar.punit@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2721835"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e8e4c9227798",
+        "office_id": "zo-punjab-himachal-pradesh",
+        "name": "PERSONAL ASSISTANT",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2701199"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

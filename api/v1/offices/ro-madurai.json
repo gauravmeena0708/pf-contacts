@@ -1,0 +1,175 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-madurai",
+    "source_key": "q=MADURAI",
+    "name": "MADURAI",
+    "category": "regional_office",
+    "parent_id": "zo-tamil-nadu-excluding-chennai",
+    "ancestor_ids": [
+      "head-office",
+      "zo-tamil-nadu-excluding-chennai"
+    ],
+    "address": "Bhavishya Nidhi Bhavan, 1, Lady Doak College Road,\nChokkikulam,\nMadurai  - 625 002",
+    "contact": {
+      "emails": [
+        "ro.madurai@epfindia.gov.in"
+      ],
+      "std_code": "0452",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2545703",
+        "2545702"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 11,
+    "source": {
+      "category_code": "TNEC",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-dbd7344750ab",
+        "office_id": "ro-madurai",
+        "name": "Shri Amiya Kant",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "amiya.kant@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2524874"
+        ],
+        "fax_numbers": [
+          "2536848"
+        ]
+      },
+      {
+        "id": "official-694e7de9e696",
+        "office_id": "ro-madurai",
+        "name": "Shri. M. James",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2524874",
+          "2545708"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6afa0665bfb3",
+        "office_id": "ro-madurai",
+        "name": "Shri S. Azhahiya Manavalan",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "azhahiya.manavalan@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2545747"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-80cda8ab4890",
+        "office_id": "ro-madurai",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2545719"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-36ddc6a1ae5f",
+        "office_id": "ro-madurai",
+        "name": "Shri M. S Suresh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ms.suresh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2545723"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1f322c4387db",
+        "office_id": "ro-madurai",
+        "name": "Shri Abhay Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "abhay-kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "252435"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-92afdc97ff47",
+        "office_id": "ro-madurai",
+        "name": "Shri Adarsh Kaimathiya",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "adarshkaimathiya@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2524730"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d38e751b5a1c",
+        "office_id": "ro-madurai",
+        "name": "Shri Sankaradass Gandhi G",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2545703",
+          "2545702"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-830550c263e0",
+        "office_id": "ro-madurai",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2545714"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-437c4fff5154",
+        "office_id": "ro-madurai",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9489938487"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d47f08f8ac70",
+        "office_id": "ro-madurai",
+        "name": "General Numbers",
+        "designation": "(PGHS & Grievance Cell)",
+        "emails": [],
+        "phone_numbers": [
+          "2545726"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

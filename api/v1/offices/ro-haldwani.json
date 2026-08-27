@@ -1,0 +1,87 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-haldwani",
+    "source_key": "q=HALDWANI",
+    "name": "HALDWANI",
+    "category": "regional_office",
+    "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh"
+    ],
+    "address": "IInd Floor, Khurana Complex, Opposite Judges Court,\nNainital Road, (Nainital).\nHaldwani - 263139",
+    "contact": {
+      "emails": [
+        "sro.haldwani@epfindia.gov.in"
+      ],
+      "std_code": "05946",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "282208"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 29.2095802,
+      "longitude": 79.52996
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "DLUK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-edb3dd8e83c0",
+        "office_id": "ro-haldwani",
+        "name": "Shri Siddharth Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "sro.haldwani@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "05946-220762"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-93b3c64c297c",
+        "office_id": "ro-haldwani",
+        "name": "Shri Akash Verma",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "sro.haldwani@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "05946-281411"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5a38cbd706ac",
+        "office_id": "ro-haldwani",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "282208"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b12c2401926c",
+        "office_id": "ro-haldwani",
+        "name": "Whatsapp Business Account",
+        "designation": "GENERAL NUMBERS",
+        "emails": [],
+        "phone_numbers": [
+          "9997950686"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

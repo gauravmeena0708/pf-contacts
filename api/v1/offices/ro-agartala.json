@@ -1,0 +1,59 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-agartala",
+    "source_key": "q=AGARTALA",
+    "name": "AGARTALA",
+    "category": "regional_office",
+    "parent_id": "zo-north-eastern-region-guwahati",
+    "ancestor_ids": [
+      "head-office",
+      "zo-north-eastern-region-guwahati"
+    ],
+    "address": "Airport Road, Near Bholagiri Ashram\nGorkha Basti, PO – Kathal Bagan, (Tripura)\nAgartala - 799 006",
+    "contact": {
+      "emails": [
+        "ro.agartala@epfindia.gov.in"
+      ],
+      "std_code": "0381",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "NER",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-ea63db566c24",
+        "office_id": "ro-agartala",
+        "name": "Shri Leo Joseph Marandi",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2324164"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-342665c11a95",
+        "office_id": "ro-agartala",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9402180891"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

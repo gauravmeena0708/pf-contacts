@@ -1,0 +1,87 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-shillong",
+    "source_key": "q=SHILLONG",
+    "name": "SHILLONG",
+    "category": "regional_office",
+    "parent_id": "zo-north-eastern-region-guwahati",
+    "ancestor_ids": [
+      "head-office",
+      "zo-north-eastern-region-guwahati"
+    ],
+    "address": "2nd Floor, BSNL Bhawan, Opposite Lady Hydari Park\nBarik, Shillong\nMeghalaya - 793 01",
+    "contact": {
+      "emails": [
+        "ro.shillong@epfindia.gov.in"
+      ],
+      "std_code": "0364",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2507333"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "NER",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c3f8f6386edd",
+        "office_id": "ro-shillong",
+        "name": "Shri Kapennao Hungyo",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "k.hungyo@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2507212"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-610c6a61d9a0",
+        "office_id": "ro-shillong",
+        "name": "Ms Kamei Achamlu",
+        "designation": "Public Relation Officer",
+        "emails": [
+          "k.achamlu@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2507333"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-92f7866a4914",
+        "office_id": "ro-shillong",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2507265"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7542165c0628",
+        "office_id": "ro-shillong",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "6033243231"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

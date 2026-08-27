@@ -1,0 +1,126 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-bengaluru-koramangala",
+    "source_key": "q=BENGALURU+%28KORAMANGALA%29",
+    "name": "BENGALURU (KORAMANGALA)",
+    "category": "regional_office",
+    "parent_id": "zo-bengaluru-bengaluru",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bengaluru-bengaluru"
+    ],
+    "address": "Annapoorneshwari Complex, Survey No. 37/1,\n6th Main, Singasandra, Hosur Main Road,\nBOMMASANDRA - 560068",
+    "contact": {
+      "emails": [
+        "ro.koramangala@epfindia.gov.in"
+      ],
+      "std_code": "080",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "29770590"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 12.8986856,
+      "longitude": 77.6365787
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "BG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-a6e6afe1f135",
+        "office_id": "ro-bengaluru-koramangala",
+        "name": "Shri Sunil Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "sunil.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29550597"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-da8eff1f0304",
+        "office_id": "ro-bengaluru-koramangala",
+        "name": "Shri Khan Javeed Iqbal",
+        "designation": "Private Secretary",
+        "emails": [
+          "ro.koramangala@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29550597"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e1045b3a4c7b",
+        "office_id": "ro-bengaluru-koramangala",
+        "name": "Dr. Pavan Jasti",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "pavan.jasti@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29550651"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7529698680f6",
+        "office_id": "ro-bengaluru-koramangala",
+        "name": "Ms. Ekankshi Gupta",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "gupta.ekankshi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29550591"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ac624cc2bc8c",
+        "office_id": "ro-bengaluru-koramangala",
+        "name": "Shri S.manjunath",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "manjunath.s@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "48509011"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3c01994073bb",
+        "office_id": "ro-bengaluru-koramangala",
+        "name": "Public Relation Officer",
+        "designation": "(General Numbers)",
+        "emails": [],
+        "phone_numbers": [
+          "29770590"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f2eabafe08d7",
+        "office_id": "ro-bengaluru-koramangala",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9686514575"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

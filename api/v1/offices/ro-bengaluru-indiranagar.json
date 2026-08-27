@@ -1,0 +1,122 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-bengaluru-indiranagar",
+    "source_key": "q=BENGALURU+%28INDIRANAGAR%29",
+    "name": "BENGALURU (INDIRANAGAR)",
+    "category": "regional_office",
+    "parent_id": "zo-bengaluru-bengaluru",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bengaluru-bengaluru"
+    ],
+    "address": "No. F-28, NSU Block, ITI Campus (Bengaluru Block),\nDooravani Nagar, Krishnarajapuram\n(WHITEFIELD) - 560016",
+    "contact": {
+      "emails": [
+        "ro.indiranagar@epfindia.gov.in"
+      ],
+      "std_code": "080",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "29900140"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "BG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6caace410b3f",
+        "office_id": "ro-bengaluru-indiranagar",
+        "name": "Shri N Gopalakrishnan",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "n.gopalakrishnan@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29919647"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-33299a770fae",
+        "office_id": "ro-bengaluru-indiranagar",
+        "name": "Shri Sharad Raj Gupta",
+        "designation": "Personal Assistant",
+        "emails": [
+          "sharad.raj@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29919647"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-454c47aae20f",
+        "office_id": "ro-bengaluru-indiranagar",
+        "name": "Shri P Rama Subbaiah",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "25658005"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-36eb15a30bcd",
+        "office_id": "ro-bengaluru-indiranagar",
+        "name": "Shri Rameez Mehar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "rameez.mehar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25603030"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f78718ee03c2",
+        "office_id": "ro-bengaluru-indiranagar",
+        "name": "Shri Mukut Bihar Lal Meena",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "mukut.meena@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-4dd6084bd712",
+        "office_id": "ro-bengaluru-indiranagar",
+        "name": "Shri Mohan Raju V",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "29900140"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b2beecfb8010",
+        "office_id": "ro-bengaluru-indiranagar",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "7204913736"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

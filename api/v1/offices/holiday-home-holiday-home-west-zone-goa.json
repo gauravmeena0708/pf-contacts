@@ -1,0 +1,37 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "holiday-home-holiday-home-west-zone-goa",
+    "source_key": "q=HH_Holiday_Home_WEST_ZONE_GOA_",
+    "name": "Holiday Home, WEST ZONE(GOA)",
+    "category": "holiday_home",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "E.P.F Holiday Home, Laxmi Niwas, Villa No. 264/108,\nGoan Paradise, Next to Hotel Gautam, Chogam Road,\nPorvorim - Goa - 403501",
+    "contact": {
+      "emails": [
+        "ro.goa@epfindia.gov.in"
+      ],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "9049010224"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "HH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

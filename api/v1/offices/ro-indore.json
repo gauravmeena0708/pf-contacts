@@ -1,0 +1,147 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-indore",
+    "source_key": "q=INDORE",
+    "name": "INDORE",
+    "category": "regional_office",
+    "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+    "ancestor_ids": [
+      "head-office",
+      "zo-madhya-pradesh-chattisgarh-bhopal"
+    ],
+    "address": "6th-9th Floor, Pradhikaran Bhawan,\n7, Race Course Road,  (M.P.)\nIndore - 452 003",
+    "contact": {
+      "emails": [
+        "ro.indore@epfindia.gov.in"
+      ],
+      "std_code": "0731",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2434413"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "MPCG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6bcc18391b93",
+        "office_id": "ro-indore",
+        "name": "Shri Ramesh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ramesh.k@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2435130"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e9e4d816bb77",
+        "office_id": "ro-indore",
+        "name": "Shri Mohd Shuaib Shaikh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "shuaib.shaikh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2537100"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a8968e71bac3",
+        "office_id": "ro-indore",
+        "name": "Shri Mrugesh Mahadeo Gharde",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "mm.gharde@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2970928"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6dd75bb4f3ad",
+        "office_id": "ro-indore",
+        "name": "Shri Arjit Dubey",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "arjit.dubey@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-39e5aca0f34d",
+        "office_id": "ro-indore",
+        "name": "Shri Yogendra Vikal",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "yogendra.v@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e1957f205616",
+        "office_id": "ro-indore",
+        "name": "Shri Norbert Dixon",
+        "designation": "Public Relation Officer",
+        "emails": [
+          "ro.indore@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2434413"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c349ae937508",
+        "office_id": "ro-indore",
+        "name": "Claim Inquiry",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "2434413",
+          "2545663"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f34655af768b",
+        "office_id": "ro-indore",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9755534438"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a89ee3b8798b",
+        "office_id": "ro-indore",
+        "name": "Woman's Helpline Number",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "2545663"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

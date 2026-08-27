@@ -1,0 +1,74 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-darjeeling",
+    "source_key": "q=DARJEELING",
+    "name": "DARJEELING",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "Chhota Kagjhora, Hill Cart Road,\nP.O. & Dist. Darjeeling (WB)\nDarjeeling - 734101",
+    "contact": {
+      "emails": [
+        "ro.darjeeling@epfindia.gov.in"
+      ],
+      "std_code": "0354",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2255902"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 27.0420814,
+      "longitude": 88.2648631
+    },
+    "official_count": 3,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c2a80b888ac2",
+        "office_id": "ro-darjeeling",
+        "name": "Shri Prem Prakash",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.darjeeling@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2254251"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-527fa25dba5b",
+        "office_id": "ro-darjeeling",
+        "name": "Smt Helen Lepcha",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2255902"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-156522fdaf12",
+        "office_id": "ro-darjeeling",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8927703218"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

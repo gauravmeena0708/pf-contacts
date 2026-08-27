@@ -1,0 +1,64 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-itarasi",
+    "source_key": "q=D.O+-+ITARASI",
+    "name": "D.O - ITARASI",
+    "category": "district_office",
+    "parent_id": "ro-bhopal",
+    "ancestor_ids": [
+      "head-office",
+      "zo-madhya-pradesh-chattisgarh-bhopal",
+      "ro-bhopal"
+    ],
+    "address": "Hall No. 104, 1st Floor, BSNL Compound,\nGandhi Nagar,\nItarsi - 461111",
+    "contact": {
+      "emails": [
+        "do.itarsi@epfindia.gov.in"
+      ],
+      "std_code": "07572",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "234046"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.5749522,
+      "longitude": 77.7794285
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "MPCG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-8bb471d95e9a",
+        "office_id": "do-itarasi",
+        "name": "Shri Lalitesh Singh Nayak",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "do.itarsi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "292292"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-21d2f45738b2",
+        "office_id": "do-itarasi",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "234046"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-bijapur",
+    "source_key": "q=D.O+-+BIJAPUR",
+    "name": "D.O - BIJAPUR",
+    "category": "district_office",
+    "parent_id": "ro-gulbarga",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "ro-gulbarga"
+    ],
+    "address": "KARMIKA SAMUDAYA BHAVAN, GROUND FLOOR, SY.NO. 1294/1A/2,\nSINDAGI ROAD/NAKA, ALLAPUR ONI,\nVijaypura - 586104",
+    "contact": {
+      "emails": [
+        "do.vijayapura@epfindia.gov.in"
+      ],
+      "std_code": "08352",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 16.825279,
+      "longitude": 75.7282639
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-fadba58039f1",
+        "office_id": "do-bijapur",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "251852"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b956ccce9991",
+        "office_id": "do-bijapur",
+        "name": "Shri Shivaprasad H B",
+        "designation": "Enforcement Officer",
+        "emails": [
+          "shivaprasad.hb@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "251852"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

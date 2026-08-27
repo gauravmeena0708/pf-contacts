@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-mandi-gobindgarh",
+    "source_key": "q=D.O+-+MANDI+GOBINDGARH",
+    "name": "D.O - MANDI GOBINDGARH",
+    "category": "district_office",
+    "parent_id": "ro-chandigarh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh",
+      "ro-chandigarh"
+    ],
+    "address": "Complex No. 326, Sector-21C,\nAmloh Road\nMandi Gobindgarh - 147301",
+    "contact": {
+      "emails": [
+        "do.mandigobind@epfindia.gov.in"
+      ],
+      "std_code": "01765",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 30.6645086,
+      "longitude": 76.2903431
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-dfdc09151da7",
+        "office_id": "do-mandi-gobindgarh",
+        "name": "Shri Krishan Lal",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "krishanlal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "252355"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

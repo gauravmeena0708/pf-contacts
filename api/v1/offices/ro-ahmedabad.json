@@ -1,0 +1,179 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-ahmedabad",
+    "source_key": "q=AHMEDABAD",
+    "name": "AHMEDABAD",
+    "category": "regional_office",
+    "parent_id": "zo-gujarat-ahmedabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad"
+    ],
+    "address": "Bhavishyanidhi Bhawan, Near Income Tax Circle\nAshram Road (Gujarat)\nAhmedabad - 380 014",
+    "contact": {
+      "emails": [
+        "ro.ahmedabad@epfindia.gov.in"
+      ],
+      "std_code": "079",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "27542251"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 11,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-655f5ddda24d",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri Awadhesh Kumar Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "awadhesh.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27543770"
+        ],
+        "fax_numbers": [
+          "27542301"
+        ]
+      },
+      {
+        "id": "official-24e48235f44b",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri Dinesh G. Solanki",
+        "designation": "Private Secretary",
+        "emails": [
+          "ro.ahmedabad@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27543770"
+        ],
+        "fax_numbers": [
+          "27540170"
+        ]
+      },
+      {
+        "id": "official-416077c6d3e0",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri Kishanaram",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "kishna.ram@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27540284"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d433fd244f7c",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri Dinesh Viyyath",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "27543771"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-dad215d9a047",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri K Johnson",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "johnson.k@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27545472"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0e7a37c7e6c9",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri Ajay Bharat",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ajay.bharat@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27545475"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-99c9a06d9087",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri Harpal Singh Kandara",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "hps.kandara@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27543771"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f88ae3eb4ac1",
+        "office_id": "ro-ahmedabad",
+        "name": "Shri P S Panicker",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "27542251"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9b888631c558",
+        "office_id": "ro-ahmedabad",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "7383146934"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ba9b0e3aeb77",
+        "office_id": "ro-ahmedabad",
+        "name": "General Numbers",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "27541357",
+          "27542818",
+          "27540257"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f4d0e178fd2a",
+        "office_id": "ro-ahmedabad",
+        "name": "Inquiry",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "27546262",
+          "27542084"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kadapa",
+    "source_key": "q=KADAPA",
+    "name": "KADAPA",
+    "category": "regional_office",
+    "parent_id": "zo-andhra-pradesh-vijayawada",
+    "ancestor_ids": [
+      "head-office",
+      "zo-andhra-pradesh-vijayawada"
+    ],
+    "address": "Bhavishyanidhi Bhawan, 1/30, Railway Station Road,\nYerramukkapalli,\nKadapa - 516 004",
+    "contact": {
+      "emails": [
+        "sro.cuddapah@epfindia.gov.in"
+      ],
+      "std_code": "08562",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "244902"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "AP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-296cf216c033",
+        "office_id": "ro-kadapa",
+        "name": "Shri Raviteja Kumar Reddy",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "244189"
+        ],
+        "fax_numbers": [
+          "258164"
+        ]
+      },
+      {
+        "id": "official-381fb16624e3",
+        "office_id": "ro-kadapa",
+        "name": "Shri S Srinivasa Kumar",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "244189"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8aef7d4f4420",
+        "office_id": "ro-kadapa",
+        "name": "Shri Manoj Shankar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "08562-244108"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8d2d59f1a44f",
+        "office_id": "ro-kadapa",
+        "name": "Shri S.sreekanth Reddy",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "256114"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6b08128d2cc3",
+        "office_id": "ro-kadapa",
+        "name": "Shri Abhishek",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fc0dfe768ab5",
+        "office_id": "ro-kadapa",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "244902"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b95fc7a7f71a",
+        "office_id": "ro-kadapa",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "254053"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fa17a6b0db9a",
+        "office_id": "ro-kadapa",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9491138297"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

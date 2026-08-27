@@ -1,0 +1,88 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-solapur",
+    "source_key": "q=SOLAPUR",
+    "name": "SOLAPUR",
+    "category": "regional_office",
+    "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+    "ancestor_ids": [
+      "head-office",
+      "zo-maharashtra-excluding-mumbai-pune"
+    ],
+    "address": "165-A, Railway Lines\nSurvase Tower,\nSolapur - 413001",
+    "contact": {
+      "emails": [
+        "ro.solapur@epfindia.gov.in"
+      ],
+      "std_code": "0217",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2313226",
+        "2313266"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 17.6682615,
+      "longitude": 75.9013249
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "MHEM",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6de617f6659a",
+        "office_id": "ro-solapur",
+        "name": "Shri Purushottam Meena",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "puru.meena@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2316830",
+          "2310052"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-cd0513c72a88",
+        "office_id": "ro-solapur",
+        "name": "Shri Sagar Metri",
+        "designation": "Public Relation officer",
+        "emails": [],
+        "phone_numbers": [
+          "2313226",
+          "2313266"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-97435d5a13cf",
+        "office_id": "ro-solapur",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2316730"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ac4c430c28c1",
+        "office_id": "ro-solapur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9404912406"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

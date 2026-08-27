@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-hisar",
+    "source_key": "q=D.O+-+HISAR",
+    "name": "D.O - HISAR",
+    "category": "district_office",
+    "parent_id": "ro-htak",
+    "ancestor_ids": [
+      "head-office",
+      "zo-haryana",
+      "ro-htak"
+    ],
+    "address": "122, Devodas Complex, MC/DC Colony Morh,\nDelhi Road\nHISAR - 125005",
+    "contact": {
+      "emails": [
+        "do.hisar@epfindia.gov.in"
+      ],
+      "std_code": "01662",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 29.1967459,
+      "longitude": 75.6383416
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "HR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-09cb0128f22b",
+        "office_id": "do-hisar",
+        "name": "Shri Gurdev  Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.hisar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "01662-248960"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

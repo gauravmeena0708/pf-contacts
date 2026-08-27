@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-bhilwara",
+    "source_key": "q=D.O+-+BHILWARA",
+    "name": "D.O - BHILWARA",
+    "category": "district_office",
+    "parent_id": "ro-udaipur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-rajasthan",
+      "ro-udaipur"
+    ],
+    "address": "13-14, Ganesh Mandir Road\nGandhi Nagar\nBhilwara - 311001",
+    "contact": {
+      "emails": [
+        "do.bhilwara@epfindia.gov.in"
+      ],
+      "std_code": "01482",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 25.3623721,
+      "longitude": 74.6397874
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "RJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-70018046ed59",
+        "office_id": "do-bhilwara",
+        "name": "Shri R. N. Meena",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ramnarain.meena@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "246876"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

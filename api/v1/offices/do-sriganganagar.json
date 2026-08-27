@@ -1,0 +1,75 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-sriganganagar",
+    "source_key": "q=D.O+-+SRIGANGANAGAR",
+    "name": "D.O - SRIGANGANAGAR",
+    "category": "district_office",
+    "parent_id": "ro-jodhpur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-rajasthan",
+      "ro-jodhpur"
+    ],
+    "address": "25-B Block,\nBehind Amrit Mishthan Bhandar,\nSriganganagar - 335001",
+    "contact": {
+      "emails": [
+        "do.sriganganagar@epfindia.gov.in"
+      ],
+      "std_code": "0154",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2487217"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 29.8978405,
+      "longitude": 73.8993907
+    },
+    "official_count": 3,
+    "source": {
+      "category_code": "RJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-44a369e90c8f",
+        "office_id": "do-sriganganagar",
+        "name": "Shri Baldev Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.sriganganagar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2487217"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-30a1c3698667",
+        "office_id": "do-sriganganagar",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2487217"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-12802bddf9dc",
+        "office_id": "do-sriganganagar",
+        "name": "Whatsapp Business Account",
+        "designation": "GENERAL NUMBERS",
+        "emails": [],
+        "phone_numbers": [
+          "2487217"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

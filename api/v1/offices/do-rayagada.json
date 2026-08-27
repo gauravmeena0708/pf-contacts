@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-rayagada",
+    "source_key": "q=D.O+-+RAYAGADA",
+    "name": "D.O - RAYAGADA",
+    "category": "district_office",
+    "parent_id": "ro-brahmapur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-orissa-bhubaneswar",
+      "ro-brahmapur"
+    ],
+    "address": "Indira Nagar 1st Line,\nNear Hotel Tejaswi International\nRayagada - 765001",
+    "contact": {
+      "emails": [
+        "do.rgda@epfindia.gov.in"
+      ],
+      "std_code": "06856",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 19.1626966,
+      "longitude": 83.4368718
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "OR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6b58e3cea0e3",
+        "office_id": "do-rayagada",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "223243"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

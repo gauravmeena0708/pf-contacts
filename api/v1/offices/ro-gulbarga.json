@@ -1,0 +1,157 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-gulbarga",
+    "source_key": "q=GULBARGA",
+    "name": "GULBARGA",
+    "category": "regional_office",
+    "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli"
+    ],
+    "address": "Bhavishya Nidhi Bhawan,\nAland Road,\nGulbarga  -  585 101",
+    "contact": {
+      "emails": [
+        "ro.gulbarga@epfindia.gov.in"
+      ],
+      "std_code": "08472",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 10,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6e727dfd070e",
+        "office_id": "ro-gulbarga",
+        "name": "Shri M Subrahmanyam",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "m.subrahmanyam@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "273203"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5ed6d4d824ac",
+        "office_id": "ro-gulbarga",
+        "name": "Shri Keshavrao Kulkarni",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "273203"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b9a00ca28eb6",
+        "office_id": "ro-gulbarga",
+        "name": "Dr. Bharat Lal Meena",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "bhrtmeena206@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3bffb1882048",
+        "office_id": "ro-gulbarga",
+        "name": "Shri Madan Kulkarni",
+        "designation": "Accounts Officer",
+        "emails": [
+          "madan.kulkarni@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "273862"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6df62783daea",
+        "office_id": "ro-gulbarga",
+        "name": "Shri Mohammed Arslan Kittur",
+        "designation": "Accounts Officer",
+        "emails": [
+          "arslan.kittur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "295858"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-29774c3126f7",
+        "office_id": "ro-gulbarga",
+        "name": "Shri.basavaraj",
+        "designation": "Accounts Officer",
+        "emails": [
+          "basavaraj.yh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "269077"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-aa7abb1098fc",
+        "office_id": "ro-gulbarga",
+        "name": "Shri B Ravindra",
+        "designation": "Enforcement Officer",
+        "emails": [
+          "b.ravindra@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a259477dd381",
+        "office_id": "ro-gulbarga",
+        "name": "Shri.sanjay Birje",
+        "designation": "Enforcement Officer",
+        "emails": [
+          "sanjay.birje@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "228877"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b03059ace00a",
+        "office_id": "ro-gulbarga",
+        "name": "Shri P. Rajkumar",
+        "designation": "E D P CELL",
+        "emails": [],
+        "phone_numbers": [
+          "295857"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-145746f8a859",
+        "office_id": "ro-gulbarga",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "25010481"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

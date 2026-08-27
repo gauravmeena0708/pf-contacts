@@ -1,0 +1,159 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-hyderabad-barkatpura",
+    "source_key": "q=HYDERABAD+%28BARKATPURA%29",
+    "name": "HYDERABAD (BARKATPURA)",
+    "category": "regional_office",
+    "parent_id": "zo-telangana-hyderabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-telangana-hyderabad"
+    ],
+    "address": "Bhavishyanidhi Bhawan, No. 3-4-763,\nBarkatpura Chaman, (Telangana)\nHyderabad - 500027",
+    "contact": {
+      "emails": [
+        "ro.hyderabad1@epfindia.gov.in"
+      ],
+      "std_code": "040",
+      "toll_free_number": "14470",
+      "phone_numbers": [],
+      "pro_numbers": [
+        "27564576"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 17.3943916,
+      "longitude": 78.4945016
+    },
+    "official_count": 10,
+    "source": {
+      "category_code": "TL",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-db8a1da89143",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Dr Shiv Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "shiv.kumar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27564054"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fae125f2eeaf",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Shri K. Ramesh",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "27564054"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-8dde2b7fe953",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Shri Minhaj Asghar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "a.minhaj@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7156d9e5b18d",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Smt. S. Hemalatha",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "s.hemalatha@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27552395"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d2aff0fb7f3d",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Shri Arjun Tukral",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "arjun.thukral@epfindial.gov.in"
+        ],
+        "phone_numbers": [
+          "27555600"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9dd5f66b91d5",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Shri Nishant Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "nishant.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27567090"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7c72483635ef",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Shri Md. Sanaullah Ansari",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ans.sanaullah@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27551982"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c0d946d93dc9",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "27564576"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-199b5ece18b7",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "27567089"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-efed387b1269",
+        "office_id": "ro-hyderabad-barkatpura",
+        "name": "Whatsapp Helpline Number",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9100026170"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

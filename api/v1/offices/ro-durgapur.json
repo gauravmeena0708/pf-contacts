@@ -1,0 +1,146 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-durgapur",
+    "source_key": "q=DURGAPUR",
+    "name": "DURGAPUR",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "Red Cross Road, Opposite Commercial Tax Office,\nCity Centre, Distt- Burdwan (West Bengal)\nDurgapur - 713216",
+    "contact": {
+      "emails": [
+        "ro.durgapur@epfindia.gov.in"
+      ],
+      "std_code": "0343",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 23.5029868,
+      "longitude": 87.374898
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-f1f9560ec12e",
+        "office_id": "ro-durgapur",
+        "name": "Shri Mhonthung Ngullie",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "mhonthung.n@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2544375"
+        ],
+        "fax_numbers": [
+          "2544374"
+        ]
+      },
+      {
+        "id": "official-f60057acac88",
+        "office_id": "ro-durgapur",
+        "name": "Shri Pankaj Kumar",
+        "designation": "Personal Assistant / SR SSA",
+        "emails": [],
+        "phone_numbers": [
+          "2544375"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-53b30e323ce6",
+        "office_id": "ro-durgapur",
+        "name": "Shri Sudhir Ranjan",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "sudhir.ranjan@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2544377"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a57ff5cbd0a2",
+        "office_id": "ro-durgapur",
+        "name": "Shri Amit Kumar Das",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.durgapur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2542357"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2d79e3120bd6",
+        "office_id": "ro-durgapur",
+        "name": "Shri Erick Herman Lakra",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.durgapur@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b563ff7f22f1",
+        "office_id": "ro-durgapur",
+        "name": "Shri Saif Ali",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.durgapur@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7262ccc149b8",
+        "office_id": "ro-durgapur",
+        "name": "Shri Rakesh Kumar  Mishra",
+        "designation": "Assistant Director",
+        "emails": [
+          "rakeshkr.mishra@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a12cac1f6f91",
+        "office_id": "ro-durgapur",
+        "name": "Shri Deepak Kumar Jha",
+        "designation": "Accounts Officer",
+        "emails": [
+          "deepak.jha@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2544378"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1de0965eb400",
+        "office_id": "ro-durgapur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9434085134"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

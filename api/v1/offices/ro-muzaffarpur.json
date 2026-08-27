@@ -1,0 +1,85 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-muzaffarpur",
+    "source_key": "q=MUZAFFARPUR",
+    "name": "MUZAFFARPUR",
+    "category": "regional_office",
+    "parent_id": "zo-bihar-jharkhand-patna",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna"
+    ],
+    "address": "BSNL Campus ,\nCompanybagh,\nMuzaffarpur - 842001",
+    "contact": {
+      "emails": [
+        "ro.muzaffarpur@epfindia.gov.in"
+      ],
+      "std_code": "0621",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2263965"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 26.1248143,
+      "longitude": 85.3806283
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-7dee01db9f26",
+        "office_id": "ro-muzaffarpur",
+        "name": "Shri Alok Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.muzaffarpur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2263963"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-581aa3ba82c5",
+        "office_id": "ro-muzaffarpur",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2263963"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f2f5ee9cc26c",
+        "office_id": "ro-muzaffarpur",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2263965"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-795b3fcd983d",
+        "office_id": "ro-muzaffarpur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "6204358536"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

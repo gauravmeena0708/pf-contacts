@@ -1,0 +1,37 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-kerala-kochi",
+    "source_key": "q=GH_Guest_House_KERALA_Kochi_",
+    "name": "Guest House, KERALA(Kochi)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "EPF Enclave,\nSalim Rajan Road\nGandhi Nagar\nKochi - 682020",
+    "contact": {
+      "emails": [],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2207104"
+      ],
+      "fax_numbers": [
+        "2338410"
+      ]
+    },
+    "coordinates": {
+      "latitude": 10.0734929,
+      "longitude": 76.3192527
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

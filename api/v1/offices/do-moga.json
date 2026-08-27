@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-moga",
+    "source_key": "q=D.O+-+MOGA",
+    "name": "D.O - MOGA",
+    "category": "district_office",
+    "parent_id": "ro-bhatinda",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh",
+      "ro-bhatinda"
+    ],
+    "address": "EPFO, Plot No. 19,\nLal Bahadur Shastri Complex,G.T. Road,\nMoga (Punjab) - 142001",
+    "contact": {
+      "emails": [
+        "do.moga@epfindia.gov.in"
+      ],
+      "std_code": "01636",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 30.8175575,
+      "longitude": 75.1764327
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-dc80017b1035",
+        "office_id": "do-moga",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "236430"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

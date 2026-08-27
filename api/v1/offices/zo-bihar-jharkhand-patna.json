@@ -1,0 +1,89 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-bihar-jharkhand-patna",
+    "source_key": "q=BIHAR+%26+JHARKHAND%28PATNA%29",
+    "name": "BIHAR & JHARKHAND(PATNA)",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Road No.06,Block R,\nSerpantine Road,Near MLA Flats\nPatna - 800001.",
+    "contact": {
+      "emails": [
+        "acc.brjh@epfindia.gov.in"
+      ],
+      "std_code": "0612",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 25.6090907,
+      "longitude": 85.1512636
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-1a6d3c95f7dc",
+        "office_id": "zo-bihar-jharkhand-patna",
+        "name": "Shri Suraj Sharma",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "acc.brjh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2506186"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f3cd03773d16",
+        "office_id": "zo-bihar-jharkhand-patna",
+        "name": "Sh. Satyam Kumar",
+        "designation": "STENO",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1f35494c2555",
+        "office_id": "zo-bihar-jharkhand-patna",
+        "name": "Sh. Ajitesh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "2506632"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e4d9a7b20f46",
+        "office_id": "zo-bihar-jharkhand-patna",
+        "name": "Shri Rajeshwar Rajesh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "2973325"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7358a7cdf3d8",
+        "office_id": "zo-bihar-jharkhand-patna",
+        "name": "Shri Raj Kumar Raj",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

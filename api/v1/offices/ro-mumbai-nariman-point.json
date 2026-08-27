@@ -1,0 +1,120 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-mumbai-nariman-point",
+    "source_key": "q=MUMBAI%28NARIMAN+POINT%29",
+    "name": "MUMBAI(NARIMAN POINT)",
+    "category": "regional_office",
+    "parent_id": "zo-bandra",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bandra"
+    ],
+    "address": "341, Bhavishya Nidhi Bhawan,\nBandra (East),\nMUMBAI-I (BANDRA) - 400 051",
+    "contact": {
+      "emails": [
+        "ro.bandra3@epfindia.gov.in"
+      ],
+      "std_code": "022",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "8356836363"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "MBBD",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-64ab8d53f86a",
+        "office_id": "ro-mumbai-nariman-point",
+        "name": "Shri Ranjan Kumar Sahoo",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.bandra3@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "26470028"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0fc096631726",
+        "office_id": "ro-mumbai-nariman-point",
+        "name": "Smt Valsala R Nair",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "26470028"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2c8da875828b",
+        "office_id": "ro-mumbai-nariman-point",
+        "name": "Dr. Sumer Ratnoo",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "sumer.ratnoo@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "26471524"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f0a6d28f497a",
+        "office_id": "ro-mumbai-nariman-point",
+        "name": "Shri A.k.sharma",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "26470022"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e106dc3396ed",
+        "office_id": "ro-mumbai-nariman-point",
+        "name": "Shri Subham Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "26471521"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-dd751c57ff00",
+        "office_id": "ro-mumbai-nariman-point",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "8356836363"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6c8d2308e1cd",
+        "office_id": "ro-mumbai-nariman-point",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9518588021"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

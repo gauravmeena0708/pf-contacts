@@ -1,0 +1,75 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-nagpur-annex-bldg",
+    "source_key": "q=NAGPUR+%28ANNEX+BLDG%29",
+    "name": "NAGPUR (ANNEX BLDG)",
+    "category": "regional_office",
+    "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+    "ancestor_ids": [
+      "head-office",
+      "zo-maharashtra-excluding-mumbai-pune"
+    ],
+    "address": "E.P.F Organisation,\nUmred Road,  Near Shitla Mata Mandir,\nNagpur - 440 024\n2746734\n2756765",
+    "contact": {
+      "emails": [],
+      "std_code": "0712",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2746734",
+        "2756765"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 21.1212648,
+      "longitude": 79.1204893
+    },
+    "official_count": 3,
+    "source": {
+      "category_code": "MHEM",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-90896c40cadb",
+        "office_id": "ro-nagpur-annex-bldg",
+        "name": "Shri Amit Kumar Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "amit.aks625@gmail.com"
+        ],
+        "phone_numbers": [
+          "2746812"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6f4c24bc894d",
+        "office_id": "ro-nagpur-annex-bldg",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2756587",
+          "2759675"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c9896384a9a7",
+        "office_id": "ro-nagpur-annex-bldg",
+        "name": "Shri Deven Manke",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2746734",
+          "2756765"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

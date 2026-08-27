@@ -1,0 +1,141 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-goa",
+    "source_key": "q=GOA",
+    "name": "GOA",
+    "category": "regional_office",
+    "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli"
+    ],
+    "address": "Bhavishya Nidhi Bhawan,  24, Patto Plaza,\nPanjim,\nGoa - 403 001",
+    "contact": {
+      "emails": [
+        "ro.goa@epfindia.gov.inwebsite"
+      ],
+      "std_code": "0832",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2438905",
+        "2438903"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-ee96af297ff0",
+        "office_id": "ro-goa",
+        "name": "Shri Sachin T Shetty",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "sachinshetty@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2438907"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bdb034f58e5f",
+        "office_id": "ro-goa",
+        "name": "Shri. Harpal Singh Kandara",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "hps.kandara@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2438908"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-62d2672152f1",
+        "office_id": "ro-goa",
+        "name": "Shri k R Abhilash",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "abhilash.kr@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2438906"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-58cdf7f5424b",
+        "office_id": "ro-goa",
+        "name": "Shri Rajneesh Dixit",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "rajneeshdixit@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2989810"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d74deb253bb8",
+        "office_id": "ro-goa",
+        "name": "Shri Arun Kumar Gaur",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "arun.gaur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2438281"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-757012335d2b",
+        "office_id": "ro-goa",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2438905",
+          "2438903"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f7c29d61d627",
+        "office_id": "ro-goa",
+        "name": "Enforcement Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2438291"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bce6b63368ec",
+        "office_id": "ro-goa",
+        "name": "Shri Mahavir Kumar Ray",
+        "designation": "Data Processing Assistant",
+        "emails": [
+          "mahavir.rai@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2438901"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

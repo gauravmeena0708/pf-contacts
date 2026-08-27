@@ -1,0 +1,100 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-varanasi",
+    "source_key": "q=VARANASI",
+    "name": "VARANASI",
+    "category": "regional_office",
+    "parent_id": "zo-uttar-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh"
+    ],
+    "address": "Bhavishya Nidhi Bhawan,Ashok Vihar, Phase-I,\nPanch Kosi Road, Paharia,\nVaranasi - 221 007",
+    "contact": {
+      "emails": [
+        "ro.varanasi@epfindia.gov.in"
+      ],
+      "std_code": "0542",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "0542-2585339"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6ca61493e5a4",
+        "office_id": "ro-varanasi",
+        "name": "Shri Neeraj Srivastava",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "n.srivastava@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0542-2585738"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7343702b85ca",
+        "office_id": "ro-varanasi",
+        "name": "Shri Maruti Nandan Tripathi",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "mn.tripathi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0542-2581568"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5c4d735ce1f9",
+        "office_id": "ro-varanasi",
+        "name": "Shri Diwakar Kumar Mishra",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "diwakar.m@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "0542-2581046"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-006ab718d52a",
+        "office_id": "ro-varanasi",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "0542-2585339"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7d46d05d396a",
+        "office_id": "ro-varanasi",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "0542-2585339"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

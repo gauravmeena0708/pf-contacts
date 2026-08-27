@@ -1,0 +1,83 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zti-zonal-training-institute-north-zone",
+    "source_key": "q=ZONAL+TRAINING+INSTITUTE,+NORTH+ZONE",
+    "name": "Zonal Training Institute, North Zone",
+    "category": "zonal_training_institute",
+    "parent_id": "pdunass-pdunass",
+    "ancestor_ids": [
+      "head-office",
+      "pdunass-pdunass"
+    ],
+    "address": "Dr. Shyama Prasad Mukherjee Institute of Social Security Administration Building,\nSector 16-A, Old Faridabad\nFaridabad - 121 002",
+    "contact": {
+      "emails": [
+        "zti.north@epfindia.gov.in"
+      ],
+      "std_code": "0129",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "PDUNASS",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c4a0e6ac3f90",
+        "office_id": "zti-zonal-training-institute-north-zone",
+        "name": "Shri Rajib Bhattacharya",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "acc.hr@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "4169780"
+        ],
+        "fax_numbers": [
+          "4169780"
+        ]
+      },
+      {
+        "id": "official-ea96a4a80732",
+        "office_id": "zti-zonal-training-institute-north-zone",
+        "name": "Shri Dhananjay M Bhagwat",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "4146920"
+        ],
+        "fax_numbers": [
+          "4146920"
+        ]
+      },
+      {
+        "id": "official-d0e4ffca5209",
+        "office_id": "zti-zonal-training-institute-north-zone",
+        "name": "Shri Deepak Narwal",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-dea3562b69a5",
+        "office_id": "zti-zonal-training-institute-north-zone",
+        "name": "Shri Ajit Kumar Mishra",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

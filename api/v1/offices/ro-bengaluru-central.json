@@ -1,0 +1,100 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-bengaluru-central",
+    "source_key": "q=BENGALURU+%28CENTRAL%29",
+    "name": "BENGALURU (CENTRAL)",
+    "category": "regional_office",
+    "parent_id": "zo-bengaluru-bengaluru",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bengaluru-bengaluru"
+    ],
+    "address": "Bhavishyanidhi Bhavan, No. 13,\nRaja Ram Mohan Roy Road,  (KN).\nBENGALURU-I - 560 025",
+    "contact": {
+      "emails": [
+        "ro.bngcentral@epfindia.gov.in"
+      ],
+      "std_code": "080",
+      "toll_free_number": "18604251068",
+      "phone_numbers": [],
+      "pro_numbers": [
+        "22230188"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "BG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-900a91adcec3",
+        "office_id": "ro-bengaluru-central",
+        "name": "Shri Navendu Rai",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "navendu.rai@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22230118"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ba65e1c41c9c",
+        "office_id": "ro-bengaluru-central",
+        "name": "Shri Naveen Emmanuel",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "naveen.ke@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22271308"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9128e043601e",
+        "office_id": "ro-bengaluru-central",
+        "name": "Shri G Vittobha",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "gvittobha@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22132142"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0f2a3fe97642",
+        "office_id": "ro-bengaluru-central",
+        "name": "PUBLIC RELATION OFFICER",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "22230188"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d1499f0321e0",
+        "office_id": "ro-bengaluru-central",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "6364264449"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

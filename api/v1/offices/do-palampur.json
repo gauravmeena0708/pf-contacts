@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-palampur",
+    "source_key": "q=D.O+-+PALAMPUR",
+    "name": "D.O - PALAMPUR",
+    "category": "district_office",
+    "parent_id": "ro-shimla",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh",
+      "ro-shimla"
+    ],
+    "address": "Annant Vihar,\nNear Atulay Resturant,\nPalampur, Distt. Kangra ( HP ) - 176061",
+    "contact": {
+      "emails": [
+        "do.palampur@epfindia.gov"
+      ],
+      "std_code": "01894",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 32.1159012,
+      "longitude": 76.5379846
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-139bc8486a16",
+        "office_id": "do-palampur",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "234097"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-giridih",
+    "source_key": "q=D.O+-+GIRIDIH",
+    "name": "D.O - GIRIDIH",
+    "category": "district_office",
+    "parent_id": "ro-ranchi",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna",
+      "ro-ranchi"
+    ],
+    "address": "Samanta Complex\nCourt Road,\nGiridih,Jharkhand - 815301",
+    "contact": {
+      "emails": [
+        "do.giridih@epfindia.gov.in"
+      ],
+      "std_code": "06532",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 24.1846041,
+      "longitude": 86.3031386
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-34a3910408d7",
+        "office_id": "do-giridih",
+        "name": "Sh Prashant Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.giridih@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "250981"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

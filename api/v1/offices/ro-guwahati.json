@@ -1,0 +1,112 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-guwahati",
+    "source_key": "q=GUWAHATI",
+    "name": "GUWAHATI",
+    "category": "regional_office",
+    "parent_id": "zo-north-eastern-region-guwahati",
+    "ancestor_ids": [
+      "head-office",
+      "zo-north-eastern-region-guwahati"
+    ],
+    "address": "Bhavishyanidhi Bhawan, G.S. Road\nNear Bharalu Bridge, \nBhangagarh, (Assam)\nGuwahati - 781 005",
+    "contact": {
+      "emails": [
+        "ro.guwahati@epfindia.gov.in"
+      ],
+      "std_code": "0361",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2451511"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "NER",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-d2baa653712f",
+        "office_id": "ro-guwahati",
+        "name": "Shri Gaurav Srivastava",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.guwahati@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "7099088876"
+        ],
+        "fax_numbers": [
+          "2529265"
+        ]
+      },
+      {
+        "id": "official-1c961e6fb8a0",
+        "office_id": "ro-guwahati",
+        "name": "Shri Samuel Das",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "samuel.das@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2455189"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1f48760796d0",
+        "office_id": "ro-guwahati",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2451511"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d7759d27bcc3",
+        "office_id": "ro-guwahati",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8822142204"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-63fe5ab76866",
+        "office_id": "ro-guwahati",
+        "name": "Facilitation Center",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2451510",
+          "2451511"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-65de5e4fed8b",
+        "office_id": "ro-guwahati",
+        "name": "Shri Anuj Kumar Sinha",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "2529047"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

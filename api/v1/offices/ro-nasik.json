@@ -1,0 +1,157 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-nasik",
+    "source_key": "q=NASIK",
+    "name": "NASIK",
+    "category": "regional_office",
+    "parent_id": "zo-maharashtra-excluding-mumbai-pune",
+    "ancestor_ids": [
+      "head-office",
+      "zo-maharashtra-excluding-mumbai-pune"
+    ],
+    "address": "Bhavishya Nidhi Bhavan, Plot No.P-11,\nMIDC Satpur (Maharashtra).\nNasik - 422007",
+    "contact": {
+      "emails": [
+        "ro.nasik@epfindia.gov.in"
+      ],
+      "std_code": "0253",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2360974"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 20.0125374,
+      "longitude": 73.729824
+    },
+    "official_count": 10,
+    "source": {
+      "category_code": "MHEM",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-cfb0f5c334a5",
+        "office_id": "ro-nasik",
+        "name": "Shri Anil Kumar Pritam",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "anilkumar.pritam@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2362410"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3e45b52314b3",
+        "office_id": "ro-nasik",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0e89044d7b12",
+        "office_id": "ro-nasik",
+        "name": "Shri Rajendra Pandurang Rajderkar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "rajderkarepfo@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2360973"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2f890c842627",
+        "office_id": "ro-nasik",
+        "name": "Shri. Kalyan H. Ashtikar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "kalyan.ashtikar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2360971"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-cc1cd0b02a4b",
+        "office_id": "ro-nasik",
+        "name": "Shri Abdul Hanif Shaikh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "abdul.hanif@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e198b222f2fd",
+        "office_id": "ro-nasik",
+        "name": "Shri. Mohit Dixit",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "dixit.mohit@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2360976"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0b993406e66c",
+        "office_id": "ro-nasik",
+        "name": "Shri. Sandeep Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "nitsandeep@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2360972"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b11794c98fcb",
+        "office_id": "ro-nasik",
+        "name": "Mrs. Jayashree Joyce",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2360974"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-acbc2229a42b",
+        "office_id": "ro-nasik",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "2532360974"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3dda6a5fccfc",
+        "office_id": "ro-nasik",
+        "name": "Shri M. Satish Kumar",
+        "designation": "Data Processing Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "2970664"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

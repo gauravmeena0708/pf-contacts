@@ -1,0 +1,120 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-udupi",
+    "source_key": "q=UDUPI",
+    "name": "UDUPI",
+    "category": "regional_office",
+    "parent_id": "zo-karnataka-other-than-bengaluru-goa-hubli",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli"
+    ],
+    "address": "Tulunadu Towers, 2nd & 3rd Floor,\nCourt Road, (Karnataka)\nUdupi  - 576101",
+    "contact": {
+      "emails": [
+        "sro.udupi@epfindia.gov.in"
+      ],
+      "std_code": "0820",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2531174"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 13.3442343,
+      "longitude": 74.746676
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-a26cfbba7382",
+        "office_id": "ro-udupi",
+        "name": "Shri Shashikant Dahiya",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "sk.dahiya@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2531172"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6ea11f2b0d95",
+        "office_id": "ro-udupi",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2534009"
+        ],
+        "fax_numbers": [
+          "2531173"
+        ]
+      },
+      {
+        "id": "official-eb970344de6e",
+        "office_id": "ro-udupi",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2531174"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-663c6f44ce70",
+        "office_id": "ro-udupi",
+        "name": "Shri Rajeev Kumar Jha",
+        "designation": "Accounts Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2531174"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e8e85f786247",
+        "office_id": "ro-udupi",
+        "name": "Shri Sunil Kumar K",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2534009"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5eca95e863d5",
+        "office_id": "ro-udupi",
+        "name": "Shri J R T Srikumar",
+        "designation": "E D P CELL",
+        "emails": [],
+        "phone_numbers": [
+          "2522664"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-ef62ee00208d",
+        "office_id": "ro-udupi",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "08202531172"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-muzaffarnagar",
+    "source_key": "q=D.O+-+MUZAFFARNAGAR",
+    "name": "D.O - MUZAFFARNAGAR",
+    "category": "district_office",
+    "parent_id": "ro-meerut",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh",
+      "ro-meerut"
+    ],
+    "address": "23-B, First Floor,\nNew Mandi,\nMuzaffarnagar - 251001",
+    "contact": {
+      "emails": [
+        "do.muzaffarnagar@epfindia.gov.in"
+      ],
+      "std_code": "0131",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 29.4740196,
+      "longitude": 77.6965998
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-99e9a3301d25",
+        "office_id": "do-muzaffarnagar",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "0132-2970133"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

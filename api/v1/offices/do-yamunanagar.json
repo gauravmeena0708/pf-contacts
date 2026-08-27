@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-yamunanagar",
+    "source_key": "q=D.O+-+YAMUNANAGAR",
+    "name": "D.O - YAMUNANAGAR",
+    "category": "district_office",
+    "parent_id": "ro-karnal",
+    "ancestor_ids": [
+      "head-office",
+      "zo-haryana",
+      "ro-karnal"
+    ],
+    "address": "EPFO, Plot No. 2496 Ist Floor,\nAmbala Highway Road, Above Dena Bank, Jagadhari,\nYamuna Nagar - 135003",
+    "contact": {
+      "emails": [
+        "do.ynr@epfindia.gov.in"
+      ],
+      "std_code": "01732",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 30.1658639,
+      "longitude": 77.3135997
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "HR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-d27e6791c21a",
+        "office_id": "do-yamunanagar",
+        "name": "Smt. Manju Chauhan",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "244026"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

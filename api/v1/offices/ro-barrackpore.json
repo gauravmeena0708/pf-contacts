@@ -1,0 +1,149 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-barrackpore",
+    "source_key": "q=BARRACKPORE",
+    "name": "BARRACKPORE",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "4(2), S. N. Banerjee Road,\nKolkata (West Bengal)\nBARRACKPORE - 700 120",
+    "contact": {
+      "emails": [
+        "ro.barrackpore@epfindia.gov.in"
+      ],
+      "std_code": "033",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "25010399"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-28f5a7a2dab2",
+        "office_id": "ro-barrackpore",
+        "name": "Shri K Rupeshor Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "krupeshor.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25010168"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-330369caba3c",
+        "office_id": "ro-barrackpore",
+        "name": "Shri Biswajit Mandal",
+        "designation": "Private Secretary",
+        "emails": [
+          "biswajit.mandal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25010168"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3d0c04c75838",
+        "office_id": "ro-barrackpore",
+        "name": "Shri  Mukesh Singh Rawat",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "mukeshsingh.rawat@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25017089"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-51ca75a743d5",
+        "office_id": "ro-barrackpore",
+        "name": "Shri Ashish Kumar Yadav",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ashish0406@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25012278"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7b5221b74c87",
+        "office_id": "ro-barrackpore",
+        "name": "Smt Srabani Banerjee",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "25010399"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d4441bab68d3",
+        "office_id": "ro-barrackpore",
+        "name": "Enforcement Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "25010167"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a80bb9fcba12",
+        "office_id": "ro-barrackpore",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "03325010481"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f55c9d5ffe96",
+        "office_id": "ro-barrackpore",
+        "name": "Pensioner's Helpdesk",
+        "designation": "General Numbers",
+        "emails": [
+          "hrpenwgs.tlo@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "25010010"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c6635e9ddf9e",
+        "office_id": "ro-barrackpore",
+        "name": "Customer Service Division",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "32544334",
+          "8100912840"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

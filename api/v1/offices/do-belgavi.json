@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-belgavi",
+    "source_key": "q=D.O+-+BELGAVI",
+    "name": "D.O - BELGAVI",
+    "category": "district_office",
+    "parent_id": "ro-hubli",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "ro-hubli"
+    ],
+    "address": "No.52,\"DADHIMATI\",1ST FLOOR,\nOPP:SHIVAJI PARK,SHAHAPUR,\nBelagavi - 590003",
+    "contact": {
+      "emails": [
+        "do.belagavi@epfindia.gov.in"
+      ],
+      "std_code": "0831",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 15.8409366,
+      "longitude": 74.5224567
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-acae61f8e1eb",
+        "office_id": "do-belgavi",
+        "name": "Shri Mahesh Jinde",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2466513"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

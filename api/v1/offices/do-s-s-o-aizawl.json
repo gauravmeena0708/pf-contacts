@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-s-s-o-aizawl",
+    "source_key": "q=S.S.O+-+AIZAWL",
+    "name": "S.S.O - AIZAWL",
+    "category": "district_office",
+    "parent_id": "ro-shillong",
+    "ancestor_ids": [
+      "head-office",
+      "zo-north-eastern-region-guwahati",
+      "ro-shillong"
+    ],
+    "address": "Upper Republic\nAizawl\nMizoram - 796001",
+    "contact": {
+      "emails": [
+        "sso.aizawl@epfindia.gov.in"
+      ],
+      "std_code": "0389",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 23.7185186,
+      "longitude": 92.724103
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "NER",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-1fb18eb40f37",
+        "office_id": "do-s-s-o-aizawl",
+        "name": "Shri Kamlalbel Neitham",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "sso.aizawl@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2321327"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

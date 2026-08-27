@@ -1,0 +1,35 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-west-bengal-kolkata",
+    "source_key": "q=GH_Guest_House_WEST_BENGAL_Kolkata_",
+    "name": "Guest House, WEST BENGAL(Kolkata)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Bhavishyanidhi Guest House,\nAF-Block, Sector-1\nSalt Lake City,\n(Near Vaisaphi Island)\nKolkata - 700064",
+    "contact": {
+      "emails": [],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": [
+        "23587407"
+      ]
+    },
+    "coordinates": {
+      "latitude": 22.5864876,
+      "longitude": 88.4074319
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

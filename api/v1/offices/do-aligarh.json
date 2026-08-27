@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-aligarh",
+    "source_key": "q=D.O+-+ALIGARH",
+    "name": "D.O - ALIGARH",
+    "category": "district_office",
+    "parent_id": "ro-agra",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh",
+      "ro-agra"
+    ],
+    "address": "EPFO, District Office,\nZilla Panchayat Parisar Collectorate Road,\nALIGARH - 202001",
+    "contact": {
+      "emails": [
+        "do.aligarh@epfindia.gov.in"
+      ],
+      "std_code": "0571",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 27.8918254,
+      "longitude": 78.0813421
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-d26be9b208e6",
+        "office_id": "do-aligarh",
+        "name": "Regional P. F. Commissioner (Gr.II)",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2409746"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

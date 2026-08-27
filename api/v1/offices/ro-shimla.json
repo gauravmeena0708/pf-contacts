@@ -1,0 +1,150 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-shimla",
+    "source_key": "q=SHIMLA",
+    "name": "SHIMLA",
+    "category": "regional_office",
+    "parent_id": "zo-punjab-himachal-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-punjab-himachal-pradesh"
+    ],
+    "address": "Bhavishyanidhi Bhawan, Block No. 34, 1st & 2nd Floor,\nSDA Complex, \nKasumpati,(HP)\nShimla -  171 009",
+    "contact": {
+      "emails": [
+        "ro.shimla@epfindia.gov.in"
+      ],
+      "std_code": "0177",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2623023",
+        "2627860"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "PBHP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-a563af7eca7e",
+        "office_id": "ro-shimla",
+        "name": "Shri Amit Singla",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "amit.singla@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2625800"
+        ],
+        "fax_numbers": [
+          "2623197"
+        ]
+      },
+      {
+        "id": "official-206dd06c4ca4",
+        "office_id": "ro-shimla",
+        "name": "Shri Victor Singh Rana",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "2625800"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-744c68e5f901",
+        "office_id": "ro-shimla",
+        "name": "Shri Mayank Bansal",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "mayank.bansal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2627684"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1a74da0cef65",
+        "office_id": "ro-shimla",
+        "name": "Shri Anil Chauhan",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "anil.chauhan@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2624621"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-971de160f12a",
+        "office_id": "ro-shimla",
+        "name": "Shri Sumit",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "sumitchoudhary@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2624623"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-93b606a70dec",
+        "office_id": "ro-shimla",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2623023",
+          "2627860"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5dd32746782a",
+        "office_id": "ro-shimla",
+        "name": "E D P CELL",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2620568"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3d72509f1494",
+        "office_id": "ro-shimla",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "7807929882"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5acc0d888fb3",
+        "office_id": "ro-shimla",
+        "name": "Pension Section",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8894789883"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

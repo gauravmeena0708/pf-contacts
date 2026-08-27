@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-dhanbad",
+    "source_key": "q=D.O+-+DHANBAD",
+    "name": "D.O - DHANBAD",
+    "category": "district_office",
+    "parent_id": "ro-ranchi",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna",
+      "ro-ranchi"
+    ],
+    "address": "Employees' Provident Fund Organisation,\nDistrict Office, Dhanbad BSNL Building\nNear Head Post Office,Dhanbad,Jharkhand - 826001",
+    "contact": {
+      "emails": [
+        "do.dhanbad@epfindia.gov.in"
+      ],
+      "std_code": "0326",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 23.7981609,
+      "longitude": 86.4320728
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-6e9fd19bc48a",
+        "office_id": "do-dhanbad",
+        "name": "Shri Joydeep Ganguly",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.dhanbad@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "3510095"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

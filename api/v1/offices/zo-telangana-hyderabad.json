@@ -1,0 +1,153 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-telangana-hyderabad",
+    "source_key": "q=TELANGANA+%28HYDERABAD%29",
+    "name": "TELANGANA (HYDERABAD)",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Bhavishya Nidhi Bhawan, Opposite Begumpet Railway Station,\nBrahmanwadi, Begumpet\nHyderabad,Telangana - 500016",
+    "contact": {
+      "emails": [
+        "acc.ts@epfindia.gov.in"
+      ],
+      "std_code": "040",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 17.4380023,
+      "longitude": 78.4559916
+    },
+    "official_count": 11,
+    "source": {
+      "category_code": "TL",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-b103477ccde6",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri Vipin Kumar Sharma",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "040-29880891"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0b8a5c030965",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri  B. T. Krishna Rao",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "040-29880891"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b41be0c143d9",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri B Chandra Sekhar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "040-29880097"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9639454ee4a5",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri M H Warsi",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "040-29880898"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fb089ad65a71",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri Manoj Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "040-29880098"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0fb82883f89b",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri Sreejith P R",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "29880893"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-567ce5521db8",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri K Ram Kumar",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "040-29880893"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d23340a5e9c7",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri D Satyanarayana Muthy",
+        "designation": "Deputy Director",
+        "emails": [],
+        "phone_numbers": [
+          "040-29880895"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b1c6f943d039",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri P V R S Sarma",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "pvr.subramanya@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e35227bed926",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Smt Mary Joseph",
+        "designation": "Assistant Director",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f5a3f77812e6",
+        "office_id": "zo-telangana-hyderabad",
+        "name": "Shri S Ramleeladhar",
+        "designation": "Assistant Director",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

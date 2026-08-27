@@ -1,0 +1,126 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-jammu",
+    "source_key": "q=JAMMU",
+    "name": "JAMMU",
+    "category": "regional_office",
+    "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh"
+    ],
+    "address": "Office of the Regional Provident Fund Commissioner, Jammu\nBhavishya Nidhi Bhawan\nRail Road - 180012",
+    "contact": {
+      "emails": [
+        "ro.jammu@epfindia.gov.in"
+      ],
+      "std_code": "0191",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2479841"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 32.6995401,
+      "longitude": 74.8732254
+    },
+    "official_count": 7,
+    "source": {
+      "category_code": "DLUK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-91adff3d3277",
+        "office_id": "ro-jammu",
+        "name": "Shri Sumeet Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.jammu@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1ddc943b0d2a",
+        "office_id": "ro-jammu",
+        "name": "Shri Raja Sekhar Dasari",
+        "designation": "Personal Assistant",
+        "emails": [
+          "ro.jammu@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2472725"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bb7755f5be26",
+        "office_id": "ro-jammu",
+        "name": "Shri Naresh Kumar Yadav",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.jammu@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "4060117"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6d41d2abb687",
+        "office_id": "ro-jammu",
+        "name": "Shri Satya Prakash",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ro.jammu@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2479941"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-763be8e9b37f",
+        "office_id": "ro-jammu",
+        "name": "Shri Nipun Gupta",
+        "designation": "Public Relation Officer",
+        "emails": [
+          "ro.jammu@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2479841"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-94a3a3cddb41",
+        "office_id": "ro-jammu",
+        "name": "Shri Ashwani Gaind",
+        "designation": "E D P Cell",
+        "emails": [
+          "ro.jammu@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a747dff27b59",
+        "office_id": "ro-jammu",
+        "name": "Whatsapp Helpline Number",
+        "designation": "General Numbers",
+        "emails": [
+          "ro.jammu@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "6006567049"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

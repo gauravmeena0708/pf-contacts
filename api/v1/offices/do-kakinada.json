@@ -1,0 +1,50 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-kakinada",
+    "source_key": "q=D.O+-+KAKINADA",
+    "name": "D.O - KAKINADA",
+    "category": "district_office",
+    "parent_id": "ro-rajamahendravaram",
+    "ancestor_ids": [
+      "head-office",
+      "zo-andhra-pradesh-vijayawada",
+      "ro-rajamahendravaram"
+    ],
+    "address": "69-7-7/3,Vegulla Papayya Street\nBesides  Krushi  Bhawan (Opp. Boat Club)\nKakinada (East Godavari District) - 533003",
+    "contact": {
+      "emails": [
+        "do.kakinada@epfindia.gov.in"
+      ],
+      "std_code": "0884",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 16.9736007,
+      "longitude": 82.2240282
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "AP",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-b82b3805ac2e",
+        "office_id": "do-kakinada",
+        "name": "Assistant P. F. Commissioner",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2378617",
+          "2350556"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

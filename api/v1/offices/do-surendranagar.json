@@ -1,0 +1,65 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-surendranagar",
+    "source_key": "q=D.O+-+SURENDRANAGAR",
+    "name": "D.O - SURENDRANAGAR",
+    "category": "district_office",
+    "parent_id": "ro-rajkot",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad",
+      "ro-rajkot"
+    ],
+    "address": "Sant Svaiyanath Circle,\nBeside State Bank of India, 80 Feet Road,\nSurendranagar - 363030",
+    "contact": {
+      "emails": [
+        "do.surendranagar@epfindia.gov.in"
+      ],
+      "std_code": "02752",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.733201,
+      "longitude": 71.7018783
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-0d7d0c13f481",
+        "office_id": "do-surendranagar",
+        "name": "Shri Kashinath Sahoo",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "do.surendranagar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "234041",
+          "234042"
+        ],
+        "fax_numbers": [
+          "234041"
+        ]
+      },
+      {
+        "id": "official-ea91b2b8b64a",
+        "office_id": "do-surendranagar",
+        "name": "General Numbers",
+        "designation": "(Phone & Whatsapp Number)",
+        "emails": [],
+        "phone_numbers": [
+          "234042"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

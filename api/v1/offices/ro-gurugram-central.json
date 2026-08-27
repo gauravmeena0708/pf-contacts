@@ -1,0 +1,134 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-gurugram-central",
+    "source_key": "q=GURUGRAM+%28CENTRAL%29",
+    "name": "GURUGRAM (CENTRAL)",
+    "category": "regional_office",
+    "parent_id": "zo-haryana",
+    "ancestor_ids": [
+      "head-office",
+      "zo-haryana"
+    ],
+    "address": "Regional Office, Gurugram (Central)\nFirst Floor, Tower-A, C-1, GTPL Info-city 1,\nSector 34, Gurugram - 122004",
+    "contact": {
+      "emails": [
+        "ro.ggncentral@epfindia.gov.in"
+      ],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "HR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-1992e3d3ebfd",
+        "office_id": "ro-gurugram-central",
+        "name": "Shri Nilendu Mishra",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "nilendu.mishra@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-18cb1ed979d0",
+        "office_id": "ro-gurugram-central",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-58e30ea79c55",
+        "office_id": "ro-gurugram-central",
+        "name": "Shri Vikas Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "vikas.gupta@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-df9d072aac8e",
+        "office_id": "ro-gurugram-central",
+        "name": "Shri Monu Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "msingh9027@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f3dd5e3c842b",
+        "office_id": "ro-gurugram-central",
+        "name": "Ms Pankajakshy Nallat",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "pankajakshy.n@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-69f6f3db74d9",
+        "office_id": "ro-gurugram-central",
+        "name": "Shri Sanjay Kumar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "sanjay.sharma@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-083dee705fb8",
+        "office_id": "ro-gurugram-central",
+        "name": "Ms Neetoo Gupta",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "neetoo.gupta@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-196aaeff98f2",
+        "office_id": "ro-gurugram-central",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "0124-2012709"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-94561bfc2e8c",
+        "office_id": "ro-gurugram-central",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9211589153"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

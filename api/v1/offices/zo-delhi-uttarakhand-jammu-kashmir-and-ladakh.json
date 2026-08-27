@@ -1,0 +1,105 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+    "source_key": "q=DELHI%2C+UTTARAKHAND%2C+JAMMU+%26+KASHMIR+AND+LADAKH",
+    "name": "DELHI, UTTARAKHAND, JAMMU & KASHMIR AND LADAKH",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Zonal Office (Delhi & Uttarakhand), Bhavishya Nidhi Bhawan,\n8 th Floor, 28, Community Centre, Wazirpur Industrial Area,\nNew Delhi - 110052",
+    "contact": {
+      "emails": [
+        "acc.dlut@epfindia.gov.in",
+        "ladakh-acc.jkl@epfindia.gov.in"
+      ],
+      "std_code": "011",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "DLUK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-dcc8670e99bb",
+        "office_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+        "name": "Shri Ajay K Mehra",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "acc.dlut@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27376784"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9e492dc2f2c2",
+        "office_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+        "name": "Shri R. C. Samal",
+        "designation": "Principal Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "27376784"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-239286e9d747",
+        "office_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+        "name": "Sh. Abhay Kumar Mandal",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "27377824"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9a88a05251c0",
+        "office_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+        "name": "Sh. Kundan Alok",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "27373404"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-25a91199c025",
+        "office_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+        "name": "Shri Brajesh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "27373397"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-eab7911c6a56",
+        "office_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+        "name": "Shri Manish Kumar Singh",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "27376173"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

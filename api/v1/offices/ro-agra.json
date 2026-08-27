@@ -1,0 +1,111 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-agra",
+    "source_key": "q=AGRA",
+    "name": "AGRA",
+    "category": "regional_office",
+    "parent_id": "zo-uttar-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh"
+    ],
+    "address": "Bhavishyanidhi Bhawan, 55/2,\nSanjay Place, (UP)\nAgra - 282 002",
+    "contact": {
+      "emails": [
+        "ro.agra@epfindia.gov.in"
+      ],
+      "std_code": "0562",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2850435"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-593e671f6bd0",
+        "office_id": "ro-agra",
+        "name": "Shri Indraneel Ghosh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "indraneel.ghosh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2523918"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-921d94fdcc00",
+        "office_id": "ro-agra",
+        "name": "Shri Mithilesh Kumar Chaudhary",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "mithilesh.c@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2850434"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0ff141d1f832",
+        "office_id": "ro-agra",
+        "name": "Shri Vijay Bahadur",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "vijaybahadur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2850436"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9307a8755f59",
+        "office_id": "ro-agra",
+        "name": "Shri Yograj Singh",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2850435"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-bd5977c09a78",
+        "office_id": "ro-agra",
+        "name": "Helpdesk",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2850435"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6863d2702a67",
+        "office_id": "ro-agra",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8279696190"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

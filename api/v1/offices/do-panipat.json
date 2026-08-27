@@ -1,0 +1,49 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-panipat",
+    "source_key": "q=D.O+-+PANIPAT",
+    "name": "D.O - PANIPAT",
+    "category": "district_office",
+    "parent_id": "ro-karnal",
+    "ancestor_ids": [
+      "head-office",
+      "zo-haryana",
+      "ro-karnal"
+    ],
+    "address": "EPFO, Property No. 728 P,\nGround Floor, Sector-6, HUDA,\nPanipat - 132103",
+    "contact": {
+      "emails": [
+        "do.panipat@epfindia.gov.in"
+      ],
+      "std_code": "0180",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 29.3895184,
+      "longitude": 76.9690892
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "HR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-bc4fdd587ae5",
+        "office_id": "do-panipat",
+        "name": "Shri Ramkesh Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2639238"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

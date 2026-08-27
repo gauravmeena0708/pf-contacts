@@ -1,0 +1,132 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-naroda",
+    "source_key": "q=NARODA",
+    "name": "NARODA",
+    "category": "regional_office",
+    "parent_id": "zo-gujarat-ahmedabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad"
+    ],
+    "address": "Shankar Vijay Saw Mill Compound,\nNear G.D. High School Bus Stop, Saijpur Bogha, Naroda Road,  (Gujarat)\nNARODA - 382 345",
+    "contact": {
+      "emails": [
+        "ro.naroda@epfindia.gov.in"
+      ],
+      "std_code": "079",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "22800522"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c35cbcdfd0d6",
+        "office_id": "ro-naroda",
+        "name": "Shri Yogesh Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.naroda@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22800534"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2b79f52259ef",
+        "office_id": "ro-naroda",
+        "name": "Shri Suryakant I. Vaghela",
+        "designation": "Private Secretary",
+        "emails": [
+          "surya.vaghela@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22800534"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-fc6860ee1378",
+        "office_id": "ro-naroda",
+        "name": "Shri Upenndra Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "22800521",
+          "22800522"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1f4600ed042c",
+        "office_id": "ro-naroda",
+        "name": "Shri Kana Ram Meena",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "22800535"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3ef33e33fc7c",
+        "office_id": "ro-naroda",
+        "name": "Shri Rajesh Babal",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "22800537"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3be593d68b41",
+        "office_id": "ro-naroda",
+        "name": "Shri Amit Kumar Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "22800617"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-acd4576eab68",
+        "office_id": "ro-naroda",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "22800522"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-12e08b344efc",
+        "office_id": "ro-naroda",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9428694145"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

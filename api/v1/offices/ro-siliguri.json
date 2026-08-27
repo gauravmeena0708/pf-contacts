@@ -1,0 +1,98 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-siliguri",
+    "source_key": "q=SILIGURI",
+    "name": "SILIGURI",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "Bhavishyanidhi Bhawan, Hill Cart Road,\nP.O. Pradhan Nagar, Distt. Darjeeling(WB)\nDarjeeling - 734 003",
+    "contact": {
+      "emails": [
+        "ro.siliguri@epfindia.gov.in"
+      ],
+      "std_code": "0353",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2512523"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-f0939696fafb",
+        "office_id": "ro-siliguri",
+        "name": "Shri Shailendra Narayan Jha",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "ro.siliguri@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2512628"
+        ],
+        "fax_numbers": [
+          "2514269"
+        ]
+      },
+      {
+        "id": "official-9e8b68003fab",
+        "office_id": "ro-siliguri",
+        "name": "Smt Tsheten Chuki",
+        "designation": "Personal Assistant",
+        "emails": [],
+        "phone_numbers": [
+          "2512628"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-48c1bf47be3d",
+        "office_id": "ro-siliguri",
+        "name": "Shri Ankit Srivastava",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2512522"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-689e444ddc06",
+        "office_id": "ro-siliguri",
+        "name": "Sri Krishna Kumar Jha",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2512523"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c272c64f38c0",
+        "office_id": "ro-siliguri",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8001196411"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kolkata",
+    "source_key": "q=KOLKATA",
+    "name": "KOLKATA",
+    "category": "regional_office",
+    "parent_id": "zo-wb-a-n-islands-sikkim-kolkata",
+    "ancestor_ids": [
+      "head-office",
+      "zo-wb-a-n-islands-sikkim-kolkata"
+    ],
+    "address": "Bhavishyanidhi Bhawan, DK Block, Sector-II,\nSalt Lake City,\nNear Karunamoyee Bus Stop,  (West Bengal)\nKolkata  - 700 091",
+    "contact": {
+      "emails": [
+        "ro.kolkata@epfindia.gov.in"
+      ],
+      "std_code": "033",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "29522121"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 16,
+    "source": {
+      "category_code": "WBANDSK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-420dca2a74c2",
+        "office_id": "ro-kolkata",
+        "name": "Shri Randhir Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "29521852"
+        ],
+        "fax_numbers": [
+          "23585825"
+        ]
+      },
+      {
+        "id": "official-544c7cc4df35",
+        "office_id": "ro-kolkata",
+        "name": "Shri Debjit Mukherjee",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "29521852",
+          "29521860"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e639ded002f7",
+        "office_id": "ro-kolkata",
+        "name": "Smt. Bakul Basu",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "29521856"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f6c84a531b26",
+        "office_id": "ro-kolkata",
+        "name": "Shri Subroto Biswas",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "29521866"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-891c32912c60",
+        "office_id": "ro-kolkata",
+        "name": "Shri Jagatjyoti Bardhan",
+        "designation": "Private Secretary",
+        "emails": [
+          "jj.bardhan@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29521866"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c1041eef0bf1",
+        "office_id": "ro-kolkata",
+        "name": "Shri Sandip Das",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "29531853",
+          "29521847"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-af419d2573f3",
+        "office_id": "ro-kolkata",
+        "name": "Shri Shiba Prasad Bhattacharya",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "29521859"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d7c641942881",
+        "office_id": "ro-kolkata",
+        "name": "Shri Joydeep Ganguly",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "29521867"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f24ee33883c6",
+        "office_id": "ro-kolkata",
+        "name": "Shri A K Muduli",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "ak.muduli@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29521858"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-111c9c1e3f2c",
+        "office_id": "ro-kolkata",
+        "name": "Shri Samir Chandra Das",
+        "designation": "Private Secretary",
+        "emails": [
+          "samir.das@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29522115"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-414e61a471cd",
+        "office_id": "ro-kolkata",
+        "name": "Shri Siddhartha Boral",
+        "designation": "Care Taker",
+        "emails": [
+          "siddhartha.boral@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29522101"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c68d1f552853",
+        "office_id": "ro-kolkata",
+        "name": "Shri Sanjay Biswas",
+        "designation": "PUBLIC RELATION OFFICER",
+        "emails": [],
+        "phone_numbers": [
+          "29522121"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-71e02189211e",
+        "office_id": "ro-kolkata",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9433968309"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b64b17084d32",
+        "office_id": "ro-kolkata",
+        "name": "General Numbers",
+        "designation": "(Pension Related Queries)",
+        "emails": [],
+        "phone_numbers": [
+          "9477314109"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0aeccb86e39e",
+        "office_id": "ro-kolkata",
+        "name": "Shri Deb Kumar Maitra",
+        "designation": "Data Processing Assistant",
+        "emails": [
+          "debkumar.maitra@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29521861"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-87d4bb734934",
+        "office_id": "ro-kolkata",
+        "name": "Shri Mahesh Prasad",
+        "designation": "Data Processing Assistant",
+        "emails": [
+          "mahesh.prasad@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29521861"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

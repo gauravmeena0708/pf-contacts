@@ -1,0 +1,103 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zti-zonal-training-institute-east-zone",
+    "source_key": "q=ZONAL+TRAINING+INSTITUTE,+EAST+ZONE",
+    "name": "Zonal Training Institute, East Zone",
+    "category": "zonal_training_institute",
+    "parent_id": "pdunass-pdunass",
+    "ancestor_ids": [
+      "head-office",
+      "pdunass-pdunass"
+    ],
+    "address": "7 Lu Hsun Sarani,(WB)\nTerrity Bazaar,\nKolkata - 700 073",
+    "contact": {
+      "emails": [
+        "zti.east@epfindia.gov.in",
+        "ztiezepfo@yahoo.com"
+      ],
+      "std_code": "033",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.573598,
+      "longitude": 88.3534925
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "PDUNASS",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-ec508c0ef83f",
+        "office_id": "zti-zonal-training-institute-east-zone",
+        "name": "Shri D. Remmei",
+        "designation": "Additional Central P. F. Commissioner",
+        "emails": [
+          "zti.east@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29634629"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e8c87dd0f0be",
+        "office_id": "zti-zonal-training-institute-east-zone",
+        "name": "Shri Abhijeet",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "zti.east@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "29638921"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d41b65dc2472",
+        "office_id": "zti-zonal-training-institute-east-zone",
+        "name": "Shri Krishnendu Das",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "zti.east@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22258226"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3b5274996148",
+        "office_id": "zti-zonal-training-institute-east-zone",
+        "name": "Shri Altamash Ali",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "zti.east@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22258227"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7b972e0c1843",
+        "office_id": "zti-zonal-training-institute-east-zone",
+        "name": "Shri Rajib Dutta",
+        "designation": "Data Processing Assistant",
+        "emails": [
+          "zti.east@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "22258227"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

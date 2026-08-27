@@ -1,0 +1,96 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-gwalior",
+    "source_key": "q=GWALIOR",
+    "name": "GWALIOR",
+    "category": "regional_office",
+    "parent_id": "zo-madhya-pradesh-chattisgarh-bhopal",
+    "ancestor_ids": [
+      "head-office",
+      "zo-madhya-pradesh-chattisgarh-bhopal"
+    ],
+    "address": "Bhavishya NidhiBhawan Near Inter-State Bus Terminal (1SBT),\nMorena Link Road, Gwalior (MP\nGwalior - 474005",
+    "contact": {
+      "emails": [
+        "ro.gwalior@epfindia.gov.in"
+      ],
+      "std_code": "0751",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2638900"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 26.2288548,
+      "longitude": 78.2086264
+    },
+    "official_count": 5,
+    "source": {
+      "category_code": "MPCG",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-64c938d78f48",
+        "office_id": "ro-gwalior",
+        "name": "Shri Satya Vardhan Gautam",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "satyavardhan.gautam@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "3503377"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-425ac6b75742",
+        "office_id": "ro-gwalior",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d455a0848b87",
+        "office_id": "ro-gwalior",
+        "name": "Shri Vivek Kumar Gupta",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "vivekgupta98@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2426203"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-77118865dd6f",
+        "office_id": "ro-gwalior",
+        "name": "Shri Shashikant Rasmeriya",
+        "designation": "PUBLIC RELATION OFFICER",
+        "emails": [],
+        "phone_numbers": [
+          "2638900"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a74c0f388df8",
+        "office_id": "ro-gwalior",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9301903862"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

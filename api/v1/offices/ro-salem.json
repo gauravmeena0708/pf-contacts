@@ -1,0 +1,135 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-salem",
+    "source_key": "q=SALEM",
+    "name": "SALEM",
+    "category": "regional_office",
+    "parent_id": "zo-tamil-nadu-excluding-chennai",
+    "ancestor_ids": [
+      "head-office",
+      "zo-tamil-nadu-excluding-chennai"
+    ],
+    "address": "STEEL PLANT ROAD\nDALAVAYPATTI\nSalem - 636302",
+    "contact": {
+      "emails": [
+        "ro.salem@epfindia.gov.in"
+      ],
+      "std_code": "0427",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2902042"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 11.669646,
+      "longitude": 78.0972246
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "TNEC",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-4a30b15ef89e",
+        "office_id": "ro-salem",
+        "name": "Shri Rakesh S Sekhar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "rakeshssekhar@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2901040"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-578f11aa0d21",
+        "office_id": "ro-salem",
+        "name": "Shri C Vetrichelvan",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "vetrichelvan.c@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2902044"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-98978f2d56c6",
+        "office_id": "ro-salem",
+        "name": "Shri M Vigneshwaran",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "m.vigneshwaran@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2900240"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a16632a14a58",
+        "office_id": "ro-salem",
+        "name": "Shri Jyotirmaya",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "jyotirmaya98@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2901030"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-349f8176c247",
+        "office_id": "ro-salem",
+        "name": "Smt Srividhya Venkatesan",
+        "designation": "Private Secretary",
+        "emails": [],
+        "phone_numbers": [
+          "2901040"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-0839730898d0",
+        "office_id": "ro-salem",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2902042"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a09d18108546",
+        "office_id": "ro-salem",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9080433650"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d575e7864410",
+        "office_id": "ro-salem",
+        "name": "General Numbers",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "2902041"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

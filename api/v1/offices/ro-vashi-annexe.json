@@ -1,0 +1,61 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-vashi-annexe",
+    "source_key": "q=VASHI+%28ANNEXE%29",
+    "name": "VASHI (ANNEXE)",
+    "category": "regional_office",
+    "parent_id": "zo-thane",
+    "ancestor_ids": [
+      "head-office",
+      "zo-thane"
+    ],
+    "address": "Vashi, Annexe Premises (Belapur), D-101-106, 1st Floor,\nITC Tower No. 7, CBD Belapur Railway Station Complex,\nNavi Mumbai - 400703",
+    "contact": {
+      "emails": [
+        "ro.vashi@epfindia.gov.in"
+      ],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "27560058"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "MBTH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-4fdf7288b94a",
+        "office_id": "ro-vashi-annexe",
+        "name": "Shri Ayush Gautam",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "27560060"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-a6fa7b407b0b",
+        "office_id": "ro-vashi-annexe",
+        "name": "PUBLIC RELATION OFFICER",
+        "designation": "(ENQUIRY)",
+        "emails": [],
+        "phone_numbers": [
+          "27560058"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

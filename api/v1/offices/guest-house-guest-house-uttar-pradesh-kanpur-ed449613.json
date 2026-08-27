@@ -1,0 +1,33 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-uttar-pradesh-kanpur-ed449613",
+    "source_key": "q=GH_Guest_House_UTTAR_PRADESH_Kanpur_",
+    "name": "Guest House, UTTAR PRADESH(Kanpur)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "OFFICERS:\nBhavishanidhi Colony\nQuarter No.2\nSarvodaya Nagar\nKanpur - 208005",
+    "contact": {
+      "emails": [],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 26.4635198,
+      "longitude": 80.246895
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

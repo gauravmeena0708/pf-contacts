@@ -1,0 +1,162 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-surat",
+    "source_key": "q=SURAT",
+    "name": "SURAT",
+    "category": "regional_office",
+    "parent_id": "zo-gujarat-ahmedabad",
+    "ancestor_ids": [
+      "head-office",
+      "zo-gujarat-ahmedabad"
+    ],
+    "address": "Bhavishyanidhi Bhawan, \nGhod Dod Road\nRam Chowk,\nSurat  - 395001",
+    "contact": {
+      "emails": [
+        "ro.surat@epfindia.gov.in"
+      ],
+      "std_code": "0261",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2652751"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 21.1820745,
+      "longitude": 72.8192877
+    },
+    "official_count": 12,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-4bb213374b3b",
+        "office_id": "ro-surat",
+        "name": "Shri Sanjay Singh Gurjar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [
+          "2652760"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9cff55968aef",
+        "office_id": "ro-surat",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [
+          "ro.surat@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2652760"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1ddd5992fb40",
+        "office_id": "ro-surat",
+        "name": "Shri Kamal Kishore",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-1f5da04bafda",
+        "office_id": "ro-surat",
+        "name": "Shri Rajat Kumar Damachya",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-2001bf0e0eea",
+        "office_id": "ro-surat",
+        "name": "Shri Nitik Jakhar",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-06758c6e695c",
+        "office_id": "ro-surat",
+        "name": "Shri Anurag Jorwal",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d16db9fd0a50",
+        "office_id": "ro-surat",
+        "name": "Shri Satyam Kumar Mishra",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-9cf2ae2c6855",
+        "office_id": "ro-surat",
+        "name": "Shri Deepak Kumar Kushwaha",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-4a2e4121c700",
+        "office_id": "ro-surat",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2652751"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5b57e86b7f6c",
+        "office_id": "ro-surat",
+        "name": "Shri Mitesh Chaudhary",
+        "designation": "E D P Cell",
+        "emails": [
+          "mitesh.chaudhary@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-3026ebb8b121",
+        "office_id": "ro-surat",
+        "name": "General Numbers",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2652728",
+          "2652730"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5baaa39899fe",
+        "office_id": "ro-surat",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "9484530500"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

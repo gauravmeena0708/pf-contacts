@@ -1,0 +1,62 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-s-s-o-imphal",
+    "source_key": "q=S.S.O+-+IMPHAL",
+    "name": "S.S.O - IMPHAL",
+    "category": "district_office",
+    "parent_id": "ro-guwahati",
+    "ancestor_ids": [
+      "head-office",
+      "zo-north-eastern-region-guwahati",
+      "ro-guwahati"
+    ],
+    "address": "Palace Compound,\nGovindaji Mahabali Road,\nImphal East,Manipur -  795001.",
+    "contact": {
+      "emails": [
+        "sso.imphal@epfindia.gov.in"
+      ],
+      "std_code": "0385",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 24.8056709,
+      "longitude": 93.9386517
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "NER",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-586eb1a594b7",
+        "office_id": "do-s-s-o-imphal",
+        "name": "Shri Angom Surendra Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "0385-2953095"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-e3e20008e975",
+        "office_id": "do-s-s-o-imphal",
+        "name": "Shri Shonngam Saka",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "sso.imphal@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2442815"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

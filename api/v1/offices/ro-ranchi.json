@@ -1,0 +1,115 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-ranchi",
+    "source_key": "q=RANCHI",
+    "name": "RANCHI",
+    "category": "regional_office",
+    "parent_id": "zo-bihar-jharkhand-patna",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna"
+    ],
+    "address": "BHAVISHYA NIDHI BHAWAN\nHINOO, DORANDA\nRanchi - 834002",
+    "contact": {
+      "emails": [
+        "ro.ranchi@epfindia.gov.in"
+      ],
+      "std_code": "0651",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2910932"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 23.3384256,
+      "longitude": 85.3136052
+    },
+    "official_count": 6,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-1345bc52e44e",
+        "office_id": "ro-ranchi",
+        "name": "Shri Sharique Tanwir",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.ranchi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2910900"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-43c4a225c27b",
+        "office_id": "ro-ranchi",
+        "name": "Private Secretary",
+        "designation": null,
+        "emails": [
+          "ro.ranchi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2910900"
+        ],
+        "fax_numbers": [
+          "2360549"
+        ]
+      },
+      {
+        "id": "official-9e4ea9d816e8",
+        "office_id": "ro-ranchi",
+        "name": "Shri Sundeep Ceasor Toppo",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [
+          "2910937"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f07975f8db81",
+        "office_id": "ro-ranchi",
+        "name": "Private Secretary",
+        "designation": null,
+        "emails": [
+          "ro.ranchi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2910937"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b19aa3a0d4bf",
+        "office_id": "ro-ranchi",
+        "name": "Shri Vineet Kumar Mishra",
+        "designation": "Public Relation Officer",
+        "emails": [
+          "ro.ranchi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2910932"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6d86a0de7efb",
+        "office_id": "ro-ranchi",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8987790956"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

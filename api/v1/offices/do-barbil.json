@@ -1,0 +1,56 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-barbil",
+    "source_key": "q=D.O+-+BARBIL",
+    "name": "D.O - BARBIL",
+    "category": "district_office",
+    "parent_id": "ro-keonjhar",
+    "ancestor_ids": [
+      "head-office",
+      "zo-orissa-bhubaneswar",
+      "ro-keonjhar"
+    ],
+    "address": "EPFO, AT/PO - Matkambada,\nKalinga Nagar,\nBarbil - 758035",
+    "contact": {
+      "emails": [],
+      "std_code": "06767",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 22.0994323,
+      "longitude": 85.3846215
+    },
+    "official_count": 2,
+    "source": {
+      "category_code": "OR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-0a7dd601697a",
+        "office_id": "do-barbil",
+        "name": "Shri Sanat Kumar Patnaik",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-d805a2544c8b",
+        "office_id": "do-barbil",
+        "name": "General Numbers",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "270067"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

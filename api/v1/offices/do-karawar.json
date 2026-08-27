@@ -1,0 +1,80 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-karawar",
+    "source_key": "q=D.O+-+KARAWAR",
+    "name": "D.O - KARAWAR",
+    "category": "district_office",
+    "parent_id": "ro-hubli",
+    "ancestor_ids": [
+      "head-office",
+      "zo-karnataka-other-than-bengaluru-goa-hubli",
+      "ro-hubli"
+    ],
+    "address": "1774/M1,\nKaiga road,\nHabbuwada, Karwar - 581306",
+    "contact": {
+      "emails": [
+        "do.karwar@epfindia.gov.in"
+      ],
+      "std_code": "08382",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 14.8168464,
+      "longitude": 74.1211287
+    },
+    "official_count": 4,
+    "source": {
+      "category_code": "KNGOA",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-131a66283993",
+        "office_id": "do-karawar",
+        "name": "Shri Neeraj Kumar  Prasad",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6fd4d91a069d",
+        "office_id": "do-karawar",
+        "name": "Shri Vinayak G",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-411418ef42cd",
+        "office_id": "do-karawar",
+        "name": "Shri S Sreekumar",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [
+          "227766"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6cee0e12a50a",
+        "office_id": "do-karawar",
+        "name": "General Numbers",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "227766"
+        ],
+        "fax_numbers": [
+          "227766"
+        ]
+      }
+    ]
+  }
+}

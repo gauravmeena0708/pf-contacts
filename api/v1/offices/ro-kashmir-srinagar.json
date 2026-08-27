@@ -1,0 +1,70 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kashmir-srinagar",
+    "source_key": "q=KASHMIR+%28SRINAGAR%29",
+    "name": "KASHMIR (SRINAGAR)",
+    "category": "regional_office",
+    "parent_id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh"
+    ],
+    "address": "EPFO REGIONAL OFFICE KASHMIR\n1st & 2nd Floor of Labour Commissioner’s Building\nBehind General Bus stand, Batamallo - 190009",
+    "contact": {
+      "emails": [
+        "ro.kashmir@epfindia.gov.in"
+      ],
+      "std_code": "0194",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 34.0718084,
+      "longitude": 74.7975256
+    },
+    "official_count": 3,
+    "source": {
+      "category_code": "DLUK",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-c73947de0622",
+        "office_id": "ro-kashmir-srinagar",
+        "name": "Shri Vinay Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.kashmir@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "4071577"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f2585203808b",
+        "office_id": "ro-kashmir-srinagar",
+        "name": "Shri Vikramjeet Singh",
+        "designation": "Enforcement Officer",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6f663533b753",
+        "office_id": "ro-kashmir-srinagar",
+        "name": "Whatsapp Number",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "7780813099"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

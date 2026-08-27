@@ -1,0 +1,37 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "guest-house-guest-house-kerala-thiruvananthapuram",
+    "source_key": "q=GH_Guest_House_KERALA_Thiruvananthapuram_",
+    "name": "Guest House, KERALA(Thiruvananthapuram)",
+    "category": "guest_house",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "EPF Staff Quarters\nPattom (PO)\nThiruvananthapuram - 695004",
+    "contact": {
+      "emails": [],
+      "std_code": null,
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2446286"
+      ],
+      "fax_numbers": [
+        "2441750"
+      ]
+    },
+    "coordinates": {
+      "latitude": 8.5017528,
+      "longitude": 76.948828
+    },
+    "official_count": 0,
+    "source": {
+      "category_code": "GH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": []
+  }
+}

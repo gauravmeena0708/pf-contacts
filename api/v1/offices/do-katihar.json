@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-katihar",
+    "source_key": "q=D.O+-+KATIHAR",
+    "name": "D.O - KATIHAR",
+    "category": "district_office",
+    "parent_id": "ro-bhagalpur",
+    "ancestor_ids": [
+      "head-office",
+      "zo-bihar-jharkhand-patna",
+      "ro-bhagalpur"
+    ],
+    "address": "Katihar Medical College Road,\nBheriya, Rahika\nKATIHAR - 854106",
+    "contact": {
+      "emails": [
+        "do.katihar@epfindia.gov.in"
+      ],
+      "std_code": "06452",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 25.5512023,
+      "longitude": 87.5304436
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "BRJH",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-f695c4fab675",
+        "office_id": "do-katihar",
+        "name": "Shri Debasish Sen",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "shekhar.svn@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "241101"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

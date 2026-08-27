@@ -1,0 +1,135 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "ro-kanpur",
+    "source_key": "q=KANPUR",
+    "name": "KANPUR",
+    "category": "regional_office",
+    "parent_id": "zo-uttar-pradesh",
+    "ancestor_ids": [
+      "head-office",
+      "zo-uttar-pradesh"
+    ],
+    "address": "Nidhi Bhawan,\nSarvodaya Nagar,\nKanpur  - 208 005",
+    "contact": {
+      "emails": [
+        "ro.kanpur@epfindia.gov.in"
+      ],
+      "std_code": "0512",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2215644"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 8,
+    "source": {
+      "category_code": "UPBR",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-18fb911b38e7",
+        "office_id": "ro-kanpur",
+        "name": "Shri Shahid Iqbal",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "ro.kanpur@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2217464"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-4f5efbc8c035",
+        "office_id": "ro-kanpur",
+        "name": "Shri Prateesh Singh",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "prateesh.singh@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2296957"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-22fabc9b56cb",
+        "office_id": "ro-kanpur",
+        "name": "Shri Kumar Abhishek",
+        "designation": "Regional P. F. Commissioner (Gr.II)",
+        "emails": [
+          "kumar.abhishek@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2215638"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-c963a23e0cf0",
+        "office_id": "ro-kanpur",
+        "name": "Shri K R Joshi",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [
+          "kr.joshi@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "2212084"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-6da1cfcd0631",
+        "office_id": "ro-kanpur",
+        "name": "Smt Shivani Garima Singh",
+        "designation": "Assistant P. F. Commissioner",
+        "emails": [],
+        "phone_numbers": [
+          "2242306"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-20eb41643a3b",
+        "office_id": "ro-kanpur",
+        "name": "Public Relation Officer",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2215644"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5be9bce06bd6",
+        "office_id": "ro-kanpur",
+        "name": "Whatsapp Business Account",
+        "designation": "General Numbers",
+        "emails": [],
+        "phone_numbers": [
+          "8004938896"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-5fe8d0847440",
+        "office_id": "ro-kanpur",
+        "name": "Personal Assistant",
+        "designation": null,
+        "emails": [],
+        "phone_numbers": [
+          "2217464"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

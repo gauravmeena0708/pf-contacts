@@ -1,0 +1,72 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "record_count": 13,
+  "categories": [
+    {
+      "id": "head_office",
+      "name": "Head Office",
+      "record_count": 1
+    },
+    {
+      "id": "zonal_office",
+      "name": "Zonal Office",
+      "record_count": 21
+    },
+    {
+      "id": "regional_office",
+      "name": "Regional Office",
+      "record_count": 153
+    },
+    {
+      "id": "district_office",
+      "name": "District Office",
+      "record_count": 118
+    },
+    {
+      "id": "special_state_office",
+      "name": "Special State Office",
+      "record_count": 1
+    },
+    {
+      "id": "vigilance_wing",
+      "name": "Vigilance Wing",
+      "record_count": 1
+    },
+    {
+      "id": "internal_audit_wing",
+      "name": "Internal Audit Wing",
+      "record_count": 1
+    },
+    {
+      "id": "national_data_centre",
+      "name": "National Data Centre",
+      "record_count": 1
+    },
+    {
+      "id": "pdunass_natrss",
+      "name": "PDUNASS / NATRSS",
+      "record_count": 1
+    },
+    {
+      "id": "zonal_training_institute",
+      "name": "Zonal Training Institute",
+      "record_count": 4
+    },
+    {
+      "id": "sub_zonal_training_institute",
+      "name": "Sub-Zonal Training Institute",
+      "record_count": 1
+    },
+    {
+      "id": "holiday_home",
+      "name": "Holiday Home",
+      "record_count": 1
+    },
+    {
+      "id": "guest_house",
+      "name": "Guest House",
+      "record_count": 21
+    }
+  ]
+}

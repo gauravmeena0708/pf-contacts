@@ -1,0 +1,146 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "zo-gujarat-ahmedabad",
+    "source_key": "q=GUJARAT+%28AHMEDABAD%29",
+    "name": "GUJARAT (AHMEDABAD)",
+    "category": "zonal_office",
+    "parent_id": "head-office",
+    "ancestor_ids": [
+      "head-office"
+    ],
+    "address": "Bhavishyanidhi Bhawan, Near Income Tax Circle\nAshram Road (Gujarat)\nAhmedabad - 380 014.",
+    "contact": {
+      "emails": [
+        "acc.gj@epfindia.gov.in"
+      ],
+      "std_code": "079",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": null,
+      "longitude": null
+    },
+    "official_count": 9,
+    "source": {
+      "category_code": "GJ",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-527987f89c64",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri Sudeepta Ghosh",
+        "designation": "Additional Central P. F. Commissioner (Hqrs)",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27546965",
+          "27546966"
+        ],
+        "fax_numbers": [
+          "27542036"
+        ]
+      },
+      {
+        "id": "official-57de67be4ff8",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri J. K. Pandey",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27545474"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-b678235ba255",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri Ashish Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-f68e7bfcaa14",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri Abhishek Gupta",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-15d988411b95",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri Abhishek Kumar",
+        "designation": "Regional P. F. Commissioner (Gr.I)",
+        "emails": [],
+        "phone_numbers": [],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-7c0272a8657b",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Kum. Pushpa Wagh",
+        "designation": "Principal Private Secretary",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27546966"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-281780812e9d",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri Jitendra G. Parmar",
+        "designation": "Private Secretary",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27546965"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-abeef7480983",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri V S Hemanthan",
+        "designation": "Private Secretary",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [
+          "27582764"
+        ],
+        "fax_numbers": []
+      },
+      {
+        "id": "official-dafb36ca82e7",
+        "office_id": "zo-gujarat-ahmedabad",
+        "name": "Shri Pankaj Parmar",
+        "designation": "Accounts Officer",
+        "emails": [
+          "acc.gj@epfindia.gov.in"
+        ],
+        "phone_numbers": [],
+        "fax_numbers": []
+      }
+    ]
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "api_version": "1.0",
+  "data_version": "v1-faaa82288adc-3c070f6e",
+  "office": {
+    "id": "do-dindigul",
+    "source_key": "q=D.O+-+DINDIGUL",
+    "name": "D.O - DINDIGUL",
+    "category": "district_office",
+    "parent_id": "ro-madurai",
+    "ancestor_ids": [
+      "head-office",
+      "zo-tamil-nadu-excluding-chennai",
+      "ro-madurai"
+    ],
+    "address": "Bava Lodge Building, 16-A, Railway Station Road\nNagal Nagar\nDindigul - 624003",
+    "contact": {
+      "emails": [
+        "do.dindigul@epfindia.gov.in"
+      ],
+      "std_code": "0451",
+      "toll_free_number": null,
+      "phone_numbers": [],
+      "pro_numbers": [
+        "2440106"
+      ],
+      "fax_numbers": []
+    },
+    "coordinates": {
+      "latitude": 10.3572339,
+      "longitude": 77.981589
+    },
+    "official_count": 1,
+    "source": {
+      "category_code": "TNEC",
+      "url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php"
+    },
+    "officials": [
+      {
+        "id": "official-7b2d638454d7",
+        "office_id": "do-dindigul",
+        "name": "Public Relation Officer",
+        "designation": "Public Relation Officer",
+        "emails": [],
+        "phone_numbers": [
+          "2440106"
+        ],
+        "fax_numbers": []
+      }
+    ]
+  }
+}
