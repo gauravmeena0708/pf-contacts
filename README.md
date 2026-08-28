@@ -113,7 +113,11 @@ Review generated changes before committing them.
 ```text
 .
 |-- index.html                 Main directory interface
+|-- directory.css             Directory-specific styles
+|-- directory.js              Directory search and map behavior
 |-- planner.html               Coverage-analysis interface
+|-- planner.css               Coverage-analysis styles
+|-- planner.js                Coverage-analysis behavior
 |-- common.js                  Shared data and rendering helpers
 |-- tokens.css                 Shared design tokens and styles
 |-- contacts-data.json         Raw scraped contact snapshot
