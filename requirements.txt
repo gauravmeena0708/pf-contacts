@@ -1,4 +1,4 @@
-beautifulsoup4
-geopy
-jsonschema
-requests
+beautifulsoup4==4.15.0
+geopy==2.5.0
+jsonschema==4.26.0
+requests==2.34.2
