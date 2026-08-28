@@ -83,6 +83,10 @@ The scheduled workflow runs every Monday and commits only validated changes.
 Geocoding is handled separately by a manually triggered workflow so contact-data
 updates are not blocked by geocoding services.
 
+Map coordinates use the best available geocode. Where a precise building match
+is unavailable, a verified PIN-code centroid is used, so markers should be
+treated as approximate locations rather than exact entrances.
+
 ## Development
 
 Python 3.10 or newer is recommended.

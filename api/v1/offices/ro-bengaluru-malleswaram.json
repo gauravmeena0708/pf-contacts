@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-bengaluru-malleswaram",
     "source_key": "q=BENGALURU+%28MALLESWARAM%29",
@@ -23,8 +23,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 12.9642407,
+      "longitude": 77.6069568
     },
     "official_count": 7,
     "source": {

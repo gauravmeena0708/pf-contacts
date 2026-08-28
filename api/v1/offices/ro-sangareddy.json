@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-sangareddy",
     "source_key": "q=SANGAREDDY",
@@ -23,8 +23,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 17.5359822,
+      "longitude": 78.2655592
     },
     "official_count": 8,
     "source": {

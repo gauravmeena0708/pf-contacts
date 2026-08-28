@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-guntur",
     "source_key": "q=GUNTUR",
@@ -23,8 +23,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 16.3170173,
+      "longitude": 80.4167112
     },
     "official_count": 10,
     "source": {

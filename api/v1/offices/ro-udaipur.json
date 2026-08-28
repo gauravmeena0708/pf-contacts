@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-udaipur",
     "source_key": "q=UDAIPUR",
@@ -26,8 +26,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 24.5955079,
+      "longitude": 73.691101
     },
     "official_count": 6,
     "source": {

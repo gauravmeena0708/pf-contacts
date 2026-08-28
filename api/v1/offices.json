@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "record_count": 325,
   "offices": [
     {
@@ -138,8 +138,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 18.6725087,
+        "longitude": 78.1024876
       },
       "official_count": 0,
       "source": {
@@ -196,8 +196,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.0494201,
+        "longitude": 77.552189
       },
       "official_count": 0,
       "source": {
@@ -258,8 +258,8 @@
         ]
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 11.2743602,
+        "longitude": 75.7809627
       },
       "official_count": 0,
       "source": {
@@ -380,8 +380,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 20.2886477,
+        "longitude": 85.8506233
       },
       "official_count": 0,
       "source": {
@@ -683,8 +683,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 15.5402428,
+        "longitude": 73.8169611
       },
       "official_count": 0,
       "source": {
@@ -711,8 +711,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.563055,
+        "longitude": 77.1860747
       },
       "official_count": 8,
       "source": {
@@ -799,8 +799,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.563055,
+        "longitude": 77.1860747
       },
       "official_count": 12,
       "source": {
@@ -859,8 +859,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0503833,
+        "longitude": 72.8621497
       },
       "official_count": 6,
       "source": {
@@ -949,8 +949,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.0546297,
+        "longitude": 80.2658562
       },
       "official_count": 11,
       "source": {
@@ -980,8 +980,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.6821912,
+        "longitude": 77.1757491
       },
       "official_count": 6,
       "source": {
@@ -1010,8 +1010,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.0413457,
+        "longitude": 72.5618038
       },
       "official_count": 9,
       "source": {
@@ -1100,8 +1100,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 8.5222185,
+        "longitude": 76.9398462
       },
       "official_count": 7,
       "source": {
@@ -1130,8 +1130,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.2288389,
+        "longitude": 77.4349563
       },
       "official_count": 6,
       "source": {
@@ -1160,8 +1160,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 18.5336188,
+        "longitude": 73.8806949
       },
       "official_count": 7,
       "source": {
@@ -1190,8 +1190,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.1603078,
+        "longitude": 91.7754097
       },
       "official_count": 3,
       "source": {
@@ -1220,8 +1220,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 20.2890681,
+        "longitude": 85.8344385
       },
       "official_count": 6,
       "source": {
@@ -1280,8 +1280,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.8850479,
+        "longitude": 75.7927939
       },
       "official_count": 4,
       "source": {
@@ -1400,8 +1400,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.471962,
+        "longitude": 80.29791
       },
       "official_count": 6,
       "source": {
@@ -1430,8 +1430,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.5767672,
+        "longitude": 88.4300892
       },
       "official_count": 5,
       "source": {
@@ -1461,8 +1461,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.8619799,
+        "longitude": 91.2904607
       },
       "official_count": 2,
       "source": {
@@ -1494,8 +1494,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 27.1934092,
+        "longitude": 78.0034362
       },
       "official_count": 6,
       "source": {
@@ -1527,8 +1527,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.0413457,
+        "longitude": 72.5618038
       },
       "official_count": 11,
       "source": {
@@ -1660,8 +1660,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.0827491,
+        "longitude": 80.1715078
       },
       "official_count": 15,
       "source": {
@@ -1694,8 +1694,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 31.6374107,
+        "longitude": 74.8768276
       },
       "official_count": 6,
       "source": {
@@ -1727,8 +1727,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 17.4381284,
+        "longitude": 78.4558912
       },
       "official_count": 8,
       "source": {
@@ -1793,8 +1793,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.7581366,
+        "longitude": 88.3699282
       },
       "official_count": 9,
       "source": {
@@ -1826,8 +1826,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 15.1547886,
+        "longitude": 76.9317056
       },
       "official_count": 8,
       "source": {
@@ -1859,8 +1859,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.8942249,
+        "longitude": 77.6423499
       },
       "official_count": 7,
       "source": {
@@ -1892,8 +1892,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.9642407,
+        "longitude": 77.6069568
       },
       "official_count": 5,
       "source": {
@@ -1925,8 +1925,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.8942249,
+        "longitude": 77.6423499
       },
       "official_count": 7,
       "source": {
@@ -1958,8 +1958,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.0185766,
+        "longitude": 77.6765271
       },
       "official_count": 7,
       "source": {
@@ -2022,8 +2022,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.9642407,
+        "longitude": 77.6069568
       },
       "official_count": 7,
       "source": {
@@ -2121,8 +2121,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 30.213522,
+        "longitude": 74.9468607
       },
       "official_count": 9,
       "source": {
@@ -2154,8 +2154,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.2288389,
+        "longitude": 77.4349563
       },
       "official_count": 4,
       "source": {
@@ -2187,8 +2187,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 20.2890681,
+        "longitude": 85.8344385
       },
       "official_count": 11,
       "source": {
@@ -2220,8 +2220,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.3124774,
+        "longitude": 84.7970507
       },
       "official_count": 5,
       "source": {
@@ -2287,8 +2287,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.0546297,
+        "longitude": 80.2658562
       },
       "official_count": 11,
       "source": {
@@ -2320,8 +2320,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.0546297,
+        "longitude": 80.2658562
       },
       "official_count": 13,
       "source": {
@@ -2418,8 +2418,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 11.0103801,
+        "longitude": 76.982743
       },
       "official_count": 10,
       "source": {
@@ -2749,8 +2749,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 15.4962294,
+        "longitude": 73.8222804
       },
       "official_count": 8,
       "source": {
@@ -2846,8 +2846,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 17.3350137,
+        "longitude": 76.8393467
       },
       "official_count": 10,
       "source": {
@@ -2877,8 +2877,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 16.3170173,
+        "longitude": 80.4167112
       },
       "official_count": 10,
       "source": {
@@ -2908,8 +2908,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.4024408,
+        "longitude": 77.0093058
       },
       "official_count": 9,
       "source": {
@@ -2941,8 +2941,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.4319503,
+        "longitude": 77.0725697
       },
       "official_count": 9,
       "source": {
@@ -2974,8 +2974,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.4273849,
+        "longitude": 77.0916356
       },
       "official_count": 6,
       "source": {
@@ -3007,8 +3007,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.1603078,
+        "longitude": 91.7754097
       },
       "official_count": 6,
       "source": {
@@ -3133,8 +3133,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.5972055,
+        "longitude": 88.3459574
       },
       "official_count": 2,
       "source": {
@@ -3232,8 +3232,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 17.3943916,
+        "longitude": 78.4945016
       },
       "official_count": 10,
       "source": {
@@ -3265,8 +3265,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.7293208,
+        "longitude": 75.8733533
       },
       "official_count": 9,
       "source": {
@@ -3299,8 +3299,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.1763643,
+        "longitude": 79.8882549
       },
       "official_count": 8,
       "source": {
@@ -3332,8 +3332,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.8850479,
+        "longitude": 75.7927939
       },
       "official_count": 8,
       "source": {
@@ -3398,8 +3398,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.5273325,
+        "longitude": 88.7243186
       },
       "official_count": 6,
       "source": {
@@ -3530,8 +3530,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.2532144,
+        "longitude": 72.9753918
       },
       "official_count": 8,
       "source": {
@@ -3596,8 +3596,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 14.4586433,
+        "longitude": 78.8299711
       },
       "official_count": 8,
       "source": {
@@ -3630,8 +3630,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.2073134,
+        "longitude": 72.8385469
       },
       "official_count": 8,
       "source": {
@@ -3664,8 +3664,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.2073134,
+        "longitude": 72.8385469
       },
       "official_count": 8,
       "source": {
@@ -3695,8 +3695,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 11.8660284,
+        "longitude": 75.3854747
       },
       "official_count": 4,
       "source": {
@@ -3728,8 +3728,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.471962,
+        "longitude": 80.29791
       },
       "official_count": 8,
       "source": {
@@ -3761,8 +3761,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 18.4376363,
+        "longitude": 79.1327836
       },
       "official_count": 4,
       "source": {
@@ -3794,8 +3794,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 29.6902988,
+        "longitude": 76.9966999
       },
       "official_count": 12,
       "source": {
@@ -3891,8 +3891,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 9.9944135,
+        "longitude": 76.2934562
       },
       "official_count": 10,
       "source": {
@@ -3957,8 +3957,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.5767672,
+        "longitude": 88.4300892
       },
       "official_count": 16,
       "source": {
@@ -3990,8 +3990,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 8.8864097,
+        "longitude": 76.5983828
       },
       "official_count": 9,
       "source": {
@@ -4056,8 +4056,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 9.590731,
+        "longitude": 76.5255479
       },
       "official_count": 6,
       "source": {
@@ -4089,8 +4089,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 11.2743602,
+        "longitude": 75.7809627
       },
       "official_count": 6,
       "source": {
@@ -4187,8 +4187,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.850833,
+        "longitude": 81.0036102
       },
       "official_count": 9,
       "source": {
@@ -4254,8 +4254,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 9.9370328,
+        "longitude": 78.1320746
       },
       "official_count": 11,
       "source": {
@@ -4287,8 +4287,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.8753514,
+        "longitude": 74.8544518
       },
       "official_count": 15,
       "source": {
@@ -4353,8 +4353,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0503833,
+        "longitude": 72.8621497
       },
       "official_count": 8,
       "source": {
@@ -4386,8 +4386,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0503833,
+        "longitude": 72.8621497
       },
       "official_count": 8,
       "source": {
@@ -4419,8 +4419,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0589914,
+        "longitude": 72.9005947
       },
       "official_count": 7,
       "source": {
@@ -4452,8 +4452,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0503833,
+        "longitude": 72.8621497
       },
       "official_count": 7,
       "source": {
@@ -4485,8 +4485,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0503833,
+        "longitude": 72.8621497
       },
       "official_count": 7,
       "source": {
@@ -4552,8 +4552,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.3301678,
+        "longitude": 76.6764019
       },
       "official_count": 9,
       "source": {
@@ -4619,8 +4619,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 21.1296427,
+        "longitude": 79.1137999
       },
       "official_count": 6,
       "source": {
@@ -4684,8 +4684,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.0568048,
+        "longitude": 72.6438844
       },
       "official_count": 8,
       "source": {
@@ -4750,8 +4750,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 18.6725087,
+        "longitude": 78.1024876
       },
       "official_count": 4,
       "source": {
@@ -4816,8 +4816,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.5527386,
+        "longitude": 88.3557309
       },
       "official_count": 11,
       "source": {
@@ -4849,8 +4849,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 25.6090911,
+        "longitude": 85.151263
       },
       "official_count": 7,
       "source": {
@@ -4947,8 +4947,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 11.9176805,
+        "longitude": 79.8114815
       },
       "official_count": 5,
       "source": {
@@ -5009,8 +5009,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 18.6559462,
+        "longitude": 73.7696861
       },
       "official_count": 7,
       "source": {
@@ -5077,8 +5077,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 18.5336188,
+        "longitude": 73.8806949
       },
       "official_count": 8,
       "source": {
@@ -5144,8 +5144,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 21.2557619,
+        "longitude": 81.65374
       },
       "official_count": 7,
       "source": {
@@ -5245,8 +5245,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.2820636,
+        "longitude": 70.761147
       },
       "official_count": 7,
       "source": {
@@ -5345,8 +5345,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.2282234,
+        "longitude": 84.8408632
       },
       "official_count": 6,
       "source": {
@@ -5378,8 +5378,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.8062572,
+        "longitude": 78.750175
       },
       "official_count": 8,
       "source": {
@@ -5442,8 +5442,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 17.5359822,
+        "longitude": 78.2655592
       },
       "official_count": 8,
       "source": {
@@ -5509,8 +5509,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 31.0802103,
+        "longitude": 77.1799251
       },
       "official_count": 9,
       "source": {
@@ -5573,8 +5573,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.788635,
+        "longitude": 88.4130931
       },
       "official_count": 5,
       "source": {
@@ -5641,8 +5641,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.9289079,
+        "longitude": 80.1144082
       },
       "official_count": 14,
       "source": {
@@ -5708,8 +5708,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.9289079,
+        "longitude": 80.1144082
       },
       "official_count": 14,
       "source": {
@@ -5739,8 +5739,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.1918702,
+        "longitude": 72.9545881
       },
       "official_count": 10,
       "source": {
@@ -5836,8 +5836,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.0827491,
+        "longitude": 80.1715078
       },
       "official_count": 3,
       "source": {
@@ -5869,8 +5869,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 8.5222185,
+        "longitude": 76.9398462
       },
       "official_count": 9,
       "source": {
@@ -5933,8 +5933,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 8.6979384,
+        "longitude": 77.7333734
       },
       "official_count": 6,
       "source": {
@@ -6064,8 +6064,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 24.5955079,
+        "longitude": 73.691101
       },
       "official_count": 6,
       "source": {
@@ -6130,8 +6130,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.1671967,
+        "longitude": 75.7746232
       },
       "official_count": 4,
       "source": {
@@ -6230,8 +6230,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 25.4236999,
+        "longitude": 82.9261834
       },
       "official_count": 5,
       "source": {
@@ -6264,8 +6264,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0763822,
+        "longitude": 73.0044568
       },
       "official_count": 10,
       "source": {
@@ -6297,8 +6297,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.0763822,
+        "longitude": 73.0044568
       },
       "official_count": 2,
       "source": {
@@ -6331,8 +6331,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.9971261,
+        "longitude": 72.6082124
       },
       "official_count": 8,
       "source": {
@@ -6364,8 +6364,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 12.9352,
+        "longitude": 79.151531
       },
       "official_count": 9,
       "source": {
@@ -6397,8 +6397,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 17.742544,
+        "longitude": 83.2390736
       },
       "official_count": 8,
       "source": {
@@ -6464,8 +6464,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.1401693,
+        "longitude": 77.5722511
       },
       "official_count": 5,
       "source": {
@@ -6558,8 +6558,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.4153323,
+        "longitude": 77.3300595
       },
       "official_count": 4,
       "source": {
@@ -6589,8 +6589,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 13.085422,
+        "longitude": 80.205856
       },
       "official_count": 5,
       "source": {
@@ -6686,8 +6686,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 19.1187377,
+        "longitude": 74.7352314
       },
       "official_count": 2,
       "source": {
@@ -6782,8 +6782,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.4829601,
+        "longitude": 89.5323276
       },
       "official_count": 1,
       "source": {
@@ -7164,8 +7164,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 21.7647189,
+        "longitude": 72.1356861
       },
       "official_count": 1,
       "source": {
@@ -8516,8 +8516,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 21.828341,
+        "longitude": 76.3603697
       },
       "official_count": 1,
       "source": {
@@ -8772,8 +8772,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 26.8588568,
+        "longitude": 88.7414026
       },
       "official_count": 1,
       "source": {
@@ -8868,8 +8868,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 23.6047357,
+        "longitude": 72.3954401
       },
       "official_count": 2,
       "source": {
@@ -8900,8 +8900,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.5670062,
+        "longitude": 88.322332
       },
       "official_count": 2,
       "source": {
@@ -9092,8 +9092,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 22.6890981,
+        "longitude": 72.8663694
       },
       "official_count": 1,
       "source": {
@@ -9156,8 +9156,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 17.0582113,
+        "longitude": 79.268293
       },
       "official_count": 0,
       "source": {
@@ -9766,8 +9766,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 18.1039245,
+        "longitude": 78.8440888
       },
       "official_count": 4,
       "source": {
@@ -10150,8 +10150,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 8.8342918,
+        "longitude": 78.1024218
       },
       "official_count": 1,
       "source": {
@@ -10182,8 +10182,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 16.4935833,
+        "longitude": 80.6451592
       },
       "official_count": 1,
       "source": {
@@ -10246,8 +10246,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 11.6431158,
+        "longitude": 76.0743302
       },
       "official_count": 2,
       "source": {
@@ -10438,8 +10438,8 @@
         "fax_numbers": []
       },
       "coordinates": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 27.3346812,
+        "longitude": 88.609072
       },
       "official_count": 2,
       "source": {

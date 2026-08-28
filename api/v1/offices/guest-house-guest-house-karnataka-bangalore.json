@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "guest-house-guest-house-karnataka-bangalore",
     "source_key": "q=GH_Guest_House_KARNATAKA_Bangalore_",
@@ -22,8 +22,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 13.0494201,
+      "longitude": 77.552189
     },
     "official_count": 0,
     "source": {

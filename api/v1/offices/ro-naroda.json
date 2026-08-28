@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-naroda",
     "source_key": "q=NARODA",
@@ -25,8 +25,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 23.0568048,
+      "longitude": 72.6438844
     },
     "official_count": 8,
     "source": {

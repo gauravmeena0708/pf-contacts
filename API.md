@@ -37,6 +37,9 @@ server. Download `offices.json` once and filter it in the consuming application.
   Once published, the builder reuses it while the same source key remains present.
 - `source_key` preserves the source directory query key.
 - `parent_id` and `ancestor_ids` describe the normalized hierarchy.
+- `coordinates` are derived from the best available geocode. Many records use
+  a verified postal-code centroid and should be treated as approximate rather
+  than as a precise building entrance.
 - `contact.emails` contains only email addresses published for the office itself.
 - Named officials and their contact details are deliberately excluded from the
   main office list. They are available through `officials.json` and individual

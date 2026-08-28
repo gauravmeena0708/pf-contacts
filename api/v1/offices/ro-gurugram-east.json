@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-gurugram-east",
     "source_key": "q=GURUGRAM+%28EAST%29",
@@ -25,8 +25,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 28.4319503,
+      "longitude": 77.0725697
     },
     "official_count": 9,
     "source": {

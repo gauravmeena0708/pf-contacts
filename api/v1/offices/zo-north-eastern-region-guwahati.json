@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "zo-north-eastern-region-guwahati",
     "source_key": "q=NORTH-EASTERN+REGION+%28GUWAHATI%29",
@@ -22,8 +22,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 26.1603078,
+      "longitude": 91.7754097
     },
     "official_count": 3,
     "source": {

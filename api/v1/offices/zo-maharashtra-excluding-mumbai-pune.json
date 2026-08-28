@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "zo-maharashtra-excluding-mumbai-pune",
     "source_key": "q=MAHARASHTRA%28EXCLUDING+MUMBAI%29%28PUNE%29",
@@ -22,8 +22,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 18.5336188,
+      "longitude": 73.8806949
     },
     "official_count": 7,
     "source": {

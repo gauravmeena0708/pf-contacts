@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-vellore",
     "source_key": "q=VELLORE",
@@ -25,8 +25,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 12.9352,
+      "longitude": 79.151531
     },
     "official_count": 9,
     "source": {

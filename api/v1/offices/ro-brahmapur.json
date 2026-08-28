@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-brahmapur",
     "source_key": "q=BRAHMAPUR",
@@ -25,8 +25,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 19.3124774,
+      "longitude": 84.7970507
     },
     "official_count": 5,
     "source": {

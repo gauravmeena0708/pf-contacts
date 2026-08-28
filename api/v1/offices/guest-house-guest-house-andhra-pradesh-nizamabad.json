@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "guest-house-guest-house-andhra-pradesh-nizamabad",
     "source_key": "q=GH_Guest_House_ANDHRA_PRADESH_Nizamabad_",
@@ -22,8 +22,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 18.6725087,
+      "longitude": 78.1024876
     },
     "official_count": 0,
     "source": {

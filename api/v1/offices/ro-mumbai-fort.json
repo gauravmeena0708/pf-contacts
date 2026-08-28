@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-mumbai-fort",
     "source_key": "q=MUMBAI+%28FORT%29",
@@ -25,8 +25,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 19.0503833,
+      "longitude": 72.8621497
     },
     "official_count": 8,
     "source": {

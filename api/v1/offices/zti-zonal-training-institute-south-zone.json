@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "zti-zonal-training-institute-south-zone",
     "source_key": "q=ZONAL+TRAINING+INSTITUTE,+SOUTH+ZONE",
@@ -23,8 +23,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 13.085422,
+      "longitude": 80.205856
     },
     "official_count": 5,
     "source": {

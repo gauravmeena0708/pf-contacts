@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-pune-hinjawadi",
     "source_key": "q=PUNE+%28HINJAWADI%29",
@@ -23,8 +23,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 18.6559462,
+      "longitude": 73.7696861
     },
     "official_count": 7,
     "source": {

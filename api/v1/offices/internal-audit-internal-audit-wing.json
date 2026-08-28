@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "internal-audit-internal-audit-wing",
     "source_key": "q=INTERNAL+AUDIT+WING",
@@ -20,8 +20,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 28.563055,
+      "longitude": 77.1860747
     },
     "official_count": 8,
     "source": {

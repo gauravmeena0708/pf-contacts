@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "zo-delhi-uttarakhand-jammu-kashmir-and-ladakh",
     "source_key": "q=DELHI%2C+UTTARAKHAND%2C+JAMMU+%26+KASHMIR+AND+LADAKH",
@@ -23,8 +23,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 28.6821912,
+      "longitude": 77.1757491
     },
     "official_count": 6,
     "source": {

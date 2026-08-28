@@ -93,6 +93,22 @@ class StaticApiTest(unittest.TestCase):
         self.assertIn("guest_house", actual)
         self.assertIn("district_office", actual)
 
+    def test_coordinate_coverage_and_india_bounds(self):
+        mapped = [
+            office for office in self.offices
+            if office["coordinates"]["latitude"] is not None
+            and office["coordinates"]["longitude"] is not None
+        ]
+        self.assertGreaterEqual(len(mapped), 315)
+
+        for office in mapped:
+            latitude = office["coordinates"]["latitude"]
+            longitude = office["coordinates"]["longitude"]
+            self.assertGreaterEqual(latitude, 6.0, office["id"])
+            self.assertLessEqual(latitude, 37.5, office["id"])
+            self.assertGreaterEqual(longitude, 68.0, office["id"])
+            self.assertLessEqual(longitude, 97.5, office["id"])
+
     def test_committed_schema_is_valid_json_and_has_required_contract(self):
         schema = json.loads(
             (PROJECT_ROOT / "api" / "v1" / "schema.json").read_text(encoding="utf-8")

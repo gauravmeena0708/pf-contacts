@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "ro-nagpur",
     "source_key": "q=NAGPUR",
@@ -26,8 +26,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 21.1296427,
+      "longitude": 79.1137999
     },
     "official_count": 6,
     "source": {

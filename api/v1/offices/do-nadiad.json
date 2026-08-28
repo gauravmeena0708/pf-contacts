@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "do-nadiad",
     "source_key": "q=D.O+-+NADIAD",
@@ -24,8 +24,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 22.6890981,
+      "longitude": 72.8663694
     },
     "official_count": 1,
     "source": {

@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "zo-wb-a-n-islands-sikkim-kolkata",
     "source_key": "q=WB%2C+A%26N+ISLANDS+%26+SIKKIM+%28KOLKATA%29",
@@ -22,8 +22,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 22.5767672,
+      "longitude": 88.4300892
     },
     "official_count": 5,
     "source": {

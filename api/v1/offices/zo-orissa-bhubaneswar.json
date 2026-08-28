@@ -1,6 +1,6 @@
 {
   "api_version": "1.0",
-  "data_version": "v1-faaa82288adc-3c070f6e",
+  "data_version": "v1-faaa82288adc-d7f725a7",
   "office": {
     "id": "zo-orissa-bhubaneswar",
     "source_key": "q=ORISSA+%28BHUBANESWAR%29",
@@ -22,8 +22,8 @@
       "fax_numbers": []
     },
     "coordinates": {
-      "latitude": null,
-      "longitude": null
+      "latitude": 20.2890681,
+      "longitude": 85.8344385
     },
     "official_count": 6,
     "source": {
