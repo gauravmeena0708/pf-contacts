@@ -1,7 +1,7 @@
 {
   "api_version": "1.0",
   "data_version": "v1-faaa82288adc-d7f725a7",
-  "generated_at": "2026-08-28T06:51:47Z",
+  "generated_at": "2026-08-29T13:21:52Z",
   "source_url": "https://www.epfindia.gov.in/site_en/Contact_office_wise.php",
   "source_sha256": "faaa82288adcffc722da2be1a7a774f53ab52d940ee7c8b9ecbfb048cf9aec7f",
   "geocodes_sha256": "d7f725a78680c812b0cb6b302bfef82ac2cb941b287c198c3645ca48d1edadff",
@@ -15,6 +15,10 @@
     "officials": "officials.json",
     "hierarchy": "hierarchy.json",
     "categories": "categories.json",
-    "schema": "schema.json"
-  }
+    "schema": "schema.json",
+    "divisions": "divisions.json",
+    "divisions_schema": "divisions-schema.json"
+  },
+  "divisions_sha256": "1314ce7a2dfecbed39dd653535da1860ea119ac222fdbbd6d404ab631816c935",
+  "division_count": 20
 }

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://gauravmeena0708.github.io/pf-contacts/api/v1/divisions-schema.json",
+  "title": "EPFO division",
+  "description": "Head Office functional division from the EPFO internal administrative structure.",
+  "type": "object",
+  "required": [
+    "code",
+    "name",
+    "short_name",
+    "unit_type",
+    "parent_code",
+    "active"
+  ],
+  "additionalProperties": true,
+  "properties": {
+    "code": {
+      "type": "string",
+      "pattern": "^EPFO-HO-[A-Z0-9_-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "short_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unit_type": {
+      "type": "string",
+      "enum": [
+        "DIVISION",
+        "SECTION",
+        "CELL",
+        "UNIT",
+        "VERTICAL",
+        "CENTRE"
+      ]
+    },
+    "parent_code": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "legacy_aliases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

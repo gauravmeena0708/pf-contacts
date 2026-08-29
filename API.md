@@ -26,7 +26,9 @@ use `/api/v1` as the base path.
 | `officials.json` | Named officials linked to offices by `office_id` |
 | `hierarchy.json` | Parent/child office tree |
 | `categories.json` | Available categories and their record counts |
+| `divisions.json` | Head Office functional divisions and unit codes |
 | `schema.json` | JSON Schema for an office record |
+| `divisions-schema.json` | JSON Schema for a division record |
 
 GitHub Pages serves static files, so query parameters are not evaluated on the
 server. Download `offices.json` once and filter it in the consuming application.

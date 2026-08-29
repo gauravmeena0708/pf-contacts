@@ -16,13 +16,14 @@ versioned static JSON API.
 
 - Search by office, city, official, designation, PIN code, or phone number.
 - Browse the normalized Head, Zonal, Regional, and District Office hierarchy.
+- Access normalized Head Office functional divisions and organizational unit codes.
 - View mapped offices and find nearby locations using browser geolocation.
 - Explore mainland coverage and potential service gaps in the coverage planner.
-- Consume office and official data through a versioned, read-only JSON API.
+- Consume office, official, and divisional data through a versioned, read-only JSON API.
 - Refresh source data automatically through a guarded weekly GitHub Actions job.
 
-The current generated API contains 325 canonical offices and 1,684 publicly
-listed officials. Current counts and content hashes are available in
+The current generated API contains 325 canonical offices, 1,684 publicly
+listed officials, and 20 Head Office functional divisions. Current counts and content hashes are available in
 [`api/v1/manifest.json`](api/v1/manifest.json).
 
 ## Run locally

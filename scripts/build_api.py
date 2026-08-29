@@ -322,6 +322,16 @@ def write_json(path: Path, payload: Any) -> None:
     )
 
 
+def validate_divisions(divisions: list[dict[str, Any]]) -> None:
+    codes = [d.get("code") for d in divisions]
+    if len(codes) != len(set(codes)):
+        raise ValueError("Division codes are not unique")
+    for d in divisions:
+        for field in ("code", "name", "short_name", "unit_type", "parent_code", "active"):
+            if field not in d:
+                raise ValueError(f"Division {d.get('code')} missing required field: {field}")
+
+
 def validate(offices: list[dict[str, Any]], officials: list[dict[str, Any]]) -> None:
     if len(offices) < 100:
         raise ValueError(f"Refusing to publish only {len(offices)} canonical offices")
@@ -348,11 +358,31 @@ def item_sort_key(office: dict[str, Any]) -> tuple[str, str]:
     return office["category"], office["name"].casefold()
 
 
-def build(source_path: Path, geocodes_path: Path, output_dir: Path) -> dict[str, Any]:
+def build(
+    source_path: Path,
+    geocodes_path: Path,
+    output_dir: Path,
+    divisions_path: Path | None = None,
+) -> dict[str, Any]:
     source_bytes = read_bytes(source_path)
     geocodes_bytes = read_bytes(geocodes_path)
     raw_records = json.loads(source_bytes.decode("utf-8"))
     geocodes = json.loads(geocodes_bytes.decode("utf-8"))
+
+    if divisions_path is None:
+        default_divisions = source_path.parent / "divisions-data.json"
+        if default_divisions.exists():
+            divisions_path = default_divisions
+
+    divisions: list[dict[str, Any]] = []
+    divisions_hash: str | None = None
+    if divisions_path and divisions_path.exists():
+        divisions_bytes = read_bytes(divisions_path)
+        divisions = json.loads(divisions_bytes.decode("utf-8"))
+        if not isinstance(divisions, list):
+            raise ValueError("divisions-data.json must contain a JSON array")
+        validate_divisions(divisions)
+        divisions_hash = sha256(divisions_bytes)
 
     if not isinstance(raw_records, list):
         raise ValueError("contacts-data.json must contain a JSON array")
@@ -471,7 +501,20 @@ def build(source_path: Path, geocodes_path: Path, output_dir: Path) -> dict[str,
     generated_at = existing_generated_at(output_dir, source_hash, geocode_hash)
     generated_at = generated_at or datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
     data_version = f"v1-{source_hash[:12]}-{geocode_hash[:8]}"
-    manifest = {
+
+    endpoints = {
+        "offices": "offices.json",
+        "office": "offices/{id}.json",
+        "officials": "officials.json",
+        "hierarchy": "hierarchy.json",
+        "categories": "categories.json",
+        "schema": "schema.json",
+    }
+    if divisions:
+        endpoints["divisions"] = "divisions.json"
+        endpoints["divisions_schema"] = "divisions-schema.json"
+
+    manifest: dict[str, Any] = {
         "api_version": API_VERSION,
         "data_version": data_version,
         "generated_at": generated_at,
@@ -482,15 +525,11 @@ def build(source_path: Path, geocodes_path: Path, output_dir: Path) -> dict[str,
         "record_count": len(offices),
         "duplicate_records_removed": duplicates_removed,
         "official_count": len(all_officials),
-        "endpoints": {
-            "offices": "offices.json",
-            "office": "offices/{id}.json",
-            "officials": "officials.json",
-            "hierarchy": "hierarchy.json",
-            "categories": "categories.json",
-            "schema": "schema.json",
-        },
+        "endpoints": endpoints,
     }
+    if divisions_hash is not None:
+        manifest["divisions_sha256"] = divisions_hash
+        manifest["division_count"] = len(divisions)
 
     office_dir = output_dir / "offices"
     office_dir.mkdir(parents=True, exist_ok=True)
@@ -512,6 +551,13 @@ def build(source_path: Path, geocodes_path: Path, output_dir: Path) -> dict[str,
         "record_count": len(all_officials),
         "officials": all_officials,
     })
+    if divisions:
+        write_json(output_dir / "divisions.json", {
+            "api_version": API_VERSION,
+            "data_version": data_version,
+            "record_count": len(divisions),
+            "divisions": divisions,
+        })
     write_json(output_dir / "hierarchy.json", {
         "api_version": API_VERSION,
         "data_version": data_version,
@@ -548,16 +594,23 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, default=project_root / "contacts-data.json")
     parser.add_argument("--geocodes", type=Path, default=project_root / "geocodes.json")
+    parser.add_argument("--divisions", type=Path, default=project_root / "divisions-data.json")
     parser.add_argument("--output", type=Path, default=project_root / "api" / "v1")
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
-    manifest = build(args.source.resolve(), args.geocodes.resolve(), args.output.resolve())
+    manifest = build(
+        args.source.resolve(),
+        args.geocodes.resolve(),
+        args.output.resolve(),
+        args.divisions.resolve() if args.divisions and args.divisions.exists() else None,
+    )
+    division_info = f", {manifest.get('division_count', 0)} divisions" if "division_count" in manifest else ""
     print(
         f"Built API {manifest['data_version']}: {manifest['record_count']} offices, "
-        f"{manifest['official_count']} officials, "
+        f"{manifest['official_count']} officials{division_info}, "
         f"{manifest['duplicate_records_removed']} exact duplicates removed."
     )
 

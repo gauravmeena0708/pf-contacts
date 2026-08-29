@@ -123,6 +123,37 @@ class StaticApiTest(unittest.TestCase):
             errors = sorted(validator.iter_errors(office), key=lambda error: list(error.path))
             self.assertEqual([], errors, f"Schema errors for {office['id']}: {errors}")
 
+    def test_divisions_payload_matches_seed_and_contract(self):
+        divisions_payload = self.load("divisions.json")
+        self.assertEqual(20, divisions_payload["record_count"])
+        self.assertEqual(20, self.manifest.get("division_count"))
+        self.assertIn("divisions", self.manifest["endpoints"])
+        self.assertIn("divisions_schema", self.manifest["endpoints"])
+
+        divisions = divisions_payload["divisions"]
+        codes = [d["code"] for d in divisions]
+        self.assertEqual(20, len(set(codes)))
+
+        schema = json.loads(
+            (PROJECT_ROOT / "api" / "v1" / "divisions-schema.json").read_text(encoding="utf-8")
+        )
+        validator = Draft202012Validator(schema)
+        for division in divisions:
+            errors = sorted(validator.iter_errors(division), key=lambda error: list(error.path))
+            self.assertEqual([], errors, f"Divisions schema errors for {division['code']}: {errors}")
+            self.assertTrue(division["code"].startswith("EPFO-HO-"))
+            self.assertEqual("EPFO-HO", division["parent_code"])
+            self.assertEqual("DIVISION", division["unit_type"])
+            self.assertTrue(division["active"])
+
+        by_code = {d["code"]: d for d in divisions}
+        self.assertIn("EPFO-HO-HRM", by_code)
+        self.assertIn("EPFO-HO-PID", by_code)
+        self.assertIn("PFD", by_code["EPFO-HO-PID"]["legacy_aliases"])
+        self.assertIn("EPFO-HO-IS", by_code)
+        self.assertIn("NDC", by_code["EPFO-HO-IS"]["legacy_aliases"])
+        self.assertIn("EPFO-HO-AUDIT", by_code)
+
 
 if __name__ == "__main__":
     unittest.main()

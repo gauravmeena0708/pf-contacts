@@ -1,0 +1,210 @@
+[
+  {
+    "code": "EPFO-HO-HRM",
+    "name": "Human Resource Management Division",
+    "short_name": "HRM",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Employee lifecycle, digital service history, transfer and posting, promotion, seniority, APAR status, study leave, deputation, and retirement administration."
+  },
+  {
+    "code": "EPFO-HO-HRD",
+    "name": "Human Resource Development Division",
+    "short_name": "HRD",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Cadre planning, sanctioned strength, welfare, holidays, training policy coordination with PDUNASS, and establishment policy."
+  },
+  {
+    "code": "EPFO-HO-REX",
+    "name": "Recruitment and Examination Division",
+    "short_name": "Recruitment/Exam",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Direct recruitment cycles, departmental exams, LDCEs, probation exams, vacancy compilation, and appointment tracking."
+  },
+  {
+    "code": "EPFO-HO-ASD",
+    "name": "Administrative Services Division",
+    "short_name": "ASD",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Head Office administrative services, office inventory, stores, furniture, vehicles, telecom, ID cards, and procurement requests."
+  },
+  {
+    "code": "EPFO-HO-PID",
+    "name": "Physical Infrastructure Division",
+    "short_name": "PID",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [
+      "PFD"
+    ],
+    "description": "Estate and facility management, buildings, civil/electrical/HVAC works, preventive maintenance schedules, and AMC execution."
+  },
+  {
+    "code": "EPFO-HO-FIN",
+    "name": "Finance and Accounts Division",
+    "short_name": "Finance",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Budget RE/BE compilation, financial sanctions, expenditure reconciliation, vendor payments, and financial MIS."
+  },
+  {
+    "code": "EPFO-HO-COMP",
+    "name": "Compliance Division",
+    "short_name": "Compliance",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Employer compliance oversight, risk-based inspection selection, 7A/14B proceedings policy, and default monitoring."
+  },
+  {
+    "code": "EPFO-HO-RECOVERY",
+    "name": "Recovery Division",
+    "short_name": "Recovery",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Recovery case tracking, demand registers, attachment orders, bank/insolvency follow-up, and recovery performance."
+  },
+  {
+    "code": "EPFO-HO-LEGAL",
+    "name": "Legal Division",
+    "short_name": "Legal",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Litigation management, court hearing calendar, advocate empanelment, judgment compliance, and legal precedent repository."
+  },
+  {
+    "code": "EPFO-HO-IS",
+    "name": "Information Services Division / NDC",
+    "short_name": "IS/NDC",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [
+      "NDC"
+    ],
+    "description": "Application portfolio register, ITSM, infrastructure inventory, VAPT/security remediation, and technology vendor governance."
+  },
+  {
+    "code": "EPFO-HO-AUDIT",
+    "name": "Audit Division",
+    "short_name": "Audit",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Internal audit planning, audit engagements, observation/para management, auditee replies, and Action Taken Report (ATR) settlement."
+  },
+  {
+    "code": "EPFO-HO-VIG",
+    "name": "Vigilance Division",
+    "short_name": "Vigilance",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Vigilance complaint tracking, confidential inquiry workflow, sensitive post monitoring, and preventive vigilance governance."
+  },
+  {
+    "code": "EPFO-HO-INV",
+    "name": "Investment Division",
+    "short_name": "Investment",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Portfolio monitoring, investment manager mandates, benchmark compliance, exposure limits, and committee reporting."
+  },
+  {
+    "code": "EPFO-HO-PENSION",
+    "name": "Pension Division",
+    "short_name": "Pension",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Pension policy, higher-pension implementation monitoring, operational exception aggregation, and disbursement assurance."
+  },
+  {
+    "code": "EPFO-HO-ICSS",
+    "name": "International Cooperation for Social Security",
+    "short_name": "International",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [
+      "International Workers"
+    ],
+    "description": "Social Security Agreements (SSA), Certificate of Coverage (COC) issuance workflow, and detached worker case tracking."
+  },
+  {
+    "code": "EPFO-HO-EXEMPT",
+    "name": "Exemption Division",
+    "short_name": "Exemption",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Exempted establishment trust monitoring, compliance return validation, condition reviews, and surrender/cancellation workflows."
+  },
+  {
+    "code": "EPFO-HO-CSD",
+    "name": "Customer Service Division",
+    "short_name": "CSD",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Grievance escalation oversight (EPFiGMS/CPGRAMS), PRO desk guidance, root-cause analytics, and service quality improvement."
+  },
+  {
+    "code": "EPFO-HO-CPR",
+    "name": "Communication and Public Relations Division",
+    "short_name": "C&PR",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Public communication, press releases, social media campaigns, media query responses, and creative approval workflows."
+  },
+  {
+    "code": "EPFO-HO-COORD",
+    "name": "Coordination / MIS / Parliamentary Questions",
+    "short_name": "Coordination/MIS",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [
+      "PQ"
+    ],
+    "description": "CPFC/CBT decision tracking, Parliamentary Question coordination, Ministry references, and Annual Report compilation."
+  },
+  {
+    "code": "EPFO-HO-OL",
+    "name": "Official Language Division",
+    "short_name": "OL",
+    "unit_type": "DIVISION",
+    "parent_code": "EPFO-HO",
+    "active": true,
+    "legacy_aliases": [],
+    "description": "Rajbhasha compliance, translation queue, bilingual terminology repository, Section 3(3) monitoring, and quarterly progress returns."
+  }
+]
